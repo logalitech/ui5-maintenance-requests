@@ -6,8 +6,12 @@ metadata:
 type: application
 server:
   customMiddleware:
-    - name: fiori-tools-proxy
+    - name: ui5-tooling-modules-middleware
       afterMiddleware: compression
+      configuration:
+        debug: false
+    - name: fiori-tools-proxy
+      afterMiddleware: ui5-tooling-modules-middleware
       configuration:
         ignoreCertErrors: false # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
         backend:
@@ -50,3 +54,7 @@ builder:
         debug: true
         transformModulesToUI5:
           overridesToOverride: true
+    - name: ui5-tooling-modules-task
+      afterTask: ui5-tooling-transpile-task
+      configuration:
+        addToNamespace: true
