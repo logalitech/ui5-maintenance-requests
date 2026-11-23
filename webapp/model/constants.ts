@@ -1,6 +1,6 @@
 /**
- * Application constants: route names, the criticality scale of the service and the properties
- * of Requests that the controllers read from the contexts of the list.
+ * Application constants: route names, the criticality scale of the service, the paths of the
+ * entity sets and the properties of Requests that the controllers read from the contexts of the list.
  */
 
 /** Names of the routes declared in manifest.json (sap.ui5/routing/routes). */
@@ -25,6 +25,11 @@ export enum Criticality {
     Critical = 2,
     Positive = 3,
     Information = 5
+}
+
+/** Absolute paths of the entity sets that the controllers use to build context paths. */
+export enum EntitySetPath {
+    Requests = "/Requests"
 }
 
 /**

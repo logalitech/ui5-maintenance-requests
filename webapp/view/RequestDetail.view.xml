@@ -1,6 +1,198 @@
 <mvc:View
     controllerName="sapui5.maintenance.controller.RequestDetail"
+    displayBlock="true"
+    height="100%"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <Page id="requestDetailPage" title="{i18n>requestDetailTitle}" />
+    xmlns:core="sap.ui.core"
+    xmlns:uxap="sap.uxap"
+    xmlns:form="sap.ui.layout.form"
+    xmlns="sap.m"
+    core:require="{
+        formatter: 'sapui5/maintenance/model/formatter',
+        Currency: 'sap/ui/model/odata/type/Currency'
+    }">
+    <!--
+        The controller binds the view to a kept-alive context of the list binding: the properties
+        that the list has already read come from its cache, and the model requests only the missing
+        ones. Dates and decimals use the OData types that the model derives from the metadata, with
+        the format of the locale. Fields without a value are hidden (strings are empty, dates null).
+    -->
+    <uxap:ObjectPageLayout
+        id="requestObjectPage"
+        upperCaseAnchorBar="false">
+        <!-- Title, number, priority and status: visible in the expanded and in the collapsed header. -->
+        <uxap:headerTitle>
+            <uxap:ObjectPageDynamicHeaderTitle id="requestHeaderTitle">
+                <uxap:heading>
+                    <Title id="requestTitle" text="{Title}" level="H2" wrapping="true" />
+                </uxap:heading>
+                <uxap:expandedContent>
+                    <Text id="requestNumberExpanded" text="{RequestID}" />
+                </uxap:expandedContent>
+                <uxap:snappedContent>
+                    <Text id="requestNumberSnapped" text="{RequestID}" />
+                </uxap:snappedContent>
+                <uxap:content>
+                    <ObjectStatus
+                        id="requestPriority"
+                        title="{i18n>headerPriority}"
+                        text="{PriorityText}"
+                        state="{
+                            path: 'PriorityCriticality',
+                            targetType: 'any',
+                            formatter: 'formatter.criticalityState'
+                        }"
+                        class="sapUiMediumMarginEnd" />
+                    <ObjectStatus
+                        id="requestStatus"
+                        title="{i18n>headerStatus}"
+                        text="{StatusText}"
+                        state="{
+                            path: 'StatusCriticality',
+                            targetType: 'any',
+                            formatter: 'formatter.criticalityState'
+                        }" />
+                </uxap:content>
+            </uxap:ObjectPageDynamicHeaderTitle>
+        </uxap:headerTitle>
+        <!--
+            Where the request is and who works on it, and its estimated cost. The cost uses the OData
+            Currency type without the code list of the service (customizing part null): the amount
+            gets the decimals of its currency and the format of the locale.
+        -->
+        <uxap:headerContent>
+            <FlexBox id="requestHeaderContent" wrap="Wrap" fitContainer="true">
+                <VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+                    <ObjectAttribute
+                        title="{i18n>headerPlant}"
+                        text="{PlantName}"
+                        visible="{= !!${PlantName} }" />
+                    <ObjectAttribute
+                        title="{i18n>headerEquipment}"
+                        text="{EquipmentName}"
+                        visible="{= !!${EquipmentName} }" />
+                    <ObjectAttribute
+                        title="{i18n>headerFunctionalLocation}"
+                        text="{FunctionalLocation}"
+                        visible="{= !!${FunctionalLocation} }" />
+                </VBox>
+                <VBox class="sapUiSmallMarginBottom">
+                    <ObjectAttribute
+                        title="{i18n>headerAssignedTo}"
+                        text="{AssignedTo}"
+                        visible="{= !!${AssignedTo} }" />
+                    <ObjectAttribute
+                        title="{i18n>headerEstimatedCost}"
+                        text="{
+                            parts: [
+                                { path: 'EstimatedCost' },
+                                { path: 'CurrencyCode' },
+                                { value: null }
+                            ],
+                            type: 'Currency'
+                        }" />
+                </VBox>
+            </FlexBox>
+        </uxap:headerContent>
+        <uxap:sections>
+            <!--
+                With a single section the object page hides the section title, so the subsection
+                repeats it; with more sections the object page shows only one of the two.
+            -->
+            <uxap:ObjectPageSection
+                id="generalSection"
+                title="{i18n>generalSectionTitle}"
+                titleUppercase="false">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection id="generalSubSection" title="{i18n>generalSectionTitle}">
+                        <uxap:blocks>
+                            <form:Form
+                                id="generalForm"
+                                editable="false"
+                                width="auto"
+                                class="sapUxAPObjectPageSubSectionAlignContent">
+                                <form:layout>
+                                    <form:ColumnLayout columnsM="2" columnsL="3" columnsXL="4" />
+                                </form:layout>
+                                <form:formContainers>
+                                    <form:FormContainer id="generalFormContainer">
+                                        <form:formElements>
+                                            <form:FormElement
+                                                label="{i18n>generalRequestType}"
+                                                visible="{= !!${RequestTypeText} }">
+                                                <form:fields>
+                                                    <Text text="{RequestTypeText}" />
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement
+                                                label="{i18n>generalDescription}"
+                                                visible="{= !!${Description} }">
+                                                <form:fields>
+                                                    <Text text="{Description}" />
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement
+                                                label="{i18n>generalReportedBy}"
+                                                visible="{= !!${ReportedBy} }">
+                                                <form:fields>
+                                                    <Text text="{ReportedBy}" />
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement
+                                                label="{i18n>generalRequiredEndDate}"
+                                                visible="{= !!${RequiredEndDate} }">
+                                                <form:fields>
+                                                    <Text text="{RequiredEndDate}" />
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement
+                                                label="{i18n>generalStartedAt}"
+                                                visible="{= !!${StartedAt} }">
+                                                <form:fields>
+                                                    <Text text="{StartedAt}" />
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement
+                                                label="{i18n>generalCompletedAt}"
+                                                visible="{= !!${CompletedAt} }">
+                                                <form:fields>
+                                                    <Text text="{CompletedAt}" />
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <!--
+                                                DowntimeHours is not nullable: it is 0 until the action
+                                                complete sets it together with CompletedAt. It has a value
+                                                once the work has ended, even if that value is 0.
+                                            -->
+                                            <form:FormElement
+                                                label="{i18n>generalDowntimeHours}"
+                                                visible="{= !!${CompletedAt} }">
+                                                <form:fields>
+                                                    <Text text="{DowntimeHours}" />
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement
+                                                label="{i18n>generalResolution}"
+                                                visible="{= !!${ResolutionText} }">
+                                                <form:fields>
+                                                    <Text text="{ResolutionText}" />
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement
+                                                label="{i18n>generalRejectionReason}"
+                                                visible="{= !!${RejectionReason} }">
+                                                <form:fields>
+                                                    <Text text="{RejectionReason}" />
+                                                </form:fields>
+                                            </form:FormElement>
+                                        </form:formElements>
+                                    </form:FormContainer>
+                                </form:formContainers>
+                            </form:Form>
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+        </uxap:sections>
+    </uxap:ObjectPageLayout>
 </mvc:View>
