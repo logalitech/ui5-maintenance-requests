@@ -1,0 +1,6 @@
+<mvc:View
+    controllerName="sapui5.maintenance.controller.RequestDetail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="requestDetailPage" title="{i18n>requestDetailTitle}" />
+</mvc:View>

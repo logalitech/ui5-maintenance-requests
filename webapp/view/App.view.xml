@@ -1,7 +1,13 @@
-<mvc:View controllerName="sapui5.maintenance.controller.App"
+<mvc:View
+    controllerName="sapui5.maintenance.controller.App"
     displayBlock="true"
+    height="100%"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <App id="app">
-    </App>
+    xmlns:f="sap.f">
+    <f:FlexibleColumnLayout
+        id="fcl"
+        layout="{appView>/layout}"
+        busy="{appView>/busy}"
+        busyIndicatorDelay="0"
+        backgroundDesign="Solid" />
 </mvc:View>

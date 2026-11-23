@@ -1,0 +1,6 @@
+<mvc:View
+    controllerName="sapui5.maintenance.controller.RequestList"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="requestListPage" title="{i18n>requestListTitle}" />
+</mvc:View>

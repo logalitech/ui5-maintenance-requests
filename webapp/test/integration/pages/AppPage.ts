@@ -9,7 +9,7 @@ export default class AppPage extends Opa5 {
 	// Assertions
 	iShouldSeeTheApp() {
 		return this.waitFor({
-			id: "app",
+			id: "fcl",
 			viewName: sViewName,
 			success: function () {
 				Opa5.assert.ok(true, "The " + sViewName + " view is displayed");
