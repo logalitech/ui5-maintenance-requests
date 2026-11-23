@@ -6,6 +6,7 @@
     xmlns:core="sap.ui.core"
     xmlns:uxap="sap.uxap"
     xmlns:form="sap.ui.layout.form"
+    xmlns:unified="sap.ui.unified"
     xmlns="sap.m"
     core:require="{
         formatter: 'sapui5/maintenance/model/formatter',
@@ -620,21 +621,85 @@
                 <uxap:subSections>
                     <uxap:ObjectPageSubSection id="attachmentsSubSection" title="{i18n>attachmentsSectionTitle}">
                         <uxap:blocks>
-                            <!-- File name, comment and media type; the content is not read in this view. -->
-                            <List
-                                id="attachmentList"
+                            <!--
+                                Thumbnail, file name, media type and comment of each attachment, sorted by file name.
+                                The value of the stream property Attachment (Edm.Stream) is the URL of the content: the
+                                avatar shows the image from that URL, reduced; another file shows the icon of its media
+                                type (formatter.attachmentThumbnail). The browser reads the content, not the model.
+
+                                In edit mode the comment is an input field bound two-way to the attachment of the draft,
+                                like the cells of the other tables. "Add File" is a file uploader that only selects the
+                                file: its media types, set by the controller, filter the file dialog. The controller
+                                checks the file, and the attachment service creates the attachment and sends its
+                                content; the table shows the new attachment once its content is on the service. The
+                                button is enabled by the dynamic control of the service (__CreateByAssociationControl).
+                            -->
+                            <Table
+                                id="attachmentTable"
                                 items="{
                                     path: '_Attachment',
                                     sorter: { path: 'FileName' },
                                     parameters: { $$ownRequest: true }
                                 }"
-                                noDataText="{i18n>attachmentListNoData}">
-                                <StandardListItem
-                                    title="{FileName}"
-                                    description="{AttComment}"
-                                    info="{MimeType}"
-                                    wrapping="true" />
-                            </List>
+                                autoPopinMode="true"
+                                contextualWidth="Auto"
+                                popinLayout="GridSmall"
+                                noDataText="{i18n>attachmentTableNoData}">
+                                <headerToolbar>
+                                    <OverflowToolbar id="attachmentToolbar" visible="{= %{IsActiveEntity} === false }">
+                                        <ToolbarSpacer />
+                                        <unified:FileUploader
+                                            id="attachmentUploader"
+                                            buttonOnly="true"
+                                            buttonText="{i18n>attachmentAddButton}"
+                                            enabled="{= %{__CreateByAssociationControl/_Attachment} === true }"
+                                            change=".onAttachmentFileChange"
+                                            typeMissmatch=".onAttachmentTypeMismatch" />
+                                    </OverflowToolbar>
+                                </headerToolbar>
+                                <columns>
+                                    <Column id="attachmentPreviewColumn" width="5rem" importance="High">
+                                        <Text text="{i18n>attachmentColumnPreview}" />
+                                    </Column>
+                                    <Column id="attachmentFileNameColumn" importance="High" autoPopinWidth="10">
+                                        <Text text="{i18n>attachmentColumnFileName}" />
+                                    </Column>
+                                    <Column id="attachmentMimeTypeColumn" width="10rem" importance="Low">
+                                        <Text text="{i18n>attachmentColumnMimeType}" />
+                                    </Column>
+                                    <Column id="attachmentCommentColumn" importance="Medium" autoPopinWidth="10">
+                                        <Text id="attachmentCommentHeader" text="{i18n>attachmentColumnComment}" />
+                                    </Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem vAlign="Middle">
+                                        <cells>
+                                            <!-- An image that cannot be loaded shows the icon of the image files. -->
+                                            <Avatar
+                                                src="{
+                                                    parts: [
+                                                        { path: 'Attachment', targetType: 'any' },
+                                                        { path: 'MimeType', targetType: 'any' }
+                                                    ],
+                                                    formatter: 'formatter.attachmentThumbnail'
+                                                }"
+                                                displayShape="Square"
+                                                displaySize="S"
+                                                fallbackIcon="sap-icon://attachment-photo"
+                                                decorative="true" />
+                                            <Text text="{FileName}" />
+                                            <Text text="{MimeType}" />
+                                            <VBox renderType="Bare">
+                                                <Text text="{AttComment}" visible="{= %{IsActiveEntity} === true }" />
+                                                <Input
+                                                    value="{AttComment}"
+                                                    ariaLabelledBy="attachmentCommentHeader"
+                                                    visible="{= %{IsActiveEntity} !== true }" />
+                                            </VBox>
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
                         </uxap:blocks>
                     </uxap:ObjectPageSubSection>
                 </uxap:subSections>

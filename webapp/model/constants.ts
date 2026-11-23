@@ -1,7 +1,8 @@
 /**
  * Application constants: route and target names, view levels of the column layout, the criticality
- * scale of the service, the paths of the entity sets and the properties of Requests, Parts and Equipments
- * that the controllers read from the contexts, set as initial data or use in filters.
+ * scale of the service, the paths of the entity sets, the properties of Requests, Parts, Attachments and
+ * Equipments that the controllers and services read from the contexts, set as initial data or use in
+ * filters, and the rules for the files that can be attached to a request.
  */
 
 /** Names of the routes declared in manifest.json (sap.ui5/routing/routes). */
@@ -73,6 +74,38 @@ export enum RequestProperty {
 /** Properties of the Parts entity set that the controllers set as initial data of a new spare part. */
 export enum PartProperty {
     CurrencyCode = "CurrencyCode"
+}
+
+/**
+ * Properties of the Attachments entity set that the attachment service sets as initial data of a new attachment
+ * or whose URL it builds: Content is the stream property (Edm.Stream) with the binary content of the file.
+ */
+export enum AttachmentProperty {
+    FileName = "FileName",
+    MimeType = "MimeType",
+    Content = "Attachment"
+}
+
+/** Media types of the files that can be attached to a request (HU-05): PNG, JPEG and SVG images and PDF documents. */
+export enum AttachmentMediaType {
+    Png = "image/png",
+    Jpeg = "image/jpeg",
+    Svg = "image/svg+xml",
+    Pdf = "application/pdf"
+}
+
+/** Limits of the files that can be attached to a request. The service does not check them: the application does. */
+export enum AttachmentLimit {
+    /** Maximum size in megabytes of 1024 x 1024 bytes, the unit of sap.ui.unified.FileUploader. */
+    MaxFileSizeMB = 5
+}
+
+/** Reason why a file cannot be attached, found before anything is sent to the service. */
+export enum AttachmentRejection {
+    /** The media type is not one of AttachmentMediaType. */
+    Type = "Type",
+    /** The file is larger than AttachmentLimit.MaxFileSizeMB. */
+    Size = "Size"
 }
 
 /** Properties of the Equipments entity set that the controllers use as paths of filters. */

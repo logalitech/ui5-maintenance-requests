@@ -1,6 +1,7 @@
 import formatMessage from "sap/base/strings/formatMessage";
 import { ButtonType, DraftIndicatorState } from "sap/m/library";
 import NumberFormat from "sap/ui/core/format/NumberFormat";
+import IconPool from "sap/ui/core/IconPool";
 import { ValueState } from "sap/ui/core/library";
 import Message from "sap/ui/core/message/Message";
 import MessageType from "sap/ui/core/message/MessageType";
@@ -74,6 +75,22 @@ export default {
             return "";
         }
         return NumberFormat.getCurrencyInstance().format(Number(quantity) * Number(unitPrice), currencyCode);
+    },
+
+    /**
+     * Source of the thumbnail of an attachment, for the src property of an avatar. For an image, the URL of its
+     * content: the value of the stream property Attachment, which the model types as sap.ui.model.odata.type.Stream,
+     * and from which the browser reads the image. For any other file, the icon of its media type, for example the
+     * PDF icon for application/pdf.
+     * @param contentUrl Value of the stream property Attachment: the URL of the content; undefined while unknown
+     * @param mimeType Media type of the attachment (MimeType)
+     * @returns The URL of the image, or the URI of an icon of the SAP icon font
+     */
+    attachmentThumbnail(contentUrl: string | null | undefined, mimeType: string | null | undefined): string {
+        if (contentUrl && mimeType?.startsWith("image/")) {
+            return contentUrl;
+        }
+        return IconPool.getIconForMimeType(mimeType ?? "");
     },
 
     /**

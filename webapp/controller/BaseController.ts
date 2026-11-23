@@ -6,10 +6,11 @@ import ResourceModel from "sap/ui/model/resource/ResourceModel";
 import ResourceBundle from "sap/base/i18n/ResourceBundle";
 import type Component from "../Component";
 import type DraftService from "../service/DraftService";
+import type AttachmentService from "../service/AttachmentService";
 
 /**
  * Base class of all controllers: typed access to the component, the router, the models,
- * the texts, the appView model and the draft service.
+ * the texts, the appView model, the draft service and the attachment service.
  *
  * @namespace sapui5.maintenance.controller
  */
@@ -51,6 +52,11 @@ export default abstract class BaseController extends Controller {
     /** The draft service of the component: creation, edit and discard of requests. */
     public getDraftService(): DraftService {
         return this.getComponent().getDraftService();
+    }
+
+    /** The attachment service of the component: check of a file, upload and binary content of the attachments. */
+    public getAttachmentService(): AttachmentService {
+        return this.getComponent().getAttachmentService();
     }
 
     /**

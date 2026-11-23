@@ -28,9 +28,9 @@ interface SideEffectsAnnotation {
 
 /**
  * Draft handling of the maintenance requests (docs/servicio.md, section 4): creation of a draft and the
- * bound actions Edit, Activate and Discard, the creation and deletion of the items of a draft (operations
- * and spare parts) and the side effects of their changes. The controllers call these methods and never
- * build an action name.
+ * bound actions Edit, Activate and Discard, the creation and deletion of the items of a draft (operations,
+ * spare parts and attachments) and the side effects of their changes. The controllers and the attachment
+ * service call these methods and never build an action name.
  *
  * The qualified names of the actions are read from the annotation Common.DraftRoot of the entity set
  * Requests, which contains them with the namespace of the service. Each action is invoked with a
@@ -81,6 +81,8 @@ export default class DraftService {
      * - With the list binding of an item navigation of a draft (_Task or _Part), an operation or a spare part
      *   of the draft, which its table shows at the top. The entity sets Tasks and Parts do not allow a direct
      *   creation: the POST request goes to the navigation of the draft.
+     * - With a list binding of the attachment service on the navigation _Attachment of a draft, an attachment
+     *   of the draft, whose content the attachment service sends afterwards.
      *
      * If the POST fails, the model reports the error and would repeat the POST with the next change of
      * the entity. The transient context is deleted instead, so that no empty row stays in the list.
@@ -201,10 +203,10 @@ export default class DraftService {
     }
 
     /**
-     * Deletes an item of a draft, an operation or a spare part, in the group of its binding ($auto). The table
-     * removes the row at once; if the service rejects the DELETE request, the model reports the error and puts
-     * the row back. The transition messages of the item are removed with it.
-     * @param itemContext The context of the item, from the list binding of its navigation (_Task or _Part)
+     * Deletes an item of a draft, an operation, a spare part or an attachment, in the group of its binding ($auto).
+     * The table removes the row at once; if the service rejects the DELETE request, the model reports the error and
+     * puts the row back. The transition messages of the item are removed with it.
+     * @param itemContext The context of the item, from a list binding of its navigation (_Task, _Part or _Attachment)
      */
     public async deleteItem(itemContext: Context): Promise<void> {
         const path = itemContext.getPath();

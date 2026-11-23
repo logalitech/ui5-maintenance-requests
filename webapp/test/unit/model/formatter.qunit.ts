@@ -3,6 +3,7 @@ import { Criticality } from "sapui5/maintenance/model/constants";
 import { ButtonType, DraftIndicatorState } from "sap/m/library";
 import { ValueState } from "sap/ui/core/library";
 import NumberFormat from "sap/ui/core/format/NumberFormat";
+import IconPool from "sap/ui/core/IconPool";
 import Message from "sap/ui/core/message/Message";
 import MessageType from "sap/ui/core/message/MessageType";
 
@@ -67,6 +68,39 @@ QUnit.test("Returns an empty text while a value is missing", function (assert) {
     assert.strictEqual(formatter.partAmount(undefined, "12.5", "EUR"), "", "quantity not loaded");
     assert.strictEqual(formatter.partAmount("2", null, "EUR"), "", "no unit price");
     assert.strictEqual(formatter.partAmount("2", "12.5", ""), "", "no currency");
+});
+
+QUnit.module("formatter.attachmentThumbnail");
+
+/** URL of the content of an attachment, as the model builds it for the stream property Attachment. */
+function getContentUrl(): string {
+    return "/sap/opu/odata4/sap/zui_mnt_request_o4/srvd/sap/zui_mnt_request/0001/"
+        + "Requests(RequestUUID=bc24114a-d99a-1fd1-b9ab-01c15b754b65,IsActiveEntity=true)/"
+        + "_Attachment(AttachmentUUID=bc24114a-d99a-1fd1-b9ab-01c15b75eb65,IsActiveEntity=true)/Attachment";
+}
+
+QUnit.test("Shows the content of an image", function (assert) {
+    const url = getContentUrl();
+    assert.strictEqual(formatter.attachmentThumbnail(url, "image/png"), url, "PNG image");
+    assert.strictEqual(formatter.attachmentThumbnail(url, "image/jpeg"), url, "JPEG image");
+    assert.strictEqual(formatter.attachmentThumbnail(url, "image/svg+xml"), url, "SVG image");
+});
+
+// The expected icons come from the icon pool, so that the tests do not depend on its assignment of icons.
+QUnit.test("Shows the icon of the media type for other files", function (assert) {
+    const url = getContentUrl();
+    assert.strictEqual(formatter.attachmentThumbnail(url, "application/pdf"),
+        IconPool.getIconForMimeType("application/pdf"), "PDF document");
+    assert.strictEqual(formatter.attachmentThumbnail(url, "text/plain"),
+        IconPool.getIconForMimeType("text/plain"), "text file");
+});
+
+QUnit.test("Shows an icon while the URL or the media type is unknown", function (assert) {
+    const url = getContentUrl();
+    assert.strictEqual(formatter.attachmentThumbnail(undefined, "image/png"), IconPool.getIconForMimeType("image/png"),
+        "no URL yet");
+    assert.strictEqual(formatter.attachmentThumbnail(url, ""), IconPool.getIconForMimeType(""), "empty media type");
+    assert.strictEqual(formatter.attachmentThumbnail(url, null), IconPool.getIconForMimeType(""), "no media type");
 });
 
 QUnit.module("formatter.draftStateText");

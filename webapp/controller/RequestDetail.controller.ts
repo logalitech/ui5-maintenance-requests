@@ -16,9 +16,12 @@ import { Model$PropertyChangeEvent } from "sap/ui/model/Model";
 import Context from "sap/ui/model/odata/v4/Context";
 import ODataListBinding from "sap/ui/model/odata/v4/ODataListBinding";
 import ODataModel, { ODataModel$PropertyChangeEventParameters } from "sap/ui/model/odata/v4/ODataModel";
+import FileUploader, {
+    FileUploader$ChangeEvent, FileUploader$TypeMissmatchEvent
+} from "sap/ui/unified/FileUploader";
 import {
-    DetailRouteArguments, EntitySetPath, EquipmentProperty, HttpStatus, PartProperty, RequestProperty, RouteName,
-    TargetName
+    AttachmentLimit, AttachmentMediaType, AttachmentRejection, DetailRouteArguments, EntitySetPath, EquipmentProperty,
+    HttpStatus, PartProperty, RequestProperty, RouteName, TargetName
 } from "../model/constants";
 import { createDetailViewModel } from "../model/models";
 
@@ -49,6 +52,11 @@ import { createDetailViewModel } from "../model/models";
  * Once the service has processed a change of an item (PATCH, POST or DELETE request), the controller asks
  * the draft service for its side effects: the estimated cost of the header after a change of a spare part.
  *
+ * In edit mode a file can be attached to the draft: the file uploader of the attachments table only selects the
+ * file. A file that the application does not accept (media type or size) is rejected with a message before anything
+ * is sent; otherwise the attachment service creates the attachment and sends its content, while the busy indicator
+ * blocks the screen. The comment of an attachment is an input field, sent to the draft like the other fields.
+ *
  * @namespace sapui5.maintenance.controller
  */
 export default class RequestDetail extends BaseController {
@@ -74,6 +82,8 @@ export default class RequestDetail extends BaseController {
     public onInit(): void {
         this.setModel(Messaging.getMessageModel(), "message");
         this.setModel(createDetailViewModel(), "detailView");
+        // the file dialog offers the accepted media types; the file uploader discards a file of another known type
+        this.getAttachmentUploader().setMimeType(Object.values(AttachmentMediaType));
         this.getODataModel().attachPropertyChange(this.onPropertyChange, this);
         this.getRouter().getRoute(RouteName.Detail)?.attachPatternMatched(this.onPatternMatched, this);
     }
@@ -146,6 +156,27 @@ export default class RequestDetail extends BaseController {
      */
     public onAddPart(): void {
         void this.addPart();
+    }
+
+    /**
+     * Add File (attachments table, edit mode): the file chosen in the file dialog is checked and attached to the draft.
+     * Chrome fires the event without a file when the dialog is cancelled. The file uploader is cleared once the file
+     * has been handled (asynchronously, after this event), so that the same file can be chosen again.
+     */
+    public onAttachmentFileChange(event: FileUploader$ChangeEvent): void {
+        const fileUploader = event.getSource();
+        const file = (event.getParameter("files") ?? [])[0] as File | undefined;
+        if (file) {
+            void this.addAttachment(file).finally(() => fileUploader.clear());
+        }
+    }
+
+    /**
+     * The file uploader has discarded a file whose media type is not one of the accepted ones. A file whose media
+     * type the browser does not know passes the file uploader and is rejected by the check of the attachment service.
+     */
+    public onAttachmentTypeMismatch(event: FileUploader$TypeMissmatchEvent): void {
+        void this.showAttachmentRejection(event.getParameter("fileName") ?? "", AttachmentRejection.Type);
     }
 
     /** Delete icon of a row of the operations or the spare parts table (edit mode): deletes the item. */
@@ -270,6 +301,42 @@ export default class RequestDetail extends BaseController {
             return;
         }
         await this.followChange(draftContext, this.getDraftService().create(binding, initialData), collectionPath);
+    }
+
+    /**
+     * Attaches a file to the shown draft. A file that the application does not accept is rejected with a message,
+     * before anything is sent. Otherwise the attachment service creates the attachment and sends its content: the
+     * busy indicator blocks the screen until the table shows the new attachment, so that the draft is not saved or
+     * discarded during the upload, and the footer shows the saving state of the draft. The model reports a failed
+     * creation, and the attachment service a failed upload; the error handler shows them.
+     * @param file The chosen file
+     */
+    private async addAttachment(file: File): Promise<void> {
+        const draftContext = this.requestContext;
+        const binding = this.byId("attachmentTable")?.getBinding("items") as ODataListBinding | undefined;
+        const collectionPath = binding?.getResolvedPath();
+        if (!draftContext || !binding || !collectionPath) {
+            return;
+        }
+        const attachmentService = this.getAttachmentService();
+        const rejection = attachmentService.checkFile(file);
+        if (rejection) {
+            await this.showAttachmentRejection(file.name, rejection);
+            return;
+        }
+        await this.runBusy(() => this.followChange(draftContext, attachmentService.add(binding, file), collectionPath));
+    }
+
+    /**
+     * Tells the user why a file cannot be attached: its media type is not accepted, or it is too large.
+     * @param fileName Name of the rejected file
+     * @param rejection Reason of the rejection
+     */
+    private async showAttachmentRejection(fileName: string, rejection: AttachmentRejection): Promise<void> {
+        const text = rejection === AttachmentRejection.Size
+            ? await this.getText("attachmentRejectedSize", [fileName, AttachmentLimit.MaxFileSizeMB])
+            : await this.getText("attachmentRejectedType", [fileName]);
+        MessageBox.error(text, { styleClass: this.getComponent().getContentDensityClass() });
     }
 
     /** Asks the user to confirm that the draft and its changes are discarded. */
@@ -441,10 +508,11 @@ export default class RequestDetail extends BaseController {
     };
 
     /**
-     * Follows a change of a draft (the PATCH request of a field, or the POST or DELETE request of an item) until
-     * the service has processed it: the footer shows its saving state and, once the change is saved, the draft
-     * service loads its side effects, such as the estimated cost after a change of a spare part. The request of
-     * the side effects is sent after the change, so that the service has already recalculated the data.
+     * Follows a change of a draft (the PATCH request of a field, the POST or DELETE request of an item, or the
+     * creation and upload of an attachment) until the service has processed it: the footer shows its saving state
+     * and, once the change is saved, the draft service loads its side effects, such as the estimated cost after a
+     * change of a spare part. The request of the side effects is sent after the change, so that the service has
+     * already recalculated the data.
      * @param draftContext The context of the draft
      * @param change Promise on the outcome of the request of the change
      * @param changedPath Absolute path of the changed property, of the deleted item or of the collection of the
@@ -583,5 +651,9 @@ export default class RequestDetail extends BaseController {
 
     private getEquipmentComboBox(): ComboBox {
         return this.byId("equipmentComboBox") as ComboBox;
+    }
+
+    private getAttachmentUploader(): FileUploader {
+        return this.byId("attachmentUploader") as FileUploader;
     }
 }

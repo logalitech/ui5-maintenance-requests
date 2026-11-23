@@ -8,6 +8,7 @@ import ODataModel from "sap/ui/model/odata/v4/ODataModel";
 import { createAppViewModel, createDeviceModel } from "./model/models";
 import ErrorHandler from "./controller/ErrorHandler";
 import DraftService from "./service/DraftService";
+import AttachmentService from "./service/AttachmentService";
 
 /**
  * @namespace sapui5.maintenance
@@ -23,6 +24,7 @@ export default class Component extends UIComponent {
 
     private errorHandler: ErrorHandler;
     private draftService: DraftService;
+    private attachmentService: AttachmentService;
     private contentDensityClass: string;
 
     public init(): void {
@@ -34,6 +36,9 @@ export default class Component extends UIComponent {
 
         // draft actions of the service, shared by the list and the detail
         this.draftService = new DraftService(this.getModel() as ODataModel);
+
+        // binary content of the attachments; the draft service creates the attachment entities
+        this.attachmentService = new AttachmentService(this.getModel() as ODataModel, this.draftService);
 
         // set the device and the appView models
         this.setModel(createDeviceModel(), "device");
@@ -65,6 +70,11 @@ export default class Component extends UIComponent {
     /** The draft handling of the requests: creation, edit and discard (service/DraftService.ts). */
     public getDraftService(): DraftService {
         return this.draftService;
+    }
+
+    /** The attachments of the requests: check, upload and binary content (service/AttachmentService.ts). */
+    public getAttachmentService(): AttachmentService {
+        return this.attachmentService;
     }
 
     /**
