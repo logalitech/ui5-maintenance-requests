@@ -1,0 +1,192 @@
+[
+  {
+    "AttachmentUUID": "bc24114a-d99a-1fd1-b9ab-01c15b75eb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b754b65",
+    "FileName": "averia_10000001.svg",
+    "MimeType": "image/svg+xml",
+    "AttComment": "Foto de la avería",
+    "LocalCreatedBy": "MCP_LGL",
+    "LocalCreatedAt": "2026-11-16T03:02:58.251397Z",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "AttachmentUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7a6b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b798b65",
+    "FileName": "averia_10000007.svg",
+    "MimeType": "image/svg+xml",
+    "AttComment": "Foto de la avería",
+    "LocalCreatedBy": "MCP_LGL",
+    "LocalCreatedAt": "2026-11-16T03:02:58.251397Z",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "AttachmentUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef356b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef34cb65",
+    "FileName": "averia_10000013.svg",
+    "MimeType": "image/svg+xml",
+    "AttComment": "Foto de la avería",
+    "LocalCreatedBy": "MCP_LGL",
+    "LocalCreatedAt": "2026-11-16T03:02:58.251397Z",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "AttachmentUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef39eb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef390b65",
+    "FileName": "averia_10000019.svg",
+    "MimeType": "image/svg+xml",
+    "AttComment": "Foto de la avería",
+    "LocalCreatedBy": "MCP_LGL",
+    "LocalCreatedAt": "2026-11-16T03:02:58.251397Z",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "AttachmentUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3deb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3d4b65",
+    "FileName": "averia_10000025.svg",
+    "MimeType": "image/svg+xml",
+    "AttComment": "Foto de la avería",
+    "LocalCreatedBy": "MCP_LGL",
+    "LocalCreatedAt": "2026-11-16T03:02:58.251397Z",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "AttachmentUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef426b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef418b65",
+    "FileName": "averia_10000031.svg",
+    "MimeType": "image/svg+xml",
+    "AttComment": "Foto de la avería",
+    "LocalCreatedBy": "MCP_LGL",
+    "LocalCreatedAt": "2026-11-16T03:02:58.251397Z",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "AttachmentUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdceb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdc4b65",
+    "FileName": "averia_10000037.svg",
+    "MimeType": "image/svg+xml",
+    "AttComment": "Foto de la avería",
+    "LocalCreatedBy": "MCP_LGL",
+    "LocalCreatedAt": "2026-11-16T03:02:58.251397Z",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "AttachmentUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce16b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce08b65",
+    "FileName": "averia_10000043.svg",
+    "MimeType": "image/svg+xml",
+    "AttComment": "Foto de la avería",
+    "LocalCreatedBy": "MCP_LGL",
+    "LocalCreatedAt": "2026-11-16T03:02:58.251397Z",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "AttachmentUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce56b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce4cb65",
+    "FileName": "averia_10000049.svg",
+    "MimeType": "image/svg+xml",
+    "AttComment": "Foto de la avería",
+    "LocalCreatedBy": "MCP_LGL",
+    "LocalCreatedAt": "2026-11-16T03:02:58.251397Z",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "AttachmentUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce9eb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce90b65",
+    "FileName": "averia_10000055.svg",
+    "MimeType": "image/svg+xml",
+    "AttComment": "Foto de la avería",
+    "LocalCreatedBy": "MCP_LGL",
+    "LocalCreatedAt": "2026-11-16T03:02:58.251397Z",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  }
+]

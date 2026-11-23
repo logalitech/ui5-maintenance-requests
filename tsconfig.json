@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "es2022",
+    "skipLibCheck": true,
+    "allowJs": true,
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "moduleResolution": "bundler",
+    "rootDir": "./webapp",
+    "outDir": "./dist",
+    "paths": {
+      "sapui5/maintenance/*": [
+        "./webapp/*"
+      ],
+      "unit/*": [
+        "./webapp/test/unit/*"
+      ],
+      "integration/*": [
+        "./webapp/test/integration/*"
+      ]
+    },
+    "types": [
+      "@sapui5/types",
+      "qunit"
+    ]
+  },
+  "include": [
+    "./webapp/**/*"
+  ]
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "Status": "NW",
+    "StatusText": "Nuevo",
+    "Criticality": 0,
+    "SortOrder": 1
+  },
+  {
+    "Status": "AS",
+    "StatusText": "Asignado",
+    "Criticality": 5,
+    "SortOrder": 2
+  },
+  {
+    "Status": "IP",
+    "StatusText": "En curso",
+    "Criticality": 2,
+    "SortOrder": 3
+  },
+  {
+    "Status": "CO",
+    "StatusText": "Completado",
+    "Criticality": 3,
+    "SortOrder": 4
+  },
+  {
+    "Status": "RJ",
+    "StatusText": "Rechazado",
+    "Criticality": 1,
+    "SortOrder": 5
+  }
+]

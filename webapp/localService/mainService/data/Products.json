@@ -1,0 +1,2842 @@
+[
+  {
+    "Product": "ANGLE_GRIND",
+    "ProductName": "Angle Grinder",
+    "ProductType": "FHMI",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Angle Grinder"
+  },
+  {
+    "Product": "AVC_RBT_APPL_UNIT",
+    "ProductName": "Unidad de aplicación",
+    "ProductType": "KMAT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Unidad de aplicación",
+    "ProductNameInEnglish": "Application Unit"
+  },
+  {
+    "Product": "AVC_RBT_BASE_FRAME",
+    "ProductName": "Estructura base",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Estructura base",
+    "ProductNameInEnglish": "Base Frame"
+  },
+  {
+    "Product": "AVC_RBT_BRD_PAINT",
+    "ProductName": "Control Board (Painting)",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Control Board (Painting)"
+  },
+  {
+    "Product": "AVC_RBT_BRD_SEAL",
+    "ProductName": "Control Board (Sealing)",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Control Board (Sealing)"
+  },
+  {
+    "Product": "AVC_RBT_BUNDLE",
+    "ProductName": "Paquete de robot",
+    "ProductType": "KMAT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Paquete de robot",
+    "ProductNameInEnglish": "Robot Bundle"
+  },
+  {
+    "Product": "AVC_RBT_CNTRL_BRD",
+    "ProductName": "Panel de control (programable)",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Panel de control (programable)",
+    "ProductNameInEnglish": "Control Board (programmable)"
+  },
+  {
+    "Product": "AVC_RBT_CNTRL_CAB",
+    "ProductName": "Caja de control",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Caja de control",
+    "ProductNameInEnglish": "Control Canbinet"
+  },
+  {
+    "Product": "AVC_RBT_CNTRL_UNIT",
+    "ProductName": "Unidad de control",
+    "ProductType": "KMAT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Unidad de control",
+    "ProductNameInEnglish": "Control Unit"
+  },
+  {
+    "Product": "AVC_RBT_CONTROL",
+    "ProductName": "Control Unit (Configurable)",
+    "ProductType": "KMAT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Control Unit (Configurable)"
+  },
+  {
+    "Product": "AVC_RBT_D_ARM_110",
+    "ProductName": "Dummy Text",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Dummy Text"
+  },
+  {
+    "Product": "AVC_RBT_D_ARM_50",
+    "ProductName": "Longitud de brazo motriz 50",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Longitud de brazo motriz 50",
+    "ProductNameInEnglish": "Drive Arm Lenght 50"
+  },
+  {
+    "Product": "AVC_RBT_D_ARM_70",
+    "ProductName": "Longitud de brazo motriz 70",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Longitud de brazo motriz 70",
+    "ProductNameInEnglish": "Drive Arm Lenght 70"
+  },
+  {
+    "Product": "AVC_RBT_L_ARM_30",
+    "ProductName": "Longitud de brazo motriz 30",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Longitud de brazo motriz 30",
+    "ProductNameInEnglish": "Drive Arm Lenght 30"
+  },
+  {
+    "Product": "AVC_RBT_L_ARM_45",
+    "ProductName": "Longitud de brazo motriz 45",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Longitud de brazo motriz 45",
+    "ProductNameInEnglish": "Drive Arm Lenght 45"
+  },
+  {
+    "Product": "AVC_RBT_L_ARM_60",
+    "ProductName": "Longitud de brazo motriz 60",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Longitud de brazo motriz 60",
+    "ProductNameInEnglish": "Drive Arm Lenght 60"
+  },
+  {
+    "Product": "AVC_RBT_LINK_ARM",
+    "ProductName": "Link Arm (Configurable)",
+    "ProductType": "KMAT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Link Arm (Configurable)"
+  },
+  {
+    "Product": "AVC_RBT_MOTOR_1XX",
+    "ProductName": "Motor 1XX",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Motor 1XX"
+  },
+  {
+    "Product": "AVC_RBT_MOTOR_2XX",
+    "ProductName": "Motor 2XX",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Motor 2XX"
+  },
+  {
+    "Product": "AVC_RBT_PAINTING",
+    "ProductName": "Unidad de pintado",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Unidad de pintado",
+    "ProductNameInEnglish": "Painting Unit"
+  },
+  {
+    "Product": "AVC_RBT_ROBOT",
+    "ProductName": "Unidad base de robot",
+    "ProductType": "KMAT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Unidad base de robot",
+    "ProductNameInEnglish": "Robot Base Unit"
+  },
+  {
+    "Product": "AVC_RBT_ROBOT2",
+    "ProductName": "Robot Multi-Level",
+    "ProductType": "KMAT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Robot Multi-Level"
+  },
+  {
+    "Product": "AVC_RBT_SEALING",
+    "ProductName": "Unidad de precintado",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Unidad de precintado",
+    "ProductNameInEnglish": "Sealing Unit"
+  },
+  {
+    "Product": "CBPTS002",
+    "ProductName": "Consume-Based Power Tools Subscr. Lean",
+    "ProductType": "SERV",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Consume-Based Power Tools Subscr. Lean"
+  },
+  {
+    "Product": "CBPTS003",
+    "ProductName": "CBP Tools Subscr. Lean -relevant for RAR",
+    "ProductType": "SERV",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "CBP Tools Subscr. Lean -relevant for RAR"
+  },
+  {
+    "Product": "CBPTS004_DE",
+    "ProductName": "Prepaid Service. Install Payment. Lean",
+    "ProductType": "SERV",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Prepaid Service. Install Payment. Lean"
+  },
+  {
+    "Product": "CBPTS004_US",
+    "ProductName": "Prepaid Service. Install Payment. Lean",
+    "ProductType": "SERV",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Prepaid Service. Install Payment. Lean"
+  },
+  {
+    "Product": "CHIP_HAMMER",
+    "ProductName": "Chipping Hammer",
+    "ProductType": "FHMI",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Chipping Hammer"
+  },
+  {
+    "Product": "CM-FL-V00",
+    "ProductName": "Carretilla elevadora",
+    "ProductType": "KMAT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Carretilla elevadora",
+    "ProductNameInEnglish": "Forklift"
+  },
+  {
+    "Product": "CM-FL-V00-3P",
+    "ProductName": "Forklift for 3rd Party",
+    "ProductType": "KMAT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Forklift for 3rd Party"
+  },
+  {
+    "Product": "CM-FL-V01",
+    "ProductName": "Carretilla elevadora",
+    "ProductType": "KMAT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Carretilla elevadora",
+    "ProductNameInEnglish": "Forklift"
+  },
+  {
+    "Product": "CM-MLFL-KM-VXX",
+    "ProductName": "Carretilla elevadora en varios niveles",
+    "ProductType": "KMAT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Carretilla elevadora en varios niveles",
+    "ProductNameInEnglish": "Multi-Level Forklifter"
+  },
+  {
+    "Product": "CM-WPR-SYSTEM",
+    "ProductName": "Wiper System",
+    "ProductType": "KMAT",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Wiper System",
+    "ProductNameInEnglish": "Wiper System"
+  },
+  {
+    "Product": "CSSRV_01",
+    "ProductName": "Service",
+    "ProductType": "SERV",
+    "BaseUnit": "STD",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Service"
+  },
+  {
+    "Product": "CSSRV_03",
+    "ProductName": "External Service",
+    "ProductType": "SERV",
+    "BaseUnit": "STD",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "External Service"
+  },
+  {
+    "Product": "D2O_0424955000",
+    "ProductName": "Hexagonal Nut",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Hexagonal Nut"
+  },
+  {
+    "Product": "D2O_0563557002",
+    "ProductName": "Washer",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Washer"
+  },
+  {
+    "Product": "D2O_0625555452",
+    "ProductName": "Hexagonal Bolt",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Hexagonal Bolt"
+  },
+  {
+    "Product": "D2O_0900047034",
+    "ProductName": "O Ring",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "O Ring"
+  },
+  {
+    "Product": "D2O_0901513371",
+    "ProductName": "Stopper",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Stopper"
+  },
+  {
+    "Product": "D2O_0901513373_C",
+    "ProductName": "Sensor Washer",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Sensor Washer"
+  },
+  {
+    "Product": "D2O_0902056385",
+    "ProductName": "Pressure Sensor",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Pressure Sensor"
+  },
+  {
+    "Product": "D2O_0903271777_C",
+    "ProductName": "Stopper_C",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Stopper_C"
+  },
+  {
+    "Product": "D2O_0904277018_C",
+    "ProductName": "Water Storage Unit",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Water Storage Unit"
+  },
+  {
+    "Product": "D2O_0905271384",
+    "ProductName": "Fixing Ring",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Fixing Ring"
+  },
+  {
+    "Product": "D2O_0905720429",
+    "ProductName": "Control Valve Module",
+    "ProductType": "UNSF",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Control Valve Module"
+  },
+  {
+    "Product": "D2O_0905720543_C",
+    "ProductName": "Long Pipe Section",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Long Pipe Section"
+  },
+  {
+    "Product": "D2O_0905720544_C",
+    "ProductName": "Metal Frame",
+    "ProductType": "UNSF",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Metal Frame"
+  },
+  {
+    "Product": "D2O_0905721007",
+    "ProductName": "Side Plate - Short",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Side Plate - Short"
+  },
+  {
+    "Product": "D2O_0905721008",
+    "ProductName": "Side Plate - Long",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Side Plate - Long"
+  },
+  {
+    "Product": "D2O_09077205423_C",
+    "ProductName": "Support Stand with Sensors and Filter",
+    "ProductType": "UNFR",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Support Stand with Sensors and Filter"
+  },
+  {
+    "Product": "D2O_1800481527",
+    "ProductName": "Connecting Pipe",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Connecting Pipe"
+  },
+  {
+    "Product": "DVAUTO01",
+    "ProductName": "Digital Vehicle Material",
+    "ProductType": "VEHI",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Digital Vehicle Material"
+  },
+  {
+    "Product": "EWMS4-01",
+    "ProductName": "Artículos diversos, art.baja rotación",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Artículos diversos, art.baja rotación",
+    "ProductNameInEnglish": "Small Part, Slow-Moving Item"
+  },
+  {
+    "Product": "EWMS4-02",
+    "ProductName": "Artículos diversos, art.alta rotación",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Artículos diversos, art.alta rotación",
+    "ProductNameInEnglish": "Small Part, Fast-Moving Item"
+  },
+  {
+    "Product": "EWMS4-03",
+    "ProductName": "Artículo grande, artículo baja rotación",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Artículo grande, artículo baja rotación",
+    "ProductNameInEnglish": "Large Part, Slow-Moving Item"
+  },
+  {
+    "Product": "EWMS4-10",
+    "ProductName": "Artículo grande, artículo baja rotación",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Artículo grande, artículo baja rotación",
+    "ProductNameInEnglish": "Large Part, Slow-Moving Item"
+  },
+  {
+    "Product": "EWMS4-11",
+    "ProductName": "Artículo grande, artículo alta rotación",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Artículo grande, artículo alta rotación",
+    "ProductNameInEnglish": "Large Part, Fast-Moving Item"
+  },
+  {
+    "Product": "EWMS4-20",
+    "ProductName": "Parte grande, art.alta rotación, lotes",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Parte grande, art.alta rotación, lotes",
+    "ProductNameInEnglish": "Large Part, Fast-Moving Item, Batches"
+  },
+  {
+    "Product": "EWMS4-40",
+    "ProductName": "Caja estándar EWM con generación SSCC",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Caja estándar EWM con generación SSCC",
+    "ProductNameInEnglish": "Product for Bulk Storage A, Short Lane"
+  },
+  {
+    "Product": "EWMS4-41",
+    "ProductName": "Prod.p.almacén de bloques A, lane grande",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Prod.p.almacén de bloques A, lane grande",
+    "ProductNameInEnglish": "Product for Bulk Storage A, Long Lane"
+  },
+  {
+    "Product": "EWMS4-42",
+    "ProductName": "Producto p.almacén de bloques B",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Producto p.almacén de bloques B",
+    "ProductNameInEnglish": "Product for Bulk Storage B"
+  },
+  {
+    "Product": "EWMS4-50",
+    "ProductName": "FIN50,de alta rotación",
+    "ProductType": "FERT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "FIN50,de alta rotación",
+    "ProductNameInEnglish": "FIN50,Fast Moving"
+  },
+  {
+    "Product": "EWMS4-502",
+    "ProductName": "RAW502,de alta rotación",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "RAW502,de alta rotación",
+    "ProductNameInEnglish": "RAW502,Fast Moving"
+  },
+  {
+    "Product": "EWMS4-503",
+    "ProductName": "RAW503,de alta rotación",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "RAW503,de alta rotación",
+    "ProductNameInEnglish": "RAW503,Fast Moving"
+  },
+  {
+    "Product": "EWMS4-601",
+    "ProductName": "RAW601,de alta rotación",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "RAW601,de alta rotación",
+    "ProductNameInEnglish": "RAW601,Fast Moving"
+  },
+  {
+    "Product": "EWMS4-602",
+    "ProductName": "RAW602,Fast Moving",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "RAW602,Fast Moving"
+  },
+  {
+    "Product": "EWMS4-CAR00",
+    "ProductName": "Caja estándar EWM con generación SSCC",
+    "ProductType": "VERP",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Caja estándar EWM con generación SSCC",
+    "ProductNameInEnglish": "EWM Default Carton with SSCC generation"
+  },
+  {
+    "Product": "EWMS4-PAL00",
+    "ProductName": "Palé estándar EWM con generación SSCC",
+    "ProductType": "VERP",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Palé estándar EWM con generación SSCC",
+    "ProductNameInEnglish": "EWM Default Pallet with SSCC generation"
+  },
+  {
+    "Product": "EWMS4-PAL01",
+    "ProductName": "Palé EEUU EWM con generación SSCC",
+    "ProductType": "VERP",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Palé EEUU EWM con generación SSCC",
+    "ProductNameInEnglish": "EWM US Pallet with SSCC generation"
+  },
+  {
+    "Product": "EWMS4-PALISU",
+    "ProductName": "Carga stock in.palé EWM (sin núm.SSCC)",
+    "ProductType": "VERP",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Carga stock in.palé EWM (sin núm.SSCC)",
+    "ProductNameInEnglish": "EWM Pallet Init. Stock Upload (no SSCC#)"
+  },
+  {
+    "Product": "EWMS4-STOCON00",
+    "ProductName": "Caja/Contenedor almacenamiento p/def.EWM",
+    "ProductType": "VERP",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Caja/Contenedor almacenamiento p/def.EWM",
+    "ProductNameInEnglish": "EWM Default Storage Container / Box"
+  },
+  {
+    "Product": "EWMS4-TRUCK00",
+    "ProductName": "EWM camión estándar",
+    "ProductType": "VERP",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "EWM camión estándar",
+    "ProductNameInEnglish": "EWM Default Truck"
+  },
+  {
+    "Product": "EWMS4-WBTRO00",
+    "ProductName": "Carrito de compra de rejilla p/def.EWM",
+    "ProductType": "VERP",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Carrito de compra de rejilla p/def.EWM",
+    "ProductNameInEnglish": "EWM Default Wire Basket Trolley"
+  },
+  {
+    "Product": "F-10A",
+    "ProductName": "FIN10A,MTS-DDMRP,PD",
+    "ProductType": "FERT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "FIN10A,MTS-DDMRP,PD",
+    "ProductNameInEnglish": "FIN10A,MTS-DDMRP,PD"
+  },
+  {
+    "Product": "F-10B",
+    "ProductName": "FIN10B,MTS-DDMRP,PD",
+    "ProductType": "FERT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "FIN10B,MTS-DDMRP,PD",
+    "ProductNameInEnglish": "FIN10B,MTS-DDMRP,PD"
+  },
+  {
+    "Product": "F-20A",
+    "ProductName": "FIN20A,MTS-DDMRP,PD",
+    "ProductType": "FERT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "FIN20A,MTS-DDMRP,PD",
+    "ProductNameInEnglish": "FIN20A,MTS-DDMRP,PD"
+  },
+  {
+    "Product": "FG-FL-MV-V00",
+    "ProductName": "Carretilla elevadora: Variante material",
+    "ProductType": "FERT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Carretilla elevadora: Variante material",
+    "ProductNameInEnglish": "Forklift - Material variant"
+  },
+  {
+    "Product": "FG-FL-MV-V01",
+    "ProductName": "Carret.elevadora: Variante material 1",
+    "ProductType": "FERT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Carret.elevadora: Variante material 1",
+    "ProductNameInEnglish": "Forklift - Material variant 1"
+  },
+  {
+    "Product": "FG-FL-MV-V02",
+    "ProductName": "Carret.elevadora: Variante material 2",
+    "ProductType": "FERT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Carret.elevadora: Variante material 2",
+    "ProductNameInEnglish": "Forklift - Material variant 2"
+  },
+  {
+    "Product": "FG1_CP",
+    "ProductName": "CP-FG1, Eje con rodamientos",
+    "ProductType": "FERT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "CP-FG1, Eje con rodamientos",
+    "ProductNameInEnglish": "CP-FG1, Shaft with Rolling Bearings"
+  },
+  {
+    "Product": "FG1_DS",
+    "ProductName": "FG1-DS, Shaft with Rolling Bearings",
+    "ProductType": "FERT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "FG1-DS, Shaft with Rolling Bearings"
+  },
+  {
+    "Product": "FG111",
+    "ProductName": "FIN111, MTS-DI, PD",
+    "ProductType": "FERT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "FIN111, MTS-DI, PD",
+    "ProductNameInEnglish": "FIN111, MTS-DI, PD"
+  },
+  {
+    "Product": "FG111_A",
+    "ProductName": "FIN111_A,MTS-DI,PD",
+    "ProductType": "FERT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "FIN111_A,MTS-DI,PD",
+    "ProductNameInEnglish": "FIN111_A,MTS-DI,PD"
+  },
+  {
+    "Product": "FG111_B",
+    "ProductName": "FIN111_B, MTS-DI, PD",
+    "ProductType": "FERT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "FIN111_B, MTS-DI, PD",
+    "ProductNameInEnglish": "FIN111_B, MTS-DI, PD"
+  },
+  {
+    "Product": "FG111_C",
+    "ProductName": "FIN111_C, MTS-DI, PD",
+    "ProductType": "FERT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "FIN111_C, MTS-DI, PD",
+    "ProductNameInEnglish": "FIN111_C, MTS-DI, PD"
+  },
+  {
+    "Product": "FG126",
+    "ProductName": "FIN126,MTS-DI,PD,SerialNo",
+    "ProductType": "FERT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "FIN126,MTS-DI,PD,SerialNo"
+  },
+  {
+    "Product": "FG129",
+    "ProductName": "FIN129,MTS-DI,PD,QM",
+    "ProductType": "FERT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "FIN129,MTS-DI,PD,QM",
+    "ProductNameInEnglish": "FIN129,MTS-DI,PD,QM"
+  },
+  {
+    "Product": "FG130",
+    "ProductName": "FIN130,MTS-DI,PD,PP",
+    "ProductType": "FERT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "FIN130,MTS-DI,PD,PP"
+  },
+  {
+    "Product": "FG2_CP",
+    "ProductName": "CP-FG2, tinta embotellada,15 ml",
+    "ProductType": "FERT",
+    "BaseUnit": "BOT",
+    "ProductNameInLanguage": "CP-FG2, tinta embotellada,15 ml",
+    "ProductNameInEnglish": "CP-FG2, Ink Bottled,15 ml"
+  },
+  {
+    "Product": "FG2_DS",
+    "ProductName": "FIN FG2 _DS , MTO",
+    "ProductType": "FERT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "FIN FG2 _DS , MTO"
+  },
+  {
+    "Product": "FG202",
+    "ProductName": "Finished Goods FG202",
+    "ProductType": "FERT",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Finished Goods FG202"
+  },
+  {
+    "Product": "FG228",
+    "ProductName": "FIN228,MTO,PD,Fifo",
+    "ProductType": "FERT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "FIN228,MTO,PD,Fifo",
+    "ProductNameInEnglish": "FIN228,MTO,PD,Fifo"
+  },
+  {
+    "Product": "FG233",
+    "ProductName": "FERT 233, PD, fabric.repetitiva",
+    "ProductType": "FERT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "FERT 233, PD, fabric.repetitiva",
+    "ProductNameInEnglish": "FERT 233, PD, Repetitive Manuf."
+  },
+  {
+    "Product": "FG29",
+    "ProductName": "FIN29,MTS-PI,PD,Batch-ExpirationDate",
+    "ProductType": "FERT",
+    "BaseUnit": "BOT",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "FIN29,MTS-PI,PD,Batch-ExpirationDate"
+  },
+  {
+    "Product": "FG29-1",
+    "ProductName": "FIN29-1,MTS-PI, con material de silo",
+    "ProductType": "FERT",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "FIN29-1,MTS-PI, con material de silo",
+    "ProductNameInEnglish": "FIN29-1,MTS-PI, with Silo Material"
+  },
+  {
+    "Product": "FG326",
+    "ProductName": "FIN326,PLM,MTS-DI,PD,FIFO lote",
+    "ProductType": "FERT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "FIN326,PLM,MTS-DI,PD,FIFO lote",
+    "ProductNameInEnglish": "FIN326,PLM,MTS-DI,PD,Batch-Fifo"
+  },
+  {
+    "Product": "FG6200",
+    "ProductName": "FIN6200, MTO-PI, PD, lote",
+    "ProductType": "FERT",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "FIN6200, MTO-PI, PD, lote",
+    "ProductNameInEnglish": "FIN6200, MTO-PI, PD, Batch"
+  },
+  {
+    "Product": "FG6500",
+    "ProductName": "FIN6500, PI, PD, camión cisterna mat.",
+    "ProductType": "FERT",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "FIN6500, PI, PD, camión cisterna mat.",
+    "ProductNameInEnglish": "FIN6500, PI, PD, Tank Trailer Material"
+  },
+  {
+    "Product": "FGIPD001",
+    "ProductName": "Asiento",
+    "ProductType": "FERT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Asiento",
+    "ProductNameInEnglish": "Seat"
+  },
+  {
+    "Product": "FGJIT01",
+    "ProductName": "Material ficticio JIT",
+    "ProductType": "FERT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Material ficticio JIT",
+    "ProductNameInEnglish": "JIT Dummy Material"
+  },
+  {
+    "Product": "FGJIT02",
+    "ProductName": "Material ficticio JIT",
+    "ProductType": "FERT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Material ficticio JIT",
+    "ProductNameInEnglish": "JIT Dummy Material"
+  },
+  {
+    "Product": "FGJIT03",
+    "ProductName": "Material ficticio JIT p.integración EWM",
+    "ProductType": "FERT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Material ficticio JIT p.integración EWM",
+    "ProductNameInEnglish": "JIT Dummy Material for EWM Integration"
+  },
+  {
+    "Product": "FGPC01",
+    "ProductName": "Conformidad de producto terminado",
+    "ProductType": "FERT",
+    "BaseUnit": "BOT",
+    "ProductNameInLanguage": "Conformidad de producto terminado",
+    "ProductNameInEnglish": "Product Compliance Finished Good"
+  },
+  {
+    "Product": "FGPCDG01",
+    "ProductName": "Producto terminado MP 5l",
+    "ProductType": "FERT",
+    "BaseUnit": "BOT",
+    "ProductNameInLanguage": "Producto terminado MP 5l",
+    "ProductNameInEnglish": "Finished Good DG 5l"
+  },
+  {
+    "Product": "FGPCDG02",
+    "ProductName": "Producto terminado MP 40l",
+    "ProductType": "FERT",
+    "BaseUnit": "BOT",
+    "ProductNameInLanguage": "Producto terminado MP 40l",
+    "ProductNameInEnglish": "Finished Good DG 40l"
+  },
+  {
+    "Product": "FGPCDG03",
+    "ProductName": "Producto terminado no MP",
+    "ProductType": "FERT",
+    "BaseUnit": "BOT",
+    "ProductNameInLanguage": "Producto terminado no MP",
+    "ProductNameInEnglish": "Finished Good no DG"
+  },
+  {
+    "Product": "FGPCLBL01",
+    "ProductName": "Gestión etiquetas prod.terminados 01",
+    "ProductType": "FERT",
+    "BaseUnit": "BOT",
+    "ProductNameInLanguage": "Gestión etiquetas prod.terminados 01",
+    "ProductNameInEnglish": "Finished Good Label Mgmt 01"
+  },
+  {
+    "Product": "FGPCSVT01",
+    "ProductName": "Finished Good SVT 01",
+    "ProductType": "FERT",
+    "BaseUnit": "BOT",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Finished Good SVT 01"
+  },
+  {
+    "Product": "FIXTURE_1",
+    "ProductName": "Fixture 1",
+    "ProductType": "FHMI",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Fixture 1"
+  },
+  {
+    "Product": "HB01",
+    "ProductName": "Operating Supply 01, Purchasing",
+    "ProductType": "HIBE",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Operating Supply 01, Purchasing"
+  },
+  {
+    "Product": "LE_FL_TEST",
+    "ProductName": "Leak and Flow Tester",
+    "ProductType": "FHMI",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Leak and Flow Tester"
+  },
+  {
+    "Product": "NL001",
+    "ProductName": "Tornillos",
+    "ProductType": "NLAG",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Tornillos",
+    "ProductNameInEnglish": "Screw"
+  },
+  {
+    "Product": "NS0001",
+    "ProductName": "Material no de almacén para consumo",
+    "ProductType": "NLAG",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Material no de almacén para consumo",
+    "ProductNameInEnglish": "Non-Stock Goods for Consumption"
+  },
+  {
+    "Product": "NS0002",
+    "ProductName": "Material no estoc 02",
+    "ProductType": "NLAG",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Material no estoc 02",
+    "ProductNameInEnglish": "Non-Stock Material 02"
+  },
+  {
+    "Product": "NS0003",
+    "ProductName": "Energy Material",
+    "ProductType": "NLAG",
+    "BaseUnit": "B78",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Energy Material"
+  },
+  {
+    "Product": "PIP01",
+    "ProductName": "Material de pipeline 01",
+    "ProductType": "PIPE",
+    "BaseUnit": "L",
+    "ProductNameInLanguage": "Material de pipeline 01",
+    "ProductNameInEnglish": "Pipeline Material 01"
+  },
+  {
+    "Product": "PKGJITHU",
+    "ProductName": "Material de embalaje ficticio JIT",
+    "ProductType": "VERP",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Material de embalaje ficticio JIT",
+    "ProductNameInEnglish": "JIT Dummy Packaging Material"
+  },
+  {
+    "Product": "PKGJITSEQ",
+    "ProductName": "Material de embalaje ficticio JIT",
+    "ProductType": "VERP",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Material de embalaje ficticio JIT",
+    "ProductNameInEnglish": "JIT Dummy Packaging Material"
+  },
+  {
+    "Product": "PMCARTON",
+    "ProductName": "CARTON",
+    "ProductType": "VERP",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "CARTON"
+  },
+  {
+    "Product": "PMCARTON_GTL",
+    "ProductName": "CARTON for GTL",
+    "ProductType": "VERP",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "CARTON for GTL"
+  },
+  {
+    "Product": "PMPALLET",
+    "ProductName": "PALLET",
+    "ProductType": "VERP",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "PALLET"
+  },
+  {
+    "Product": "PMPALLET_GTL",
+    "ProductName": "PALLET for GTL",
+    "ProductType": "VERP",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "PALLET for GTL"
+  },
+  {
+    "Product": "PMWIREBASKET",
+    "ProductName": "WIRE BASKET",
+    "ProductType": "VERP",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "WIRE BASKET"
+  },
+  {
+    "Product": "PMWIREBASKET_GTL",
+    "ProductName": "WIRE BASKET for GTL",
+    "ProductType": "VERP",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "WIRE BASKET for GTL"
+  },
+  {
+    "Product": "PRES_GAUGE",
+    "ProductName": "Pressure Gauge",
+    "ProductType": "FHMI",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Pressure Gauge"
+  },
+  {
+    "Product": "QM001",
+    "ProductName": "QM Regular",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "QM Regular",
+    "ProductNameInEnglish": "QM Regular"
+  },
+  {
+    "Product": "QM002",
+    "ProductName": "QM Registro info Q",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "QM Registro info Q",
+    "ProductNameInEnglish": "QM Q-Info-Record"
+  },
+  {
+    "Product": "QM003",
+    "ProductName": "QM Modificación dinámica",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "QM Modificación dinámica",
+    "ProductNameInEnglish": "QM Dynamic Modification"
+  },
+  {
+    "Product": "QM004",
+    "ProductName": "QM Esquema de muestreo",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "QM Esquema de muestreo",
+    "ProductNameInEnglish": "QM Sampling Scheme"
+  },
+  {
+    "Product": "QM005",
+    "ProductName": "Certificado calidad QM en aprovisionam.",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Certificado calidad QM en aprovisionam.",
+    "ProductNameInEnglish": "QM Quality Certificate in Procurement"
+  },
+  {
+    "Product": "QM006",
+    "ProductName": "LOTE DE PRODUCCIÓN GC",
+    "ProductType": "HALB",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "LOTE DE PRODUCCIÓN GC",
+    "ProductNameInEnglish": "QM PRODUCTION BATCH"
+  },
+  {
+    "Product": "QM008",
+    "ProductName": "QM Multi Spec and Stability Study",
+    "ProductType": "HALB",
+    "BaseUnit": "CCM",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "QM Multi Spec and Stability Study"
+  },
+  {
+    "Product": "R-302",
+    "ProductName": "RAW302,PD",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "RAW302,PD",
+    "ProductNameInEnglish": "RAW302,PD"
+  },
+  {
+    "Product": "R-311",
+    "ProductName": "RAW311,PD",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "RAW311,PD",
+    "ProductNameInEnglish": "RAW311,PD"
+  },
+  {
+    "Product": "R-401",
+    "ProductName": "RAW401,D1",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "RAW401,D1",
+    "ProductNameInEnglish": "RAW401,D1"
+  },
+  {
+    "Product": "R-410",
+    "ProductName": "RAW410,PD",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "RAW410,PD",
+    "ProductNameInEnglish": "RAW410,PD"
+  },
+  {
+    "Product": "R-411",
+    "ProductName": "RAW411,PD",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "RAW411,PD",
+    "ProductNameInEnglish": "RAW411,PD"
+  },
+  {
+    "Product": "R-412",
+    "ProductName": "RAW412,PD",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "RAW412,PD",
+    "ProductNameInEnglish": "RAW412,PD"
+  },
+  {
+    "Product": "RM09",
+    "ProductName": "RAW09,PD,Batch-Fifo",
+    "ProductType": "ROH",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "RAW09,PD,Batch-Fifo"
+  },
+  {
+    "Product": "RM1_CP",
+    "ProductName": "CP-RM1, Acero",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "CP-RM1, Acero",
+    "ProductNameInEnglish": "CP-RM1, Steel"
+  },
+  {
+    "Product": "RM1_DS",
+    "ProductName": "RM1-DS, Steel",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "RM1-DS, Steel"
+  },
+  {
+    "Product": "RM12",
+    "ProductName": "RAW12,PD,RepetitiveManuf.",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "RAW12,PD,RepetitiveManuf."
+  },
+  {
+    "Product": "RM120",
+    "ProductName": "RAW120,PD,QualityManaged",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "RAW120,PD,QualityManaged"
+  },
+  {
+    "Product": "RM122",
+    "ProductName": "RAW122,PD,Batch-Fifo,ProcureImport",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "RAW122,PD,Batch-Fifo,ProcureImport"
+  },
+  {
+    "Product": "RM124",
+    "ProductName": "RAW124,VB,Consumption,FixedBin",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "RAW124,VB,Consumption,FixedBin"
+  },
+  {
+    "Product": "RM128",
+    "ProductName": "RAW128,PD,Consignment",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "RAW128,PD,Consignment"
+  },
+  {
+    "Product": "RM129",
+    "ProductName": "RAW129,PD",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "RAW129,PD",
+    "ProductNameInEnglish": "RAW129,PD"
+  },
+  {
+    "Product": "RM13",
+    "ProductName": "RAW13,PD,Subcontracting",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "RAW13,PD,Subcontracting"
+  },
+  {
+    "Product": "RM14",
+    "ProductName": "RAW14,PD,Subcontracting",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "RAW14,PD,Subcontracting"
+  },
+  {
+    "Product": "RM1420",
+    "ProductName": "RM1420, PD, disolvente",
+    "ProductType": "ROH",
+    "BaseUnit": "L",
+    "ProductNameInLanguage": "RM1420, PD, disolvente",
+    "ProductNameInEnglish": "RM1420, PD, Solvent"
+  },
+  {
+    "Product": "RM1430",
+    "ProductName": "RM1430, PD, catalizador",
+    "ProductType": "ROH",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "RM1430, PD, catalizador",
+    "ProductNameInEnglish": "RM1430, PD, Catalyst"
+  },
+  {
+    "Product": "RM15",
+    "ProductName": "RAW15,PD",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "RAW15,PD"
+  },
+  {
+    "Product": "RM16",
+    "ProductName": "RAW16,PD",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "RAW16,PD"
+  },
+  {
+    "Product": "RM19",
+    "ProductName": "RAW19,PD,Batch-Fifo,LeanQM",
+    "ProductType": "ROH",
+    "BaseUnit": "L",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "RAW19,PD,Batch-Fifo,LeanQM"
+  },
+  {
+    "Product": "RM2_CP",
+    "ProductName": "CP-RM2, Rodamiento",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "CP-RM2, Rodamiento",
+    "ProductNameInEnglish": "CP-RM2, Rolling Bearing"
+  },
+  {
+    "Product": "RM2_DS",
+    "ProductName": "RM1-DS, Steel",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "RM1-DS, Steel"
+  },
+  {
+    "Product": "RM20",
+    "ProductName": "RAW20,PD",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "RAW20,PD"
+  },
+  {
+    "Product": "RM203",
+    "ProductName": "Raw Material RM203",
+    "ProductType": "ROH",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Raw Material RM203"
+  },
+  {
+    "Product": "RM204",
+    "ProductName": "Raw Material RM204",
+    "ProductType": "ROH",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Raw Material RM204"
+  },
+  {
+    "Product": "RM233-1",
+    "ProductName": "RAW233-1, PD, KANBAN Transf.stock",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "RAW233-1, PD, KANBAN Transf.stock",
+    "ProductNameInEnglish": "RAW233-1, PD, KANBAN Stock Transfer"
+  },
+  {
+    "Product": "RM233-2",
+    "ProductName": "RAW233-2,ND,KANBAN,acuerdos planif.",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "RAW233-2,ND,KANBAN,acuerdos planif.",
+    "ProductNameInEnglish": "RAW233-2,ND,KANBAN,sched. agreements"
+  },
+  {
+    "Product": "RM233-4",
+    "ProductName": "RAW233-4,ND,KANBAN,acuerdos planif.",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "RAW233-4,ND,KANBAN,acuerdos planif.",
+    "ProductNameInEnglish": "RAW233-4,ND,KANBAN,sched. agreements"
+  },
+  {
+    "Product": "RM233-6",
+    "ProductName": "RAW233-6, PD, Kanban de tarjeta única",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "RAW233-6, PD, Kanban de tarjeta única",
+    "ProductNameInEnglish": "RAW233-6, PD, One-Card Kanban"
+  },
+  {
+    "Product": "RM233-7",
+    "ProductName": "RAW233-7, Kanban, Aprovis.centro coste",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "RAW233-7, Kanban, Aprovis.centro coste",
+    "ProductNameInEnglish": "RAW233-7, Kanban, Procure to Cost Center"
+  },
+  {
+    "Product": "RM234",
+    "ProductName": "RAW234,VB,fabric.repetitiva",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "RAW234,VB,fabric.repetitiva",
+    "ProductNameInEnglish": "RAW234,VB,Repetitive Manuf."
+  },
+  {
+    "Product": "RM235",
+    "ProductName": "RAW235,VB",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "RAW235,VB",
+    "ProductNameInEnglish": "RAW235,VB"
+  },
+  {
+    "Product": "RM27",
+    "ProductName": "RAW27,PD,PackagingBox",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "RAW27,PD,PackagingBox"
+  },
+  {
+    "Product": "RM27_1",
+    "ProductName": "RAW27_1, PD, embalaje",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "RAW27_1, PD, embalaje",
+    "ProductNameInEnglish": "RAW27_1, PD, Packaging"
+  },
+  {
+    "Product": "RM28",
+    "ProductName": "RAW28,PD,PackagingFoil",
+    "ProductType": "ROH",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "RAW28,PD,PackagingFoil"
+  },
+  {
+    "Product": "RM3_DS",
+    "ProductName": "RAW RM3_DS",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "RAW RM3_DS"
+  },
+  {
+    "Product": "RM30",
+    "ProductName": "RAW30,VB,Batch-Fifo",
+    "ProductType": "ROH",
+    "BaseUnit": "L",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "RAW30,VB,Batch-Fifo"
+  },
+  {
+    "Product": "RM33",
+    "ProductName": "RAW33,PD,subcontratación",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "RAW33,PD,subcontratación",
+    "ProductNameInEnglish": "RAW33,PD,Subcontracting"
+  },
+  {
+    "Product": "RM34",
+    "ProductName": "RAW34,PD,subcontratación",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "RAW34,PD,subcontratación",
+    "ProductNameInEnglish": "RAW34,PD,Subcontracting"
+  },
+  {
+    "Product": "RM4_DS",
+    "ProductName": "RAW RM4_DS",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "RAW RM4_DS"
+  },
+  {
+    "Product": "RM5_CP",
+    "ProductName": "CP-RM5, barniz",
+    "ProductType": "ROH",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "CP-RM5, barniz",
+    "ProductNameInEnglish": "CP-RM5, Varnish"
+  },
+  {
+    "Product": "RM7_CP",
+    "ProductName": "CP-RM7, etiqueta",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "CP-RM7, etiqueta",
+    "ProductNameInEnglish": "CP-RM7, Label"
+  },
+  {
+    "Product": "RMIPD001",
+    "ProductName": "Hardware ARM 1",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Hardware ARM 1",
+    "ProductNameInEnglish": "ARM Hardware 1"
+  },
+  {
+    "Product": "RMIPD002",
+    "ProductName": "Hardware ARM 2",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Hardware ARM 2",
+    "ProductNameInEnglish": "ARM Hardware 2"
+  },
+  {
+    "Product": "RMJIT01",
+    "ProductName": "RAW01,JIT, fabricación repetitiva",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "RAW01,JIT, fabricación repetitiva",
+    "ProductNameInEnglish": "RAW01,JIT,RepetitiveManuf."
+  },
+  {
+    "Product": "RMJIT02",
+    "ProductName": "RAW02, JIT, fabricación repetitiva",
+    "ProductType": "ROH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "RAW02, JIT, fabricación repetitiva",
+    "ProductNameInEnglish": "RAW02,JIT,RepetitiveManuf."
+  },
+  {
+    "Product": "RMPC06",
+    "ProductName": "Conformidad producto materia prima",
+    "ProductType": "ROH",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "Conformidad producto materia prima",
+    "ProductNameInEnglish": "Product Compliance Raw Material"
+  },
+  {
+    "Product": "RMPC07",
+    "ProductName": "Raw PMA 07",
+    "ProductType": "ROH",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Raw PMA 07"
+  },
+  {
+    "Product": "RMPC08",
+    "ProductName": "Raw PMA 08",
+    "ProductType": "ROH",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Raw PMA 08"
+  },
+  {
+    "Product": "RMPC11",
+    "ProductName": "Conformidad producto materia prima",
+    "ProductType": "ROH",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "Conformidad producto materia prima",
+    "ProductNameInEnglish": "Product Compliance Raw Material"
+  },
+  {
+    "Product": "RMPI001",
+    "ProductName": "Entrada 1 (AGUA)",
+    "ProductType": "ROH",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "Entrada 1 (AGUA)",
+    "ProductNameInEnglish": "Input 1 (WATER)"
+  },
+  {
+    "Product": "RMPI002",
+    "ProductName": "Entrada 2 (AGENTE 2)",
+    "ProductType": "ROH",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "Entrada 2 (AGENTE 2)",
+    "ProductNameInEnglish": "Input 2 (AGENT 2)."
+  },
+  {
+    "Product": "RMPI003",
+    "ProductName": "Entrada 3 (AGENTE 3)",
+    "ProductType": "ROH",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "Entrada 3 (AGENTE 3)",
+    "ProductNameInEnglish": "Input 3 (AGENT 3)"
+  },
+  {
+    "Product": "RMPI004",
+    "ProductName": "Entrada 3 (agente 3)",
+    "ProductType": "ROH",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "Entrada 3 (agente 3)",
+    "ProductNameInEnglish": "Input 4 (Agent 4)"
+  },
+  {
+    "Product": "RMPI005",
+    "ProductName": "Entrada 5 (color azul)",
+    "ProductType": "ROH",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "Entrada 5 (color azul)",
+    "ProductNameInEnglish": "Input 5 (Blue Color)"
+  },
+  {
+    "Product": "RMPI006",
+    "ProductName": "Entrada X (color naranja)",
+    "ProductType": "ROH",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "Entrada X (color naranja)",
+    "ProductNameInEnglish": "Input X (Orange Color)"
+  },
+  {
+    "Product": "RMPI007",
+    "ProductName": "Entrada 7 (agente 7)",
+    "ProductType": "ROH",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "Entrada 7 (agente 7)",
+    "ProductNameInEnglish": "Input 7 (Agent 7)"
+  },
+  {
+    "Product": "RMPI008",
+    "ProductName": "Entrada 8 (agente 8)",
+    "ProductType": "ROH",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "Entrada 8 (agente 8)",
+    "ProductNameInEnglish": "Input 8 (Agent 8)"
+  },
+  {
+    "Product": "RMPI009",
+    "ProductName": "Entrada 9 (agente 9)",
+    "ProductType": "ROH",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "Entrada 9 (agente 9)",
+    "ProductNameInEnglish": "Input 9 (Agent 9)"
+  },
+  {
+    "Product": "RMPI010",
+    "ProductName": "Entrada 10 (agente 10)",
+    "ProductType": "ROH",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "Entrada 10 (agente 10)",
+    "ProductNameInEnglish": "Input 10 (Agent 10)"
+  },
+  {
+    "Product": "RMPI011",
+    "ProductName": "Entrada 11 (agente 11)",
+    "ProductType": "ROH",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "Entrada 11 (agente 11)",
+    "ProductNameInEnglish": "Input 11 (Agent 11)"
+  },
+  {
+    "Product": "RMPI012",
+    "ProductName": "Entrada 12 (agente 12)",
+    "ProductType": "ROH",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "Entrada 12 (agente 12)",
+    "ProductNameInEnglish": "Input 12 (Agent 12)"
+  },
+  {
+    "Product": "RMPI013",
+    "ProductName": "Entrada 13 (color verde)",
+    "ProductType": "ROH",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "Entrada 13 (color verde)",
+    "ProductNameInEnglish": "Input 13 (Green Color)"
+  },
+  {
+    "Product": "RMPI014",
+    "ProductName": "Entrada 14 (color verde 2)",
+    "ProductType": "ROH",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "Entrada 14 (color verde 2)",
+    "ProductNameInEnglish": "Input 14 (Green Color 2)"
+  },
+  {
+    "Product": "RMPI015",
+    "ProductName": "ENTRADA15",
+    "ProductType": "ROH",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "ENTRADA15",
+    "ProductNameInEnglish": "INPUT15"
+  },
+  {
+    "Product": "RMPI016",
+    "ProductName": "ENTRADA16",
+    "ProductType": "ROH",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "ENTRADA16",
+    "ProductNameInEnglish": "INPUT16"
+  },
+  {
+    "Product": "RP001",
+    "ProductName": "Envases,ND",
+    "ProductType": "LEIH",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Envases,ND",
+    "ProductNameInEnglish": "Empties,ND"
+  },
+  {
+    "Product": "S-201",
+    "ProductName": "SEMI201,MTS,D1,subconjunto",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "SEMI201,MTS,D1,subconjunto",
+    "ProductNameInEnglish": "SEMI201,MTS,D1,Subassembly"
+  },
+  {
+    "Product": "S-202",
+    "ProductName": "SEMI202,MTS,D1",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "SEMI202,MTS,D1",
+    "ProductNameInEnglish": "SEMI202,MTS,D1"
+  },
+  {
+    "Product": "S-203",
+    "ProductName": "SEMI203,D1",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "SEMI203,D1",
+    "ProductNameInEnglish": "SEMI203,D1"
+  },
+  {
+    "Product": "S-208",
+    "ProductName": "SEMI208,MTS,PD,Submontaje",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "SEMI208,MTS,PD,Submontaje",
+    "ProductNameInEnglish": "SEMI208,MTS,PD,Subassembly"
+  },
+  {
+    "Product": "S-210",
+    "ProductName": "SEMI210,MTS,PD,Submontaje",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "SEMI210,MTS,PD,Submontaje",
+    "ProductNameInEnglish": "SEMI210,MTS,PD,Subassembly"
+  },
+  {
+    "Product": "S-301",
+    "ProductName": "SEMI301,MTS,PD,subconjunto",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "SEMI301,MTS,PD,subconjunto",
+    "ProductNameInEnglish": "SEMI301,MTS,PD,Subassembly"
+  },
+  {
+    "Product": "S-310",
+    "ProductName": "SEM310,MTS,PD,Submontaje",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "SEM310,MTS,PD,Submontaje",
+    "ProductNameInEnglish": "SEM310,MTS,PD,Subassembly"
+  },
+  {
+    "Product": "S-315",
+    "ProductName": "SEM315,MTS,PD,Submontaje",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "SEM315,MTS,PD,Submontaje",
+    "ProductNameInEnglish": "SEM315,MTS,PD,Subassembly"
+  },
+  {
+    "Product": "SDBOMERLAHD",
+    "ProductName": "SD BOM Cabecera ERLA",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "SD BOM Cabecera ERLA",
+    "ProductNameInEnglish": "SD BOM Header ERLA"
+  },
+  {
+    "Product": "SDBOMERLAIT01",
+    "ProductName": "SD BOM ERLA Item01",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "SD BOM ERLA Item01",
+    "ProductNameInEnglish": "SD BOM ERLA Item01"
+  },
+  {
+    "Product": "SDBOMERLAIT02",
+    "ProductName": "SD BOM ERLA Item02",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "SD BOM ERLA Item02",
+    "ProductNameInEnglish": "SD BOM ERLA Item02"
+  },
+  {
+    "Product": "SDBOMLUMFHD",
+    "ProductName": "SD BOM Header LUMF",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "SD BOM Header LUMF",
+    "ProductNameInEnglish": "SD BOM Header LUMF"
+  },
+  {
+    "Product": "SDBOMLUMFIT01",
+    "ProductName": "SD BOM LUMF Item01",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "SD BOM LUMF Item01",
+    "ProductNameInEnglish": "SD BOM LUMF Item01"
+  },
+  {
+    "Product": "SDBOMLUMFIT02",
+    "ProductName": "SD BOM LUMF Item02",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "SD BOM LUMF Item02",
+    "ProductNameInEnglish": "SD BOM LUMF Item02"
+  },
+  {
+    "Product": "SF-FL-COMB",
+    "ProductName": "Modelo combustión base carretilla elev.",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Modelo combustión base carretilla elev.",
+    "ProductNameInEnglish": "Forklift Base Combustion Model"
+  },
+  {
+    "Product": "SF-FL-CWEIGHT",
+    "ProductName": " Escudo contrapeso carretilla elevadora",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": " Escudo contrapeso carretilla elevadora",
+    "ProductNameInEnglish": "Forklift Counterweight  Plate"
+  },
+  {
+    "Product": "SF-FL-ELECTRIC",
+    "ProductName": "Modelo electrónico base carretilla elev.",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Modelo electrónico base carretilla elev.",
+    "ProductNameInEnglish": "Forklift Base Electrical Model"
+  },
+  {
+    "Product": "SF-FL-FORK-L",
+    "ProductName": "Carretilla elevadora de horquilla grande",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Carretilla elevadora de horquilla grande",
+    "ProductNameInEnglish": "Forklift Large Fork"
+  },
+  {
+    "Product": "SF-FL-FORK-M",
+    "ProductName": "Carretilla elevadora de horquilla media",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Carretilla elevadora de horquilla media",
+    "ProductNameInEnglish": "Forklift Medium Fork"
+  },
+  {
+    "Product": "SF-FL-FORK-S",
+    "ProductName": "Carretilla elevadora de horquilla peq.",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Carretilla elevadora de horquilla peq.",
+    "ProductNameInEnglish": "Forklift Small Fork"
+  },
+  {
+    "Product": "SF-FL-FORKSEAT-VXX",
+    "ProductName": "Tipo de asiento carretilla elev.(HALB)",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Tipo de asiento carretilla elev.(HALB)",
+    "ProductNameInEnglish": "Seat Type of Fork lifter(HALB)"
+  },
+  {
+    "Product": "SF-FL-TIRE-CUSH",
+    "ProductName": "Llanta maciza de carretilla elevadora",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Llanta maciza de carretilla elevadora",
+    "ProductNameInEnglish": "Forklift Cushion Tire"
+  },
+  {
+    "Product": "SF-FL-TIRE-PNEU",
+    "ProductName": "Llanta neumática de carretilla elevad.",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Llanta neumática de carretilla elevad.",
+    "ProductNameInEnglish": "Forklift Pneumatic Tire"
+  },
+  {
+    "Product": "SG-CFP",
+    "ProductName": "Bomba centrífuga",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Bomba centrífuga",
+    "ProductNameInEnglish": "Centrifugal Pump"
+  },
+  {
+    "Product": "SG-CFP-ADAPTER",
+    "ProductName": "Adaptador",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Adaptador",
+    "ProductNameInEnglish": "Adapter"
+  },
+  {
+    "Product": "SG-CFP-B-BRNG",
+    "ProductName": "Rodamiento de bolas",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Rodamiento de bolas",
+    "ProductNameInEnglish": "Ball Bearing"
+  },
+  {
+    "Product": "SG-CFP-BRNG-BRKT",
+    "ProductName": "Soporte de cojinete",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Soporte de cojinete",
+    "ProductNameInEnglish": "Bearing Bracket"
+  },
+  {
+    "Product": "SG-CFP-CON",
+    "ProductName": "Conector",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Conector",
+    "ProductNameInEnglish": "Connector"
+  },
+  {
+    "Product": "SG-CFP-CON_BK",
+    "ProductName": "Conector trasero",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Conector trasero",
+    "ProductNameInEnglish": "Connector Back"
+  },
+  {
+    "Product": "SG-CFP-CON_BX_CVR",
+    "ProductName": "Cubierta de la caja del conector",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Cubierta de la caja del conector",
+    "ProductNameInEnglish": "Connector Box Cover"
+  },
+  {
+    "Product": "SG-CFP-COUPLER",
+    "ProductName": "Acoplador",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Acoplador",
+    "ProductNameInEnglish": "Coupler"
+  },
+  {
+    "Product": "SG-CFP-F-SENSOR",
+    "ProductName": "Sensor de movimiento",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Sensor de movimiento",
+    "ProductNameInEnglish": "Flow Sensor"
+  },
+  {
+    "Product": "SG-CFP-HARNESS",
+    "ProductName": "Arnés",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Arnés",
+    "ProductNameInEnglish": "Harness"
+  },
+  {
+    "Product": "SG-CFP-HOUSING",
+    "ProductName": "Carcasa de la bomba",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Carcasa de la bomba",
+    "ProductNameInEnglish": "Pump housing"
+  },
+  {
+    "Product": "SG-CFP-IMPELLER",
+    "ProductName": "Impulso",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Impulso",
+    "ProductNameInEnglish": "Impeller"
+  },
+  {
+    "Product": "SG-CFP-INBRD_CVR",
+    "ProductName": "Cubierta interior",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Cubierta interior",
+    "ProductNameInEnglish": "Inboard Cover"
+  },
+  {
+    "Product": "SG-CFP-SEAL",
+    "ProductName": "Sello",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Sello",
+    "ProductNameInEnglish": "Seal"
+  },
+  {
+    "Product": "SG-CFP-SHAFT",
+    "ProductName": "Eje",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Eje",
+    "ProductNameInEnglish": "Shaft"
+  },
+  {
+    "Product": "SG-CFP-V-SENSOR",
+    "ProductName": "Sensor de vibración",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Sensor de vibración",
+    "ProductNameInEnglish": "Vibration Sensor"
+  },
+  {
+    "Product": "SG-WPM-ELEC-PLUG",
+    "ProductName": "Electrical Plug",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Electrical Plug",
+    "ProductNameInEnglish": "Electrical Plug"
+  },
+  {
+    "Product": "SG-WPM-GEAR-HSNG",
+    "ProductName": "Gear Housing",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Gear Housing",
+    "ProductNameInEnglish": "Gear Housing"
+  },
+  {
+    "Product": "SG-WPM-MOTOR-HSG",
+    "ProductName": "Motor Housing",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Motor Housing",
+    "ProductNameInEnglish": "Motor Housing"
+  },
+  {
+    "Product": "SG-WPM-RING-GEAR",
+    "ProductName": "Ring Gear",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Ring Gear",
+    "ProductNameInEnglish": "Ring Gear"
+  },
+  {
+    "Product": "SG-WPR-ARM-1",
+    "ProductName": "Wiper Arm - 1",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Wiper Arm - 1",
+    "ProductNameInEnglish": "Wiper Arm - 1"
+  },
+  {
+    "Product": "SG-WPR-ARM-2",
+    "ProductName": "Wiper Arm - 2",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Wiper Arm - 2",
+    "ProductNameInEnglish": "Wiper Arm - 2"
+  },
+  {
+    "Product": "SG-WPR-ARM-3",
+    "ProductName": "Wiper Arm - 3",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Wiper Arm - 3",
+    "ProductNameInEnglish": "Wiper Arm - 3"
+  },
+  {
+    "Product": "SG-WPR-BLADE-L",
+    "ProductName": "Wiper Blade - Large",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Wiper Blade - Large",
+    "ProductNameInEnglish": "Wiper Blade - Large"
+  },
+  {
+    "Product": "SG-WPR-BLADE-M",
+    "ProductName": "Wiper Blade - Medium",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Wiper Blade - Medium",
+    "ProductNameInEnglish": "Wiper Blade - Medium"
+  },
+  {
+    "Product": "SG-WPR-BLADE-S",
+    "ProductName": "Wiper Blade - Small",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Wiper Blade - Small",
+    "ProductNameInEnglish": "Wiper Blade - Small"
+  },
+  {
+    "Product": "SG-WPR-BOTTLE",
+    "ProductName": "Wiper Bottle",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Wiper Bottle",
+    "ProductNameInEnglish": "Wiper Bottle"
+  },
+  {
+    "Product": "SG-WPR-CNTLR",
+    "ProductName": "Wiper Controller",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Wiper Controller",
+    "ProductNameInEnglish": "Wiper Controller"
+  },
+  {
+    "Product": "SG-WPR-CNTLR-A",
+    "ProductName": "Wiper Controller Automatic",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Wiper Controller Automatic",
+    "ProductNameInEnglish": "Wiper Controller Automatic"
+  },
+  {
+    "Product": "SG-WPR-CNTLR-M",
+    "ProductName": "Wiper Controller Manual",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Wiper Controller Manual",
+    "ProductNameInEnglish": "Wiper Controller Manual"
+  },
+  {
+    "Product": "SG-WPR-MOTOR",
+    "ProductName": "Wiper Motor",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Wiper Motor",
+    "ProductNameInEnglish": "Wiper Motor"
+  },
+  {
+    "Product": "SG-WPR-WHEELBOX",
+    "ProductName": "Wiper Wheel Box",
+    "ProductType": "HALB",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Wiper Wheel Box",
+    "ProductNameInEnglish": "Wiper Wheel Box"
+  },
+  {
+    "Product": "SG1_CP",
+    "ProductName": "CP-SG1, Eje",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "CP-SG1, Eje",
+    "ProductNameInEnglish": "CP-SG1, Shaft"
+  },
+  {
+    "Product": "SG1_DS",
+    "ProductName": "SG1-DS, Shaft",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "SG1-DS, Shaft"
+  },
+  {
+    "Product": "SG1010",
+    "ProductName": "SEMI1010, DC, material de silo con lote",
+    "ProductType": "HALB",
+    "BaseUnit": "L",
+    "ProductNameInLanguage": "SEMI1010, DC, material de silo con lote",
+    "ProductNameInEnglish": "SEMI1010, PD, Silo material with batch"
+  },
+  {
+    "Product": "SG124",
+    "ProductName": "SEMI124,PD,Subassembly",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "SEMI124,PD,Subassembly"
+  },
+  {
+    "Product": "SG2_CP",
+    "ProductName": "CP-SG2, tinta embotellada",
+    "ProductType": "HALB",
+    "BaseUnit": "CCM",
+    "ProductNameInLanguage": "CP-SG2, tinta embotellada",
+    "ProductNameInEnglish": "CP-SG2, Ink Bottled"
+  },
+  {
+    "Product": "SG2_DS",
+    "ProductName": "SEMI SG2_DS",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "SEMI SG2_DS"
+  },
+  {
+    "Product": "SG21",
+    "ProductName": "SEMI21,PD,RepetitiveManuf.",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "SEMI21,PD,RepetitiveManuf."
+  },
+  {
+    "Product": "SG22",
+    "ProductName": "SEMI22,PD,Phantom",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "SEMI22,PD,Phantom"
+  },
+  {
+    "Product": "SG2200",
+    "ProductName": "SEMI2200, MTS-PI,PD, c/coprod.y subprod.",
+    "ProductType": "HALB",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "SEMI2200, MTS-PI,PD, c/coprod.y subprod.",
+    "ProductNameInEnglish": "SEMI2200,MTS-PI,PD,with Co- & By-Product"
+  },
+  {
+    "Product": "SG224",
+    "ProductName": "SEMI224,MTO,PD,Subassembly",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "SEMI224,MTO,PD,Subassembly"
+  },
+  {
+    "Product": "SG23",
+    "ProductName": "SEMI23,PD,Subcontracting",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "SEMI23,PD,Subcontracting"
+  },
+  {
+    "Product": "SG233",
+    "ProductName": "SEMI233,PD,KANBAN, REM",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "SEMI233,PD,KANBAN, REM",
+    "ProductNameInEnglish": "SEMI233,PD,KANBAN, REM"
+  },
+  {
+    "Product": "SG234",
+    "ProductName": "SEMI234,PD,KANBAN, MTS",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "SEMI234,PD,KANBAN, MTS",
+    "ProductNameInEnglish": "SEMI234,PD,KANBAN, MTS"
+  },
+  {
+    "Product": "SG24",
+    "ProductName": "SEMI24,PD,Batch-Fifo",
+    "ProductType": "HALB",
+    "BaseUnit": "CCM",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "SEMI24,PD,Batch-Fifo"
+  },
+  {
+    "Product": "SG25",
+    "ProductName": "SEMI25,PD,ExternalProcurement",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "SEMI25,PD,ExternalProcurement"
+  },
+  {
+    "Product": "SG26",
+    "ProductName": "SEMI26,PD,subcontratación",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "SEMI26,PD,subcontratación",
+    "ProductNameInEnglish": "SEMI26,PD,Subcontracting"
+  },
+  {
+    "Product": "SG27",
+    "ProductName": "SEMI27,PD,subcontratación",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "SEMI27,PD,subcontratación",
+    "ProductNameInEnglish": "SEMI27,PD,Subcontracting"
+  },
+  {
+    "Product": "SG29",
+    "ProductName": "SEM29,PD,QM",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "SEM29,PD,QM",
+    "ProductNameInEnglish": "SEM29,PD,QM"
+  },
+  {
+    "Product": "SG30",
+    "ProductName": "SEM30,PD,PP",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "SEM30,PD,PP"
+  },
+  {
+    "Product": "SG6100",
+    "ProductName": "SEMI6100, PI, PD, lote",
+    "ProductType": "HALB",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "SEMI6100, PI, PD, lote",
+    "ProductNameInEnglish": "SEMI6100, PI, PD, Batch"
+  },
+  {
+    "Product": "SG7100",
+    "ProductName": "SEMI7100, PD, subproducto",
+    "ProductType": "HALB",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "SEMI7100, PD, subproducto",
+    "ProductNameInEnglish": "SEMI7100, PD, By-Product"
+  },
+  {
+    "Product": "SG8100",
+    "ProductName": "SEMI8100, PD, coproducto, precio FIJO",
+    "ProductType": "HALB",
+    "BaseUnit": "L",
+    "ProductNameInLanguage": "SEMI8100, PD, coproducto, precio FIJO",
+    "ProductNameInEnglish": "SEMI8100, PD, Co-Product, FIX Price"
+  },
+  {
+    "Product": "SG9100",
+    "ProductName": "SEMI9100, PD, coproducto",
+    "ProductType": "HALB",
+    "BaseUnit": "L",
+    "ProductNameInLanguage": "SEMI9100, PD, coproducto",
+    "ProductNameInEnglish": "SEMI9100, PD, Co-Product"
+  },
+  {
+    "Product": "SGJIT01",
+    "ProductName": "SEMI01,JIT, fabricación repetitiva",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "SEMI01,JIT, fabricación repetitiva",
+    "ProductNameInEnglish": "SEMI01,JIT,RepetitiveManuf."
+  },
+  {
+    "Product": "SGJIT02",
+    "ProductName": "SEMI02, JIT, fabricación repetitiva",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "SEMI02, JIT, fabricación repetitiva",
+    "ProductNameInEnglish": "SEMI02,JIT,RepetitiveManuf."
+  },
+  {
+    "Product": "SGJIT02-SERIALIZED",
+    "ProductName": "MATERIAL SERIALIZADO, JIT",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "MATERIAL SERIALIZADO, JIT",
+    "ProductNameInEnglish": "SERIALIZED MATERIAL, JIT"
+  },
+  {
+    "Product": "SGPCDG01",
+    "ProductName": "Producto semielaborado MP01",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Producto semielaborado MP01",
+    "ProductNameInEnglish": "Semi Finished Good DG01"
+  },
+  {
+    "Product": "SGPCDG02",
+    "ProductName": "Producto semielaborado MP02",
+    "ProductType": "HALB",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Producto semielaborado MP02",
+    "ProductNameInEnglish": "Semi Finished Good DG02"
+  },
+  {
+    "Product": "SGPCSVT01",
+    "ProductName": "Semi SVT 01",
+    "ProductType": "HALB",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Semi SVT 01"
+  },
+  {
+    "Product": "SGPI001",
+    "ProductName": "SALIDA 1",
+    "ProductType": "HALB",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "SALIDA 1",
+    "ProductNameInEnglish": "OUTPUT 1"
+  },
+  {
+    "Product": "SGPI001-V00",
+    "ProductName": "SALIDA 1",
+    "ProductType": "HALB",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "SALIDA 1",
+    "ProductNameInEnglish": "OUTPUT 1"
+  },
+  {
+    "Product": "SGPI002",
+    "ProductName": "SALIDA 2",
+    "ProductType": "HALB",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "SALIDA 2",
+    "ProductNameInEnglish": "OUTPUT 2"
+  },
+  {
+    "Product": "SGPI003",
+    "ProductName": "SALIDA 3",
+    "ProductType": "HALB",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "SALIDA 3",
+    "ProductNameInEnglish": "OUTPUT 3"
+  },
+  {
+    "Product": "SGPI004",
+    "ProductName": "SALIDA 4",
+    "ProductType": "HALB",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "SALIDA 4",
+    "ProductNameInEnglish": "OUTPUT 4"
+  },
+  {
+    "Product": "SGPI005",
+    "ProductName": "SALIDA 5",
+    "ProductType": "HALB",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "SALIDA 5",
+    "ProductNameInEnglish": "OUTPUT 5"
+  },
+  {
+    "Product": "SGPI006",
+    "ProductName": "SALIDA 6",
+    "ProductType": "HALB",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "SALIDA 6",
+    "ProductNameInEnglish": "OUTPUT 6"
+  },
+  {
+    "Product": "SGPI007",
+    "ProductName": "SALIDA 7",
+    "ProductType": "HALB",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "SALIDA 7",
+    "ProductNameInEnglish": "OUTPUT 7"
+  },
+  {
+    "Product": "SGPI008",
+    "ProductName": "SALIDA 8",
+    "ProductType": "HALB",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "SALIDA 8",
+    "ProductNameInEnglish": "OUTPUT 8"
+  },
+  {
+    "Product": "SGPI009",
+    "ProductName": "SALIDA 9",
+    "ProductType": "HALB",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "SALIDA 9",
+    "ProductNameInEnglish": "OUTPUT 9"
+  },
+  {
+    "Product": "SGPI010",
+    "ProductName": "SALIDA 10",
+    "ProductType": "HALB",
+    "BaseUnit": "KG",
+    "ProductNameInLanguage": "SALIDA 10",
+    "ProductNameInEnglish": "OUTPUT 10"
+  },
+  {
+    "Product": "SM_PROD01",
+    "ProductName": "Equipment Repair (T&M)",
+    "ProductType": "DIEN",
+    "BaseUnit": "LE",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Equipment Repair (T&M)"
+  },
+  {
+    "Product": "SM_PROD02",
+    "ProductName": "Equipment Maintenance",
+    "ProductType": "DIEN",
+    "BaseUnit": "LE",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Equipment Maintenance"
+  },
+  {
+    "Product": "SM_PROD03",
+    "ProductName": "Equipment Repair (Fixed Price)",
+    "ProductType": "DIEN",
+    "BaseUnit": "LE",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Equipment Repair (Fixed Price)"
+  },
+  {
+    "Product": "SM_REP01",
+    "ProductName": "Repair Service",
+    "ProductType": "DIEN",
+    "BaseUnit": "STD",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Repair Service"
+  },
+  {
+    "Product": "SM0001",
+    "ProductName": "Material servicio 01",
+    "ProductType": "SERV",
+    "BaseUnit": "H",
+    "ProductNameInLanguage": "Material servicio 01",
+    "ProductNameInEnglish": "Service Material 01"
+  },
+  {
+    "Product": "SOM_MSU_CLD_INFRA",
+    "ProductName": "Multi Level Cloud Infrastructure",
+    "ProductType": "SUBS",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Multi Level Cloud Infrastructure"
+  },
+  {
+    "Product": "SOM_MSU_WL_VM",
+    "ProductName": "Workload - Virtual Machine",
+    "ProductType": "SUBS",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Workload - Virtual Machine"
+  },
+  {
+    "Product": "SOM_SCR_CLD_STR",
+    "ProductName": "Cloud Subscription Storage",
+    "ProductType": "SUBS",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Cloud Subscription Storage"
+  },
+  {
+    "Product": "SOM_SCR_VM_INST_GP",
+    "ProductName": "VM Instance - General Purpose",
+    "ProductType": "SUBS",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "VM Instance - General Purpose"
+  },
+  {
+    "Product": "SOM_SCR_VM_INST_SO",
+    "ProductName": "VM Instance - Storage Optimized",
+    "ProductType": "SUBS",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "VM Instance - Storage Optimized"
+  },
+  {
+    "Product": "SOM_SCR_WL_BR_MTL",
+    "ProductName": "Workload - Bare Metal",
+    "ProductType": "SUBS",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Workload - Bare Metal"
+  },
+  {
+    "Product": "SP001",
+    "ProductName": "Cojinete",
+    "ProductType": "ERSA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Cojinete",
+    "ProductNameInEnglish": "Bearing"
+  },
+  {
+    "Product": "SP002",
+    "ProductName": "Acoplamiento",
+    "ProductType": "ERSA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Acoplamiento",
+    "ProductNameInEnglish": "Coupling"
+  },
+  {
+    "Product": "SP003",
+    "ProductName": "Eje",
+    "ProductType": "ERSA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Eje",
+    "ProductNameInEnglish": "Shaft"
+  },
+  {
+    "Product": "SP004",
+    "ProductName": "Juntas 1mm",
+    "ProductType": "ERSA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Juntas 1mm",
+    "ProductNameInEnglish": "Gaskets 1mm"
+  },
+  {
+    "Product": "SP005",
+    "ProductName": "Junta mecánica",
+    "ProductType": "ERSA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Junta mecánica",
+    "ProductNameInEnglish": "Mechanical Seal"
+  },
+  {
+    "Product": "SP006",
+    "ProductName": "Engranaje IS651",
+    "ProductType": "ERSA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Engranaje IS651",
+    "ProductNameInEnglish": "Spur gear IS651"
+  },
+  {
+    "Product": "SPP-MAT-100",
+    "ProductName": "SPP Material for forecasting 1",
+    "ProductType": "FERT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "SPP Material for forecasting 1"
+  },
+  {
+    "Product": "SPP-MAT-200",
+    "ProductName": "SPP Material for forecasting 2",
+    "ProductType": "FERT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "SPP Material for forecasting 2"
+  },
+  {
+    "Product": "SPP-MAT-300",
+    "ProductName": "SPP Material for forecasting 3",
+    "ProductType": "FERT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "SPP Material for forecasting 3"
+  },
+  {
+    "Product": "SPP-MAT-400",
+    "ProductName": "SPP Material for forecasting 4",
+    "ProductType": "FERT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "SPP Material for forecasting 4"
+  },
+  {
+    "Product": "SPP-MAT-500",
+    "ProductName": "SPP Material for forecasting 5",
+    "ProductType": "FERT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "SPP Material for forecasting 5"
+  },
+  {
+    "Product": "SQ_BUND_01",
+    "ProductName": "Solution Quotation Bundle Product",
+    "ProductType": "BUND",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Solution Quotation Bundle Product"
+  },
+  {
+    "Product": "SRV_02",
+    "ProductName": "Service Expense",
+    "ProductType": "SERV",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Service Expense"
+  },
+  {
+    "Product": "SRV_CONTRACT",
+    "ProductName": "Service Contract Product",
+    "ProductType": "SERV",
+    "BaseUnit": "LE",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Service Contract Product"
+  },
+  {
+    "Product": "SRV_DIAGNOSIS",
+    "ProductName": "Service Diagnosis",
+    "ProductType": "SERV",
+    "BaseUnit": "STD",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Service Diagnosis"
+  },
+  {
+    "Product": "SRV_PART_CONFIG",
+    "ProductName": "Service Part Configurable",
+    "ProductType": "KMAT",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Service Part Configurable"
+  },
+  {
+    "Product": "SRV_PROD_CONFIG",
+    "ProductName": "Service Product Configurable",
+    "ProductType": "SERV",
+    "BaseUnit": "LE",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Service Product Configurable"
+  },
+  {
+    "Product": "SRV_PUMP_CONFIG",
+    "ProductName": "Pump Service (configurable)",
+    "ProductType": "DIEN",
+    "BaseUnit": "LE",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Pump Service (configurable)"
+  },
+  {
+    "Product": "SRV_TG01",
+    "ProductName": "Trad.Good Printer Pro IHR",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Trad.Good Printer Pro IHR"
+  },
+  {
+    "Product": "SWN-CFG-SW-S1",
+    "ProductName": "Software S1",
+    "ProductType": "SWNV",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Software S1",
+    "ProductNameInEnglish": "Software S1"
+  },
+  {
+    "Product": "SWN-WPR-SW-A",
+    "ProductName": "Wiper Software Automatic",
+    "ProductType": "SWNV",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Wiper Software Automatic",
+    "ProductNameInEnglish": "Wiper Software Automatic"
+  },
+  {
+    "Product": "SWN-WPR-SW-M",
+    "ProductName": "Wiper Software Manual",
+    "ProductType": "SWNV",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Wiper Software Manual",
+    "ProductNameInEnglish": "Wiper Software Manual"
+  },
+  {
+    "Product": "SWN-WPR-SW-S1",
+    "ProductName": "Wiper Software S1",
+    "ProductType": "SWNV",
+    "BaseUnit": "EA",
+    "ProductNameInLanguage": "Wiper Software S1",
+    "ProductNameInEnglish": "Wiper Software S1"
+  },
+  {
+    "Product": "SWNIPD001",
+    "ProductName": "Software ARM 1",
+    "ProductType": "SWNV",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Software ARM 1",
+    "ProductNameInEnglish": "ARM Software 1"
+  },
+  {
+    "Product": "SWNIPD002",
+    "ProductName": "ARM sofware 2",
+    "ProductType": "SWNV",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "ARM sofware 2",
+    "ProductNameInEnglish": "ARM Software 2"
+  },
+  {
+    "Product": "TEMP_JIG_1",
+    "ProductName": "Template JIG 1",
+    "ProductType": "FHMI",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Template JIG 1"
+  },
+  {
+    "Product": "TG0001",
+    "ProductName": "Mercancía comerciable para consumo",
+    "ProductType": "MAT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Mercancía comerciable para consumo",
+    "ProductNameInEnglish": "Trading Good for Consumption"
+  },
+  {
+    "Product": "TG0011",
+    "ProductName": "Mcía.comerciable 0012,PD, proc.habitual",
+    "ProductType": "MAT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Mcía.comerciable 0012,PD, proc.habitual",
+    "ProductNameInEnglish": "Trading Good 0011,PD,Regular Proc."
+  },
+  {
+    "Product": "TG0012",
+    "ProductName": "Mcía.comerc.0012,reg., proc.habitual",
+    "ProductType": "MAT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Mcía.comerc.0012,reg., proc.habitual",
+    "ProductNameInEnglish": "Trad. Good 0012,Reord. Pt.,Regular Proc."
+  },
+  {
+    "Product": "TG0013",
+    "ProductName": "Mercancía comerc. 0013,PD,Proc.regular",
+    "ProductType": "MAT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Mercancía comerc. 0013,PD,Proc.regular",
+    "ProductNameInEnglish": "Trading Good 0013,PD,Regular Proc."
+  },
+  {
+    "Product": "TG0014",
+    "ProductName": "Mercadería 0014,PD,procedimiento regular",
+    "ProductType": "MAT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Mercadería 0014,PD,procedimiento regular",
+    "ProductNameInEnglish": "Trading Good 0014,PD,Regular Proc."
+  },
+  {
+    "Product": "TG0015",
+    "ProductName": "Mercadería 0015,PD,proc.regular",
+    "ProductType": "MAT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Mercadería 0015,PD,proc.regular",
+    "ProductNameInEnglish": "Trading Good 0015,PD,Regular Proc."
+  },
+  {
+    "Product": "TG0099",
+    "ProductName": "Mercadería 0099, DC, proc.regular",
+    "ProductType": "MAT",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Mercadería 0099, DC, proc.regular",
+    "ProductNameInEnglish": "Trading Good 0099,PD,Regular Proc."
+  },
+  {
+    "Product": "TG10",
+    "ProductName": "Mercancía comerciable 10, PD, tramo",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Mercancía comerciable 10, PD, tramo",
+    "ProductNameInEnglish": "Trad.Good 10,PD,Third Party"
+  },
+  {
+    "Product": "TG11",
+    "ProductName": "Mcía.comerc.11, PD, comercio registrado",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Mcía.comerc.11, PD, comercio registrado",
+    "ProductNameInEnglish": "Trad.Good 11,PD,Reg.Trading"
+  },
+  {
+    "Product": "TG12",
+    "ProductName": "Mcía.com.12, pto.pedido, comercio reg.",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Mcía.com.12, pto.pedido, comercio reg.",
+    "ProductNameInEnglish": "Trad.Good 12,Reorder Point,Reg.Trad."
+  },
+  {
+    "Product": "TG13",
+    "ProductName": "Mcía.comerc.13, punto de pedido, tramo",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Mcía.comerc.13, punto de pedido, tramo",
+    "ProductNameInEnglish": "Trad.Good 13,Reorder Point,Thrd Party"
+  },
+  {
+    "Product": "TG14",
+    "ProductName": "Mcía.comerciable 14, PD, comprado, H14",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Mcía.comerciable 14, PD, comprado, H14",
+    "ProductNameInEnglish": "Trad.Good 14,PD,Bought-In,H14"
+  },
+  {
+    "Product": "TG20",
+    "ProductName": "Mcía.comerc.20, punto pedido, núm.serie",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Mcía.comerc.20, punto pedido, núm.serie",
+    "ProductNameInEnglish": "Trad.Good 20,Reorder Point,SerialNo"
+  },
+  {
+    "Product": "TG21",
+    "ProductName": "Mcía.comerc.21, punto pedido, FIFO lote",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Mcía.comerc.21, punto pedido, FIFO lote",
+    "ProductNameInEnglish": "Trad.Good 21,Reorder Point,Batch-FIFO"
+  },
+  {
+    "Product": "TG22",
+    "ProductName": "Mcía.com.22, punto pedido, fe.exp.lote",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "Mcía.com.22, punto pedido, fe.exp.lote",
+    "ProductNameInEnglish": "Trad.Good 22,Reorder Point,Batch-ExpD"
+  },
+  {
+    "Product": "TG24",
+    "ProductName": "Trad.Good 24, Adv. SR",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Trad.Good 24, Adv. SR"
+  },
+  {
+    "Product": "TG25",
+    "ProductName": "Trad.Good 25, Adv. SR",
+    "ProductType": "HAWA",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Trad.Good 25, Adv. SR"
+  },
+  {
+    "Product": "TORQ_WRENCH",
+    "ProductName": "Torque Wrench",
+    "ProductType": "FHMI",
+    "BaseUnit": "ST",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Torque Wrench"
+  },
+  {
+    "Product": "UE01",
+    "ProductName": "Util. Electricity A",
+    "ProductType": "U001",
+    "BaseUnit": "KWH",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Util. Electricity A"
+  },
+  {
+    "Product": "UE02",
+    "ProductName": "Util. Electricity B",
+    "ProductType": "U001",
+    "BaseUnit": "KWH",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Util. Electricity B"
+  },
+  {
+    "Product": "UR01",
+    "ProductName": "Util. Ref. Material",
+    "ProductType": "UR01",
+    "BaseUnit": "KWH",
+    "ProductNameInLanguage": "",
+    "ProductNameInEnglish": "Util. Ref. Material"
+  }
+]

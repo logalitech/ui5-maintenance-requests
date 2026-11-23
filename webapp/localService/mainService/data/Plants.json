@@ -1,0 +1,117 @@
+[
+  {
+    "Plant": "1010",
+    "PlantName": "Plant 1 DE",
+    "EquipmentCount": 97
+  },
+  {
+    "Plant": "1110",
+    "PlantName": "Plant 1 GB",
+    "EquipmentCount": 93
+  },
+  {
+    "Plant": "1210",
+    "PlantName": "Plant 1 FR",
+    "EquipmentCount": 93
+  },
+  {
+    "Plant": "1310",
+    "PlantName": "Plant 1 CN",
+    "EquipmentCount": 93
+  },
+  {
+    "Plant": "1410",
+    "PlantName": "Plant 1 BR",
+    "EquipmentCount": 93
+  },
+  {
+    "Plant": "1610",
+    "PlantName": "Plant 1 RU",
+    "EquipmentCount": 93
+  },
+  {
+    "Plant": "1710",
+    "PlantName": "Plant 1 US",
+    "EquipmentCount": 97
+  },
+  {
+    "Plant": "1810",
+    "PlantName": "Plant 1 IN",
+    "EquipmentCount": 93
+  },
+  {
+    "Plant": "2110",
+    "PlantName": "Plant 1 HU",
+    "EquipmentCount": 93
+  },
+  {
+    "Plant": "2210",
+    "PlantName": "Plant 1 CH",
+    "EquipmentCount": 93
+  },
+  {
+    "Plant": "2310",
+    "PlantName": "Plant 1 IT",
+    "EquipmentCount": 93
+  },
+  {
+    "Plant": "2410",
+    "PlantName": "Plant 1 ES",
+    "EquipmentCount": 93
+  },
+  {
+    "Plant": "2510",
+    "PlantName": "Plant 1 BE",
+    "EquipmentCount": 93
+  },
+  {
+    "Plant": "2610",
+    "PlantName": "Plant 1 PL",
+    "EquipmentCount": 93
+  },
+  {
+    "Plant": "2910",
+    "PlantName": "Plant 1 CA",
+    "EquipmentCount": 93
+  },
+  {
+    "Plant": "3010",
+    "PlantName": "Plant 1 AU",
+    "EquipmentCount": 93
+  },
+  {
+    "Plant": "3310",
+    "PlantName": "Plant 1 AE",
+    "EquipmentCount": 93
+  },
+  {
+    "Plant": "3510",
+    "PlantName": "Plant 1 PT",
+    "EquipmentCount": 93
+  },
+  {
+    "Plant": "3610",
+    "PlantName": "Plant 1 TR",
+    "EquipmentCount": 93
+  },
+  {
+    "Plant": "3710",
+    "PlantName": "Plant 1 NL",
+    "EquipmentCount": 93
+  },
+  {
+    "Plant": "5510",
+    "PlantName": "Plant 1 MX",
+    "EquipmentCount": 93
+  },
+  {
+    "Plant": "6410",
+    "PlantName": "Plant 1 ZA",
+    "EquipmentCount": 93
+  },
+  {
+    "Plant": "7K10",
+    "PlantName": "Plant 1 LU",
+    "EquipmentCount": 93
+  }
+]

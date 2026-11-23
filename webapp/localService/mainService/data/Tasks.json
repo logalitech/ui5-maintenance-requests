@@ -1,0 +1,3422 @@
+[
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b756b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b754b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b758b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b754b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b75ab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b754b65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b762b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b760b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b764b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b760b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b766b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b760b65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b768b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b760b65",
+    "TaskNumber": "40",
+    "Description": "Probar y poner en servicio",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b770b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b76eb65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b772b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b76eb65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b77cb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b77ab65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 3,
+    "ActualHours": 3,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b77eb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b77ab65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 1,
+    "ActualHours": 1,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b780b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b77ab65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 2,
+    "ActualHours": 2,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b784b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b782b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b786b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b782b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b788b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b782b65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b78ab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b782b65",
+    "TaskNumber": "40",
+    "Description": "Probar y poner en servicio",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b790b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b78eb65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b792b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b78eb65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b79ab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b798b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b79cb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b798b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b79eb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b798b65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7aab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7a8b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7acb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7a8b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7aeb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7a8b65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7b0b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7a8b65",
+    "TaskNumber": "40",
+    "Description": "Probar y poner en servicio",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7b4b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7b2b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 2,
+    "ActualHours": 2,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7b6b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7b2b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 3,
+    "ActualHours": 3,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7bcb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7bab65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7beb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7bab65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7c0b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7bab65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7c8b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7c6b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7cab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7c6b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7ccb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7c6b65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7ceb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7c6b65",
+    "TaskNumber": "40",
+    "Description": "Probar y poner en servicio",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef348b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef346b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef34ab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef346b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef34eb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef34cb65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef350b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef34cb65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef352b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef34cb65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef35ab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef358b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 1,
+    "ActualHours": 1,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef35cb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef358b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 2,
+    "ActualHours": 2,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef35eb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef358b65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 3,
+    "ActualHours": 3,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef360b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef358b65",
+    "TaskNumber": "40",
+    "Description": "Probar y poner en servicio",
+    "PlannedHours": 1,
+    "ActualHours": 1,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef368b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef366b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef36ab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef366b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef374b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef372b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef376b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef372b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef378b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef372b65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef37cb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef37ab65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef37eb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef37ab65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef380b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef37ab65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef382b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef37ab65",
+    "TaskNumber": "40",
+    "Description": "Probar y poner en servicio",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef388b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef386b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef38ab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef386b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef392b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef390b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 3,
+    "ActualHours": 3,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef394b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef390b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 1,
+    "ActualHours": 1,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef396b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef390b65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 2,
+    "ActualHours": 2,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3a2b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3a0b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3a4b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3a0b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3a6b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3a0b65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3a8b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3a0b65",
+    "TaskNumber": "40",
+    "Description": "Probar y poner en servicio",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3acb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3aab65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3aeb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3aab65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3b4b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3b2b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3b6b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3b2b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3b8b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3b2b65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3c0b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3beb65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3c2b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3beb65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3c4b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3beb65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3c6b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3beb65",
+    "TaskNumber": "40",
+    "Description": "Probar y poner en servicio",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3d0b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3ceb65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 2,
+    "ActualHours": 2,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3d2b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3ceb65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 3,
+    "ActualHours": 3,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3d6b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3d4b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3d8b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3d4b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3dab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3d4b65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3e2b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3e0b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3e4b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3e0b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3e6b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3e0b65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3e8b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3e0b65",
+    "TaskNumber": "40",
+    "Description": "Probar y poner en servicio",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3f0b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3eeb65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3f2b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3eeb65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3fcb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3fab65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3feb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3fab65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef400b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3fab65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef404b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef402b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 1,
+    "ActualHours": 1,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef406b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef402b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 2,
+    "ActualHours": 2,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef408b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef402b65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 3,
+    "ActualHours": 3,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef40ab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef402b65",
+    "TaskNumber": "40",
+    "Description": "Probar y poner en servicio",
+    "PlannedHours": 1,
+    "ActualHours": 1,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef410b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef40eb65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef412b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef40eb65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef41ab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef418b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef41cb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef418b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef41eb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef418b65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef42ab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef428b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef42cb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef428b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef42eb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef428b65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef430b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef428b65",
+    "TaskNumber": "40",
+    "Description": "Probar y poner en servicio",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef434b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef432b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef436b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef432b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef43cb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef43ab65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 3,
+    "ActualHours": 3,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef43eb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef43ab65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 1,
+    "ActualHours": 1,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cda8b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef43ab65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 2,
+    "ActualHours": 2,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdb0b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdaeb65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdb2b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdaeb65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdb4b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdaeb65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdb6b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdaeb65",
+    "TaskNumber": "40",
+    "Description": "Probar y poner en servicio",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdc0b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdbeb65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdc2b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdbeb65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdc6b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdc4b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdc8b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdc4b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdcab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdc4b65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdd2b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdd0b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdd4b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdd0b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdd6b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdd0b65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdd8b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdd0b65",
+    "TaskNumber": "40",
+    "Description": "Probar y poner en servicio",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cde0b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cddeb65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 2,
+    "ActualHours": 2,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cde2b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cddeb65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 3,
+    "ActualHours": 3,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdecb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdeab65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdeeb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdeab65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdf0b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdeab65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdf4b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdf2b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdf6b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdf2b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdf8b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdf2b65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdfab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdf2b65",
+    "TaskNumber": "40",
+    "Description": "Probar y poner en servicio",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce00b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdfeb65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce02b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdfeb65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce0ab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce08b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce0cb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce08b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce0eb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce08b65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce1ab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce18b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 1,
+    "ActualHours": 1,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce1cb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce18b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 2,
+    "ActualHours": 2,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce1eb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce18b65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 3,
+    "ActualHours": 3,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce20b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce18b65",
+    "TaskNumber": "40",
+    "Description": "Probar y poner en servicio",
+    "PlannedHours": 1,
+    "ActualHours": 1,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce24b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce22b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce26b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce22b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce2cb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce2ab65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce2eb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce2ab65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce30b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce2ab65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce38b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce36b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce3ab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce36b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce3cb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce36b65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce3eb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce36b65",
+    "TaskNumber": "40",
+    "Description": "Probar y poner en servicio",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce48b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce46b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce4ab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce46b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce4eb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce4cb65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 3,
+    "ActualHours": 3,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce50b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce4cb65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 1,
+    "ActualHours": 1,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce52b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce4cb65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 2,
+    "ActualHours": 2,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce5ab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce58b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce5cb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce58b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce5eb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce58b65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce60b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce58b65",
+    "TaskNumber": "40",
+    "Description": "Probar y poner en servicio",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce68b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce66b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce6ab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce66b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce74b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce72b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce76b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce72b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce78b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce72b65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce7cb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce7ab65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce7eb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce7ab65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce80b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce7ab65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce82b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce7ab65",
+    "TaskNumber": "40",
+    "Description": "Probar y poner en servicio",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce88b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce86b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 2,
+    "ActualHours": 2,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce8ab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce86b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 3,
+    "ActualHours": 3,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce92b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce90b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce94b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce90b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce96b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce90b65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cea2b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cea0b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cea4b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cea0b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cea6b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cea0b65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cea8b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cea0b65",
+    "TaskNumber": "40",
+    "Description": "Probar y poner en servicio",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ceacb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ceaab65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ceaeb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ceaab65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ceb4b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ceb2b65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ceb6b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ceb2b65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 1,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ceb8b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ceb2b65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cec0b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cebeb65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 1,
+    "ActualHours": 1,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cec2b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cebeb65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 2,
+    "ActualHours": 2,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cec4b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cebeb65",
+    "TaskNumber": "30",
+    "Description": "Sustituir la pieza",
+    "PlannedHours": 3,
+    "ActualHours": 3,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97cec6b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cebeb65",
+    "TaskNumber": "40",
+    "Description": "Probar y poner en servicio",
+    "PlannedHours": 1,
+    "ActualHours": 1,
+    "IsCompleted": true,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ced0b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ceceb65",
+    "TaskNumber": "10",
+    "Description": "Aislar y bloquear el equipo",
+    "PlannedHours": 2,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "TaskUUID": "bc24114a-d99a-1fd1-b9ab-01c97ced2b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ceceb65",
+    "TaskNumber": "20",
+    "Description": "Desmontar el componente",
+    "PlannedHours": 3,
+    "ActualHours": 0,
+    "IsCompleted": false,
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  }
+]

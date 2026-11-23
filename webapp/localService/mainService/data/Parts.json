@@ -1,0 +1,1802 @@
+[
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c15b75cb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b754b65",
+    "Product": "SP003",
+    "ProductName": "Eje",
+    "Quantity": 3,
+    "QuantityUnit": "ST",
+    "UnitPrice": 24.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c15b76ab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b760b65",
+    "Product": "SP004",
+    "ProductName": "Juntas 1mm",
+    "Quantity": 4,
+    "QuantityUnit": "ST",
+    "UnitPrice": 45,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c15b76cb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b760b65",
+    "Product": "SP005",
+    "ProductName": "Junta mecánica",
+    "Quantity": 1,
+    "QuantityUnit": "ST",
+    "UnitPrice": 79.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c15b774b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b76eb65",
+    "Product": "SP005",
+    "ProductName": "Junta mecánica",
+    "Quantity": 1,
+    "QuantityUnit": "ST",
+    "UnitPrice": 79.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c15b776b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b76eb65",
+    "Product": "SP006",
+    "ProductName": "Engranaje IS651",
+    "Quantity": 2,
+    "QuantityUnit": "ST",
+    "UnitPrice": 120,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c15b778b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b76eb65",
+    "Product": "SP001",
+    "ProductName": "Cojinete",
+    "Quantity": 3,
+    "QuantityUnit": "ST",
+    "UnitPrice": 8.5,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c15b78cb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b782b65",
+    "Product": "SP001",
+    "ProductName": "Cojinete",
+    "Quantity": 3,
+    "QuantityUnit": "ST",
+    "UnitPrice": 8.5,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c15b794b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b78eb65",
+    "Product": "SP002",
+    "ProductName": "Acoplamiento",
+    "Quantity": 4,
+    "QuantityUnit": "ST",
+    "UnitPrice": 12.5,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c15b796b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b78eb65",
+    "Product": "SP003",
+    "ProductName": "Eje",
+    "Quantity": 1,
+    "QuantityUnit": "ST",
+    "UnitPrice": 24.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7a0b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b798b65",
+    "Product": "SP003",
+    "ProductName": "Eje",
+    "Quantity": 1,
+    "QuantityUnit": "ST",
+    "UnitPrice": 24.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7a2b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b798b65",
+    "Product": "SP004",
+    "ProductName": "Juntas 1mm",
+    "Quantity": 2,
+    "QuantityUnit": "ST",
+    "UnitPrice": 45,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7a4b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b798b65",
+    "Product": "SP005",
+    "ProductName": "Junta mecánica",
+    "Quantity": 3,
+    "QuantityUnit": "ST",
+    "UnitPrice": 79.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7b8b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7b2b65",
+    "Product": "SP005",
+    "ProductName": "Junta mecánica",
+    "Quantity": 3,
+    "QuantityUnit": "ST",
+    "UnitPrice": 79.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7c2b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7bab65",
+    "Product": "SP006",
+    "ProductName": "Engranaje IS651",
+    "Quantity": 4,
+    "QuantityUnit": "ST",
+    "UnitPrice": 120,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7c4b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7bab65",
+    "Product": "SP001",
+    "ProductName": "Cojinete",
+    "Quantity": 1,
+    "QuantityUnit": "ST",
+    "UnitPrice": 8.5,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef340b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7c6b65",
+    "Product": "SP001",
+    "ProductName": "Cojinete",
+    "Quantity": 1,
+    "QuantityUnit": "ST",
+    "UnitPrice": 8.5,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef342b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7c6b65",
+    "Product": "SP002",
+    "ProductName": "Acoplamiento",
+    "Quantity": 2,
+    "QuantityUnit": "ST",
+    "UnitPrice": 12.5,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef344b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c15b7c6b65",
+    "Product": "SP003",
+    "ProductName": "Eje",
+    "Quantity": 3,
+    "QuantityUnit": "ST",
+    "UnitPrice": 24.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef354b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef34cb65",
+    "Product": "SP003",
+    "ProductName": "Eje",
+    "Quantity": 3,
+    "QuantityUnit": "ST",
+    "UnitPrice": 24.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef362b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef358b65",
+    "Product": "SP004",
+    "ProductName": "Juntas 1mm",
+    "Quantity": 4,
+    "QuantityUnit": "ST",
+    "UnitPrice": 45,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef364b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef358b65",
+    "Product": "SP005",
+    "ProductName": "Junta mecánica",
+    "Quantity": 1,
+    "QuantityUnit": "ST",
+    "UnitPrice": 79.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef36cb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef366b65",
+    "Product": "SP005",
+    "ProductName": "Junta mecánica",
+    "Quantity": 1,
+    "QuantityUnit": "ST",
+    "UnitPrice": 79.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef36eb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef366b65",
+    "Product": "SP006",
+    "ProductName": "Engranaje IS651",
+    "Quantity": 2,
+    "QuantityUnit": "ST",
+    "UnitPrice": 120,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef370b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef366b65",
+    "Product": "SP001",
+    "ProductName": "Cojinete",
+    "Quantity": 3,
+    "QuantityUnit": "ST",
+    "UnitPrice": 8.5,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef384b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef37ab65",
+    "Product": "SP001",
+    "ProductName": "Cojinete",
+    "Quantity": 3,
+    "QuantityUnit": "ST",
+    "UnitPrice": 8.5,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef38cb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef386b65",
+    "Product": "SP002",
+    "ProductName": "Acoplamiento",
+    "Quantity": 4,
+    "QuantityUnit": "ST",
+    "UnitPrice": 12.5,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef38eb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef386b65",
+    "Product": "SP003",
+    "ProductName": "Eje",
+    "Quantity": 1,
+    "QuantityUnit": "ST",
+    "UnitPrice": 24.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef398b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef390b65",
+    "Product": "SP003",
+    "ProductName": "Eje",
+    "Quantity": 1,
+    "QuantityUnit": "ST",
+    "UnitPrice": 24.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef39ab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef390b65",
+    "Product": "SP004",
+    "ProductName": "Juntas 1mm",
+    "Quantity": 2,
+    "QuantityUnit": "ST",
+    "UnitPrice": 45,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef39cb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef390b65",
+    "Product": "SP005",
+    "ProductName": "Junta mecánica",
+    "Quantity": 3,
+    "QuantityUnit": "ST",
+    "UnitPrice": 79.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3b0b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3aab65",
+    "Product": "SP005",
+    "ProductName": "Junta mecánica",
+    "Quantity": 3,
+    "QuantityUnit": "ST",
+    "UnitPrice": 79.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3bab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3b2b65",
+    "Product": "SP006",
+    "ProductName": "Engranaje IS651",
+    "Quantity": 4,
+    "QuantityUnit": "ST",
+    "UnitPrice": 120,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3bcb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3b2b65",
+    "Product": "SP001",
+    "ProductName": "Cojinete",
+    "Quantity": 1,
+    "QuantityUnit": "ST",
+    "UnitPrice": 8.5,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3c8b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3beb65",
+    "Product": "SP001",
+    "ProductName": "Cojinete",
+    "Quantity": 1,
+    "QuantityUnit": "ST",
+    "UnitPrice": 8.5,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3cab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3beb65",
+    "Product": "SP002",
+    "ProductName": "Acoplamiento",
+    "Quantity": 2,
+    "QuantityUnit": "ST",
+    "UnitPrice": 12.5,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3ccb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3beb65",
+    "Product": "SP003",
+    "ProductName": "Eje",
+    "Quantity": 3,
+    "QuantityUnit": "ST",
+    "UnitPrice": 24.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3dcb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3d4b65",
+    "Product": "SP003",
+    "ProductName": "Eje",
+    "Quantity": 3,
+    "QuantityUnit": "ST",
+    "UnitPrice": 24.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3eab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3e0b65",
+    "Product": "SP004",
+    "ProductName": "Juntas 1mm",
+    "Quantity": 4,
+    "QuantityUnit": "ST",
+    "UnitPrice": 45,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3ecb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3e0b65",
+    "Product": "SP005",
+    "ProductName": "Junta mecánica",
+    "Quantity": 1,
+    "QuantityUnit": "ST",
+    "UnitPrice": 79.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3f4b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3eeb65",
+    "Product": "SP005",
+    "ProductName": "Junta mecánica",
+    "Quantity": 1,
+    "QuantityUnit": "ST",
+    "UnitPrice": 79.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3f6b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3eeb65",
+    "Product": "SP006",
+    "ProductName": "Engranaje IS651",
+    "Quantity": 2,
+    "QuantityUnit": "ST",
+    "UnitPrice": 120,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3f8b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef3eeb65",
+    "Product": "SP001",
+    "ProductName": "Cojinete",
+    "Quantity": 3,
+    "QuantityUnit": "ST",
+    "UnitPrice": 8.5,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef40cb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef402b65",
+    "Product": "SP001",
+    "ProductName": "Cojinete",
+    "Quantity": 3,
+    "QuantityUnit": "ST",
+    "UnitPrice": 8.5,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef414b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef40eb65",
+    "Product": "SP002",
+    "ProductName": "Acoplamiento",
+    "Quantity": 4,
+    "QuantityUnit": "ST",
+    "UnitPrice": 12.5,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef416b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef40eb65",
+    "Product": "SP003",
+    "ProductName": "Eje",
+    "Quantity": 1,
+    "QuantityUnit": "ST",
+    "UnitPrice": 24.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef420b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef418b65",
+    "Product": "SP003",
+    "ProductName": "Eje",
+    "Quantity": 1,
+    "QuantityUnit": "ST",
+    "UnitPrice": 24.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef422b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef418b65",
+    "Product": "SP004",
+    "ProductName": "Juntas 1mm",
+    "Quantity": 2,
+    "QuantityUnit": "ST",
+    "UnitPrice": 45,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef424b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef418b65",
+    "Product": "SP005",
+    "ProductName": "Junta mecánica",
+    "Quantity": 3,
+    "QuantityUnit": "ST",
+    "UnitPrice": 79.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef438b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef432b65",
+    "Product": "SP005",
+    "ProductName": "Junta mecánica",
+    "Quantity": 3,
+    "QuantityUnit": "ST",
+    "UnitPrice": 79.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdaab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef43ab65",
+    "Product": "SP006",
+    "ProductName": "Engranaje IS651",
+    "Quantity": 4,
+    "QuantityUnit": "ST",
+    "UnitPrice": 120,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdacb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c8ef43ab65",
+    "Product": "SP001",
+    "ProductName": "Cojinete",
+    "Quantity": 1,
+    "QuantityUnit": "ST",
+    "UnitPrice": 8.5,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdb8b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdaeb65",
+    "Product": "SP001",
+    "ProductName": "Cojinete",
+    "Quantity": 1,
+    "QuantityUnit": "ST",
+    "UnitPrice": 8.5,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdbab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdaeb65",
+    "Product": "SP002",
+    "ProductName": "Acoplamiento",
+    "Quantity": 2,
+    "QuantityUnit": "ST",
+    "UnitPrice": 12.5,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdbcb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdaeb65",
+    "Product": "SP003",
+    "ProductName": "Eje",
+    "Quantity": 3,
+    "QuantityUnit": "ST",
+    "UnitPrice": 24.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdccb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdc4b65",
+    "Product": "SP003",
+    "ProductName": "Eje",
+    "Quantity": 3,
+    "QuantityUnit": "ST",
+    "UnitPrice": 24.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97cddab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdd0b65",
+    "Product": "SP004",
+    "ProductName": "Juntas 1mm",
+    "Quantity": 4,
+    "QuantityUnit": "ST",
+    "UnitPrice": 45,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97cddcb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdd0b65",
+    "Product": "SP005",
+    "ProductName": "Junta mecánica",
+    "Quantity": 1,
+    "QuantityUnit": "ST",
+    "UnitPrice": 79.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97cde4b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cddeb65",
+    "Product": "SP005",
+    "ProductName": "Junta mecánica",
+    "Quantity": 1,
+    "QuantityUnit": "ST",
+    "UnitPrice": 79.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97cde6b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cddeb65",
+    "Product": "SP006",
+    "ProductName": "Engranaje IS651",
+    "Quantity": 2,
+    "QuantityUnit": "ST",
+    "UnitPrice": 120,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97cde8b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cddeb65",
+    "Product": "SP001",
+    "ProductName": "Cojinete",
+    "Quantity": 3,
+    "QuantityUnit": "ST",
+    "UnitPrice": 8.5,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdfcb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdf2b65",
+    "Product": "SP001",
+    "ProductName": "Cojinete",
+    "Quantity": 3,
+    "QuantityUnit": "ST",
+    "UnitPrice": 8.5,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce04b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdfeb65",
+    "Product": "SP002",
+    "ProductName": "Acoplamiento",
+    "Quantity": 4,
+    "QuantityUnit": "ST",
+    "UnitPrice": 12.5,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce06b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cdfeb65",
+    "Product": "SP003",
+    "ProductName": "Eje",
+    "Quantity": 1,
+    "QuantityUnit": "ST",
+    "UnitPrice": 24.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce10b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce08b65",
+    "Product": "SP003",
+    "ProductName": "Eje",
+    "Quantity": 1,
+    "QuantityUnit": "ST",
+    "UnitPrice": 24.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce12b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce08b65",
+    "Product": "SP004",
+    "ProductName": "Juntas 1mm",
+    "Quantity": 2,
+    "QuantityUnit": "ST",
+    "UnitPrice": 45,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce14b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce08b65",
+    "Product": "SP005",
+    "ProductName": "Junta mecánica",
+    "Quantity": 3,
+    "QuantityUnit": "ST",
+    "UnitPrice": 79.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce28b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce22b65",
+    "Product": "SP005",
+    "ProductName": "Junta mecánica",
+    "Quantity": 3,
+    "QuantityUnit": "ST",
+    "UnitPrice": 79.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce32b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce2ab65",
+    "Product": "SP006",
+    "ProductName": "Engranaje IS651",
+    "Quantity": 4,
+    "QuantityUnit": "ST",
+    "UnitPrice": 120,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce34b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce2ab65",
+    "Product": "SP001",
+    "ProductName": "Cojinete",
+    "Quantity": 1,
+    "QuantityUnit": "ST",
+    "UnitPrice": 8.5,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce40b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce36b65",
+    "Product": "SP001",
+    "ProductName": "Cojinete",
+    "Quantity": 1,
+    "QuantityUnit": "ST",
+    "UnitPrice": 8.5,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce42b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce36b65",
+    "Product": "SP002",
+    "ProductName": "Acoplamiento",
+    "Quantity": 2,
+    "QuantityUnit": "ST",
+    "UnitPrice": 12.5,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce44b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce36b65",
+    "Product": "SP003",
+    "ProductName": "Eje",
+    "Quantity": 3,
+    "QuantityUnit": "ST",
+    "UnitPrice": 24.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce54b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce4cb65",
+    "Product": "SP003",
+    "ProductName": "Eje",
+    "Quantity": 3,
+    "QuantityUnit": "ST",
+    "UnitPrice": 24.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce62b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce58b65",
+    "Product": "SP004",
+    "ProductName": "Juntas 1mm",
+    "Quantity": 4,
+    "QuantityUnit": "ST",
+    "UnitPrice": 45,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce64b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce58b65",
+    "Product": "SP005",
+    "ProductName": "Junta mecánica",
+    "Quantity": 1,
+    "QuantityUnit": "ST",
+    "UnitPrice": 79.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce6cb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce66b65",
+    "Product": "SP005",
+    "ProductName": "Junta mecánica",
+    "Quantity": 1,
+    "QuantityUnit": "ST",
+    "UnitPrice": 79.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce6eb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce66b65",
+    "Product": "SP006",
+    "ProductName": "Engranaje IS651",
+    "Quantity": 2,
+    "QuantityUnit": "ST",
+    "UnitPrice": 120,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce70b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce66b65",
+    "Product": "SP001",
+    "ProductName": "Cojinete",
+    "Quantity": 3,
+    "QuantityUnit": "ST",
+    "UnitPrice": 8.5,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce84b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce7ab65",
+    "Product": "SP001",
+    "ProductName": "Cojinete",
+    "Quantity": 3,
+    "QuantityUnit": "ST",
+    "UnitPrice": 8.5,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce8cb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce86b65",
+    "Product": "SP002",
+    "ProductName": "Acoplamiento",
+    "Quantity": 4,
+    "QuantityUnit": "ST",
+    "UnitPrice": 12.5,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce8eb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce86b65",
+    "Product": "SP003",
+    "ProductName": "Eje",
+    "Quantity": 1,
+    "QuantityUnit": "ST",
+    "UnitPrice": 24.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce98b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce90b65",
+    "Product": "SP003",
+    "ProductName": "Eje",
+    "Quantity": 1,
+    "QuantityUnit": "ST",
+    "UnitPrice": 24.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce9ab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce90b65",
+    "Product": "SP004",
+    "ProductName": "Juntas 1mm",
+    "Quantity": 2,
+    "QuantityUnit": "ST",
+    "UnitPrice": 45,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce9cb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ce90b65",
+    "Product": "SP005",
+    "ProductName": "Junta mecánica",
+    "Quantity": 3,
+    "QuantityUnit": "ST",
+    "UnitPrice": 79.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97ceb0b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ceaab65",
+    "Product": "SP005",
+    "ProductName": "Junta mecánica",
+    "Quantity": 3,
+    "QuantityUnit": "ST",
+    "UnitPrice": 79.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97cebab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ceb2b65",
+    "Product": "SP006",
+    "ProductName": "Engranaje IS651",
+    "Quantity": 4,
+    "QuantityUnit": "ST",
+    "UnitPrice": 120,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97cebcb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97ceb2b65",
+    "Product": "SP001",
+    "ProductName": "Cojinete",
+    "Quantity": 1,
+    "QuantityUnit": "ST",
+    "UnitPrice": 8.5,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97cec8b65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cebeb65",
+    "Product": "SP001",
+    "ProductName": "Cojinete",
+    "Quantity": 1,
+    "QuantityUnit": "ST",
+    "UnitPrice": 8.5,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97cecab65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cebeb65",
+    "Product": "SP002",
+    "ProductName": "Acoplamiento",
+    "Quantity": 2,
+    "QuantityUnit": "ST",
+    "UnitPrice": 12.5,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  },
+  {
+    "PartUUID": "bc24114a-d99a-1fd1-b9ab-01c97ceccb65",
+    "RequestUUID": "bc24114a-d99a-1fd1-b9ab-01c97cebeb65",
+    "Product": "SP003",
+    "ProductName": "Eje",
+    "Quantity": 3,
+    "QuantityUnit": "ST",
+    "UnitPrice": 24.9,
+    "CurrencyCode": "EUR",
+    "LocalLastChangedAt": "2026-11-21T03:02:58.251397Z",
+    "HasDraftEntity": false,
+    "DraftEntityCreationDateTime": null,
+    "DraftEntityLastChangeDateTime": null,
+    "HasActiveEntity": false,
+    "IsActiveEntity": true,
+    "__EntityControl": {
+      "Deletable": true,
+      "Updatable": true
+    }
+  }
+]

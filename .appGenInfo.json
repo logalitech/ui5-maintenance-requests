@@ -1,0 +1,23 @@
+{
+  "generationParameters": {
+    "generationDate": "Sat Nov 21 2026 04:12:44 GMT+0100 (Central European Standard Time)",
+    "generatorPlatform": "CLI",
+    "serviceType": "None",
+    "metadataFilename": "",
+    "serviceUrl": "N/A",
+    "appName": "maintenance",
+    "appTitle": "Avisos de mantenimiento",
+    "appDescription": "Gestión de avisos de mantenimiento de planta",
+    "appNamespace": "sapui5",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.148.0",
+    "enableEslint": true,
+    "enableTypeScript": true,
+    "showMockDataInfo": false,
+    "generatorVersion": "1.33.0",
+    "template": "Basic",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"
+  }
+}

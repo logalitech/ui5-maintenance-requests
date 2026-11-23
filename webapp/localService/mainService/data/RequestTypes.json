@@ -1,0 +1,26 @@
+[
+  {
+    "RequestType": "CO",
+    "RequestTypeText": "Correctivo",
+    "Criticality": 0,
+    "SortOrder": 1
+  },
+  {
+    "RequestType": "PR",
+    "RequestTypeText": "Preventivo",
+    "Criticality": 0,
+    "SortOrder": 2
+  },
+  {
+    "RequestType": "IN",
+    "RequestTypeText": "Inspección",
+    "Criticality": 0,
+    "SortOrder": 3
+  },
+  {
+    "RequestType": "ME",
+    "RequestTypeText": "Mejora",
+    "Criticality": 0,
+    "SortOrder": 4
+  }
+]

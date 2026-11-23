@@ -1,0 +1,4259 @@
+[
+  {
+    "Equipment": "210100001",
+    "EquipmentName": "Manual Isolation Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR1-INLT-SMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Manual Isolation Valve"
+  },
+  {
+    "Equipment": "210100002",
+    "EquipmentName": "Control Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR1-INLT-SCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Control Valve"
+  },
+  {
+    "Equipment": "210100003",
+    "EquipmentName": "Gear Box",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR1-CGB1",
+    "TechnicalObjectType": "9700",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Gear Box"
+  },
+  {
+    "Equipment": "210100004",
+    "EquipmentName": "Compressor Motor",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR1-CMT1",
+    "TechnicalObjectType": "9100",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Motor"
+  },
+  {
+    "Equipment": "210100005",
+    "EquipmentName": "DE side Bearing Assembly",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR1-DSBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "DE side Bearing Assembly"
+  },
+  {
+    "Equipment": "210100006",
+    "EquipmentName": "NDE side Bearing Assembly",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR1-NDBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "NDE side Bearing Assembly"
+  },
+  {
+    "Equipment": "210100007",
+    "EquipmentName": "Compressor Stage 1",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR1-CST1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 1"
+  },
+  {
+    "Equipment": "210100008",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR1-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "210100009",
+    "EquipmentName": "Compressor Stage 1 cooler",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR1-CLR1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 1 cooler"
+  },
+  {
+    "Equipment": "210100010",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR1-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "210100011",
+    "EquipmentName": "Compressor Stage 2",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR1-CST2",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 2"
+  },
+  {
+    "Equipment": "210100012",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR1-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "210100013",
+    "EquipmentName": "Compressor Stage 2 cooler",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR1-CLR2",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 2 cooler"
+  },
+  {
+    "Equipment": "210100014",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR1-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "210100015",
+    "EquipmentName": "Compressor Stage 3",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR1-CST3",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 3"
+  },
+  {
+    "Equipment": "210100016",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR1-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "210100017",
+    "EquipmentName": "Compressor Stage 3 cooler",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR1-CLR3",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 3 cooler"
+  },
+  {
+    "Equipment": "210100018",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR1-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "210100019",
+    "EquipmentName": "Compr. Discharge Manual Isolation Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR1-DMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compr. Discharge Manual Isolation Valve"
+  },
+  {
+    "Equipment": "210100020",
+    "EquipmentName": "Compr. Discharge: Control Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR1-DCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compr. Discharge: Control Valve"
+  },
+  {
+    "Equipment": "210100021",
+    "EquipmentName": "Manual Isolation Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR2-INLT-SMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Manual Isolation Valve"
+  },
+  {
+    "Equipment": "210100022",
+    "EquipmentName": "Control Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR2-INLT-SCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Control Valve"
+  },
+  {
+    "Equipment": "210100023",
+    "EquipmentName": "Gear Box",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR2-CGB1",
+    "TechnicalObjectType": "9700",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Gear Box"
+  },
+  {
+    "Equipment": "210100024",
+    "EquipmentName": "Compressor Motor",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR2-CMT1",
+    "TechnicalObjectType": "9100",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Motor"
+  },
+  {
+    "Equipment": "210100025",
+    "EquipmentName": "DE side Bearing Assembly",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR2-DSBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "DE side Bearing Assembly"
+  },
+  {
+    "Equipment": "210100026",
+    "EquipmentName": "NDE side Bearing Assembly",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR2-NDBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "NDE side Bearing Assembly"
+  },
+  {
+    "Equipment": "210100027",
+    "EquipmentName": "Compressor Stage 1",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR2-CST1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 1"
+  },
+  {
+    "Equipment": "210100028",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR2-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "210100029",
+    "EquipmentName": "Compressor Stage 1 cooler",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR2-CLR1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 1 cooler"
+  },
+  {
+    "Equipment": "210100030",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR2-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "210100031",
+    "EquipmentName": "Compressor Stage 2",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR2-CST2",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 2"
+  },
+  {
+    "Equipment": "210100032",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR2-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "210100033",
+    "EquipmentName": "Compressor Stage 2 cooler",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR2-CLR2",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 2 cooler"
+  },
+  {
+    "Equipment": "210100034",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR2-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "210100035",
+    "EquipmentName": "Compressor Stage 3",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR2-CST3",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 3"
+  },
+  {
+    "Equipment": "210100036",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR2-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "210100037",
+    "EquipmentName": "Compressor Stage 3 cooler",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR2-CLR3",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 3 cooler"
+  },
+  {
+    "Equipment": "210100038",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR2-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "210100039",
+    "EquipmentName": "Compr. Discharge Manual Isolation Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR2-DMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compr. Discharge Manual Isolation Valve"
+  },
+  {
+    "Equipment": "210100040",
+    "EquipmentName": "Compr. Discharge: Control Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR2-DCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compr. Discharge: Control Valve"
+  },
+  {
+    "Equipment": "210100041",
+    "EquipmentName": "Manual Isolation Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR3-INLT-SMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Manual Isolation Valve"
+  },
+  {
+    "Equipment": "210100042",
+    "EquipmentName": "Control Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR3-INLT-SCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Control Valve"
+  },
+  {
+    "Equipment": "210100043",
+    "EquipmentName": "Gear Box",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR3-CGB1",
+    "TechnicalObjectType": "9700",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Gear Box"
+  },
+  {
+    "Equipment": "210100044",
+    "EquipmentName": "Compressor Motor",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR3-CMT1",
+    "TechnicalObjectType": "9100",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Motor"
+  },
+  {
+    "Equipment": "210100045",
+    "EquipmentName": "DE side Bearing Assembly",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR3-DSBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "DE side Bearing Assembly"
+  },
+  {
+    "Equipment": "210100046",
+    "EquipmentName": "NDE side Bearing Assembly",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR3-NDBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "NDE side Bearing Assembly"
+  },
+  {
+    "Equipment": "210100047",
+    "EquipmentName": "Compressor Stage 1",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR3-CST1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 1"
+  },
+  {
+    "Equipment": "210100048",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR3-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "210100049",
+    "EquipmentName": "Compressor Stage 1 cooler",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR3-CLR1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 1 cooler"
+  },
+  {
+    "Equipment": "210100050",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR3-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "210100051",
+    "EquipmentName": "Compressor Stage 2",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR3-CST2",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 2"
+  },
+  {
+    "Equipment": "210100052",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR3-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "210100053",
+    "EquipmentName": "Compressor Stage 2 cooler",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR3-CLR2",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 2 cooler"
+  },
+  {
+    "Equipment": "210100054",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR3-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "210100055",
+    "EquipmentName": "Compressor Stage 3",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR3-CST3",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 3"
+  },
+  {
+    "Equipment": "210100056",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR3-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "210100057",
+    "EquipmentName": "Compressor Stage 3 cooler",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR3-CLR3",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 3 cooler"
+  },
+  {
+    "Equipment": "210100058",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR3-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "210100059",
+    "EquipmentName": "Compr. Discharge Manual Isolation Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR3-DMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compr. Discharge Manual Isolation Valve"
+  },
+  {
+    "Equipment": "210100060",
+    "EquipmentName": "Compr. Discharge: Control Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR3-DCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compr. Discharge: Control Valve"
+  },
+  {
+    "Equipment": "210100061",
+    "EquipmentName": "Manual Isolation Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR4-INLT-SMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Manual Isolation Valve"
+  },
+  {
+    "Equipment": "210100062",
+    "EquipmentName": "Control Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR4-INLT-SCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Control Valve"
+  },
+  {
+    "Equipment": "210100063",
+    "EquipmentName": "Gear Box",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR4-CGB1",
+    "TechnicalObjectType": "9700",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Gear Box"
+  },
+  {
+    "Equipment": "210100064",
+    "EquipmentName": "Compressor Motor",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR4-CMT1",
+    "TechnicalObjectType": "9100",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Motor"
+  },
+  {
+    "Equipment": "210100065",
+    "EquipmentName": "DE side Bearing Assembly",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR4-DSBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "DE side Bearing Assembly"
+  },
+  {
+    "Equipment": "210100066",
+    "EquipmentName": "NDE side Bearing Assembly",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR4-NDBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "NDE side Bearing Assembly"
+  },
+  {
+    "Equipment": "210100067",
+    "EquipmentName": "Compressor Stage 1",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR4-CST1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 1"
+  },
+  {
+    "Equipment": "210100068",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR4-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "210100069",
+    "EquipmentName": "Compressor Stage 1 cooler",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR4-CLR1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 1 cooler"
+  },
+  {
+    "Equipment": "210100070",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR4-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "210100071",
+    "EquipmentName": "Compressor Stage 2",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR4-CST2",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 2"
+  },
+  {
+    "Equipment": "210100072",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR4-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "210100073",
+    "EquipmentName": "Compressor Stage 2 cooler",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR4-CLR2",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 2 cooler"
+  },
+  {
+    "Equipment": "210100074",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR4-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "210100075",
+    "EquipmentName": "Compressor Stage 3",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR4-CST3",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 3"
+  },
+  {
+    "Equipment": "210100076",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR4-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "210100077",
+    "EquipmentName": "Compressor Stage 3 cooler",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR4-CLR3",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 3 cooler"
+  },
+  {
+    "Equipment": "210100078",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR4-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "210100079",
+    "EquipmentName": "Compr. Discharge Manual Isolation Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR4-DMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compr. Discharge Manual Isolation Valve"
+  },
+  {
+    "Equipment": "210100080",
+    "EquipmentName": "Compr. Discharge: Control Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-SAC-PLAR4-DCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compr. Discharge: Control Valve"
+  },
+  {
+    "Equipment": "210100081",
+    "EquipmentName": "Dryer Inlet Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-ADR-DRY01-D1IV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Dryer Inlet Valve"
+  },
+  {
+    "Equipment": "210100082",
+    "EquipmentName": "Dryer Outlet Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-ADR-DRY01-D1OV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Dryer Outlet Valve"
+  },
+  {
+    "Equipment": "210100083",
+    "EquipmentName": "Dryer Inlet Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-ADR-DRY01-D2IV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Dryer Inlet Valve"
+  },
+  {
+    "Equipment": "210100084",
+    "EquipmentName": "Dryer Outlet Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-SPA-ADR-DRY01-D2OV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Dryer Outlet Valve"
+  },
+  {
+    "Equipment": "210100085",
+    "EquipmentName": "Cooling Tower Fan",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-CWS-CTW-CTW01-CTFN",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Cooling Tower Fan"
+  },
+  {
+    "Equipment": "210100086",
+    "EquipmentName": "Cooling Tower Fan Gear Box",
+    "Plant": "1010",
+    "FunctionalLocation": "",
+    "TechnicalObjectType": "9700",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Cooling Tower Fan Gear Box"
+  },
+  {
+    "Equipment": "210100087",
+    "EquipmentName": "Inlet Water Isolation Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-CWS-CTW-CTW01-IWIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Isolation Valve"
+  },
+  {
+    "Equipment": "210100088",
+    "EquipmentName": "Cooling Tower Fan",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-CWS-CTW-CTW02-CTFN",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Cooling Tower Fan"
+  },
+  {
+    "Equipment": "210100089",
+    "EquipmentName": "Cooling Tower Fan Gear Box",
+    "Plant": "1010",
+    "FunctionalLocation": "",
+    "TechnicalObjectType": "9700",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Cooling Tower Fan Gear Box"
+  },
+  {
+    "Equipment": "210100090",
+    "EquipmentName": "Inlet Water Isolation Valve",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-CWS-CTW-CTW02-IWIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Isolation Valve"
+  },
+  {
+    "Equipment": "210100091",
+    "EquipmentName": "Cooling Water Circulation Pump",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-CWS-WCS-CWCP1",
+    "TechnicalObjectType": "9500",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Cooling Water Circulation Pump"
+  },
+  {
+    "Equipment": "210100092",
+    "EquipmentName": "Cooling Water Circulation Pump",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-CWS-WCS-CWCP2",
+    "TechnicalObjectType": "9500",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Cooling Water Circulation Pump"
+  },
+  {
+    "Equipment": "210100093",
+    "EquipmentName": "Cooling Water Circulation Pump",
+    "Plant": "1010",
+    "FunctionalLocation": "1010-CWS-WCS-CWCP1",
+    "TechnicalObjectType": "9500",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Cooling Water Circulation Pump"
+  },
+  {
+    "Equipment": "210100900",
+    "EquipmentName": "Printer Professional ABC",
+    "Plant": "1010",
+    "FunctionalLocation": "XX10-001-001",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Printer Professional ABC"
+  },
+  {
+    "Equipment": "210100901",
+    "EquipmentName": "Printer Professional IHR1911",
+    "Plant": "1010",
+    "FunctionalLocation": "",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Printer Professional IHR1911"
+  },
+  {
+    "Equipment": "210100902",
+    "EquipmentName": "Printer Professional IHR1911",
+    "Plant": "1010",
+    "FunctionalLocation": "",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Printer Professional IHR1911"
+  },
+  {
+    "Equipment": "210100903",
+    "EquipmentName": "Motor AE01",
+    "Plant": "1010",
+    "FunctionalLocation": "",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Motor AE01"
+  },
+  {
+    "Equipment": "212100001",
+    "EquipmentName": "Válvula de aislamiento manual",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR1-INLT-SMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de aislamiento manual",
+    "EquipmentNameInEnglish": "Manual Isolation Valve"
+  },
+  {
+    "Equipment": "212100002",
+    "EquipmentName": "Válvula de control",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR1-INLT-SCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de control",
+    "EquipmentNameInEnglish": "Control Valve"
+  },
+  {
+    "Equipment": "212100003",
+    "EquipmentName": "Caja de cambios",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR1-CGB1",
+    "TechnicalObjectType": "9700",
+    "EquipmentNameInLanguage": "Caja de cambios",
+    "EquipmentNameInEnglish": "Gear Box"
+  },
+  {
+    "Equipment": "212100004",
+    "EquipmentName": "Motor de compresor",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR1-CMT1",
+    "TechnicalObjectType": "9100",
+    "EquipmentNameInLanguage": "Motor de compresor",
+    "EquipmentNameInEnglish": "Compressor Motor"
+  },
+  {
+    "Equipment": "212100005",
+    "EquipmentName": "Junta de soporte lateral DE",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR1-DSBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "Junta de soporte lateral DE",
+    "EquipmentNameInEnglish": "DE side Bearing Assembly"
+  },
+  {
+    "Equipment": "212100006",
+    "EquipmentName": "Junta de soporte lateral NDE",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR1-NDBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "Junta de soporte lateral NDE",
+    "EquipmentNameInEnglish": "NDE side Bearing Assembly"
+  },
+  {
+    "Equipment": "212100007",
+    "EquipmentName": "Compresor etapa 1",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR1-CST1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Compresor etapa 1",
+    "EquipmentNameInEnglish": "Compressor Stage 1"
+  },
+  {
+    "Equipment": "212100008",
+    "EquipmentName": "Válvula de entrada de agua",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR1-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de entrada de agua",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "212100009",
+    "EquipmentName": "Refrigerador de compresor etapa 1",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR1-CLR1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Refrigerador de compresor etapa 1",
+    "EquipmentNameInEnglish": "Compressor Stage 1 cooler"
+  },
+  {
+    "Equipment": "212100010",
+    "EquipmentName": "Válvula de salida de agua",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR1-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de salida de agua",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "212100011",
+    "EquipmentName": "Compresor etapa 2",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR1-CST2",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Compresor etapa 2",
+    "EquipmentNameInEnglish": "Compressor Stage 2"
+  },
+  {
+    "Equipment": "212100012",
+    "EquipmentName": "Válvula de entrada de agua",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR1-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de entrada de agua",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "212100013",
+    "EquipmentName": "Refrigerador de compresor etapa 2",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR1-CLR2",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "Refrigerador de compresor etapa 2",
+    "EquipmentNameInEnglish": "Compressor Stage 2 cooler"
+  },
+  {
+    "Equipment": "212100014",
+    "EquipmentName": "Válvula de salida de agua",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR1-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de salida de agua",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "212100015",
+    "EquipmentName": "Compresor etapa 3",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR1-CST3",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Compresor etapa 3",
+    "EquipmentNameInEnglish": "Compressor Stage 3"
+  },
+  {
+    "Equipment": "212100016",
+    "EquipmentName": "Válvula de entrada de agua",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR1-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de entrada de agua",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "212100017",
+    "EquipmentName": "Refrigerador de compresor etapa 3",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR1-CLR3",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "Refrigerador de compresor etapa 3",
+    "EquipmentNameInEnglish": "Compressor Stage 3 cooler"
+  },
+  {
+    "Equipment": "212100018",
+    "EquipmentName": "Válvula de salida de agua",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR1-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de salida de agua",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "212100019",
+    "EquipmentName": "Válvula aislamiento manual salida compr.",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR1-DMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula aislamiento manual salida compr.",
+    "EquipmentNameInEnglish": "Compr. Discharge Manual Isolation Valve"
+  },
+  {
+    "Equipment": "212100020",
+    "EquipmentName": "Salida compr.: Válvula de control",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR1-DCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Salida compr.: Válvula de control",
+    "EquipmentNameInEnglish": "Compr. Discharge: Control Valve"
+  },
+  {
+    "Equipment": "212100021",
+    "EquipmentName": "Válvula de aislamiento manual",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR2-INLT-SMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de aislamiento manual",
+    "EquipmentNameInEnglish": "Manual Isolation Valve"
+  },
+  {
+    "Equipment": "212100022",
+    "EquipmentName": "Válvula de control",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR2-INLT-SCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de control",
+    "EquipmentNameInEnglish": "Control Valve"
+  },
+  {
+    "Equipment": "212100023",
+    "EquipmentName": "Caja de cambios",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR2-CGB1",
+    "TechnicalObjectType": "9700",
+    "EquipmentNameInLanguage": "Caja de cambios",
+    "EquipmentNameInEnglish": "Gear Box"
+  },
+  {
+    "Equipment": "212100024",
+    "EquipmentName": "Motor de compresor",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR2-CMT1",
+    "TechnicalObjectType": "9100",
+    "EquipmentNameInLanguage": "Motor de compresor",
+    "EquipmentNameInEnglish": "Compressor Motor"
+  },
+  {
+    "Equipment": "212100025",
+    "EquipmentName": "Junta de soporte lateral DE",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR2-DSBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "Junta de soporte lateral DE",
+    "EquipmentNameInEnglish": "DE side Bearing Assembly"
+  },
+  {
+    "Equipment": "212100026",
+    "EquipmentName": "Junta de soporte lateral NDE",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR2-NDBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "Junta de soporte lateral NDE",
+    "EquipmentNameInEnglish": "NDE side Bearing Assembly"
+  },
+  {
+    "Equipment": "212100027",
+    "EquipmentName": "Compresor etapa 1",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR2-CST1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Compresor etapa 1",
+    "EquipmentNameInEnglish": "Compressor Stage 1"
+  },
+  {
+    "Equipment": "212100028",
+    "EquipmentName": "Válvula de entrada de agua",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR2-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de entrada de agua",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "212100029",
+    "EquipmentName": "Refrigerador de compresor etapa 1",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR2-CLR1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Refrigerador de compresor etapa 1",
+    "EquipmentNameInEnglish": "Compressor Stage 1 cooler"
+  },
+  {
+    "Equipment": "212100030",
+    "EquipmentName": "Válvula de salida de agua",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR2-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de salida de agua",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "212100031",
+    "EquipmentName": "Compresor etapa 2",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR2-CST2",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Compresor etapa 2",
+    "EquipmentNameInEnglish": "Compressor Stage 2"
+  },
+  {
+    "Equipment": "212100032",
+    "EquipmentName": "Válvula de entrada de agua",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR2-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de entrada de agua",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "212100033",
+    "EquipmentName": "Refrigerador de compresor etapa 2",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR2-CLR2",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "Refrigerador de compresor etapa 2",
+    "EquipmentNameInEnglish": "Compressor Stage 2 cooler"
+  },
+  {
+    "Equipment": "212100034",
+    "EquipmentName": "Válvula de salida de agua",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR2-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de salida de agua",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "212100035",
+    "EquipmentName": "Compresor etapa 3",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR2-CST3",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Compresor etapa 3",
+    "EquipmentNameInEnglish": "Compressor Stage 3"
+  },
+  {
+    "Equipment": "212100036",
+    "EquipmentName": "Válvula de entrada de agua",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR2-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de entrada de agua",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "212100037",
+    "EquipmentName": "Refrigerador de compresor etapa 3",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR2-CLR3",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "Refrigerador de compresor etapa 3",
+    "EquipmentNameInEnglish": "Compressor Stage 3 cooler"
+  },
+  {
+    "Equipment": "212100038",
+    "EquipmentName": "Válvula de salida de agua",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR2-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de salida de agua",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "212100039",
+    "EquipmentName": "Válvula aislamiento manual salida compr.",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR2-DMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula aislamiento manual salida compr.",
+    "EquipmentNameInEnglish": "Compr. Discharge Manual Isolation Valve"
+  },
+  {
+    "Equipment": "212100040",
+    "EquipmentName": "Salida compr.: Válvula de control",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR2-DCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Salida compr.: Válvula de control",
+    "EquipmentNameInEnglish": "Compr. Discharge: Control Valve"
+  },
+  {
+    "Equipment": "212100041",
+    "EquipmentName": "Válvula de aislamiento manual",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR3-INLT-SMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de aislamiento manual",
+    "EquipmentNameInEnglish": "Manual Isolation Valve"
+  },
+  {
+    "Equipment": "212100042",
+    "EquipmentName": "Válvula de control",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR3-INLT-SCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de control",
+    "EquipmentNameInEnglish": "Control Valve"
+  },
+  {
+    "Equipment": "212100043",
+    "EquipmentName": "Caja de cambios",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR3-CGB1",
+    "TechnicalObjectType": "9700",
+    "EquipmentNameInLanguage": "Caja de cambios",
+    "EquipmentNameInEnglish": "Gear Box"
+  },
+  {
+    "Equipment": "212100044",
+    "EquipmentName": "Motor de compresor",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR3-CMT1",
+    "TechnicalObjectType": "9100",
+    "EquipmentNameInLanguage": "Motor de compresor",
+    "EquipmentNameInEnglish": "Compressor Motor"
+  },
+  {
+    "Equipment": "212100045",
+    "EquipmentName": "Junta de soporte lateral DE",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR3-DSBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "Junta de soporte lateral DE",
+    "EquipmentNameInEnglish": "DE side Bearing Assembly"
+  },
+  {
+    "Equipment": "212100046",
+    "EquipmentName": "Junta de soporte lateral NDE",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR3-NDBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "Junta de soporte lateral NDE",
+    "EquipmentNameInEnglish": "NDE side Bearing Assembly"
+  },
+  {
+    "Equipment": "212100047",
+    "EquipmentName": "Compresor etapa 1",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR3-CST1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Compresor etapa 1",
+    "EquipmentNameInEnglish": "Compressor Stage 1"
+  },
+  {
+    "Equipment": "212100048",
+    "EquipmentName": "Válvula de entrada de agua",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR3-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de entrada de agua",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "212100049",
+    "EquipmentName": "Refrigerador de compresor etapa 1",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR3-CLR1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Refrigerador de compresor etapa 1",
+    "EquipmentNameInEnglish": "Compressor Stage 1 cooler"
+  },
+  {
+    "Equipment": "212100050",
+    "EquipmentName": "Válvula de salida de agua",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR3-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de salida de agua",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "212100051",
+    "EquipmentName": "Compresor etapa 2",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR3-CST2",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Compresor etapa 2",
+    "EquipmentNameInEnglish": "Compressor Stage 2"
+  },
+  {
+    "Equipment": "212100052",
+    "EquipmentName": "Válvula de entrada de agua",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR3-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de entrada de agua",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "212100053",
+    "EquipmentName": "Refrigerador de compresor etapa 2",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR3-CLR2",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "Refrigerador de compresor etapa 2",
+    "EquipmentNameInEnglish": "Compressor Stage 2 cooler"
+  },
+  {
+    "Equipment": "212100054",
+    "EquipmentName": "Válvula de salida de agua",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR3-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de salida de agua",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "212100055",
+    "EquipmentName": "Compresor etapa 3",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR3-CST3",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Compresor etapa 3",
+    "EquipmentNameInEnglish": "Compressor Stage 3"
+  },
+  {
+    "Equipment": "212100056",
+    "EquipmentName": "Válvula de entrada de agua",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR3-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de entrada de agua",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "212100057",
+    "EquipmentName": "Refrigerador de compresor etapa 3",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR3-CLR3",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "Refrigerador de compresor etapa 3",
+    "EquipmentNameInEnglish": "Compressor Stage 3 cooler"
+  },
+  {
+    "Equipment": "212100058",
+    "EquipmentName": "Válvula de salida de agua",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR3-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de salida de agua",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "212100059",
+    "EquipmentName": "Válvula aislamiento manual salida compr.",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR3-DMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula aislamiento manual salida compr.",
+    "EquipmentNameInEnglish": "Compr. Discharge Manual Isolation Valve"
+  },
+  {
+    "Equipment": "212100060",
+    "EquipmentName": "Salida compr.: Válvula de control",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR3-DCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Salida compr.: Válvula de control",
+    "EquipmentNameInEnglish": "Compr. Discharge: Control Valve"
+  },
+  {
+    "Equipment": "212100061",
+    "EquipmentName": "Válvula de aislamiento manual",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR4-INLT-SMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de aislamiento manual",
+    "EquipmentNameInEnglish": "Manual Isolation Valve"
+  },
+  {
+    "Equipment": "212100062",
+    "EquipmentName": "Válvula de control",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR4-INLT-SCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de control",
+    "EquipmentNameInEnglish": "Control Valve"
+  },
+  {
+    "Equipment": "212100063",
+    "EquipmentName": "Caja de cambios",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR4-CGB1",
+    "TechnicalObjectType": "9700",
+    "EquipmentNameInLanguage": "Caja de cambios",
+    "EquipmentNameInEnglish": "Gear Box"
+  },
+  {
+    "Equipment": "212100064",
+    "EquipmentName": "Motor de compresor",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR4-CMT1",
+    "TechnicalObjectType": "9100",
+    "EquipmentNameInLanguage": "Motor de compresor",
+    "EquipmentNameInEnglish": "Compressor Motor"
+  },
+  {
+    "Equipment": "212100065",
+    "EquipmentName": "Junta de soporte lateral DE",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR4-DSBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "Junta de soporte lateral DE",
+    "EquipmentNameInEnglish": "DE side Bearing Assembly"
+  },
+  {
+    "Equipment": "212100066",
+    "EquipmentName": "Junta de soporte lateral NDE",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR4-NDBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "Junta de soporte lateral NDE",
+    "EquipmentNameInEnglish": "NDE side Bearing Assembly"
+  },
+  {
+    "Equipment": "212100067",
+    "EquipmentName": "Compresor etapa 1",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR4-CST1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Compresor etapa 1",
+    "EquipmentNameInEnglish": "Compressor Stage 1"
+  },
+  {
+    "Equipment": "212100068",
+    "EquipmentName": "Válvula de entrada de agua",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR4-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de entrada de agua",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "212100069",
+    "EquipmentName": "Refrigerador de compresor etapa 1",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR4-CLR1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Refrigerador de compresor etapa 1",
+    "EquipmentNameInEnglish": "Compressor Stage 1 cooler"
+  },
+  {
+    "Equipment": "212100070",
+    "EquipmentName": "Válvula de salida de agua",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR4-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de salida de agua",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "212100071",
+    "EquipmentName": "Compresor etapa 2",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR4-CST2",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Compresor etapa 2",
+    "EquipmentNameInEnglish": "Compressor Stage 2"
+  },
+  {
+    "Equipment": "212100072",
+    "EquipmentName": "Válvula de entrada de agua",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR4-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de entrada de agua",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "212100073",
+    "EquipmentName": "Refrigerador de compresor etapa 2",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR4-CLR2",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "Refrigerador de compresor etapa 2",
+    "EquipmentNameInEnglish": "Compressor Stage 2 cooler"
+  },
+  {
+    "Equipment": "212100074",
+    "EquipmentName": "Válvula de salida de agua",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR4-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de salida de agua",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "212100075",
+    "EquipmentName": "Compresor etapa 3",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR4-CST3",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Compresor etapa 3",
+    "EquipmentNameInEnglish": "Compressor Stage 3"
+  },
+  {
+    "Equipment": "212100076",
+    "EquipmentName": "Válvula de entrada de agua",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR4-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de entrada de agua",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "212100077",
+    "EquipmentName": "Refrigerador de compresor etapa 3",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR4-CLR3",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "Refrigerador de compresor etapa 3",
+    "EquipmentNameInEnglish": "Compressor Stage 3 cooler"
+  },
+  {
+    "Equipment": "212100078",
+    "EquipmentName": "Válvula de salida de agua",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR4-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de salida de agua",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "212100079",
+    "EquipmentName": "Válvula aislamiento manual salida compr.",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR4-DMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula aislamiento manual salida compr.",
+    "EquipmentNameInEnglish": "Compr. Discharge Manual Isolation Valve"
+  },
+  {
+    "Equipment": "212100080",
+    "EquipmentName": "Salida compr.: Válvula de control",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-SAC-PLAR4-DCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Salida compr.: Válvula de control",
+    "EquipmentNameInEnglish": "Compr. Discharge: Control Valve"
+  },
+  {
+    "Equipment": "212100081",
+    "EquipmentName": "Válvula de entrada de secado",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-ADR-DRY01-D1IV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de entrada de secado",
+    "EquipmentNameInEnglish": "Dryer Inlet Valve"
+  },
+  {
+    "Equipment": "212100082",
+    "EquipmentName": "Válvula de salida de secado",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-ADR-DRY01-D1OV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de salida de secado",
+    "EquipmentNameInEnglish": "Dryer Outlet Valve"
+  },
+  {
+    "Equipment": "212100083",
+    "EquipmentName": "Válvula de entrada de secado",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-ADR-DRY01-D2IV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de entrada de secado",
+    "EquipmentNameInEnglish": "Dryer Inlet Valve"
+  },
+  {
+    "Equipment": "212100084",
+    "EquipmentName": "Válvula de salida de secado",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-SPA-ADR-DRY01-D2OV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de salida de secado",
+    "EquipmentNameInEnglish": "Dryer Outlet Valve"
+  },
+  {
+    "Equipment": "212100085",
+    "EquipmentName": "Ventilador de torre de refrigeración",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-CWS-CTW-CTW01-CTFN",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "Ventilador de torre de refrigeración",
+    "EquipmentNameInEnglish": "Cooling Tower Fan"
+  },
+  {
+    "Equipment": "212100086",
+    "EquipmentName": "Caja de cambio de ventilador torre refr.",
+    "Plant": "1210",
+    "FunctionalLocation": "",
+    "TechnicalObjectType": "9700",
+    "EquipmentNameInLanguage": "Caja de cambio de ventilador torre refr.",
+    "EquipmentNameInEnglish": "Cooling Tower Fan Gear Box"
+  },
+  {
+    "Equipment": "212100087",
+    "EquipmentName": "Válvula de aislamiento de agua entrada",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-CWS-CTW-CTW01-IWIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de aislamiento de agua entrada",
+    "EquipmentNameInEnglish": "Inlet Water Isolation Valve"
+  },
+  {
+    "Equipment": "212100088",
+    "EquipmentName": "Ventilador de torre de refrigeración",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-CWS-CTW-CTW02-CTFN",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "Ventilador de torre de refrigeración",
+    "EquipmentNameInEnglish": "Cooling Tower Fan"
+  },
+  {
+    "Equipment": "212100089",
+    "EquipmentName": "Caja de cambio de ventilador torre refr.",
+    "Plant": "1210",
+    "FunctionalLocation": "",
+    "TechnicalObjectType": "9700",
+    "EquipmentNameInLanguage": "Caja de cambio de ventilador torre refr.",
+    "EquipmentNameInEnglish": "Cooling Tower Fan Gear Box"
+  },
+  {
+    "Equipment": "212100090",
+    "EquipmentName": "Válvula de aislamiento de agua entrada",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-CWS-CTW-CTW02-IWIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de aislamiento de agua entrada",
+    "EquipmentNameInEnglish": "Inlet Water Isolation Valve"
+  },
+  {
+    "Equipment": "212100091",
+    "EquipmentName": "Bomba circulación de agua refrigerante",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-CWS-WCS-CWCP1",
+    "TechnicalObjectType": "9500",
+    "EquipmentNameInLanguage": "Bomba circulación de agua refrigerante",
+    "EquipmentNameInEnglish": "Cooling Water Circulation Pump"
+  },
+  {
+    "Equipment": "212100092",
+    "EquipmentName": "Bomba circulación de agua refrigerante",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-CWS-WCS-CWCP2",
+    "TechnicalObjectType": "9500",
+    "EquipmentNameInLanguage": "Bomba circulación de agua refrigerante",
+    "EquipmentNameInEnglish": "Cooling Water Circulation Pump"
+  },
+  {
+    "Equipment": "212100093",
+    "EquipmentName": "Bomba circulación de agua refrigerante",
+    "Plant": "1210",
+    "FunctionalLocation": "1210-CWS-WCS-CWCP1",
+    "TechnicalObjectType": "9500",
+    "EquipmentNameInLanguage": "Bomba circulación de agua refrigerante",
+    "EquipmentNameInEnglish": "Cooling Water Circulation Pump"
+  },
+  {
+    "Equipment": "217100001",
+    "EquipmentName": "Manual Isolation Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR1-INLT-SMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Manual Isolation Valve"
+  },
+  {
+    "Equipment": "217100002",
+    "EquipmentName": "Control Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR1-INLT-SCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Control Valve"
+  },
+  {
+    "Equipment": "217100003",
+    "EquipmentName": "Gear Box",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR1-CGB1",
+    "TechnicalObjectType": "9700",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Gear Box"
+  },
+  {
+    "Equipment": "217100004",
+    "EquipmentName": "Compressor Motor",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR1-CMT1",
+    "TechnicalObjectType": "9100",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Motor"
+  },
+  {
+    "Equipment": "217100005",
+    "EquipmentName": "DE side Bearing Assembly",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR1-DSBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "DE side Bearing Assembly"
+  },
+  {
+    "Equipment": "217100006",
+    "EquipmentName": "NDE side Bearing Assembly",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR1-NDBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "NDE side Bearing Assembly"
+  },
+  {
+    "Equipment": "217100007",
+    "EquipmentName": "Compressor Stage 1",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR1-CST1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 1"
+  },
+  {
+    "Equipment": "217100008",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR1-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "217100009",
+    "EquipmentName": "Compressor Stage 1 cooler",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR1-CLR1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 1 cooler"
+  },
+  {
+    "Equipment": "217100010",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR1-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "217100011",
+    "EquipmentName": "Compressor Stage 2",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR1-CST2",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 2"
+  },
+  {
+    "Equipment": "217100012",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR1-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "217100013",
+    "EquipmentName": "Compressor Stage 2 cooler",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR1-CLR2",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 2 cooler"
+  },
+  {
+    "Equipment": "217100014",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR1-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "217100015",
+    "EquipmentName": "Compressor Stage 3",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR1-CST3",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 3"
+  },
+  {
+    "Equipment": "217100016",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR1-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "217100017",
+    "EquipmentName": "Compressor Stage 3 cooler",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR1-CLR3",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 3 cooler"
+  },
+  {
+    "Equipment": "217100018",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR1-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "217100019",
+    "EquipmentName": "Compr. Discharge Manual Isolation Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR1-DMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compr. Discharge Manual Isolation Valve"
+  },
+  {
+    "Equipment": "217100020",
+    "EquipmentName": "Compr. Discharge: Control Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR1-DCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compr. Discharge: Control Valve"
+  },
+  {
+    "Equipment": "217100021",
+    "EquipmentName": "Manual Isolation Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR2-INLT-SMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Manual Isolation Valve"
+  },
+  {
+    "Equipment": "217100022",
+    "EquipmentName": "Control Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR2-INLT-SCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Control Valve"
+  },
+  {
+    "Equipment": "217100023",
+    "EquipmentName": "Gear Box",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR2-CGB1",
+    "TechnicalObjectType": "9700",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Gear Box"
+  },
+  {
+    "Equipment": "217100024",
+    "EquipmentName": "Compressor Motor",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR2-CMT1",
+    "TechnicalObjectType": "9100",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Motor"
+  },
+  {
+    "Equipment": "217100025",
+    "EquipmentName": "DE side Bearing Assembly",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR2-DSBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "DE side Bearing Assembly"
+  },
+  {
+    "Equipment": "217100026",
+    "EquipmentName": "NDE side Bearing Assembly",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR2-NDBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "NDE side Bearing Assembly"
+  },
+  {
+    "Equipment": "217100027",
+    "EquipmentName": "Compressor Stage 1",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR2-CST1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 1"
+  },
+  {
+    "Equipment": "217100028",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR2-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "217100029",
+    "EquipmentName": "Compressor Stage 1 cooler",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR2-CLR1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 1 cooler"
+  },
+  {
+    "Equipment": "217100030",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR2-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "217100031",
+    "EquipmentName": "Compressor Stage 2",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR2-CST2",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 2"
+  },
+  {
+    "Equipment": "217100032",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR2-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "217100033",
+    "EquipmentName": "Compressor Stage 2 cooler",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR2-CLR2",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 2 cooler"
+  },
+  {
+    "Equipment": "217100034",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR2-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "217100035",
+    "EquipmentName": "Compressor Stage 3",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR2-CST3",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 3"
+  },
+  {
+    "Equipment": "217100036",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR2-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "217100037",
+    "EquipmentName": "Compressor Stage 3 cooler",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR2-CLR3",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 3 cooler"
+  },
+  {
+    "Equipment": "217100038",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR2-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "217100039",
+    "EquipmentName": "Compr. Discharge Manual Isolation Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR2-DMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compr. Discharge Manual Isolation Valve"
+  },
+  {
+    "Equipment": "217100040",
+    "EquipmentName": "Compr. Discharge: Control Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR2-DCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compr. Discharge: Control Valve"
+  },
+  {
+    "Equipment": "217100041",
+    "EquipmentName": "Manual Isolation Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR3-INLT-SMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Manual Isolation Valve"
+  },
+  {
+    "Equipment": "217100042",
+    "EquipmentName": "Control Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR3-INLT-SCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Control Valve"
+  },
+  {
+    "Equipment": "217100043",
+    "EquipmentName": "Gear Box",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR3-CGB1",
+    "TechnicalObjectType": "9700",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Gear Box"
+  },
+  {
+    "Equipment": "217100044",
+    "EquipmentName": "Compressor Motor",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR3-CMT1",
+    "TechnicalObjectType": "9100",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Motor"
+  },
+  {
+    "Equipment": "217100045",
+    "EquipmentName": "DE side Bearing Assembly",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR3-DSBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "DE side Bearing Assembly"
+  },
+  {
+    "Equipment": "217100046",
+    "EquipmentName": "NDE side Bearing Assembly",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR3-NDBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "NDE side Bearing Assembly"
+  },
+  {
+    "Equipment": "217100047",
+    "EquipmentName": "Compressor Stage 1",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR3-CST1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 1"
+  },
+  {
+    "Equipment": "217100048",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR3-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "217100049",
+    "EquipmentName": "Compressor Stage 1 cooler",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR3-CLR1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 1 cooler"
+  },
+  {
+    "Equipment": "217100050",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR3-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "217100051",
+    "EquipmentName": "Compressor Stage 2",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR3-CST2",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 2"
+  },
+  {
+    "Equipment": "217100052",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR3-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "217100053",
+    "EquipmentName": "Compressor Stage 2 cooler",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR3-CLR2",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 2 cooler"
+  },
+  {
+    "Equipment": "217100054",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR3-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "217100055",
+    "EquipmentName": "Compressor Stage 3",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR3-CST3",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 3"
+  },
+  {
+    "Equipment": "217100056",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR3-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "217100057",
+    "EquipmentName": "Compressor Stage 3 cooler",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR3-CLR3",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 3 cooler"
+  },
+  {
+    "Equipment": "217100058",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR3-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "217100059",
+    "EquipmentName": "Compr. Discharge Manual Isolation Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR3-DMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compr. Discharge Manual Isolation Valve"
+  },
+  {
+    "Equipment": "217100060",
+    "EquipmentName": "Compr. Discharge: Control Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR3-DCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compr. Discharge: Control Valve"
+  },
+  {
+    "Equipment": "217100061",
+    "EquipmentName": "Manual Isolation Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR4-INLT-SMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Manual Isolation Valve"
+  },
+  {
+    "Equipment": "217100062",
+    "EquipmentName": "Control Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR4-INLT-SCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Control Valve"
+  },
+  {
+    "Equipment": "217100063",
+    "EquipmentName": "Gear Box",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR4-CGB1",
+    "TechnicalObjectType": "9700",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Gear Box"
+  },
+  {
+    "Equipment": "217100064",
+    "EquipmentName": "Compressor Motor",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR4-CMT1",
+    "TechnicalObjectType": "9100",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Motor"
+  },
+  {
+    "Equipment": "217100065",
+    "EquipmentName": "DE side Bearing Assembly",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR4-DSBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "DE side Bearing Assembly"
+  },
+  {
+    "Equipment": "217100066",
+    "EquipmentName": "NDE side Bearing Assembly",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR4-NDBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "NDE side Bearing Assembly"
+  },
+  {
+    "Equipment": "217100067",
+    "EquipmentName": "Compressor Stage 1",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR4-CST1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 1"
+  },
+  {
+    "Equipment": "217100068",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR4-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "217100069",
+    "EquipmentName": "Compressor Stage 1 cooler",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR4-CLR1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 1 cooler"
+  },
+  {
+    "Equipment": "217100070",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR4-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "217100071",
+    "EquipmentName": "Compressor Stage 2",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR4-CST2",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 2"
+  },
+  {
+    "Equipment": "217100072",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR4-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "217100073",
+    "EquipmentName": "Compressor Stage 2 cooler",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR4-CLR2",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 2 cooler"
+  },
+  {
+    "Equipment": "217100074",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR4-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "217100075",
+    "EquipmentName": "Compressor Stage 3",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR4-CST3",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 3"
+  },
+  {
+    "Equipment": "217100076",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR4-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "217100077",
+    "EquipmentName": "Compressor Stage 3 cooler",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR4-CLR3",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 3 cooler"
+  },
+  {
+    "Equipment": "217100078",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR4-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "217100079",
+    "EquipmentName": "Compr. Discharge Manual Isolation Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR4-DMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compr. Discharge Manual Isolation Valve"
+  },
+  {
+    "Equipment": "217100080",
+    "EquipmentName": "Compr. Discharge: Control Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-SAC-PLAR4-DCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compr. Discharge: Control Valve"
+  },
+  {
+    "Equipment": "217100081",
+    "EquipmentName": "Dryer Inlet Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-ADR-DRY01-D1IV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Dryer Inlet Valve"
+  },
+  {
+    "Equipment": "217100082",
+    "EquipmentName": "Dryer Outlet Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-ADR-DRY01-D1OV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Dryer Outlet Valve"
+  },
+  {
+    "Equipment": "217100083",
+    "EquipmentName": "Dryer Inlet Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-ADR-DRY01-D2IV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Dryer Inlet Valve"
+  },
+  {
+    "Equipment": "217100084",
+    "EquipmentName": "Dryer Outlet Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-SPA-ADR-DRY01-D2OV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Dryer Outlet Valve"
+  },
+  {
+    "Equipment": "217100085",
+    "EquipmentName": "Cooling Tower Fan",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-CWS-CTW-CTW01-CTFN",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Cooling Tower Fan"
+  },
+  {
+    "Equipment": "217100086",
+    "EquipmentName": "Cooling Tower Fan Gear Box",
+    "Plant": "1710",
+    "FunctionalLocation": "",
+    "TechnicalObjectType": "9700",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Cooling Tower Fan Gear Box"
+  },
+  {
+    "Equipment": "217100087",
+    "EquipmentName": "Inlet Water Isolation Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-CWS-CTW-CTW01-IWIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Isolation Valve"
+  },
+  {
+    "Equipment": "217100088",
+    "EquipmentName": "Cooling Tower Fan",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-CWS-CTW-CTW02-CTFN",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Cooling Tower Fan"
+  },
+  {
+    "Equipment": "217100089",
+    "EquipmentName": "Cooling Tower Fan Gear Box",
+    "Plant": "1710",
+    "FunctionalLocation": "",
+    "TechnicalObjectType": "9700",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Cooling Tower Fan Gear Box"
+  },
+  {
+    "Equipment": "217100090",
+    "EquipmentName": "Inlet Water Isolation Valve",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-CWS-CTW-CTW02-IWIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Isolation Valve"
+  },
+  {
+    "Equipment": "217100091",
+    "EquipmentName": "Cooling Water Circulation Pump",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-CWS-WCS-CWCP1",
+    "TechnicalObjectType": "9500",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Cooling Water Circulation Pump"
+  },
+  {
+    "Equipment": "217100092",
+    "EquipmentName": "Cooling Water Circulation Pump",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-CWS-WCS-CWCP2",
+    "TechnicalObjectType": "9500",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Cooling Water Circulation Pump"
+  },
+  {
+    "Equipment": "217100093",
+    "EquipmentName": "Cooling Water Circulation Pump",
+    "Plant": "1710",
+    "FunctionalLocation": "1710-CWS-WCS-CWCP1",
+    "TechnicalObjectType": "9500",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Cooling Water Circulation Pump"
+  },
+  {
+    "Equipment": "217100900",
+    "EquipmentName": "Printer Professional ABC",
+    "Plant": "1710",
+    "FunctionalLocation": "XX17-001-001",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Printer Professional ABC"
+  },
+  {
+    "Equipment": "217100901",
+    "EquipmentName": "Printer Professional IHR1911",
+    "Plant": "1710",
+    "FunctionalLocation": "",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Printer Professional IHR1911"
+  },
+  {
+    "Equipment": "217100902",
+    "EquipmentName": "Printer Professional IHR1911",
+    "Plant": "1710",
+    "FunctionalLocation": "",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Printer Professional IHR1911"
+  },
+  {
+    "Equipment": "217100903",
+    "EquipmentName": "Motor AE01",
+    "Plant": "1710",
+    "FunctionalLocation": "",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Motor AE01"
+  },
+  {
+    "Equipment": "224100001",
+    "EquipmentName": "Válvula de aislamiento manual",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR1-INLT-SMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de aislamiento manual",
+    "EquipmentNameInEnglish": "Manual Isolation Valve"
+  },
+  {
+    "Equipment": "224100002",
+    "EquipmentName": "Válvula de control",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR1-INLT-SCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de control",
+    "EquipmentNameInEnglish": "Control Valve"
+  },
+  {
+    "Equipment": "224100003",
+    "EquipmentName": "Caja de cambios",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR1-CGB1",
+    "TechnicalObjectType": "9700",
+    "EquipmentNameInLanguage": "Caja de cambios",
+    "EquipmentNameInEnglish": "Gear Box"
+  },
+  {
+    "Equipment": "224100004",
+    "EquipmentName": "Motor de compresor",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR1-CMT1",
+    "TechnicalObjectType": "9100",
+    "EquipmentNameInLanguage": "Motor de compresor",
+    "EquipmentNameInEnglish": "Compressor Motor"
+  },
+  {
+    "Equipment": "224100005",
+    "EquipmentName": "Junta de soporte lateral DE",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR1-DSBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "Junta de soporte lateral DE",
+    "EquipmentNameInEnglish": "DE side Bearing Assembly"
+  },
+  {
+    "Equipment": "224100006",
+    "EquipmentName": "Junta de soporte lateral NDE",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR1-NDBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "Junta de soporte lateral NDE",
+    "EquipmentNameInEnglish": "NDE side Bearing Assembly"
+  },
+  {
+    "Equipment": "224100007",
+    "EquipmentName": "Compresor etapa 1",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR1-CST1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Compresor etapa 1",
+    "EquipmentNameInEnglish": "Compressor Stage 1"
+  },
+  {
+    "Equipment": "224100008",
+    "EquipmentName": "Válvula de entrada de agua",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR1-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de entrada de agua",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "224100009",
+    "EquipmentName": "Refrigerador de compresor etapa 1",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR1-CLR1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Refrigerador de compresor etapa 1",
+    "EquipmentNameInEnglish": "Compressor Stage 1 cooler"
+  },
+  {
+    "Equipment": "224100010",
+    "EquipmentName": "Válvula de salida de agua",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR1-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de salida de agua",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "224100011",
+    "EquipmentName": "Compresor etapa 2",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR1-CST2",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Compresor etapa 2",
+    "EquipmentNameInEnglish": "Compressor Stage 2"
+  },
+  {
+    "Equipment": "224100012",
+    "EquipmentName": "Válvula de entrada de agua",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR1-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de entrada de agua",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "224100013",
+    "EquipmentName": "Refrigerador de compresor etapa 2",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR1-CLR2",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "Refrigerador de compresor etapa 2",
+    "EquipmentNameInEnglish": "Compressor Stage 2 cooler"
+  },
+  {
+    "Equipment": "224100014",
+    "EquipmentName": "Válvula de salida de agua",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR1-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de salida de agua",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "224100015",
+    "EquipmentName": "Compresor etapa 3",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR1-CST3",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Compresor etapa 3",
+    "EquipmentNameInEnglish": "Compressor Stage 3"
+  },
+  {
+    "Equipment": "224100016",
+    "EquipmentName": "Válvula de entrada de agua",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR1-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de entrada de agua",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "224100017",
+    "EquipmentName": "Refrigerador de compresor etapa 3",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR1-CLR3",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "Refrigerador de compresor etapa 3",
+    "EquipmentNameInEnglish": "Compressor Stage 3 cooler"
+  },
+  {
+    "Equipment": "224100018",
+    "EquipmentName": "Válvula de salida de agua",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR1-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de salida de agua",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "224100019",
+    "EquipmentName": "Válvula aislamiento manual salida compr.",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR1-DMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula aislamiento manual salida compr.",
+    "EquipmentNameInEnglish": "Compr. Discharge Manual Isolation Valve"
+  },
+  {
+    "Equipment": "224100020",
+    "EquipmentName": "Salida compr.: Válvula de control",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR1-DCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Salida compr.: Válvula de control",
+    "EquipmentNameInEnglish": "Compr. Discharge: Control Valve"
+  },
+  {
+    "Equipment": "224100021",
+    "EquipmentName": "Válvula de aislamiento manual",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR2-INLT-SMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de aislamiento manual",
+    "EquipmentNameInEnglish": "Manual Isolation Valve"
+  },
+  {
+    "Equipment": "224100022",
+    "EquipmentName": "Válvula de control",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR2-INLT-SCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de control",
+    "EquipmentNameInEnglish": "Control Valve"
+  },
+  {
+    "Equipment": "224100023",
+    "EquipmentName": "Caja de cambios",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR2-CGB1",
+    "TechnicalObjectType": "9700",
+    "EquipmentNameInLanguage": "Caja de cambios",
+    "EquipmentNameInEnglish": "Gear Box"
+  },
+  {
+    "Equipment": "224100024",
+    "EquipmentName": "Motor de compresor",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR2-CMT1",
+    "TechnicalObjectType": "9100",
+    "EquipmentNameInLanguage": "Motor de compresor",
+    "EquipmentNameInEnglish": "Compressor Motor"
+  },
+  {
+    "Equipment": "224100025",
+    "EquipmentName": "Junta de soporte lateral DE",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR2-DSBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "Junta de soporte lateral DE",
+    "EquipmentNameInEnglish": "DE side Bearing Assembly"
+  },
+  {
+    "Equipment": "224100026",
+    "EquipmentName": "Junta de soporte lateral NDE",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR2-NDBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "Junta de soporte lateral NDE",
+    "EquipmentNameInEnglish": "NDE side Bearing Assembly"
+  },
+  {
+    "Equipment": "224100027",
+    "EquipmentName": "Compresor etapa 1",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR2-CST1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Compresor etapa 1",
+    "EquipmentNameInEnglish": "Compressor Stage 1"
+  },
+  {
+    "Equipment": "224100028",
+    "EquipmentName": "Válvula de entrada de agua",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR2-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de entrada de agua",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "224100029",
+    "EquipmentName": "Refrigerador de compresor etapa 1",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR2-CLR1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Refrigerador de compresor etapa 1",
+    "EquipmentNameInEnglish": "Compressor Stage 1 cooler"
+  },
+  {
+    "Equipment": "224100030",
+    "EquipmentName": "Válvula de salida de agua",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR2-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de salida de agua",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "224100031",
+    "EquipmentName": "Compresor etapa 2",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR2-CST2",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Compresor etapa 2",
+    "EquipmentNameInEnglish": "Compressor Stage 2"
+  },
+  {
+    "Equipment": "224100032",
+    "EquipmentName": "Válvula de entrada de agua",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR2-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de entrada de agua",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "224100033",
+    "EquipmentName": "Refrigerador de compresor etapa 2",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR2-CLR2",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "Refrigerador de compresor etapa 2",
+    "EquipmentNameInEnglish": "Compressor Stage 2 cooler"
+  },
+  {
+    "Equipment": "224100034",
+    "EquipmentName": "Válvula de salida de agua",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR2-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de salida de agua",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "224100035",
+    "EquipmentName": "Compresor etapa 3",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR2-CST3",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Compresor etapa 3",
+    "EquipmentNameInEnglish": "Compressor Stage 3"
+  },
+  {
+    "Equipment": "224100036",
+    "EquipmentName": "Válvula de entrada de agua",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR2-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de entrada de agua",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "224100037",
+    "EquipmentName": "Refrigerador de compresor etapa 3",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR2-CLR3",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "Refrigerador de compresor etapa 3",
+    "EquipmentNameInEnglish": "Compressor Stage 3 cooler"
+  },
+  {
+    "Equipment": "224100038",
+    "EquipmentName": "Válvula de salida de agua",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR2-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de salida de agua",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "224100039",
+    "EquipmentName": "Válvula aislamiento manual salida compr.",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR2-DMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula aislamiento manual salida compr.",
+    "EquipmentNameInEnglish": "Compr. Discharge Manual Isolation Valve"
+  },
+  {
+    "Equipment": "224100040",
+    "EquipmentName": "Salida compr.: Válvula de control",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR2-DCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Salida compr.: Válvula de control",
+    "EquipmentNameInEnglish": "Compr. Discharge: Control Valve"
+  },
+  {
+    "Equipment": "224100041",
+    "EquipmentName": "Válvula de aislamiento manual",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR3-INLT-SMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de aislamiento manual",
+    "EquipmentNameInEnglish": "Manual Isolation Valve"
+  },
+  {
+    "Equipment": "224100042",
+    "EquipmentName": "Válvula de control",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR3-INLT-SCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de control",
+    "EquipmentNameInEnglish": "Control Valve"
+  },
+  {
+    "Equipment": "224100043",
+    "EquipmentName": "Caja de cambios",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR3-CGB1",
+    "TechnicalObjectType": "9700",
+    "EquipmentNameInLanguage": "Caja de cambios",
+    "EquipmentNameInEnglish": "Gear Box"
+  },
+  {
+    "Equipment": "224100044",
+    "EquipmentName": "Motor de compresor",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR3-CMT1",
+    "TechnicalObjectType": "9100",
+    "EquipmentNameInLanguage": "Motor de compresor",
+    "EquipmentNameInEnglish": "Compressor Motor"
+  },
+  {
+    "Equipment": "224100045",
+    "EquipmentName": "Junta de soporte lateral DE",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR3-DSBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "Junta de soporte lateral DE",
+    "EquipmentNameInEnglish": "DE side Bearing Assembly"
+  },
+  {
+    "Equipment": "224100046",
+    "EquipmentName": "Junta de soporte lateral NDE",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR3-NDBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "Junta de soporte lateral NDE",
+    "EquipmentNameInEnglish": "NDE side Bearing Assembly"
+  },
+  {
+    "Equipment": "224100047",
+    "EquipmentName": "Compresor etapa 1",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR3-CST1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Compresor etapa 1",
+    "EquipmentNameInEnglish": "Compressor Stage 1"
+  },
+  {
+    "Equipment": "224100048",
+    "EquipmentName": "Válvula de entrada de agua",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR3-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de entrada de agua",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "224100049",
+    "EquipmentName": "Refrigerador de compresor etapa 1",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR3-CLR1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Refrigerador de compresor etapa 1",
+    "EquipmentNameInEnglish": "Compressor Stage 1 cooler"
+  },
+  {
+    "Equipment": "224100050",
+    "EquipmentName": "Válvula de salida de agua",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR3-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de salida de agua",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "224100051",
+    "EquipmentName": "Compresor etapa 2",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR3-CST2",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Compresor etapa 2",
+    "EquipmentNameInEnglish": "Compressor Stage 2"
+  },
+  {
+    "Equipment": "224100052",
+    "EquipmentName": "Válvula de entrada de agua",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR3-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de entrada de agua",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "224100053",
+    "EquipmentName": "Refrigerador de compresor etapa 2",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR3-CLR2",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "Refrigerador de compresor etapa 2",
+    "EquipmentNameInEnglish": "Compressor Stage 2 cooler"
+  },
+  {
+    "Equipment": "224100054",
+    "EquipmentName": "Válvula de salida de agua",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR3-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de salida de agua",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "224100055",
+    "EquipmentName": "Compresor etapa 3",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR3-CST3",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Compresor etapa 3",
+    "EquipmentNameInEnglish": "Compressor Stage 3"
+  },
+  {
+    "Equipment": "224100056",
+    "EquipmentName": "Válvula de entrada de agua",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR3-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de entrada de agua",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "224100057",
+    "EquipmentName": "Refrigerador de compresor etapa 3",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR3-CLR3",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "Refrigerador de compresor etapa 3",
+    "EquipmentNameInEnglish": "Compressor Stage 3 cooler"
+  },
+  {
+    "Equipment": "224100058",
+    "EquipmentName": "Válvula de salida de agua",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR3-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de salida de agua",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "224100059",
+    "EquipmentName": "Válvula aislamiento manual salida compr.",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR3-DMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula aislamiento manual salida compr.",
+    "EquipmentNameInEnglish": "Compr. Discharge Manual Isolation Valve"
+  },
+  {
+    "Equipment": "224100060",
+    "EquipmentName": "Salida compr.: Válvula de control",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR3-DCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Salida compr.: Válvula de control",
+    "EquipmentNameInEnglish": "Compr. Discharge: Control Valve"
+  },
+  {
+    "Equipment": "224100061",
+    "EquipmentName": "Válvula de aislamiento manual",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR4-INLT-SMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de aislamiento manual",
+    "EquipmentNameInEnglish": "Manual Isolation Valve"
+  },
+  {
+    "Equipment": "224100062",
+    "EquipmentName": "Válvula de control",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR4-INLT-SCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de control",
+    "EquipmentNameInEnglish": "Control Valve"
+  },
+  {
+    "Equipment": "224100063",
+    "EquipmentName": "Caja de cambios",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR4-CGB1",
+    "TechnicalObjectType": "9700",
+    "EquipmentNameInLanguage": "Caja de cambios",
+    "EquipmentNameInEnglish": "Gear Box"
+  },
+  {
+    "Equipment": "224100064",
+    "EquipmentName": "Motor de compresor",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR4-CMT1",
+    "TechnicalObjectType": "9100",
+    "EquipmentNameInLanguage": "Motor de compresor",
+    "EquipmentNameInEnglish": "Compressor Motor"
+  },
+  {
+    "Equipment": "224100065",
+    "EquipmentName": "Junta de soporte lateral DE",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR4-DSBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "Junta de soporte lateral DE",
+    "EquipmentNameInEnglish": "DE side Bearing Assembly"
+  },
+  {
+    "Equipment": "224100066",
+    "EquipmentName": "Junta de soporte lateral NDE",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR4-NDBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "Junta de soporte lateral NDE",
+    "EquipmentNameInEnglish": "NDE side Bearing Assembly"
+  },
+  {
+    "Equipment": "224100067",
+    "EquipmentName": "Compresor etapa 1",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR4-CST1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Compresor etapa 1",
+    "EquipmentNameInEnglish": "Compressor Stage 1"
+  },
+  {
+    "Equipment": "224100068",
+    "EquipmentName": "Válvula de entrada de agua",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR4-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de entrada de agua",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "224100069",
+    "EquipmentName": "Refrigerador de compresor etapa 1",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR4-CLR1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Refrigerador de compresor etapa 1",
+    "EquipmentNameInEnglish": "Compressor Stage 1 cooler"
+  },
+  {
+    "Equipment": "224100070",
+    "EquipmentName": "Válvula de salida de agua",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR4-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de salida de agua",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "224100071",
+    "EquipmentName": "Compresor etapa 2",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR4-CST2",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Compresor etapa 2",
+    "EquipmentNameInEnglish": "Compressor Stage 2"
+  },
+  {
+    "Equipment": "224100072",
+    "EquipmentName": "Válvula de entrada de agua",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR4-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de entrada de agua",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "224100073",
+    "EquipmentName": "Refrigerador de compresor etapa 2",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR4-CLR2",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "Refrigerador de compresor etapa 2",
+    "EquipmentNameInEnglish": "Compressor Stage 2 cooler"
+  },
+  {
+    "Equipment": "224100074",
+    "EquipmentName": "Válvula de salida de agua",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR4-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de salida de agua",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "224100075",
+    "EquipmentName": "Compresor etapa 3",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR4-CST3",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "Compresor etapa 3",
+    "EquipmentNameInEnglish": "Compressor Stage 3"
+  },
+  {
+    "Equipment": "224100076",
+    "EquipmentName": "Válvula de entrada de agua",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR4-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de entrada de agua",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "224100077",
+    "EquipmentName": "Refrigerador de compresor etapa 3",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR4-CLR3",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "Refrigerador de compresor etapa 3",
+    "EquipmentNameInEnglish": "Compressor Stage 3 cooler"
+  },
+  {
+    "Equipment": "224100078",
+    "EquipmentName": "Válvula de salida de agua",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR4-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de salida de agua",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "224100079",
+    "EquipmentName": "Válvula aislamiento manual salida compr.",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR4-DMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula aislamiento manual salida compr.",
+    "EquipmentNameInEnglish": "Compr. Discharge Manual Isolation Valve"
+  },
+  {
+    "Equipment": "224100080",
+    "EquipmentName": "Salida compr.: Válvula de control",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-SAC-PLAR4-DCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Salida compr.: Válvula de control",
+    "EquipmentNameInEnglish": "Compr. Discharge: Control Valve"
+  },
+  {
+    "Equipment": "224100081",
+    "EquipmentName": "Válvula de entrada de secado",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-ADR-DRY01-D1IV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de entrada de secado",
+    "EquipmentNameInEnglish": "Dryer Inlet Valve"
+  },
+  {
+    "Equipment": "224100082",
+    "EquipmentName": "Válvula de salida de secado",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-ADR-DRY01-D1OV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de salida de secado",
+    "EquipmentNameInEnglish": "Dryer Outlet Valve"
+  },
+  {
+    "Equipment": "224100083",
+    "EquipmentName": "Válvula de entrada de secado",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-ADR-DRY01-D2IV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de entrada de secado",
+    "EquipmentNameInEnglish": "Dryer Inlet Valve"
+  },
+  {
+    "Equipment": "224100084",
+    "EquipmentName": "Válvula de salida de secado",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-SPA-ADR-DRY01-D2OV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de salida de secado",
+    "EquipmentNameInEnglish": "Dryer Outlet Valve"
+  },
+  {
+    "Equipment": "224100085",
+    "EquipmentName": "Ventilador de torre de refrigeración",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-CWS-CTW-CTW01-CTFN",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "Ventilador de torre de refrigeración",
+    "EquipmentNameInEnglish": "Cooling Tower Fan"
+  },
+  {
+    "Equipment": "224100086",
+    "EquipmentName": "Caja de cambio de ventilador torre refr.",
+    "Plant": "2410",
+    "FunctionalLocation": "",
+    "TechnicalObjectType": "9700",
+    "EquipmentNameInLanguage": "Caja de cambio de ventilador torre refr.",
+    "EquipmentNameInEnglish": "Cooling Tower Fan Gear Box"
+  },
+  {
+    "Equipment": "224100087",
+    "EquipmentName": "Válvula de aislamiento de agua entrada",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-CWS-CTW-CTW01-IWIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de aislamiento de agua entrada",
+    "EquipmentNameInEnglish": "Inlet Water Isolation Valve"
+  },
+  {
+    "Equipment": "224100088",
+    "EquipmentName": "Ventilador de torre de refrigeración",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-CWS-CTW-CTW02-CTFN",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "Ventilador de torre de refrigeración",
+    "EquipmentNameInEnglish": "Cooling Tower Fan"
+  },
+  {
+    "Equipment": "224100089",
+    "EquipmentName": "Caja de cambio de ventilador torre refr.",
+    "Plant": "2410",
+    "FunctionalLocation": "",
+    "TechnicalObjectType": "9700",
+    "EquipmentNameInLanguage": "Caja de cambio de ventilador torre refr.",
+    "EquipmentNameInEnglish": "Cooling Tower Fan Gear Box"
+  },
+  {
+    "Equipment": "224100090",
+    "EquipmentName": "Válvula de aislamiento de agua entrada",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-CWS-CTW-CTW02-IWIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "Válvula de aislamiento de agua entrada",
+    "EquipmentNameInEnglish": "Inlet Water Isolation Valve"
+  },
+  {
+    "Equipment": "224100091",
+    "EquipmentName": "Bomba circulación de agua refrigerante",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-CWS-WCS-CWCP1",
+    "TechnicalObjectType": "9500",
+    "EquipmentNameInLanguage": "Bomba circulación de agua refrigerante",
+    "EquipmentNameInEnglish": "Cooling Water Circulation Pump"
+  },
+  {
+    "Equipment": "224100092",
+    "EquipmentName": "Bomba circulación de agua refrigerante",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-CWS-WCS-CWCP2",
+    "TechnicalObjectType": "9500",
+    "EquipmentNameInLanguage": "Bomba circulación de agua refrigerante",
+    "EquipmentNameInEnglish": "Cooling Water Circulation Pump"
+  },
+  {
+    "Equipment": "224100093",
+    "EquipmentName": "Bomba circulación de agua refrigerante",
+    "Plant": "2410",
+    "FunctionalLocation": "2410-CWS-WCS-CWCP1",
+    "TechnicalObjectType": "9500",
+    "EquipmentNameInLanguage": "Bomba circulación de agua refrigerante",
+    "EquipmentNameInEnglish": "Cooling Water Circulation Pump"
+  },
+  {
+    "Equipment": "255100001",
+    "EquipmentName": "Manual Isolation Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR1-INLT-SMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Manual Isolation Valve"
+  },
+  {
+    "Equipment": "255100002",
+    "EquipmentName": "Control Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR1-INLT-SCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Control Valve"
+  },
+  {
+    "Equipment": "255100003",
+    "EquipmentName": "Gear Box",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR1-CGB1",
+    "TechnicalObjectType": "9700",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Gear Box"
+  },
+  {
+    "Equipment": "255100004",
+    "EquipmentName": "Compressor Motor",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR1-CMT1",
+    "TechnicalObjectType": "9100",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Motor"
+  },
+  {
+    "Equipment": "255100005",
+    "EquipmentName": "DE side Bearing Assembly",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR1-DSBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "DE side Bearing Assembly"
+  },
+  {
+    "Equipment": "255100006",
+    "EquipmentName": "NDE side Bearing Assembly",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR1-NDBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "NDE side Bearing Assembly"
+  },
+  {
+    "Equipment": "255100007",
+    "EquipmentName": "Compressor Stage 1",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR1-CST1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 1"
+  },
+  {
+    "Equipment": "255100008",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR1-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "255100009",
+    "EquipmentName": "Compressor Stage 1 cooler",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR1-CLR1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 1 cooler"
+  },
+  {
+    "Equipment": "255100010",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR1-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "255100011",
+    "EquipmentName": "Compressor Stage 2",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR1-CST2",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 2"
+  },
+  {
+    "Equipment": "255100012",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR1-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "255100013",
+    "EquipmentName": "Compressor Stage 2 cooler",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR1-CLR2",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 2 cooler"
+  },
+  {
+    "Equipment": "255100014",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR1-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "255100015",
+    "EquipmentName": "Compressor Stage 3",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR1-CST3",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 3"
+  },
+  {
+    "Equipment": "255100016",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR1-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "255100017",
+    "EquipmentName": "Compressor Stage 3 cooler",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR1-CLR3",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 3 cooler"
+  },
+  {
+    "Equipment": "255100018",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR1-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "255100019",
+    "EquipmentName": "Compr. Discharge Manual Isolation Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR1-DMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compr. Discharge Manual Isolation Valve"
+  },
+  {
+    "Equipment": "255100020",
+    "EquipmentName": "Compr. Discharge: Control Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR1-DCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compr. Discharge: Control Valve"
+  },
+  {
+    "Equipment": "255100021",
+    "EquipmentName": "Manual Isolation Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR2-INLT-SMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Manual Isolation Valve"
+  },
+  {
+    "Equipment": "255100022",
+    "EquipmentName": "Control Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR2-INLT-SCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Control Valve"
+  },
+  {
+    "Equipment": "255100023",
+    "EquipmentName": "Gear Box",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR2-CGB1",
+    "TechnicalObjectType": "9700",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Gear Box"
+  },
+  {
+    "Equipment": "255100024",
+    "EquipmentName": "Compressor Motor",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR2-CMT1",
+    "TechnicalObjectType": "9100",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Motor"
+  },
+  {
+    "Equipment": "255100025",
+    "EquipmentName": "DE side Bearing Assembly",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR2-DSBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "DE side Bearing Assembly"
+  },
+  {
+    "Equipment": "255100026",
+    "EquipmentName": "NDE side Bearing Assembly",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR2-NDBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "NDE side Bearing Assembly"
+  },
+  {
+    "Equipment": "255100027",
+    "EquipmentName": "Compressor Stage 1",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR2-CST1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 1"
+  },
+  {
+    "Equipment": "255100028",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR2-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "255100029",
+    "EquipmentName": "Compressor Stage 1 cooler",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR2-CLR1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 1 cooler"
+  },
+  {
+    "Equipment": "255100030",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR2-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "255100031",
+    "EquipmentName": "Compressor Stage 2",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR2-CST2",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 2"
+  },
+  {
+    "Equipment": "255100032",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR2-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "255100033",
+    "EquipmentName": "Compressor Stage 2 cooler",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR2-CLR2",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 2 cooler"
+  },
+  {
+    "Equipment": "255100034",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR2-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "255100035",
+    "EquipmentName": "Compressor Stage 3",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR2-CST3",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 3"
+  },
+  {
+    "Equipment": "255100036",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR2-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "255100037",
+    "EquipmentName": "Compressor Stage 3 cooler",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR2-CLR3",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 3 cooler"
+  },
+  {
+    "Equipment": "255100038",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR2-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "255100039",
+    "EquipmentName": "Compr. Discharge Manual Isolation Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR2-DMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compr. Discharge Manual Isolation Valve"
+  },
+  {
+    "Equipment": "255100040",
+    "EquipmentName": "Compr. Discharge: Control Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR2-DCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compr. Discharge: Control Valve"
+  },
+  {
+    "Equipment": "255100041",
+    "EquipmentName": "Manual Isolation Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR3-INLT-SMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Manual Isolation Valve"
+  },
+  {
+    "Equipment": "255100042",
+    "EquipmentName": "Control Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR3-INLT-SCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Control Valve"
+  },
+  {
+    "Equipment": "255100043",
+    "EquipmentName": "Gear Box",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR3-CGB1",
+    "TechnicalObjectType": "9700",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Gear Box"
+  },
+  {
+    "Equipment": "255100044",
+    "EquipmentName": "Compressor Motor",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR3-CMT1",
+    "TechnicalObjectType": "9100",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Motor"
+  },
+  {
+    "Equipment": "255100045",
+    "EquipmentName": "DE side Bearing Assembly",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR3-DSBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "DE side Bearing Assembly"
+  },
+  {
+    "Equipment": "255100046",
+    "EquipmentName": "NDE side Bearing Assembly",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR3-NDBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "NDE side Bearing Assembly"
+  },
+  {
+    "Equipment": "255100047",
+    "EquipmentName": "Compressor Stage 1",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR3-CST1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 1"
+  },
+  {
+    "Equipment": "255100048",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR3-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "255100049",
+    "EquipmentName": "Compressor Stage 1 cooler",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR3-CLR1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 1 cooler"
+  },
+  {
+    "Equipment": "255100050",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR3-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "255100051",
+    "EquipmentName": "Compressor Stage 2",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR3-CST2",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 2"
+  },
+  {
+    "Equipment": "255100052",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR3-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "255100053",
+    "EquipmentName": "Compressor Stage 2 cooler",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR3-CLR2",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 2 cooler"
+  },
+  {
+    "Equipment": "255100054",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR3-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "255100055",
+    "EquipmentName": "Compressor Stage 3",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR3-CST3",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 3"
+  },
+  {
+    "Equipment": "255100056",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR3-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "255100057",
+    "EquipmentName": "Compressor Stage 3 cooler",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR3-CLR3",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 3 cooler"
+  },
+  {
+    "Equipment": "255100058",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR3-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "255100059",
+    "EquipmentName": "Compr. Discharge Manual Isolation Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR3-DMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compr. Discharge Manual Isolation Valve"
+  },
+  {
+    "Equipment": "255100060",
+    "EquipmentName": "Compr. Discharge: Control Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR3-DCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compr. Discharge: Control Valve"
+  },
+  {
+    "Equipment": "255100061",
+    "EquipmentName": "Manual Isolation Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR4-INLT-SMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Manual Isolation Valve"
+  },
+  {
+    "Equipment": "255100062",
+    "EquipmentName": "Control Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR4-INLT-SCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Control Valve"
+  },
+  {
+    "Equipment": "255100063",
+    "EquipmentName": "Gear Box",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR4-CGB1",
+    "TechnicalObjectType": "9700",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Gear Box"
+  },
+  {
+    "Equipment": "255100064",
+    "EquipmentName": "Compressor Motor",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR4-CMT1",
+    "TechnicalObjectType": "9100",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Motor"
+  },
+  {
+    "Equipment": "255100065",
+    "EquipmentName": "DE side Bearing Assembly",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR4-DSBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "DE side Bearing Assembly"
+  },
+  {
+    "Equipment": "255100066",
+    "EquipmentName": "NDE side Bearing Assembly",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR4-NDBA",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "NDE side Bearing Assembly"
+  },
+  {
+    "Equipment": "255100067",
+    "EquipmentName": "Compressor Stage 1",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR4-CST1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 1"
+  },
+  {
+    "Equipment": "255100068",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR4-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "255100069",
+    "EquipmentName": "Compressor Stage 1 cooler",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR4-CLR1",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 1 cooler"
+  },
+  {
+    "Equipment": "255100070",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR4-CLR1",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "255100071",
+    "EquipmentName": "Compressor Stage 2",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR4-CST2",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 2"
+  },
+  {
+    "Equipment": "255100072",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR4-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "255100073",
+    "EquipmentName": "Compressor Stage 2 cooler",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR4-CLR2",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 2 cooler"
+  },
+  {
+    "Equipment": "255100074",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR4-CLR2",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "255100075",
+    "EquipmentName": "Compressor Stage 3",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR4-CST3",
+    "TechnicalObjectType": "9200",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 3"
+  },
+  {
+    "Equipment": "255100076",
+    "EquipmentName": "Inlet Water Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR4-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Valve"
+  },
+  {
+    "Equipment": "255100077",
+    "EquipmentName": "Compressor Stage 3 cooler",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR4-CLR3",
+    "TechnicalObjectType": "9800",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compressor Stage 3 cooler"
+  },
+  {
+    "Equipment": "255100078",
+    "EquipmentName": "Discharge Water Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR4-CLR3",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Discharge Water Valve"
+  },
+  {
+    "Equipment": "255100079",
+    "EquipmentName": "Compr. Discharge Manual Isolation Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR4-DMIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compr. Discharge Manual Isolation Valve"
+  },
+  {
+    "Equipment": "255100080",
+    "EquipmentName": "Compr. Discharge: Control Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-SAC-PLAR4-DCTV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Compr. Discharge: Control Valve"
+  },
+  {
+    "Equipment": "255100081",
+    "EquipmentName": "Dryer Inlet Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-ADR-DRY01-D1IV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Dryer Inlet Valve"
+  },
+  {
+    "Equipment": "255100082",
+    "EquipmentName": "Dryer Outlet Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-ADR-DRY01-D1OV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Dryer Outlet Valve"
+  },
+  {
+    "Equipment": "255100083",
+    "EquipmentName": "Dryer Inlet Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-ADR-DRY01-D2IV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Dryer Inlet Valve"
+  },
+  {
+    "Equipment": "255100084",
+    "EquipmentName": "Dryer Outlet Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-SPA-ADR-DRY01-D2OV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Dryer Outlet Valve"
+  },
+  {
+    "Equipment": "255100085",
+    "EquipmentName": "Cooling Tower Fan",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-CWS-CTW-CTW01-CTFN",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Cooling Tower Fan"
+  },
+  {
+    "Equipment": "255100086",
+    "EquipmentName": "Cooling Tower Fan Gear Box",
+    "Plant": "5510",
+    "FunctionalLocation": "",
+    "TechnicalObjectType": "9700",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Cooling Tower Fan Gear Box"
+  },
+  {
+    "Equipment": "255100087",
+    "EquipmentName": "Inlet Water Isolation Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-CWS-CTW-CTW01-IWIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Isolation Valve"
+  },
+  {
+    "Equipment": "255100088",
+    "EquipmentName": "Cooling Tower Fan",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-CWS-CTW-CTW02-CTFN",
+    "TechnicalObjectType": "",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Cooling Tower Fan"
+  },
+  {
+    "Equipment": "255100089",
+    "EquipmentName": "Cooling Tower Fan Gear Box",
+    "Plant": "5510",
+    "FunctionalLocation": "",
+    "TechnicalObjectType": "9700",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Cooling Tower Fan Gear Box"
+  },
+  {
+    "Equipment": "255100090",
+    "EquipmentName": "Inlet Water Isolation Valve",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-CWS-CTW-CTW02-IWIV",
+    "TechnicalObjectType": "9400",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Inlet Water Isolation Valve"
+  },
+  {
+    "Equipment": "255100091",
+    "EquipmentName": "Cooling Water Circulation Pump",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-CWS-WCS-CWCP1",
+    "TechnicalObjectType": "9500",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Cooling Water Circulation Pump"
+  },
+  {
+    "Equipment": "255100092",
+    "EquipmentName": "Cooling Water Circulation Pump",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-CWS-WCS-CWCP2",
+    "TechnicalObjectType": "9500",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Cooling Water Circulation Pump"
+  },
+  {
+    "Equipment": "255100093",
+    "EquipmentName": "Cooling Water Circulation Pump",
+    "Plant": "5510",
+    "FunctionalLocation": "5510-CWS-WCS-CWCP1",
+    "TechnicalObjectType": "9500",
+    "EquipmentNameInLanguage": "",
+    "EquipmentNameInEnglish": "Cooling Water Circulation Pump"
+  }
+]
