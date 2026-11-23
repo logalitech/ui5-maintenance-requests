@@ -101,8 +101,14 @@ export default class BarChart extends Control {
 
     private chart?: Chart<"bar">;
 
+    /** The colors of the theme are read again when the theme changes. Declared only: see init. */
+    private declare onThemeApplied: () => void;
+
     public init(): void {
         Chart.register(BarController, BarElement, CategoryScale, LinearScale, Tooltip);
+        // init runs in the constructor of the base class, before the fields of this class are initialized: a
+        // field with an initializer would still be undefined here, so the handler is created in init itself
+        this.onThemeApplied = () => this.invalidate();
         Theming.attachApplied(this.onThemeApplied);
     }
 
@@ -136,11 +142,6 @@ export default class BarChart extends Control {
         );
         return `${rem}rem`;
     }
-
-    /** The colors of the theme are read again when the theme changes. */
-    private readonly onThemeApplied = (): void => {
-        this.invalidate();
-    };
 
     /**
      * Draws the chart on the canvas of the current rendering. It does nothing when the control has been rendered
