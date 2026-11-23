@@ -105,6 +105,12 @@
                         change=".onFilterChange">
                         <core:Item key="{Plant}" text="{PlantName}" />
                     </ComboBox>
+                    <!-- Opens the indicators view (route indicators). -->
+                    <Button
+                        id="indicatorsButton"
+                        icon="sap-icon://vertical-bar-chart"
+                        tooltip="{i18n>indicatorsButtonTooltip}"
+                        press=".onOpenIndicators" />
                     <Button
                         id="sortButton"
                         icon="sap-icon://sort"

@@ -9,7 +9,8 @@
 /** Names of the routes declared in manifest.json (sap.ui5/routing/routes). */
 export enum RouteName {
     List = "list",
-    Detail = "detail"
+    Detail = "detail",
+    Indicators = "indicators"
 }
 
 /** Targets declared in manifest.json (sap.ui5/routing/targets) that the controllers display without a route. */
@@ -166,4 +167,52 @@ export enum EquipmentProperty {
 /** OData system query options that the controllers change on a list binding. */
 export enum BindingParameter {
     Search = "$search"
+}
+
+/** Status codes of the Statuses entity set (docs/servicio.md, section 8.1). */
+export enum RequestStatus {
+    New = "NW",
+    Assigned = "AS",
+    InProgress = "IP",
+    Completed = "CO",
+    Rejected = "RJ"
+}
+
+/** Priority codes of the Priorities entity set (docs/servicio.md, section 8.2). */
+export enum RequestPriority {
+    VeryHigh = "1",
+    High = "2",
+    Medium = "3",
+    Low = "4"
+}
+
+/** Entity sets that the indicators read (HU-08). */
+export enum IndicatorEntitySet {
+    RequestStats = "/RequestStats",
+    Statuses = "/Statuses",
+    Priorities = "/Priorities",
+    Plants = "/Plants"
+}
+
+/** The four numeric indicators of the indicators view (HU-08). The value is also the key of its text and its count. */
+export enum Indicator {
+    Open = "open",
+    InProgress = "inProgress",
+    Completed = "completed",
+    VeryHigh = "veryHigh"
+}
+
+/**
+ * Query parameters of the list route (pattern ":?query:") that preselect the filters of the list. Status takes one or
+ * more status codes separated by commas; priority and plant take one code.
+ */
+export interface ListQuery {
+    status?: string;
+    priority?: string;
+    plant?: string;
+}
+
+/** Arguments of the list route: the optional query with the filters to apply. */
+export interface ListRouteArguments {
+    "?query"?: ListQuery;
 }

@@ -15,7 +15,9 @@ import Sorter from "sap/ui/model/Sorter";
 import Context from "sap/ui/model/odata/v4/Context";
 import ODataListBinding from "sap/ui/model/odata/v4/ODataListBinding";
 import ValueHelpService from "../service/ValueHelpService";
-import { BindingParameter, DetailRouteArguments, RequestProperty, RouteName, ViewLevel } from "../model/constants";
+import {
+    BindingParameter, DetailRouteArguments, ListQuery, ListRouteArguments, RequestProperty, RouteName, ViewLevel
+} from "../model/constants";
 
 /**
  * List of maintenance requests, shown in the first column.
@@ -80,6 +82,11 @@ export default class RequestList extends BaseController {
      */
     public onCreate(): void {
         void this.createRequest();
+    }
+
+    /** Opens the indicators view. */
+    public onOpenIndicators(): void {
+        this.getRouter().navTo(RouteName.Indicators);
     }
 
     /** After each update of the rows (first load, growing, filter, sort) the shown request keeps its mark. */
@@ -203,8 +210,33 @@ export default class RequestList extends BaseController {
         } else {
             this.shownRequest = undefined;
             this.getTable().removeSelections(true);
+            const query = (event.getParameter("arguments") as ListRouteArguments)["?query"];
+            if (event.getParameter("name") === RouteName.List && query) {
+                this.applyQuery(query);
+            }
         }
     };
+
+    /**
+     * Applies the filters that the list route receives in its query (HU-08, from the indicators view): the three
+     * filter controls take the values of the query, so that the user sees and can change them, and the list
+     * binding is filtered with them. A filter that the query does not contain is removed. The search text and the
+     * sort order are kept. A route without query changes nothing: closing the detail keeps the filters.
+     * @param query Status codes separated by commas, priority and plant
+     */
+    private applyQuery(query: ListQuery): void {
+        const statusFilter = this.getStatusFilter();
+        statusFilter.setSelectedKeys((query.status ?? "").split(",").map((code) => code.trim()).filter(Boolean));
+        statusFilter.setValue("");
+        statusFilter.setValueState(ValueState.None);
+        for (const [comboBox, code] of [[this.getPriorityFilter(), query.priority], [this.getPlantFilter(), query.plant]] as const) {
+            comboBox.setSelectedKey(code ?? "");
+            if (!code) {
+                comboBox.setValue("");
+            }
+        }
+        this.onFilterChange();
+    }
 
     /** Shows the request of the given row in the detail. */
     private showRequest(item: ListItemBase | undefined): void {

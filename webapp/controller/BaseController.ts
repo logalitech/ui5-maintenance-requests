@@ -9,6 +9,7 @@ import type DraftService from "../service/DraftService";
 import type AttachmentService from "../service/AttachmentService";
 import type ActionService from "../service/ActionService";
 import type ValueHelpService from "../service/ValueHelpService";
+import type IndicatorService from "../service/IndicatorService";
 
 /**
  * Base class of all controllers: typed access to the component, the router, the models,
@@ -69,6 +70,11 @@ export default abstract class BaseController extends Controller {
     /** The value help service of the component: search of the codes of plants, equipments and materials. */
     public getValueHelpService(): ValueHelpService {
         return this.getComponent().getValueHelpService();
+    }
+
+    /** The indicator service of the component: totals of the requests by status and plant. */
+    public getIndicatorService(): IndicatorService {
+        return this.getComponent().getIndicatorService();
     }
 
     /**

@@ -8,3 +8,14 @@
     max-height: 70vh;
     object-fit: contain;
 }
+
+/* Chart of the control control/BarChart.ts: it fills the width of its container; Chart.js needs a container of its
+   own with a position and the height that the control sets, to size the canvas. A bar can be pressed. */
+.maintenanceBarChart {
+    position: relative;
+    width: 100%;
+}
+
+.maintenanceBarChart canvas {
+    cursor: pointer;
+}

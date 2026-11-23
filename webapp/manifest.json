@@ -121,12 +121,24 @@
             "list",
             "detail"
           ]
+        },
+        {
+          "name": "indicators",
+          "pattern": "indicators",
+          "target": [
+            "indicators"
+          ]
         }
       ],
       "targets": {
         "list": {
           "name": "RequestList",
           "id": "requestList",
+          "controlAggregation": "beginColumnPages"
+        },
+        "indicators": {
+          "name": "Indicators",
+          "id": "indicators",
           "controlAggregation": "beginColumnPages"
         },
         "detail": {

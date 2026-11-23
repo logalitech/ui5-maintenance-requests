@@ -1,0 +1,157 @@
+<mvc:View
+    controllerName="sapui5.maintenance.controller.Indicators"
+    displayBlock="true"
+    height="100%"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns:chart="sapui5.maintenance.control"
+    xmlns="sap.m"
+    core:require="{ formatter: 'sapui5/maintenance/model/formatter' }">
+    <!--
+        Indicators of the active requests, summed from RequestStats by the controller into the indicators model.
+        The tiles, the bars of the charts and the rows of the tables open the list filtered by what they show.
+        Each chart has a table with the same data, as the alternative for assistive technologies; the bars
+        cannot be reached with the keyboard, the rows can. The values of the custom data "indicator" of the
+        tiles are the values of the enum Indicator (model/constants.ts).
+    -->
+    <Page
+        id="indicatorsPage"
+        title="{i18n>indicatorsPageTitle}"
+        showNavButton="true"
+        navButtonPress=".onNavBack"
+        busy="{indicators>/busy}"
+        busyIndicatorDelay="0">
+        <content>
+            <Title
+                id="indicatorsTotal"
+                level="H2"
+                class="sapUiSmallMarginBegin sapUiSmallMarginTop"
+                text="{
+                    parts: [
+                        { path: 'i18n>indicatorsTotal' },
+                        { path: 'i18n>indicatorsTotalWithCount' },
+                        { path: 'indicators>/total', targetType: 'any' }
+                    ],
+                    formatter: 'formatter.listTitle'
+                }" />
+            <FlexBox id="indicatorTiles" wrap="Wrap" class="sapUiSmallMarginBeginEnd sapUiTinyMarginTop">
+                <GenericTile
+                    id="openTile"
+                    class="sapUiTinyMargin"
+                    frameType="OneByOne"
+                    header="{i18n>indicatorOpen}"
+                    subheader="{i18n>indicatorOpenDescription}"
+                    press=".onTilePress">
+                    <customData>
+                        <core:CustomData key="indicator" value="open" />
+                    </customData>
+                    <TileContent>
+                        <NumericContent value="{indicators>/counts/open}" valueColor="Neutral" withMargin="false" />
+                    </TileContent>
+                </GenericTile>
+                <GenericTile
+                    id="inProgressTile"
+                    class="sapUiTinyMargin"
+                    frameType="OneByOne"
+                    header="{i18n>indicatorInProgress}"
+                    press=".onTilePress">
+                    <customData>
+                        <core:CustomData key="indicator" value="inProgress" />
+                    </customData>
+                    <TileContent>
+                        <NumericContent value="{indicators>/counts/inProgress}" valueColor="Critical" withMargin="false" />
+                    </TileContent>
+                </GenericTile>
+                <GenericTile
+                    id="completedTile"
+                    class="sapUiTinyMargin"
+                    frameType="OneByOne"
+                    header="{i18n>indicatorCompleted}"
+                    press=".onTilePress">
+                    <customData>
+                        <core:CustomData key="indicator" value="completed" />
+                    </customData>
+                    <TileContent>
+                        <NumericContent value="{indicators>/counts/completed}" valueColor="Good" withMargin="false" />
+                    </TileContent>
+                </GenericTile>
+                <GenericTile
+                    id="veryHighTile"
+                    class="sapUiTinyMargin"
+                    frameType="OneByOne"
+                    header="{i18n>indicatorVeryHigh}"
+                    press=".onTilePress">
+                    <customData>
+                        <core:CustomData key="indicator" value="veryHigh" />
+                    </customData>
+                    <TileContent>
+                        <NumericContent value="{indicators>/counts/veryHigh}" valueColor="Error" withMargin="false" />
+                    </TileContent>
+                </GenericTile>
+            </FlexBox>
+
+            <Panel id="statusPanel" headerText="{i18n>chartByStatusTitle}" class="sapUiResponsiveMargin" width="auto">
+                <chart:BarChart
+                    id="statusChart"
+                    ariaLabel="{i18n>chartByStatusAriaLabel}"
+                    select=".onStatusSelect"
+                    items="{indicators>/byStatus}">
+                    <chart:BarChartItem
+                        key="{indicators>key}"
+                        label="{indicators>label}"
+                        value="{indicators>count}"
+                        state="{indicators>state}" />
+                </chart:BarChart>
+                <Table
+                    id="statusTable"
+                    class="sapUiSmallMarginTop"
+                    headerText="{i18n>chartTableTitle}"
+                    items="{indicators>/byStatus}"
+                    itemPress=".onStatusRowPress">
+                    <columns>
+                        <Column><Text text="{i18n>columnStatus}" /></Column>
+                        <Column hAlign="End" width="8rem"><Text text="{i18n>columnRequestCount}" /></Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem type="Active">
+                            <Text text="{indicators>label}" />
+                            <Text text="{indicators>count}" />
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </Panel>
+
+            <Panel id="plantPanel" headerText="{i18n>chartByPlantTitle}" class="sapUiResponsiveMargin" width="auto">
+                <chart:BarChart
+                    id="plantChart"
+                    horizontal="true"
+                    ariaLabel="{i18n>chartByPlantAriaLabel}"
+                    select=".onPlantSelect"
+                    items="{indicators>/byPlant}">
+                    <chart:BarChartItem
+                        key="{indicators>key}"
+                        label="{indicators>label}"
+                        value="{indicators>count}"
+                        state="{indicators>state}" />
+                </chart:BarChart>
+                <Table
+                    id="plantTable"
+                    class="sapUiSmallMarginTop"
+                    headerText="{i18n>chartTableTitle}"
+                    items="{indicators>/byPlant}"
+                    itemPress=".onPlantRowPress">
+                    <columns>
+                        <Column><Text text="{i18n>columnPlant}" /></Column>
+                        <Column hAlign="End" width="8rem"><Text text="{i18n>columnRequestCount}" /></Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem type="Active">
+                            <Text text="{indicators>label}" />
+                            <Text text="{indicators>count}" />
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </Panel>
+        </content>
+    </Page>
+</mvc:View>

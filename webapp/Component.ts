@@ -11,6 +11,7 @@ import DraftService from "./service/DraftService";
 import AttachmentService from "./service/AttachmentService";
 import ActionService from "./service/ActionService";
 import ValueHelpService from "./service/ValueHelpService";
+import IndicatorService from "./service/IndicatorService";
 
 /**
  * @namespace sapui5.maintenance
@@ -29,6 +30,7 @@ export default class Component extends UIComponent {
     private attachmentService: AttachmentService;
     private actionService: ActionService;
     private valueHelpService: ValueHelpService;
+    private indicatorService: IndicatorService;
     private contentDensityClass: string;
 
     public init(): void {
@@ -49,6 +51,9 @@ export default class Component extends UIComponent {
 
         // search of the codes typed in the fields with a search help
         this.valueHelpService = new ValueHelpService(this.getModel() as ODataModel);
+
+        // totals of the requests by status and plant, for the indicators view
+        this.indicatorService = new IndicatorService(this.getModel() as ODataModel);
 
         // set the device and the appView models
         this.setModel(createDeviceModel(), "device");
@@ -90,6 +95,11 @@ export default class Component extends UIComponent {
     /** The search of the codes of plants, equipments and materials (service/ValueHelpService.ts). */
     public getValueHelpService(): ValueHelpService {
         return this.valueHelpService;
+    }
+
+    /** The totals of the requests for the indicators view (service/IndicatorService.ts). */
+    public getIndicatorService(): IndicatorService {
+        return this.indicatorService;
     }
 
     /** The error handler: the controllers that show an error themselves run its capture. */
