@@ -1,5 +1,6 @@
 /**
- * Application constants: route names and, in later stories, status and priority codes.
+ * Application constants: route names, the criticality scale of the service and the properties
+ * of Requests that the controllers read from the contexts of the list.
  */
 
 /** Names of the routes declared in manifest.json (sap.ui5/routing/routes). */
@@ -15,4 +16,19 @@ export interface DetailRouteArguments {
     uuid: string;
     active: string;
     layout?: string;
+}
+
+/** Criticality scale of the service (docs/servicio.md, section 8). */
+export enum Criticality {
+    Neutral = 0,
+    Negative = 1,
+    Critical = 2,
+    Positive = 3,
+    Information = 5
+}
+
+/** Properties of the Requests entity set that the controllers read from a context. */
+export enum RequestProperty {
+    RequestUUID = "RequestUUID",
+    IsActiveEntity = "IsActiveEntity"
 }

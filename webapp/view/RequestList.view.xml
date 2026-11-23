@@ -1,6 +1,116 @@
 <mvc:View
     controllerName="sapui5.maintenance.controller.RequestList"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <Page id="requestListPage" title="{i18n>requestListTitle}" />
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    core:require="{ formatter: 'sapui5/maintenance/model/formatter' }">
+    <Page id="requestListPage" title="{i18n>requestListTitle}">
+        <!--
+            Active requests and the drafts of the user, without duplicates (static $filter), counted
+            on the server ($count) and sorted by request number descending (initial dynamic sorter,
+            replaced later by the sort options). The binding is marked with $$getKeepAliveContext so
+            that the detail can share its contexts. The table requests 20 rows per page (growing).
+        -->
+        <Table
+            id="requestTable"
+            items="{
+                path: '/Requests',
+                sorter: { path: 'RequestID', descending: true },
+                parameters: {
+                    $count: true,
+                    $filter: 'IsActiveEntity eq false or SiblingEntity/IsActiveEntity eq null',
+                    $$getKeepAliveContext: true
+                }
+            }"
+            growing="true"
+            growingThreshold="20"
+            growingScrollToLoad="true"
+            mode="{= ${device>/system/phone} ? 'None' : 'SingleSelectMaster'}"
+            sticky="ColumnHeaders,HeaderToolbar"
+            autoPopinMode="true"
+            contextualWidth="Auto"
+            popinLayout="GridSmall"
+            noDataText="{i18n>requestTableNoData}"
+            selectionChange=".onSelectionChange"
+            itemPress=".onItemPress"
+            updateFinished=".onUpdateFinished">
+            <headerToolbar>
+                <OverflowToolbar id="requestToolbar">
+                    <!-- Bound by the controller to the header context of the list binding ($count) -->
+                    <Title
+                        id="requestTableTitle"
+                        level="H2"
+                        text="{
+                            parts: [
+                                { path: 'i18n>requestTableTitle' },
+                                { path: 'i18n>requestTableTitleWithCount' },
+                                { path: '$count', targetType: 'any' }
+                            ],
+                            formatter: 'formatter.listTitle'
+                        }" />
+                    <ToolbarSpacer />
+                </OverflowToolbar>
+            </headerToolbar>
+            <!--
+                Fixed widths in rem only where the content is short; the title takes the remaining
+                space. With autoPopinMode the table moves the columns to the pop-in by importance:
+                Low first (plant, equipment), then Medium (due date). The four High columns stay
+                visible at about 450 px, the width of the list next to the detail.
+            -->
+            <columns>
+                <Column id="requestColumn" width="5rem" importance="High">
+                    <Text text="{i18n>columnRequest}" />
+                </Column>
+                <Column id="titleColumn" importance="High" autoPopinWidth="4">
+                    <Text text="{i18n>columnTitle}" />
+                </Column>
+                <Column id="plantColumn" width="8rem" importance="Low">
+                    <Text text="{i18n>columnPlant}" />
+                </Column>
+                <Column id="equipmentColumn" width="10rem" importance="Low">
+                    <Text text="{i18n>columnEquipment}" />
+                </Column>
+                <Column id="priorityColumn" width="5rem" importance="High">
+                    <Text text="{i18n>columnPriority}" />
+                </Column>
+                <Column id="statusColumn" width="5.5rem" importance="High">
+                    <Text text="{i18n>columnStatus}" />
+                </Column>
+                <Column id="requiredEndDateColumn" width="7rem" importance="Medium">
+                    <Text text="{i18n>columnRequiredEndDate}" />
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem
+                    id="requestItem"
+                    type="{= ${device>/system/phone} ? 'Navigation' : 'Active'}"
+                    vAlign="Middle">
+                    <cells>
+                        <VBox>
+                            <ObjectIdentifier title="{RequestID}" />
+                            <ObjectMarker type="Draft" visible="{= !${IsActiveEntity}}" />
+                        </VBox>
+                        <Text text="{Title}" />
+                        <Text text="{PlantName}" />
+                        <Text text="{EquipmentName}" />
+                        <ObjectStatus
+                            text="{PriorityText}"
+                            state="{
+                                path: 'PriorityCriticality',
+                                targetType: 'any',
+                                formatter: 'formatter.criticalityState'
+                            }" />
+                        <ObjectStatus
+                            text="{StatusText}"
+                            state="{
+                                path: 'StatusCriticality',
+                                targetType: 'any',
+                                formatter: 'formatter.criticalityState'
+                            }" />
+                        <Text text="{RequiredEndDate}" />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </Page>
 </mvc:View>
