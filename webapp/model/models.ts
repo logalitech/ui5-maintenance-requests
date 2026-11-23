@@ -38,8 +38,9 @@ export interface AppViewState {
 /** State of the detail view kept in its detailView model. */
 export interface DetailViewState {
     /**
-     * Saving state of the changes of the shown draft: Saving while a PATCH request is pending, Saved once the
-     * service has saved the last change, Clear when no change has been made since the request was shown.
+     * Saving state of the changes of the shown draft: Saving while the request of a change (PATCH of a field, POST
+     * or DELETE of an item) is pending, Saved once the service has saved the last change, Clear when no change has
+     * been made since the request was shown.
      */
     draftState: DraftIndicatorState;
 }

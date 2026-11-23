@@ -1,7 +1,7 @@
 /**
  * Application constants: route and target names, view levels of the column layout, the criticality
- * scale of the service, the paths of the entity sets and the properties of Requests and Equipments
- * that the controllers read from the contexts or use in filters.
+ * scale of the service, the paths of the entity sets and the properties of Requests, Parts and Equipments
+ * that the controllers read from the contexts, set as initial data or use in filters.
  */
 
 /** Names of the routes declared in manifest.json (sap.ui5/routing/routes). */
@@ -25,7 +25,9 @@ export enum ViewLevel {
 export enum HttpStatus {
     BadRequest = 400,
     NotFound = 404,
-    UnprocessableContent = 422
+    Conflict = 409,
+    UnprocessableContent = 422,
+    Locked = 423
 }
 
 /**
@@ -64,7 +66,13 @@ export enum RequestProperty {
     Status = "Status",
     Priority = "Priority",
     Plant = "Plant",
-    RequiredEndDate = "RequiredEndDate"
+    RequiredEndDate = "RequiredEndDate",
+    CurrencyCode = "CurrencyCode"
+}
+
+/** Properties of the Parts entity set that the controllers set as initial data of a new spare part. */
+export enum PartProperty {
+    CurrencyCode = "CurrencyCode"
 }
 
 /** Properties of the Equipments entity set that the controllers use as paths of filters. */

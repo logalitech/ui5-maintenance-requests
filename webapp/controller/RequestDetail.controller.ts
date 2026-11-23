@@ -4,6 +4,7 @@ import { NavigationActionsTargets } from "sap/f/FlexibleColumnLayoutSemanticHelp
 import { Button$PressEvent } from "sap/m/Button";
 import ComboBox, { ComboBox$ChangeEvent } from "sap/m/ComboBox";
 import { DraftIndicatorState } from "sap/m/library";
+import { ListBase$DeleteEvent } from "sap/m/ListBase";
 import MessageBox from "sap/m/MessageBox";
 import MessagePopover from "sap/m/MessagePopover";
 import MessageToast from "sap/m/MessageToast";
@@ -16,7 +17,8 @@ import Context from "sap/ui/model/odata/v4/Context";
 import ODataListBinding from "sap/ui/model/odata/v4/ODataListBinding";
 import ODataModel, { ODataModel$PropertyChangeEventParameters } from "sap/ui/model/odata/v4/ODataModel";
 import {
-    DetailRouteArguments, EntitySetPath, EquipmentProperty, HttpStatus, RequestProperty, RouteName, TargetName
+    DetailRouteArguments, EntitySetPath, EquipmentProperty, HttpStatus, PartProperty, RequestProperty, RouteName,
+    TargetName
 } from "../model/constants";
 import { createDetailViewModel } from "../model/models";
 
@@ -42,6 +44,11 @@ import { createDetailViewModel } from "../model/models";
  * of a failed activation stay in the message model (sap.ui.core.Messaging), bound to their fields; the view
  * gets that model as "message" for the message button and the message popover.
  *
+ * The tables of operations and spare parts are editable in edit mode as well: their cells are input fields
+ * bound two-way to the items of the draft, "Add" creates an item and the delete icon of a row deletes it.
+ * Once the service has processed a change of an item (PATCH, POST or DELETE request), the controller asks
+ * the draft service for its side effects: the estimated cost of the header after a change of a spare part.
+ *
  * @namespace sapui5.maintenance.controller
  */
 export default class RequestDetail extends BaseController {
@@ -58,8 +65,8 @@ export default class RequestDetail extends BaseController {
     /** Key of the request of the last matched detail route, also while it is being read. */
     private routeKey?: Pick<DetailRouteArguments, "uuid" | "active">;
 
-    /** Promise of the PATCH request of the last change of the shown draft, whose outcome the footer shows. */
-    private lastPatch?: Promise<void>;
+    /** Promise of the request of the last change of the shown draft, whose outcome the footer shows. */
+    private lastChange?: Promise<unknown>;
 
     /** The message popover, loaded once from its fragment the first time it is opened. */
     private messagePopover?: Promise<MessagePopover>;
@@ -122,6 +129,34 @@ export default class RequestDetail extends BaseController {
      */
     public onPlantChange(event: ComboBox$ChangeEvent): void {
         this.filterEquipments(event.getSource().getSelectedKey());
+    }
+
+    /** Add (operations table, edit mode): creates an operation of the draft, shown at the top of the table. */
+    public onAddTask(): void {
+        const draftContext = this.requestContext;
+        if (draftContext) {
+            void this.addItem(draftContext, "taskTable");
+        }
+    }
+
+    /**
+     * Add (spare parts table, edit mode): creates a spare part of the draft, shown at the top of the table. Its
+     * price gets the currency of the request: the service adds quantity by price of the spare parts to the
+     * estimated cost of the request, which is in that currency.
+     */
+    public onAddPart(): void {
+        void this.addPart();
+    }
+
+    /** Delete icon of a row of the operations or the spare parts table (edit mode): deletes the item. */
+    public onDeleteItem(event: ListBase$DeleteEvent): void {
+        const draftContext = this.requestContext;
+        const itemContext = event.getParameter("listItem")?.getBindingContext() as Context | null | undefined;
+        if (!draftContext || !itemContext) {
+            return;
+        }
+        const itemPath = itemContext.getPath();
+        void this.followChange(draftContext, this.getDraftService().deleteItem(itemContext), itemPath);
     }
 
     /**
@@ -201,6 +236,40 @@ export default class RequestDetail extends BaseController {
         this.resetDraftState();
         this.getView()?.setBindingContext(null as unknown as Context);
         this.getRouter().navTo(RouteName.List, {}, true);
+    }
+
+    /** Creates a spare part of the shown draft, with the currency of the request as currency of its price. */
+    private async addPart(): Promise<void> {
+        const draftContext = this.requestContext;
+        if (!draftContext) {
+            return;
+        }
+        let currencyCode: string;
+        try {
+            currencyCode = await draftContext.requestProperty(RequestProperty.CurrencyCode) as string;
+        } catch {
+            // the model has reported the error of the service, and the error handler shows it
+            return;
+        }
+        await this.addItem(draftContext, "partTable", { [PartProperty.CurrencyCode]: currencyCode });
+    }
+
+    /**
+     * Creates an item of a draft with the list binding of its table, which shows the new row at the top. The
+     * screen is not blocked: the user can fill in the row while the service creates the item, and the model
+     * sends those values with the POST request or after it.
+     * @param draftContext The context of the draft
+     * @param tableId Id of the table of the items: taskTable or partTable
+     * @param initialData Initial values of the item
+     */
+    private async addItem(draftContext: Context, tableId: string, initialData?: Record<string, unknown>):
+            Promise<void> {
+        const binding = this.byId(tableId)?.getBinding("items") as ODataListBinding | undefined;
+        const collectionPath = binding?.getResolvedPath();
+        if (!binding || !collectionPath) {
+            return;
+        }
+        await this.followChange(draftContext, this.getDraftService().create(binding, initialData), collectionPath);
     }
 
     /** Asks the user to confirm that the draft and its changes are discarded. */
@@ -357,45 +426,71 @@ export default class RequestDetail extends BaseController {
     /**
      * A property has been changed by a two-way binding. For a property of the shown draft (a field of the
      * request, or of one of its items), the transition messages bound to that property are removed, because
-     * they refer to the value that the service validated, and the footer shows the saving state of the change.
+     * they refer to the value that the service validated, and the change is followed until it is saved.
      */
     private readonly onPropertyChange = (event: Model$PropertyChangeEvent): void => {
         const { resolvedPath, promise } = event.getParameters() as ODataModel$PropertyChangeEventParameters;
-        const requestPath = this.requestContext?.getPath();
-        if (!requestPath || !resolvedPath?.startsWith(`${requestPath}/`)) {
+        const draftContext = this.requestContext;
+        if (!draftContext || !resolvedPath?.startsWith(`${draftContext.getPath()}/`)) {
             return;
         }
         this.getDraftService().removeTransitionMessages(resolvedPath, false);
         if (promise) {
-            void this.showDraftState(promise);
+            void this.followChange(draftContext, promise, resolvedPath);
         }
     };
 
     /**
-     * Shows the saving state of a change: "Saving draft..." while its PATCH request is pending, and
-     * "Draft saved" once the service has saved it. A failed PATCH request is repeated by the model with
-     * the next change, so the state stays "Saving draft..." until then; the promise is rejected only when
-     * the change is reset. Only the outcome of the last change is shown, so that the state does not show
-     * "Draft saved" while a later change is still pending.
-     * @param patch Promise on the outcome of the PATCH request of the change
+     * Follows a change of a draft (the PATCH request of a field, or the POST or DELETE request of an item) until
+     * the service has processed it: the footer shows its saving state and, once the change is saved, the draft
+     * service loads its side effects, such as the estimated cost after a change of a spare part. The request of
+     * the side effects is sent after the change, so that the service has already recalculated the data.
+     * @param draftContext The context of the draft
+     * @param change Promise on the outcome of the request of the change
+     * @param changedPath Absolute path of the changed property, of the deleted item or of the collection of the
+     *   created item
      */
-    private async showDraftState(patch: Promise<void>): Promise<void> {
-        this.lastPatch = patch;
-        this.setDraftState(DraftIndicatorState.Saving);
-        let state = DraftIndicatorState.Saved;
+    private async followChange(draftContext: Context, change: Promise<unknown>, changedPath: string):
+            Promise<void> {
+        if (!await this.showDraftState(change)) {
+            return;
+        }
         try {
-            await patch;
+            await this.getDraftService().requestSideEffects(draftContext, changedPath);
         } catch {
-            state = DraftIndicatorState.Clear;
+            // the model has reported the error of the service, and the error handler shows it; a draft activated
+            // or discarded in the meantime has no data left to load
         }
-        if (this.lastPatch === patch) {
-            this.setDraftState(state);
+    }
+
+    /**
+     * Shows the saving state of a change: "Saving draft..." while its request is pending, and "Draft saved"
+     * once the service has processed it. A failed PATCH request is repeated by the model with the next change,
+     * so the state stays "Saving draft..." until then; its promise is rejected only when the change is reset.
+     * A failed POST or DELETE request of an item rejects its promise, and the state is cleared. Only the
+     * outcome of the last change is shown, so that the state does not show "Draft saved" while a later change
+     * is still pending.
+     * @param change Promise on the outcome of the request of the change
+     * @returns Whether the service has saved the change
+     */
+    private async showDraftState(change: Promise<unknown>): Promise<boolean> {
+        this.lastChange = change;
+        this.setDraftState(DraftIndicatorState.Saving);
+        let saved = true;
+        try {
+            await change;
+        } catch {
+            saved = false;
         }
+        if (this.lastChange === change) {
+            this.setDraftState(saved ? DraftIndicatorState.Saved : DraftIndicatorState.Clear);
+        }
+        return saved;
     }
 
     /** No saving state: no change has been made since the request was shown. */
     private resetDraftState(): void {
-        this.lastPatch = undefined;
+        this.lastChange = undefined;
         this.setDraftState(DraftIndicatorState.Clear);
     }
 

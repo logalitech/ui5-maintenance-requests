@@ -25,6 +25,10 @@ import type Component from "../Component";
  * the target Equipment of a failed activation). Its messages stay in the message model, without a message
  * box: the field shows the message and the message button of the detail lists it.
  *
+ * A conflict with another user is not a technical error either: a 409 or 423 response, such as the action Edit
+ * on a request that another user is editing. The message box shows the message of the service, which says
+ * what happened, instead of the generic text.
+ *
  * @namespace sapui5.maintenance.controller
  */
 export default class ErrorHandler extends BaseObject {
@@ -87,18 +91,32 @@ export default class ErrorHandler extends BaseObject {
         });
     }
 
+    /**
+     * Whether the message reports a conflict with another user: a 409 (Conflict) or 423 (Locked) response, for
+     * example to the action Edit on a request that another user is editing.
+     */
+    private isConflictMessage(message: Message): boolean {
+        const httpStatus = this.getHttpStatus(message);
+        return httpStatus === HttpStatus.Conflict || httpStatus === HttpStatus.Locked;
+    }
+
     /** HTTP status of the response of the message (httpStatus of the technical details of the model). */
     private getHttpStatus(message: Message): number | undefined {
         const technicalDetails = message.getTechnicalDetails() as { httpStatus?: number } | undefined;
         return technicalDetails?.httpStatus;
     }
 
+    /**
+     * Shows the error in a message box: the message of the service for a conflict with another user, the
+     * generic text with the message of the service in the details otherwise.
+     */
     private async showError(message: Message): Promise<void> {
         const resourceModel = this.component.getModel("i18n") as ResourceModel;
         const bundle = await Promise.resolve(resourceModel.getResourceBundle());
-        MessageBox.error(bundle.getText("errorText") ?? "", {
+        const conflict = this.isConflictMessage(message);
+        MessageBox.error(conflict ? message.getMessage() : bundle.getText("errorText") ?? "", {
             title: bundle.getText("errorTitle"),
-            details: this.getDetails(message),
+            details: conflict ? undefined : this.getDetails(message),
             styleClass: this.component.getContentDensityClass(),
             onClose: () => {
                 this.messageOpen = false;

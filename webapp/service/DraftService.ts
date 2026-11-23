@@ -12,9 +12,25 @@ type DraftRootAction = "EditAction" | "ActivationAction" | "DiscardAction";
 /** Binding parameters of a deferred operation binding. */
 type OperationParameters = Parameters<ODataModel["bindContext"]>[2];
 
+/** A navigation property in the metadata model: its kind and the navigation property back to its source. */
+interface NavigationPropertyMetadata {
+    $kind?: string;
+    $Partner?: string;
+}
+
+/** Annotation Common.SideEffects in the metadata model: the members that the service uses. */
+interface SideEffectsAnnotation {
+    /** Properties of the annotated entity type whose change has side effects. */
+    SourceProperties?: { $PropertyPath: string }[];
+    /** Properties that the service recalculates, as paths relative to the annotated entity type. */
+    TargetProperties?: string[];
+}
+
 /**
  * Draft handling of the maintenance requests (docs/servicio.md, section 4): creation of a draft and the
- * bound actions Edit, Activate and Discard. The controllers call these methods and never build an action name.
+ * bound actions Edit, Activate and Discard, the creation and deletion of the items of a draft (operations
+ * and spare parts) and the side effects of their changes. The controllers call these methods and never
+ * build an action name.
  *
  * The qualified names of the actions are read from the annotation Common.DraftRoot of the entity set
  * Requests, which contains them with the namespace of the service. Each action is invoked with a
@@ -27,11 +43,21 @@ type OperationParameters = Parameters<ODataModel["bindContext"]>[2];
  * The model reports the messages of an error response as transition messages and keeps them until the
  * application removes them: the validation messages of a failed activation stay bound to the fields of the
  * draft. They are removed when the draft is activated again or discarded (removeTransitionMessages).
+ *
+ * The service recalculates some properties of a draft after a change of its items (side effects): the
+ * metadata declare them with the annotation Common.SideEffects, and the model only loads them on request
+ * (requestSideEffects).
  */
 export default class DraftService {
 
     /** Annotation of the entity set Requests that names the draft actions. */
     private static readonly DRAFT_ROOT = "@com.sap.vocabularies.Common.v1.DraftRoot";
+
+    /** Term of the annotations that declare the side effects of an entity type; a qualifier may follow after "#". */
+    private static readonly SIDE_EFFECTS = "@com.sap.vocabularies.Common.v1.SideEffects";
+
+    /** Value of $kind in the metadata of a navigation property. */
+    private static readonly NAVIGATION_PROPERTY_KIND = "NavigationProperty";
 
     /** Mandatory parameter of the action Edit. */
     private static readonly PRESERVE_CHANGES = "PreserveChanges";
@@ -49,16 +75,21 @@ export default class DraftService {
     }
 
     /**
-     * Creates a request with the list binding: the service creates it directly as a draft
-     * (IsActiveEntity false), and the list shows it at the top.
+     * Creates an entity with a list binding, in the group of the binding ($auto):
+     * - With the list binding of the requests, a request: the service creates it directly as a draft
+     *   (IsActiveEntity false), and the list shows it at the top.
+     * - With the list binding of an item navigation of a draft (_Task or _Part), an operation or a spare part
+     *   of the draft, which its table shows at the top. The entity sets Tasks and Parts do not allow a direct
+     *   creation: the POST request goes to the navigation of the draft.
      *
      * If the POST fails, the model reports the error and would repeat the POST with the next change of
      * the entity. The transient context is deleted instead, so that no empty row stays in the list.
-     * @param listBinding The list binding of the requests
-     * @returns The context of the new draft, once the service has created it and its key is known
+     * @param listBinding The list binding of the requests, or of the items of a draft
+     * @param initialData Initial values of the entity, sent with the POST request
+     * @returns The context of the new entity, once the service has created it and its key is known
      */
-    public async create(listBinding: ODataListBinding): Promise<Context> {
-        const context = listBinding.create();
+    public async create(listBinding: ODataListBinding, initialData?: Record<string, unknown>): Promise<Context> {
+        const context = listBinding.create(initialData);
         const success = await new Promise<boolean>((resolve) => {
             const onCreateCompleted = (event: ODataListBinding$CreateCompletedEvent): void => {
                 if (event.getParameter("context") === context) {
@@ -72,7 +103,8 @@ export default class DraftService {
             // the deletion cancels the creation: its promise is rejected on purpose
             void context.created()?.catch(() => undefined);
             await context.delete();
-            throw new Error(`The service did not create the draft in ${listBinding.getPath()}`);
+            const path = listBinding.getResolvedPath() ?? listBinding.getPath();
+            throw new Error(`The service did not create the entity in ${path}`);
         }
         await context.created();
         return context;
@@ -166,6 +198,78 @@ export default class DraftService {
             draftContext.replaceWith(activeContext);
         }
         return true;
+    }
+
+    /**
+     * Deletes an item of a draft, an operation or a spare part, in the group of its binding ($auto). The table
+     * removes the row at once; if the service rejects the DELETE request, the model reports the error and puts
+     * the row back. The transition messages of the item are removed with it.
+     * @param itemContext The context of the item, from the list binding of its navigation (_Task or _Part)
+     */
+    public async deleteItem(itemContext: Context): Promise<void> {
+        const path = itemContext.getPath();
+        await itemContext.delete();
+        this.removeTransitionMessages(path, true);
+    }
+
+    /**
+     * Loads again the properties of a draft that the service recalculates after a change of one of its items
+     * (docs/servicio.md, section 11), so that the screen shows the new values without reading the draft again.
+     * Call it once the service has processed the change.
+     *
+     * The annotations Common.SideEffects of the entity type of the item declare them: for a spare part, a change
+     * of Quantity or of UnitPrice changes _Request/EstimatedCost. A target that starts with the partner of the
+     * item navigation (_Request, the way back from the item to the draft) is a property of the draft: it is
+     * requested on the draft context (Context#requestSideEffects), which the list and the detail share. The other
+     * side effects need no request, because the model takes them from the response to the PATCH request of the
+     * changed entity: the targets in the item itself, and the side effects of a property of the draft (a change
+     * of Plant changes Equipment).
+     *
+     * The service also recalculates the estimated cost when a spare part is created or deleted, although no
+     * annotation declares it. For a created or deleted item, the targets of all the side effects of its entity
+     * type are requested: what depends on the properties of an item depends on the item itself as well.
+     *
+     * The response also carries the current ETag of the draft, which the recalculation can change; the model
+     * updates it in its cache, so that the next change and the activation of the draft send the current one.
+     * @param draftContext The context of the draft
+     * @param changedPath Absolute path of the changed property of an item, of the created or deleted item, or of
+     *   the collection of the created item; a property of the draft itself requests nothing
+     */
+    public async requestSideEffects(draftContext: Context, changedPath: string): Promise<void> {
+        const metaModel = this.model.getMetaModel();
+        const draftMetaPath = metaModel.getMetaPath(draftContext.getPath());
+        // for example "_Part/Quantity" (property of a part), "_Part" (a part) or "Title" (property of the draft)
+        const [navigation, property] = metaModel.getMetaPath(changedPath)
+            .slice(draftMetaPath.length + 1)
+            .split("/");
+        const navigationMetaPath = `${draftMetaPath}/${navigation}`;
+        const navigationProperty = await metaModel.requestObject(navigationMetaPath) as
+            NavigationPropertyMetadata | undefined;
+        if (navigationProperty?.$kind !== DraftService.NAVIGATION_PROPERTY_KIND || !navigationProperty.$Partner) {
+            return;
+        }
+        const draftPrefix = `${navigationProperty.$Partner}/`;
+        // the trailing slash addresses the entity type of the items: "@" is the map of its annotations
+        const annotations = await metaModel.requestObject(`${navigationMetaPath}/@`) as
+            Record<string, unknown> | undefined;
+        const paths = new Set<string>();
+        for (const [term, value] of Object.entries(annotations ?? {})) {
+            if (term !== DraftService.SIDE_EFFECTS && !term.startsWith(`${DraftService.SIDE_EFFECTS}#`)) {
+                continue;
+            }
+            const sideEffects = value as SideEffectsAnnotation;
+            if (property && !sideEffects.SourceProperties?.some((source) => source.$PropertyPath === property)) {
+                continue;
+            }
+            for (const target of sideEffects.TargetProperties ?? []) {
+                if (target.startsWith(draftPrefix)) {
+                    paths.add(target.slice(draftPrefix.length));
+                }
+            }
+        }
+        if (paths.size > 0) {
+            await draftContext.requestSideEffects([...paths]);
+        }
     }
 
     /**

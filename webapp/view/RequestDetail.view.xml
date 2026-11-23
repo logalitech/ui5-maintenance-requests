@@ -374,6 +374,16 @@
                 request. Each binding reads its collection with an own request ($$ownRequest) on the
                 navigation of the shown request, instead of depending on the cache of the list; the
                 model derives the $select of that request from the cells.
+
+                In edit mode the operations and the spare parts of the draft can be changed. The toolbar
+                of the table adds an item: "Add" is enabled by the dynamic control of the service
+                (__CreateByAssociationControl). The delete icon of a row (mode Delete) deletes the item.
+                Each cell of a row holds a text and an input field: the text when the item is active
+                (IsActiveEntity true), the input field otherwise, also for a new item while the service
+                creates it (its IsActiveEntity is not known yet). The input fields are bound two-way to
+                the item, so each change is sent to the draft like the fields of the request, and they
+                are labelled by the header of their column. The cells with a wrapper set the alignment
+                of the column on their controls, because the table only applies it to the cell itself.
             -->
             <uxap:ObjectPageSection
                 id="tasksSection"
@@ -390,35 +400,82 @@
                                     sorter: { path: 'TaskNumber' },
                                     parameters: { $$ownRequest: true }
                                 }"
+                                mode="{= %{IsActiveEntity} === false ? 'Delete' : 'None' }"
                                 autoPopinMode="true"
                                 contextualWidth="Auto"
                                 popinLayout="GridSmall"
-                                noDataText="{i18n>taskTableNoData}">
+                                noDataText="{i18n>taskTableNoData}"
+                                delete=".onDeleteItem">
+                                <headerToolbar>
+                                    <OverflowToolbar id="taskToolbar" visible="{= %{IsActiveEntity} === false }">
+                                        <ToolbarSpacer />
+                                        <Button
+                                            id="addTaskButton"
+                                            text="{i18n>taskAddButton}"
+                                            enabled="{= %{__CreateByAssociationControl/_Task} === true }"
+                                            press=".onAddTask" />
+                                    </OverflowToolbar>
+                                </headerToolbar>
                                 <columns>
                                     <Column id="taskNumberColumn" width="5rem" importance="High">
-                                        <Text text="{i18n>taskColumnNumber}" />
+                                        <Text id="taskNumberHeader" text="{i18n>taskColumnNumber}" />
                                     </Column>
                                     <Column id="taskDescriptionColumn" importance="High" autoPopinWidth="10">
-                                        <Text text="{i18n>taskColumnDescription}" />
+                                        <Text id="taskDescriptionHeader" text="{i18n>taskColumnDescription}" />
                                     </Column>
                                     <Column id="taskPlannedHoursColumn" width="7rem" hAlign="End" importance="Medium">
-                                        <Text text="{i18n>taskColumnPlannedHours}" />
+                                        <Text id="taskPlannedHoursHeader" text="{i18n>taskColumnPlannedHours}" />
                                     </Column>
                                     <Column id="taskActualHoursColumn" width="7rem" hAlign="End" importance="Medium">
-                                        <Text text="{i18n>taskColumnActualHours}" />
+                                        <Text id="taskActualHoursHeader" text="{i18n>taskColumnActualHours}" />
                                     </Column>
                                     <Column id="taskCompletedColumn" width="6rem" hAlign="Center" importance="High">
-                                        <Text text="{i18n>taskColumnCompleted}" />
+                                        <Text id="taskCompletedHeader" text="{i18n>taskColumnCompleted}" />
                                     </Column>
                                 </columns>
                                 <items>
                                     <ColumnListItem vAlign="Middle">
                                         <cells>
-                                            <Text text="{TaskNumber}" />
-                                            <Text text="{Description}" />
-                                            <Text text="{PlannedHours}" />
-                                            <Text text="{ActualHours}" />
-                                            <CheckBox selected="{IsCompleted}" displayOnly="true" />
+                                            <VBox renderType="Bare">
+                                                <Text text="{TaskNumber}" visible="{= %{IsActiveEntity} === true }" />
+                                                <Input
+                                                    value="{TaskNumber}"
+                                                    ariaLabelledBy="taskNumberHeader"
+                                                    visible="{= %{IsActiveEntity} !== true }" />
+                                            </VBox>
+                                            <VBox renderType="Bare">
+                                                <Text text="{Description}" visible="{= %{IsActiveEntity} === true }" />
+                                                <Input
+                                                    value="{Description}"
+                                                    ariaLabelledBy="taskDescriptionHeader"
+                                                    visible="{= %{IsActiveEntity} !== true }" />
+                                            </VBox>
+                                            <VBox renderType="Bare">
+                                                <Text
+                                                    text="{PlannedHours}"
+                                                    textAlign="End"
+                                                    visible="{= %{IsActiveEntity} === true }" />
+                                                <Input
+                                                    value="{PlannedHours}"
+                                                    textAlign="End"
+                                                    ariaLabelledBy="taskPlannedHoursHeader"
+                                                    visible="{= %{IsActiveEntity} !== true }" />
+                                            </VBox>
+                                            <VBox renderType="Bare">
+                                                <Text
+                                                    text="{ActualHours}"
+                                                    textAlign="End"
+                                                    visible="{= %{IsActiveEntity} === true }" />
+                                                <Input
+                                                    value="{ActualHours}"
+                                                    textAlign="End"
+                                                    ariaLabelledBy="taskActualHoursHeader"
+                                                    visible="{= %{IsActiveEntity} !== true }" />
+                                            </VBox>
+                                            <CheckBox
+                                                selected="{IsCompleted}"
+                                                displayOnly="{= %{IsActiveEntity} === true }"
+                                                ariaLabelledBy="taskCompletedHeader" />
                                         </cells>
                                     </ColumnListItem>
                                 </items>
@@ -439,6 +496,13 @@
                                 code lists of the service (customizing part null): the format of the locale,
                                 and the unit code when the unit is in no list, for example "3 ST". The amount
                                 is quantity by unit price, formatted in the currency of the price.
+
+                                In edit mode the material is entered by its code, with the name that the
+                                service sets as description; quantity and unit price are entered as decimals
+                                (type from the metadata), with the unit and the currency as description. A
+                                change of the quantity or of the unit price, and the creation or deletion of a
+                                spare part, change the estimated cost of the header (side effects, loaded by
+                                the controller).
                             -->
                             <Table
                                 id="partTable"
@@ -447,19 +511,31 @@
                                     sorter: { path: 'Product' },
                                     parameters: { $$ownRequest: true }
                                 }"
+                                mode="{= %{IsActiveEntity} === false ? 'Delete' : 'None' }"
                                 autoPopinMode="true"
                                 contextualWidth="Auto"
                                 popinLayout="GridSmall"
-                                noDataText="{i18n>partTableNoData}">
+                                noDataText="{i18n>partTableNoData}"
+                                delete=".onDeleteItem">
+                                <headerToolbar>
+                                    <OverflowToolbar id="partToolbar" visible="{= %{IsActiveEntity} === false }">
+                                        <ToolbarSpacer />
+                                        <Button
+                                            id="addPartButton"
+                                            text="{i18n>partAddButton}"
+                                            enabled="{= %{__CreateByAssociationControl/_Part} === true }"
+                                            press=".onAddPart" />
+                                    </OverflowToolbar>
+                                </headerToolbar>
                                 <columns>
                                     <Column id="partProductColumn" importance="High" autoPopinWidth="10">
-                                        <Text text="{i18n>partColumnProduct}" />
+                                        <Text id="partProductHeader" text="{i18n>partColumnProduct}" />
                                     </Column>
-                                    <Column id="partQuantityColumn" width="8rem" hAlign="End" importance="High">
-                                        <Text text="{i18n>partColumnQuantity}" />
+                                    <Column id="partQuantityColumn" width="10rem" hAlign="End" importance="High">
+                                        <Text id="partQuantityHeader" text="{i18n>partColumnQuantity}" />
                                     </Column>
-                                    <Column id="partUnitPriceColumn" width="8rem" hAlign="End" importance="Medium">
-                                        <Text text="{i18n>partColumnUnitPrice}" />
+                                    <Column id="partUnitPriceColumn" width="10rem" hAlign="End" importance="Medium">
+                                        <Text id="partUnitPriceHeader" text="{i18n>partColumnUnitPrice}" />
                                     </Column>
                                     <Column id="partAmountColumn" width="8rem" hAlign="End" importance="High">
                                         <Text text="{i18n>partColumnAmount}" />
@@ -468,25 +544,58 @@
                                 <items>
                                     <ColumnListItem vAlign="Middle">
                                         <cells>
-                                            <ObjectIdentifier title="{ProductName}" text="{Product}" />
-                                            <Text
-                                                text="{
-                                                    parts: [
-                                                        { path: 'Quantity' },
-                                                        { path: 'QuantityUnit' },
-                                                        { value: null }
-                                                    ],
-                                                    type: 'Unit'
-                                                }" />
-                                            <Text
-                                                text="{
-                                                    parts: [
-                                                        { path: 'UnitPrice' },
-                                                        { path: 'CurrencyCode' },
-                                                        { value: null }
-                                                    ],
-                                                    type: 'Currency'
-                                                }" />
+                                            <VBox renderType="Bare">
+                                                <ObjectIdentifier
+                                                    title="{ProductName}"
+                                                    text="{Product}"
+                                                    visible="{= %{IsActiveEntity} === true }" />
+                                                <Input
+                                                    value="{Product}"
+                                                    description="{ProductName}"
+                                                    fieldWidth="40%"
+                                                    ariaLabelledBy="partProductHeader"
+                                                    visible="{= %{IsActiveEntity} !== true }" />
+                                            </VBox>
+                                            <VBox renderType="Bare">
+                                                <Text
+                                                    text="{
+                                                        parts: [
+                                                            { path: 'Quantity' },
+                                                            { path: 'QuantityUnit' },
+                                                            { value: null }
+                                                        ],
+                                                        type: 'Unit'
+                                                    }"
+                                                    textAlign="End"
+                                                    visible="{= %{IsActiveEntity} === true }" />
+                                                <Input
+                                                    value="{Quantity}"
+                                                    description="{QuantityUnit}"
+                                                    fieldWidth="70%"
+                                                    textAlign="End"
+                                                    ariaLabelledBy="partQuantityHeader"
+                                                    visible="{= %{IsActiveEntity} !== true }" />
+                                            </VBox>
+                                            <VBox renderType="Bare">
+                                                <Text
+                                                    text="{
+                                                        parts: [
+                                                            { path: 'UnitPrice' },
+                                                            { path: 'CurrencyCode' },
+                                                            { value: null }
+                                                        ],
+                                                        type: 'Currency'
+                                                    }"
+                                                    textAlign="End"
+                                                    visible="{= %{IsActiveEntity} === true }" />
+                                                <Input
+                                                    value="{UnitPrice}"
+                                                    description="{CurrencyCode}"
+                                                    fieldWidth="70%"
+                                                    textAlign="End"
+                                                    ariaLabelledBy="partUnitPriceHeader"
+                                                    visible="{= %{IsActiveEntity} !== true }" />
+                                            </VBox>
                                             <Text
                                                 text="{
                                                     parts: [
