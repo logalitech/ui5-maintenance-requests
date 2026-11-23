@@ -1,0 +1,40 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <!--
+        Confirmation dialog of the action startWork, opened by "Start": the action has no parameters. The controller
+        writes the question, with the request number, in detailView>/actionText. It is a dialog and not a message box
+        so that it stays open, with the message of the service, when the service rejects the action
+        (detailView>/actionError), like the dialogs of the actions with parameters.
+    -->
+    <Dialog
+        id="startWorkDialog"
+        title="{i18n>startWorkConfirmTitle}"
+        contentWidth="28rem"
+        stretch="{device>/system/phone}"
+        afterClose=".onActionDialogAfterClose">
+        <content>
+            <MessageStrip
+                id="startWorkErrorStrip"
+                text="{detailView>/actionError}"
+                type="Error"
+                showIcon="true"
+                visible="{= !!${detailView>/actionError} }"
+                class="sapUiSmallMargin" />
+            <Text id="startWorkText" text="{detailView>/actionText}" class="sapUiSmallMargin" />
+        </content>
+        <beginButton>
+            <Button
+                id="startWorkConfirmButton"
+                text="{i18n>startWorkConfirmAction}"
+                type="Emphasized"
+                press=".onConfirmAction" />
+        </beginButton>
+        <endButton>
+            <Button
+                id="startWorkCancelButton"
+                text="{i18n>actionCancelButton}"
+                press=".onCancelAction" />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,69 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form">
+    <!--
+        Dialog of the action complete, opened by "Complete". Its binding context is the parameter context of the
+        operation binding of the action: the resolution and the downtime hours are bound two-way to the parameters
+        ResolutionText and DowntimeHours, whose types (string of 1000 characters and decimal with one decimal place)
+        the model derives from the metadata. The message strip shows the message of the service when it rejects the
+        action; the dialog stays open (detailView>/actionError).
+    -->
+    <Dialog
+        id="completeDialog"
+        title="{i18n>completeDialogTitle}"
+        contentWidth="32rem"
+        stretch="{device>/system/phone}"
+        afterClose=".onActionDialogAfterClose">
+        <content>
+            <MessageStrip
+                id="completeErrorStrip"
+                text="{detailView>/actionError}"
+                type="Error"
+                showIcon="true"
+                visible="{= !!${detailView>/actionError} }"
+                class="sapUiSmallMargin" />
+            <form:Form id="completeForm" editable="true" width="auto">
+                <form:layout>
+                    <form:ColumnLayout columnsM="1" columnsL="1" columnsXL="1" />
+                </form:layout>
+                <form:formContainers>
+                    <form:FormContainer>
+                        <form:formElements>
+                            <form:FormElement label="{i18n>generalResolution}">
+                                <form:fields>
+                                    <TextArea
+                                        id="resolutionTextArea"
+                                        value="{ResolutionText}"
+                                        required="true"
+                                        rows="4"
+                                        growing="true"
+                                        growingMaxLines="10"
+                                        width="100%" />
+                                </form:fields>
+                            </form:FormElement>
+                            <form:FormElement label="{i18n>generalDowntimeHours}">
+                                <form:fields>
+                                    <Input id="downtimeHoursInput" value="{DowntimeHours}" textAlign="End" />
+                                </form:fields>
+                            </form:FormElement>
+                        </form:formElements>
+                    </form:FormContainer>
+                </form:formContainers>
+            </form:Form>
+        </content>
+        <beginButton>
+            <Button
+                id="completeConfirmButton"
+                text="{i18n>completeConfirmButton}"
+                type="Emphasized"
+                press=".onConfirmAction" />
+        </beginButton>
+        <endButton>
+            <Button
+                id="completeCancelButton"
+                text="{i18n>actionCancelButton}"
+                press=".onCancelAction" />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

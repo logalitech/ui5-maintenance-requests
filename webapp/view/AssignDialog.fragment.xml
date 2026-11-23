@@ -1,0 +1,56 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form">
+    <!--
+        Dialog of the action assign, opened by "Assign". The controller gives it the parameter context of the operation
+        binding of the action as binding context: the input field is bound two-way to the parameter AssignedTo, and the
+        model derives its type (string of 40 characters) from the metadata. The message strip shows the message of the
+        service when it rejects the action; the dialog stays open (detailView>/actionError).
+    -->
+    <Dialog
+        id="assignDialog"
+        title="{i18n>assignDialogTitle}"
+        contentWidth="28rem"
+        stretch="{device>/system/phone}"
+        afterClose=".onActionDialogAfterClose">
+        <content>
+            <MessageStrip
+                id="assignErrorStrip"
+                text="{detailView>/actionError}"
+                type="Error"
+                showIcon="true"
+                visible="{= !!${detailView>/actionError} }"
+                class="sapUiSmallMargin" />
+            <form:Form id="assignForm" editable="true" width="auto">
+                <form:layout>
+                    <form:ColumnLayout columnsM="1" columnsL="1" columnsXL="1" />
+                </form:layout>
+                <form:formContainers>
+                    <form:FormContainer>
+                        <form:formElements>
+                            <form:FormElement label="{i18n>headerAssignedTo}">
+                                <form:fields>
+                                    <Input id="assignedToInput" value="{AssignedTo}" required="true" />
+                                </form:fields>
+                            </form:FormElement>
+                        </form:formElements>
+                    </form:FormContainer>
+                </form:formContainers>
+            </form:Form>
+        </content>
+        <beginButton>
+            <Button
+                id="assignConfirmButton"
+                text="{i18n>assignConfirmButton}"
+                type="Emphasized"
+                press=".onConfirmAction" />
+        </beginButton>
+        <endButton>
+            <Button
+                id="assignCancelButton"
+                text="{i18n>actionCancelButton}"
+                press=".onCancelAction" />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

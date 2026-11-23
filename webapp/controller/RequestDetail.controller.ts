@@ -13,21 +13,35 @@ import MessagePopover from "sap/m/MessagePopover";
 import MessageToast from "sap/m/MessageToast";
 import DateFormat from "sap/ui/core/format/DateFormat";
 import Messaging from "sap/ui/core/Messaging";
+import Message from "sap/ui/core/message/Message";
+import MessageType from "sap/ui/core/message/MessageType";
 import Filter from "sap/ui/model/Filter";
 import FilterOperator from "sap/ui/model/FilterOperator";
 import JSONModel from "sap/ui/model/json/JSONModel";
 import { Model$PropertyChangeEvent } from "sap/ui/model/Model";
 import Context from "sap/ui/model/odata/v4/Context";
+import ODataContextBinding from "sap/ui/model/odata/v4/ODataContextBinding";
 import ODataListBinding from "sap/ui/model/odata/v4/ODataListBinding";
 import ODataModel, { ODataModel$PropertyChangeEventParameters } from "sap/ui/model/odata/v4/ODataModel";
 import FileUploader, {
     FileUploader$ChangeEvent, FileUploader$TypeMissmatchEvent
 } from "sap/ui/unified/FileUploader";
 import {
-    AttachmentLimit, AttachmentMediaType, AttachmentProperty, AttachmentRejection, CameraFailure, DetailRouteArguments,
-    EntitySetPath, EquipmentProperty, HttpStatus, PartProperty, RequestProperty, RouteName, TargetName
+    ActionParameter, AttachmentLimit, AttachmentMediaType, AttachmentProperty, AttachmentRejection, BusinessAction,
+    CameraFailure, DetailRouteArguments, EntitySetPath, EquipmentProperty, HttpStatus, PartProperty, RequestProperty,
+    RouteName, TargetName
 } from "../model/constants";
 import { createDetailViewModel, EnlargedImage } from "../model/models";
+
+/** The business action whose dialog is open, with the operation binding that holds its parameters. */
+interface OpenAction {
+    action: BusinessAction;
+    /** Operation binding of the action; its parameter context is the binding context of the dialog. */
+    binding: ODataContextBinding;
+    dialog: Dialog;
+    /** Context of the request on which the action is invoked. */
+    requestContext: Context;
+}
 
 /**
  * Detail of a maintenance request, shown in the second column.
@@ -70,6 +84,14 @@ import { createDetailViewModel, EnlargedImage } from "../model/models";
  * In both modes the thumbnail of an image opens the image enlarged in a light box, and the download icon of a row
  * makes the browser save the content of the attachment as a file.
  *
+ * In display mode the buttons of the business actions (Assign, Start, Complete and Reject), Edit and Delete are enabled
+ * by the dynamic control of the service, which the view binds; the controller holds no rule about the status. Each
+ * action opens a dialog, loaded once from its fragment: Assign, Complete and Reject ask for their parameters, and
+ * Start asks for a confirmation. The action service creates the operation binding, whose parameter context is the
+ * binding context of the dialog. If the service rejects the action, the dialog stays open with the message of the
+ * service; otherwise it closes, the request is loaded again (the detail and the row of the list show the new status)
+ * and a notification reports the result. "Delete" asks for a confirmation, deletes the request and shows the list.
+ *
  * @namespace sapui5.maintenance.controller
  */
 export default class RequestDetail extends BaseController {
@@ -108,6 +130,33 @@ export default class RequestDetail extends BaseController {
 
     /** The dialog "Take Photo", loaded once from its fragment the first time the camera is opened. */
     private cameraDialog?: Promise<Dialog>;
+
+    /** Name of the fragment of the dialog of each business action. */
+    private static readonly ACTION_DIALOG_FRAGMENTS: Record<BusinessAction, string> = {
+        [BusinessAction.Assign]: "AssignDialog",
+        [BusinessAction.StartWork]: "StartWorkDialog",
+        [BusinessAction.Complete]: "CompleteDialog",
+        [BusinessAction.Reject]: "RejectDialog"
+    };
+
+    /** Key of the notification that reports the result of each business action. */
+    private static readonly ACTION_SUCCESS_TEXTS: Record<BusinessAction, string> = {
+        [BusinessAction.Assign]: "assignSuccessMessage",
+        [BusinessAction.StartWork]: "startWorkSuccessMessage",
+        [BusinessAction.Complete]: "completeSuccessMessage",
+        [BusinessAction.Reject]: "rejectSuccessMessage"
+    };
+
+    /** Initial values of the parameters of the actions that have a usual value. */
+    private static readonly ACTION_DEFAULT_PARAMETERS: Partial<Record<BusinessAction, Record<string, string>>> = {
+        [BusinessAction.Complete]: { [ActionParameter.DowntimeHours]: "0" }
+    };
+
+    /** The dialogs of the business actions, each loaded once from its fragment the first time it is opened. */
+    private readonly actionDialogs = new Map<BusinessAction, Promise<Dialog>>();
+
+    /** The business action whose dialog is open; undefined while no dialog is open. */
+    private openAction?: OpenAction;
 
     /** Whether the dialog "Take Photo" is open: a camera that starts once the dialog has closed is stopped at once. */
     private cameraOpen = false;
@@ -149,6 +198,55 @@ export default class RequestDetail extends BaseController {
     /** Edit (active request): the request goes into edit mode on its draft. */
     public onEdit(): void {
         void this.editRequest();
+    }
+
+    /** Assign (active request): the dialog asks for the technician. */
+    public onAssign(): void {
+        void this.openActionDialog(BusinessAction.Assign);
+    }
+
+    /** Start (active request): the dialog asks for a confirmation. */
+    public onStartWork(): void {
+        void this.openActionDialog(BusinessAction.StartWork);
+    }
+
+    /** Complete (active request): the dialog asks for the resolution and the downtime hours. */
+    public onComplete(): void {
+        void this.openActionDialog(BusinessAction.Complete);
+    }
+
+    /** Reject (active request): the dialog asks for the reason. */
+    public onReject(): void {
+        void this.openActionDialog(BusinessAction.Reject);
+    }
+
+    /** Confirm button of the dialog of a business action: the action is invoked with the parameters entered. */
+    public onConfirmAction(): void {
+        void this.confirmAction();
+    }
+
+    /** Cancel button of the dialog of a business action: the dialog is closed without invoking the action. */
+    public onCancelAction(): void {
+        this.openAction?.dialog.close();
+    }
+
+    /** The dialog of a business action has closed: its parameters, messages and operation binding are released. */
+    public onActionDialogAfterClose(): void {
+        const open = this.openAction;
+        if (!open) {
+            return;
+        }
+        this.openAction = undefined;
+        // the dialog is released from the parameter context before the binding is destroyed
+        open.dialog.setBindingContext(null as unknown as Context);
+        open.binding.destroy();
+        this.getDraftService().removeTransitionMessages(open.requestContext.getPath(), true);
+        this.setActionState("", "");
+    }
+
+    /** Delete (active request): after confirmation, the request is deleted and the list is shown. */
+    public onDelete(): void {
+        void this.deleteRequest();
     }
 
     /** Save (draft): the draft is activated. */
@@ -351,6 +449,194 @@ export default class RequestDetail extends BaseController {
         this.resetDraftState();
         this.getView()?.setBindingContext(null as unknown as Context);
         this.getRouter().navTo(RouteName.List, {}, true);
+    }
+
+    /**
+     * Opens the dialog of a business action on the shown request. The operation binding of the action holds the
+     * parameters: its parameter context is the binding context of the dialog, so that the fields edit the parameters.
+     * @param action The business action
+     */
+    private async openActionDialog(action: BusinessAction): Promise<void> {
+        const requestContext = this.requestContext;
+        if (!requestContext || this.openAction) {
+            return;
+        }
+        let binding: ODataContextBinding;
+        let requestID: string;
+        try {
+            binding = await this.getActionService().bind(
+                action, requestContext, RequestDetail.ACTION_DEFAULT_PARAMETERS[action]);
+            requestID = await requestContext.requestProperty(RequestProperty.RequestID) as string;
+        } catch {
+            // the model has reported the error of the service, and the error handler shows it
+            return;
+        }
+        const dialog = await this.getActionDialog(action);
+        if (this.openAction || this.requestContext !== requestContext) {
+            binding.destroy();
+            return;
+        }
+        const question = action === BusinessAction.StartWork
+            ? await this.getText("startWorkConfirmText", [requestID])
+            : "";
+        this.setActionState("", question);
+        dialog.setBindingContext(binding.getParameterContext());
+        this.openAction = { action, binding, dialog, requestContext };
+        dialog.open();
+    }
+
+    /**
+     * Invokes the business action of the open dialog with the parameters entered. The dialog is busy meanwhile. If the
+     * service rejects the action, the dialog stays open and shows the message of the service; the model has reported
+     * the error, which the error handler does not repeat in a message box (ErrorHandler#capture). Otherwise the dialog
+     * closes, the request is loaded again, so that the detail, the enabled buttons and the row of the list show the
+     * new status, and a notification reports the result. A value that a field cannot parse (a downtime that is not a
+     * number) is a client error of the field: the action is not invoked until it is corrected.
+     */
+    private async confirmAction(): Promise<void> {
+        const open = this.openAction;
+        if (!open) {
+            return;
+        }
+        const { action, binding, dialog, requestContext } = open;
+        // messages of an earlier rejection refer to the values that the service validated
+        this.getDraftService().removeTransitionMessages(requestContext.getPath(), true);
+        if (this.hasClientError(dialog)) {
+            return;
+        }
+        this.setActionError("");
+        dialog.setBusy(true);
+        try {
+            await this.getComponent().getErrorHandler().capture(() => this.getActionService().invoke(binding));
+        } catch (error) {
+            dialog.setBusy(false);
+            const reason = error instanceof Error ? error.message : "";
+            this.setActionError(reason || await this.getText("actionFailedText"));
+            return;
+        }
+        dialog.setBusy(false);
+        dialog.close();
+        try {
+            await this.getActionService().reload(requestContext);
+        } catch {
+            // the model has reported the error of the service, and the error handler shows it
+        }
+        await this.notifyAction(action, requestContext);
+    }
+
+    /**
+     * Notifies the result of a business action: the request number and, for an assignment, the technician, which the
+     * service has set. The values come from the request that has been loaded again.
+     * @param action The business action
+     * @param requestContext Context of the request
+     */
+    private async notifyAction(action: BusinessAction, requestContext: Context): Promise<void> {
+        const [requestID, assignedTo] = await requestContext.requestProperty([
+            RequestProperty.RequestID,
+            RequestProperty.AssignedTo
+        ]) as [string, string];
+        const args = action === BusinessAction.Assign ? [requestID, assignedTo] : [requestID];
+        MessageToast.show(await this.getText(RequestDetail.ACTION_SUCCESS_TEXTS[action], args));
+    }
+
+    /**
+     * Deletes the shown active request after confirmation and shows the list alone, in which the row has gone. As the
+     * API of the model advises, the view is released from the context before it is deleted, and bound again if the
+     * service rejects the deletion (422 when it is not allowed, 423 when the request has a draft): the error handler
+     * shows the message of the service, and the request stays as it was.
+     */
+    private async deleteRequest(): Promise<void> {
+        const requestContext = this.requestContext;
+        if (!requestContext) {
+            return;
+        }
+        let requestID: string;
+        try {
+            requestID = await requestContext.requestProperty(RequestProperty.RequestID) as string;
+        } catch {
+            // the model has reported the error of the service, and the error handler shows it
+            return;
+        }
+        if (!await this.confirmDelete(requestID)) {
+            return;
+        }
+        this.requestContext = undefined;
+        this.getView()?.setBindingContext(null as unknown as Context);
+        try {
+            await this.runBusy(() => this.getActionService().deleteRequest(requestContext));
+        } catch {
+            this.requestContext = requestContext;
+            this.getView()?.setBindingContext(requestContext);
+            return;
+        }
+        this.resetDraftState();
+        this.getRouter().navTo(RouteName.List, {}, true);
+        MessageToast.show(await this.getText("deleteSuccessMessage", [requestID]));
+    }
+
+    /**
+     * Asks the user to confirm that the request is deleted.
+     * @param requestID Number of the request
+     */
+    private async confirmDelete(requestID: string): Promise<boolean> {
+        const [title, text, deleteAction] = await Promise.all([
+            this.getText("deleteConfirmTitle"),
+            this.getText("deleteConfirmText", [requestID]),
+            this.getText("deleteConfirmAction")
+        ]);
+        return new Promise((resolve) => {
+            MessageBox.confirm(text, {
+                title,
+                actions: [deleteAction, MessageBox.Action.CANCEL],
+                emphasizedAction: deleteAction,
+                styleClass: this.getComponent().getContentDensityClass(),
+                onClose: (action: string | null) => resolve(action === deleteAction)
+            });
+        });
+    }
+
+    /**
+     * Whether a field of the dialog has a client error: a value that its type cannot parse or validate. The messages
+     * of the service are persistent; these are not.
+     * @param dialog The dialog of a business action
+     */
+    private hasClientError(dialog: Dialog): boolean {
+        const ids = new Set(dialog.findElements(true).map((element) => element.getId()));
+        const messages = Messaging.getMessageModel().getProperty("/") as Message[];
+        return messages.some((message) => !message.getPersistent()
+            && message.getType() === MessageType.Error
+            && (message.getControlIds() as string[]).some((id) => ids.has(id)));
+    }
+
+    /**
+     * The dialog of a business action, loaded once from its fragment as a dependent of the view. It gets the content
+     * density of the application, because a dialog is rendered outside the view.
+     * @param action The business action
+     */
+    private getActionDialog(action: BusinessAction): Promise<Dialog> {
+        let dialog = this.actionDialogs.get(action);
+        if (!dialog) {
+            dialog = (this.loadFragment({
+                name: `sapui5.maintenance.view.${RequestDetail.ACTION_DIALOG_FRAGMENTS[action]}`
+            }) as Promise<Dialog>).then((loaded) => loaded.addStyleClass(this.getComponent().getContentDensityClass()));
+            this.actionDialogs.set(action, dialog);
+        }
+        return dialog;
+    }
+
+    /** Message of the service in the open dialog of a business action; empty to hide it. */
+    private setActionError(message: string): void {
+        this.getModel<JSONModel>("detailView").setProperty("/actionError", message);
+    }
+
+    /**
+     * Sets the message and the question of the dialog of a business action.
+     * @param message Message of the service that rejected the action; empty for none
+     * @param question Question of the confirmation dialog; empty for the dialogs with parameters
+     */
+    private setActionState(message: string, question: string): void {
+        this.setActionError(message);
+        this.getModel<JSONModel>("detailView").setProperty("/actionText", question);
     }
 
     /** Creates a spare part of the shown draft, with the currency of the request as currency of its price. */

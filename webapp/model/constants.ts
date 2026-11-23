@@ -66,10 +66,27 @@ export enum RequestProperty {
     HasActiveEntity = "HasActiveEntity",
     HasDraftEntity = "HasDraftEntity",
     Status = "Status",
+    AssignedTo = "AssignedTo",
     Priority = "Priority",
     Plant = "Plant",
     RequiredEndDate = "RequiredEndDate",
     CurrencyCode = "CurrencyCode"
+}
+
+/**
+ * Business actions bound to Requests (docs/servicio.md, section 5). The value is the unqualified name of the action,
+ * which is also the name of its flag in __OperationControl.
+ */
+export enum BusinessAction {
+    Assign = "assign",
+    StartWork = "startWork",
+    Complete = "complete",
+    Reject = "reject"
+}
+
+/** Parameters of the business actions, as the service names them. */
+export enum ActionParameter {
+    DowntimeHours = "DowntimeHours"
 }
 
 /** Properties of the Parts entity set that the controllers set as initial data of a new spare part. */

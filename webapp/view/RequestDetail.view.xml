@@ -69,14 +69,52 @@
                             formatter: 'formatter.criticalityState'
                         }" />
                 </uxap:content>
-                <!-- Edit: only for the active request; the action Edit gives the draft of the user. -->
+                <!--
+                    Actions of the active request (display mode). Each button is enabled by the dynamic control that
+                    the service publishes with the request: the flag of its action in __OperationControl, and for
+                    "Delete" Deletable of __EntityControl. The application holds no rule about the status. Edit
+                    gives the draft of the user. Assign, Complete and Reject ask for their parameters in a dialog,
+                    and Start and Delete for a confirmation.
+                -->
                 <uxap:actions>
+                    <Button
+                        id="assignButton"
+                        text="{i18n>detailAssignButton}"
+                        visible="{= %{IsActiveEntity} === true }"
+                        enabled="{= %{__OperationControl/assign} === true }"
+                        press=".onAssign" />
+                    <Button
+                        id="startWorkButton"
+                        text="{i18n>detailStartWorkButton}"
+                        visible="{= %{IsActiveEntity} === true }"
+                        enabled="{= %{__OperationControl/startWork} === true }"
+                        press=".onStartWork" />
+                    <Button
+                        id="completeButton"
+                        text="{i18n>detailCompleteButton}"
+                        visible="{= %{IsActiveEntity} === true }"
+                        enabled="{= %{__OperationControl/complete} === true }"
+                        press=".onComplete" />
+                    <Button
+                        id="rejectButton"
+                        text="{i18n>detailRejectButton}"
+                        visible="{= %{IsActiveEntity} === true }"
+                        enabled="{= %{__OperationControl/reject} === true }"
+                        press=".onReject" />
                     <Button
                         id="editButton"
                         text="{i18n>detailEditButton}"
                         type="Emphasized"
                         visible="{= %{IsActiveEntity} === true }"
+                        enabled="{= %{__OperationControl/Edit} === true }"
                         press=".onEdit" />
+                    <Button
+                        id="deleteButton"
+                        text="{i18n>detailDeleteButton}"
+                        type="Reject"
+                        visible="{= %{IsActiveEntity} === true }"
+                        enabled="{= %{__EntityControl/Deletable} === true }"
+                        press=".onDelete" />
                 </uxap:actions>
                 <!--
                     Full screen, exit full screen and close. Each action is visible when the semantic

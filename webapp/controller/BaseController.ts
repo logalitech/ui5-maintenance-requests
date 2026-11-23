@@ -7,6 +7,7 @@ import ResourceBundle from "sap/base/i18n/ResourceBundle";
 import type Component from "../Component";
 import type DraftService from "../service/DraftService";
 import type AttachmentService from "../service/AttachmentService";
+import type ActionService from "../service/ActionService";
 
 /**
  * Base class of all controllers: typed access to the component, the router, the models,
@@ -57,6 +58,11 @@ export default abstract class BaseController extends Controller {
     /** The attachment service of the component: check of a file, upload and binary content of the attachments. */
     public getAttachmentService(): AttachmentService {
         return this.getComponent().getAttachmentService();
+    }
+
+    /** The action service of the component: business actions of the requests and their deletion. */
+    public getActionService(): ActionService {
+        return this.getComponent().getActionService();
     }
 
     /**

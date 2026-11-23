@@ -1,0 +1,63 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form">
+    <!--
+        Dialog of the action reject, opened by "Reject". Its binding context is the parameter context of the operation
+        binding of the action: the text area is bound two-way to the parameter RejectionReason, whose type (string of
+        255 characters) the model derives from the metadata. The message strip shows the message of the service when it
+        rejects the action; the dialog stays open (detailView>/actionError).
+    -->
+    <Dialog
+        id="rejectDialog"
+        title="{i18n>rejectDialogTitle}"
+        contentWidth="32rem"
+        stretch="{device>/system/phone}"
+        afterClose=".onActionDialogAfterClose">
+        <content>
+            <MessageStrip
+                id="rejectErrorStrip"
+                text="{detailView>/actionError}"
+                type="Error"
+                showIcon="true"
+                visible="{= !!${detailView>/actionError} }"
+                class="sapUiSmallMargin" />
+            <form:Form id="rejectForm" editable="true" width="auto">
+                <form:layout>
+                    <form:ColumnLayout columnsM="1" columnsL="1" columnsXL="1" />
+                </form:layout>
+                <form:formContainers>
+                    <form:FormContainer>
+                        <form:formElements>
+                            <form:FormElement label="{i18n>generalRejectionReason}">
+                                <form:fields>
+                                    <TextArea
+                                        id="rejectionReasonTextArea"
+                                        value="{RejectionReason}"
+                                        required="true"
+                                        rows="3"
+                                        growing="true"
+                                        growingMaxLines="8"
+                                        width="100%" />
+                                </form:fields>
+                            </form:FormElement>
+                        </form:formElements>
+                    </form:FormContainer>
+                </form:formContainers>
+            </form:Form>
+        </content>
+        <beginButton>
+            <Button
+                id="rejectConfirmButton"
+                text="{i18n>rejectConfirmButton}"
+                type="Emphasized"
+                press=".onConfirmAction" />
+        </beginButton>
+        <endButton>
+            <Button
+                id="rejectCancelButton"
+                text="{i18n>actionCancelButton}"
+                press=".onCancelAction" />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

@@ -57,6 +57,10 @@ export interface DetailViewState {
     image: EnlargedImage;
     /** Whether the dialog "Take Photo" shows the live image of the camera, so that a photo can be captured. */
     cameraReady: boolean;
+    /** Message of the service that rejected the business action of the open dialog; empty while there is none. */
+    actionError: string;
+    /** Question of the confirmation dialog of the business action without parameters (startWork). */
+    actionText: string;
 }
 
 export function createDeviceModel(): JSONModel {
@@ -89,7 +93,9 @@ export function createDetailViewModel(): JSONModel {
             title: "",
             subtitle: ""
         },
-        cameraReady: false
+        cameraReady: false,
+        actionError: "",
+        actionText: ""
     };
     return new JSONModel(state);
 }

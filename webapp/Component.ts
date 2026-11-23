@@ -9,6 +9,7 @@ import { createAppViewModel, createDeviceModel } from "./model/models";
 import ErrorHandler from "./controller/ErrorHandler";
 import DraftService from "./service/DraftService";
 import AttachmentService from "./service/AttachmentService";
+import ActionService from "./service/ActionService";
 
 /**
  * @namespace sapui5.maintenance
@@ -25,6 +26,7 @@ export default class Component extends UIComponent {
     private errorHandler: ErrorHandler;
     private draftService: DraftService;
     private attachmentService: AttachmentService;
+    private actionService: ActionService;
     private contentDensityClass: string;
 
     public init(): void {
@@ -39,6 +41,9 @@ export default class Component extends UIComponent {
 
         // binary content of the attachments; the draft service creates the attachment entities
         this.attachmentService = new AttachmentService(this.getModel() as ODataModel, this.draftService);
+
+        // business actions and deletion of the requests
+        this.actionService = new ActionService(this.getModel() as ODataModel);
 
         // set the device and the appView models
         this.setModel(createDeviceModel(), "device");
@@ -75,6 +80,16 @@ export default class Component extends UIComponent {
     /** The attachments of the requests: check, upload and binary content (service/AttachmentService.ts). */
     public getAttachmentService(): AttachmentService {
         return this.attachmentService;
+    }
+
+    /** The error handler: the controllers that show an error themselves run its capture. */
+    public getErrorHandler(): ErrorHandler {
+        return this.errorHandler;
+    }
+
+    /** The business actions of the requests and their deletion (service/ActionService.ts). */
+    public getActionService(): ActionService {
+        return this.actionService;
     }
 
     /**

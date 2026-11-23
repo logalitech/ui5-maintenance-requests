@@ -40,6 +40,9 @@ export default class ErrorHandler extends BaseObject {
     private readonly messageBinding: ListBinding;
     private messageOpen = false;
 
+    /** Number of tasks running in capture; while it is above zero the technical errors get no message box. */
+    private captureCount = 0;
+
     constructor(component: Component) {
         super();
         this.component = component;
@@ -53,6 +56,23 @@ export default class ErrorHandler extends BaseObject {
         super.destroy();
     }
 
+    /**
+     * Runs a task whose technical errors the caller shows itself, for example in the dialog that asked for the
+     * parameters of a business action: the message of the service is the message of the rejected promise, and no
+     * message box repeats it. The model reports the error before it rejects the promise, so the errors of the task are
+     * already removed when the task ends.
+     * @param task The task, for example the invocation of an action
+     * @returns The result of the task
+     */
+    public async capture<T>(task: () => Promise<T>): Promise<T> {
+        this.captureCount++;
+        try {
+            return await task();
+        } finally {
+            this.captureCount--;
+        }
+    }
+
     private readonly onMessagesChanged = (): void => {
         const messages = this.messageBinding.getContexts()
             .map((context) => context.getObject() as Message)
@@ -62,6 +82,9 @@ export default class ErrorHandler extends BaseObject {
         }
         // Remove the technical messages so that they are reported once
         Messaging.removeMessages(messages);
+        if (this.captureCount > 0) {
+            return;
+        }
         const errors = messages.filter((message) => this.getHttpStatus(message) !== HttpStatus.NotFound);
         if (errors.length === 0 || this.messageOpen) {
             return;
