@@ -2,11 +2,18 @@ import BaseController from "./BaseController";
 import Table from "sap/m/Table";
 import Title from "sap/m/Title";
 import ListItemBase from "sap/m/ListItemBase";
+import SearchField, { SearchField$SearchEvent } from "sap/m/SearchField";
+import MultiComboBox from "sap/m/MultiComboBox";
+import ComboBox from "sap/m/ComboBox";
+import ViewSettingsDialog, { ViewSettingsDialog$ConfirmEvent } from "sap/m/ViewSettingsDialog";
 import { ListBase$ItemPressEvent, ListBase$SelectionChangeEvent } from "sap/m/ListBase";
 import { Router$RouteMatchedEvent } from "sap/ui/core/routing/Router";
+import Filter from "sap/ui/model/Filter";
+import FilterOperator from "sap/ui/model/FilterOperator";
+import Sorter from "sap/ui/model/Sorter";
 import Context from "sap/ui/model/odata/v4/Context";
 import ODataListBinding from "sap/ui/model/odata/v4/ODataListBinding";
-import { DetailRouteArguments, RequestProperty, RouteName } from "../model/constants";
+import { BindingParameter, DetailRouteArguments, RequestProperty, RouteName } from "../model/constants";
 
 /**
  * List of maintenance requests, shown in the first column.
@@ -14,6 +21,11 @@ import { DetailRouteArguments, RequestProperty, RouteName } from "../model/const
  * The list binding of the table resolves everything on the server: the fixed draft filter and the
  * count are binding parameters, the initial sorter is a dynamic sorter and the pages of 20 rows
  * come from the growing feature of the table. The count is read from the header context.
+ *
+ * Search, filters and sort change that binding: the search text goes to the $search parameter,
+ * the filters are application filters (combined with the fixed draft filter) and the sort replaces
+ * the dynamic sorter. Each change produces one request; the reset applies all changes between
+ * suspend and resume so that it produces one request as well.
  *
  * @namespace sapui5.maintenance.controller
  */
@@ -24,6 +36,9 @@ export default class RequestList extends BaseController {
 
     /** Key of the request shown in the detail, whose row is kept selected; undefined on the list route. */
     private shownRequest?: Pick<DetailRouteArguments, "uuid" | "active">;
+
+    /** The sort dialog, loaded once from its fragment the first time it is opened. */
+    private sortDialog?: Promise<ViewSettingsDialog>;
 
     public onInit(): void {
         this.getRouter().attachRouteMatched(this.onRouteMatched, this);
@@ -58,6 +73,106 @@ export default class RequestList extends BaseController {
     /** After each update of the rows (first load, growing, filter, sort) the shown request keeps its mark. */
     public onUpdateFinished(): void {
         this.markShownRequest();
+    }
+
+    /**
+     * Search (Enter, search button or clear button): the text goes as is to the $search parameter
+     * of the list binding, which the service resolves on the request number and the title. An empty
+     * text removes the parameter. Changing the parameter refreshes the binding: one request.
+     */
+    public onSearch(event: SearchField$SearchEvent): void {
+        const query = (event.getParameter("query") ?? "").trim();
+        this.getRequestBinding()?.changeParameters({ [BindingParameter.Search]: query || undefined });
+    }
+
+    /**
+     * Change of the status, priority or plant filter: the application filters of the list binding
+     * are replaced by the current state of the three controls, combined with "and". The combo
+     * boxes only hold a selected key when the text matches an item, so a free text applies no
+     * filter. The binding sends no request when the filters are unchanged.
+     */
+    public onFilterChange(): void {
+        this.getRequestBinding()?.filter(this.buildFilters());
+    }
+
+    /** Opens the sort dialog; the fragment is loaded the first time. */
+    public onOpenSortDialog(): void {
+        void this.getSortDialog().then((dialog) => dialog.open());
+    }
+
+    /** Confirmation of the sort dialog: the chosen property and direction replace the dynamic sorter. */
+    public onSortConfirm(event: ViewSettingsDialog$ConfirmEvent): void {
+        const path = event.getParameter("sortItem")?.getKey() ?? RequestProperty.RequestID;
+        const descending = event.getParameter("sortDescending") ?? false;
+        this.getRequestBinding()?.sort(new Sorter(path, descending));
+    }
+
+    /**
+     * Resets the search, the three filters (including a text typed by hand) and the sort order.
+     * The binding is suspended while the changes are applied, so that the resume sends one request.
+     */
+    public onResetFilters(): void {
+        this.getSearchField().setValue("");
+        const statusFilter = this.getStatusFilter();
+        statusFilter.setSelectedKeys([]);
+        statusFilter.setValue("");
+        for (const comboBox of [this.getPriorityFilter(), this.getPlantFilter()]) {
+            comboBox.setSelectedKey("");
+            comboBox.setValue("");
+        }
+        void this.sortDialog?.then((dialog) => {
+            dialog.setSelectedSortItem(RequestProperty.RequestID);
+            dialog.setSortDescending(true);
+        });
+
+        const binding = this.getRequestBinding();
+        if (!binding) {
+            return;
+        }
+        binding.suspend();
+        binding.filter([]);
+        binding.sort(this.createInitialSorter());
+        binding.changeParameters({ [BindingParameter.Search]: undefined });
+        binding.resume();
+    }
+
+    /**
+     * Filters of the list from the state of the filter controls. The selected statuses are
+     * combined with "or", and the three properties with "and". Explicit conjunctions are used
+     * because the binding does not support mixing them with its automatic grouping by path.
+     * An empty array removes all application filters.
+     */
+    private buildFilters(): Filter | Filter[] {
+        const filters: Filter[] = [];
+        const statuses = this.getStatusFilter().getSelectedKeys();
+        if (statuses.length > 0) {
+            filters.push(new Filter({
+                filters: statuses.map((status) => new Filter(RequestProperty.Status, FilterOperator.EQ, status)),
+                and: false
+            }));
+        }
+        const priority = this.getPriorityFilter().getSelectedKey();
+        if (priority) {
+            filters.push(new Filter(RequestProperty.Priority, FilterOperator.EQ, priority));
+        }
+        const plant = this.getPlantFilter().getSelectedKey();
+        if (plant) {
+            filters.push(new Filter(RequestProperty.Plant, FilterOperator.EQ, plant));
+        }
+        return filters.length > 0 ? new Filter({ filters, and: true }) : [];
+    }
+
+    /** The initial sorter of the list, as declared in the view: request number, descending. */
+    private createInitialSorter(): Sorter {
+        return new Sorter(RequestProperty.RequestID, true);
+    }
+
+    /** The sort dialog, loaded once from the fragment SortDialog as a dependent of the view. */
+    private getSortDialog(): Promise<ViewSettingsDialog> {
+        this.sortDialog ??= this.loadFragment({
+            name: "sapui5.maintenance.view.SortDialog"
+        }) as Promise<ViewSettingsDialog>;
+        return this.sortDialog;
     }
 
     /**
@@ -118,6 +233,22 @@ export default class RequestList extends BaseController {
 
     private getTable(): Table {
         return this.byId("requestTable") as Table;
+    }
+
+    private getSearchField(): SearchField {
+        return this.byId("searchField") as SearchField;
+    }
+
+    private getStatusFilter(): MultiComboBox {
+        return this.byId("statusFilter") as MultiComboBox;
+    }
+
+    private getPriorityFilter(): ComboBox {
+        return this.byId("priorityFilter") as ComboBox;
+    }
+
+    private getPlantFilter(): ComboBox {
+        return this.byId("plantFilter") as ComboBox;
     }
 
     private getRequestBinding(): ODataListBinding | undefined {

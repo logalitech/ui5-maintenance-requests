@@ -34,6 +34,12 @@
             selectionChange=".onSelectionChange"
             itemPress=".onItemPress"
             updateFinished=".onUpdateFinished">
+            <!--
+                Search, filters and sort are applied to the list binding by the controller and resolved
+                on the server. The filter controls take their values from the code lists of the service;
+                the combo boxes only apply a value that exists in their list. When the toolbar is narrow
+                (list next to the detail), the filters move to the overflow area.
+            -->
             <headerToolbar>
                 <OverflowToolbar id="requestToolbar">
                     <!-- Bound by the controller to the header context of the list binding ($count) -->
@@ -49,6 +55,49 @@
                             formatter: 'formatter.listTitle'
                         }" />
                     <ToolbarSpacer />
+                    <SearchField
+                        id="searchField"
+                        width="12rem"
+                        placeholder="{i18n>searchPlaceholder}"
+                        search=".onSearch">
+                        <layoutData>
+                            <OverflowToolbarLayoutData priority="NeverOverflow" />
+                        </layoutData>
+                    </SearchField>
+                    <MultiComboBox
+                        id="statusFilter"
+                        width="11rem"
+                        placeholder="{i18n>filterStatusPlaceholder}"
+                        items="{ path: '/Statuses', sorter: { path: 'SortOrder' } }"
+                        selectionChange=".onFilterChange">
+                        <core:Item key="{Status}" text="{StatusText}" />
+                    </MultiComboBox>
+                    <ComboBox
+                        id="priorityFilter"
+                        width="9rem"
+                        placeholder="{i18n>filterPriorityPlaceholder}"
+                        items="{ path: '/Priorities', sorter: { path: 'SortOrder' } }"
+                        change=".onFilterChange">
+                        <core:Item key="{Priority}" text="{PriorityText}" />
+                    </ComboBox>
+                    <ComboBox
+                        id="plantFilter"
+                        width="10rem"
+                        placeholder="{i18n>filterPlantPlaceholder}"
+                        items="{ path: '/Plants', sorter: { path: 'PlantName' } }"
+                        change=".onFilterChange">
+                        <core:Item key="{Plant}" text="{PlantName}" />
+                    </ComboBox>
+                    <Button
+                        id="sortButton"
+                        icon="sap-icon://sort"
+                        tooltip="{i18n>sortButtonTooltip}"
+                        press=".onOpenSortDialog" />
+                    <Button
+                        id="resetButton"
+                        icon="sap-icon://clear-filter"
+                        tooltip="{i18n>resetButtonTooltip}"
+                        press=".onResetFilters" />
                 </OverflowToolbar>
             </headerToolbar>
             <!--

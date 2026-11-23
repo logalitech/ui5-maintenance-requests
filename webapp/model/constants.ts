@@ -27,8 +27,21 @@ export enum Criticality {
     Information = 5
 }
 
-/** Properties of the Requests entity set that the controllers read from a context. */
+/**
+ * Properties of the Requests entity set that the controllers read from a context or use as
+ * paths of filters and sorters of the list.
+ */
 export enum RequestProperty {
     RequestUUID = "RequestUUID",
-    IsActiveEntity = "IsActiveEntity"
+    RequestID = "RequestID",
+    IsActiveEntity = "IsActiveEntity",
+    Status = "Status",
+    Priority = "Priority",
+    Plant = "Plant",
+    RequiredEndDate = "RequiredEndDate"
+}
+
+/** OData system query options that the controllers change on a list binding. */
+export enum BindingParameter {
+    Search = "$search"
 }

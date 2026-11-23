@@ -1,0 +1,20 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <!--
+        Sort options of the request list. The key of each item is the property of Requests that the
+        controller passes to the sorter. The initial selection matches the initial sorter of the
+        table binding: request number, descending.
+    -->
+    <ViewSettingsDialog
+        id="sortDialog"
+        title="{i18n>sortDialogTitle}"
+        sortDescending="true"
+        confirm=".onSortConfirm">
+        <sortItems>
+            <ViewSettingsItem id="sortByRequest" key="RequestID" text="{i18n>sortByRequest}" selected="true" />
+            <ViewSettingsItem id="sortByRequiredEndDate" key="RequiredEndDate" text="{i18n>sortByRequiredEndDate}" />
+            <ViewSettingsItem id="sortByPriority" key="Priority" text="{i18n>sortByPriority}" />
+        </sortItems>
+    </ViewSettingsDialog>
+</core:FragmentDefinition>
