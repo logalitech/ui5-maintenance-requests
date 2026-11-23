@@ -1,0 +1,43 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <!--
+        Search help of the material (HU-07), opened by the value help icon of the material field of a spare part. The
+        items are suspended until the controller opens the dialog. The search text goes to $search (server side) and
+        the table loads the rows progressively (growing). The base unit is a column, so that the selected row carries
+        it: it is the unit of the spare part.
+    -->
+    <TableSelectDialog
+        id="productValueHelp"
+        title="{i18n>valueHelpProductTitle}"
+        noDataText="{i18n>valueHelpNoData}"
+        contentWidth="40rem"
+        growing="true"
+        growingThreshold="20"
+        search=".onValueHelpSearch"
+        confirm=".onProductSelected"
+        items="{
+            path: '/Products',
+            sorter: { path: 'ProductName' },
+            suspended: true
+        }">
+        <columns>
+            <Column width="12rem">
+                <Text text="{i18n>valueHelpColumnCode}" />
+            </Column>
+            <Column>
+                <Text text="{i18n>valueHelpColumnName}" />
+            </Column>
+            <Column width="6rem" minScreenWidth="Tablet" demandPopin="true">
+                <Text text="{i18n>valueHelpColumnUnit}" />
+            </Column>
+        </columns>
+        <ColumnListItem>
+            <cells>
+                <Text text="{Product}" />
+                <Text text="{ProductName}" />
+                <Text text="{BaseUnit}" />
+            </cells>
+        </ColumnListItem>
+    </TableSelectDialog>
+</core:FragmentDefinition>

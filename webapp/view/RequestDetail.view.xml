@@ -209,11 +209,15 @@
                                 for the due date). The messages of the service bound to a property (a failed
                                 validation of the activation) and the parse errors of the types mark the field.
 
-                                The code lists are suspended, so that the display mode does not read them; the
-                                controller resumes them the first time a draft is shown. The equipment list holds
-                                the equipments of the plant of the draft (filtered by the controller). The value of
-                                the equipment field is the name of the equipment of the request (one-way): it is
-                                shown also when the equipment is not in the list of the plant.
+                                The code lists of type and priority are suspended, so that the display mode does
+                                not read them; the controller resumes them the first time a draft is shown.
+
+                                Plant and equipment are input fields with a search help (HU-07): the code is the
+                                value and the name is the description, both read from the draft (one-way). The
+                                controller checks a typed code in the service and, only if it exists, writes it
+                                to the draft; otherwise the field stays in error. The equipment field is disabled
+                                while the draft has no plant, and its search help shows the equipments of that
+                                plant.
                             -->
                             <form:Form
                                 id="generalForm"
@@ -282,41 +286,32 @@
                                                 label="{i18n>generalPlant}"
                                                 visible="{= %{IsActiveEntity} === false }">
                                                 <form:fields>
-                                                    <ComboBox
-                                                        id="plantComboBox"
-                                                        selectedKey="{Plant}"
+                                                    <Input
+                                                        id="plantInput"
+                                                        value="{ path: 'Plant', mode: 'OneWay' }"
+                                                        description="{PlantName}"
+                                                        fieldWidth="30%"
                                                         required="true"
-                                                        showSecondaryValues="true"
-                                                        items="{
-                                                            path: '/Plants',
-                                                            sorter: { path: 'PlantName' },
-                                                            suspended: true
-                                                        }"
-                                                        change=".onPlantChange">
-                                                        <core:ListItem key="{Plant}" text="{PlantName}" additionalText="{Plant}" />
-                                                    </ComboBox>
+                                                        showValueHelp="true"
+                                                        valueHelpRequest=".onPlantValueHelp"
+                                                        change=".onPlantInputChange" />
                                                 </form:fields>
                                             </form:FormElement>
                                             <form:FormElement
                                                 label="{i18n>generalEquipment}"
                                                 visible="{= %{IsActiveEntity} === false }">
                                                 <form:fields>
-                                                    <ComboBox
-                                                        id="equipmentComboBox"
-                                                        selectedKey="{Equipment}"
-                                                        value="{ path: 'EquipmentName', mode: 'OneWay' }"
+                                                    <Input
+                                                        id="equipmentInput"
+                                                        value="{ path: 'Equipment', mode: 'OneWay' }"
+                                                        description="{EquipmentName}"
+                                                        fieldWidth="40%"
                                                         required="true"
-                                                        showSecondaryValues="true"
-                                                        items="{
-                                                            path: '/Equipments',
-                                                            sorter: { path: 'EquipmentName' },
-                                                            suspended: true
-                                                        }">
-                                                        <core:ListItem
-                                                            key="{Equipment}"
-                                                            text="{EquipmentName}"
-                                                            additionalText="{Equipment}" />
-                                                    </ComboBox>
+                                                        enabled="{= !!%{Plant} }"
+                                                        placeholder="{= !%{Plant} ? ${i18n>valueHelpEquipmentNoPlant} : '' }"
+                                                        showValueHelp="true"
+                                                        valueHelpRequest=".onEquipmentValueHelp"
+                                                        change=".onEquipmentInputChange" />
                                                 </form:fields>
                                             </form:FormElement>
                                             <form:FormElement
@@ -536,8 +531,9 @@
                                 and the unit code when the unit is in no list, for example "3 ST". The amount
                                 is quantity by unit price, formatted in the currency of the price.
 
-                                In edit mode the material is entered by its code, with the name that the
-                                service sets as description; quantity and unit price are entered as decimals
+                                In edit mode the material is entered by its code or with its search help, with the
+                                name that the service sets as description; choosing a material also sets the unit
+                                of the spare part to the base unit of the material; quantity and unit price are entered as decimals
                                 (type from the metadata), with the unit and the currency as description. A
                                 change of the quantity or of the unit price, and the creation or deletion of a
                                 spare part, change the estimated cost of the header (side effects, loaded by
@@ -589,9 +585,12 @@
                                                     text="{Product}"
                                                     visible="{= %{IsActiveEntity} === true }" />
                                                 <Input
-                                                    value="{Product}"
+                                                    value="{ path: 'Product', mode: 'OneWay' }"
                                                     description="{ProductName}"
                                                     fieldWidth="40%"
+                                                    showValueHelp="true"
+                                                    valueHelpRequest=".onProductValueHelp"
+                                                    change=".onProductInputChange"
                                                     ariaLabelledBy="partProductHeader"
                                                     visible="{= %{IsActiveEntity} !== true }" />
                                             </VBox>

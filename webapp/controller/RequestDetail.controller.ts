@@ -3,15 +3,20 @@ import { Route$PatternMatchedEvent } from "sap/ui/core/routing/Route";
 import { NavigationActionsTargets } from "sap/f/FlexibleColumnLayoutSemanticHelper";
 import { Avatar$PressEvent } from "sap/m/Avatar";
 import { Button$PressEvent } from "sap/m/Button";
-import ComboBox, { ComboBox$ChangeEvent } from "sap/m/ComboBox";
 import Dialog from "sap/m/Dialog";
+import Input, { Input$ValueHelpRequestEvent } from "sap/m/Input";
+import { InputBase$ChangeEvent } from "sap/m/InputBase";
 import { DraftIndicatorState } from "sap/m/library";
 import LightBox from "sap/m/LightBox";
 import { ListBase$DeleteEvent } from "sap/m/ListBase";
 import MessageBox from "sap/m/MessageBox";
 import MessagePopover from "sap/m/MessagePopover";
 import MessageToast from "sap/m/MessageToast";
+import TableSelectDialog, {
+    TableSelectDialog$ConfirmEvent, TableSelectDialog$SearchEvent
+} from "sap/m/TableSelectDialog";
 import DateFormat from "sap/ui/core/format/DateFormat";
+import { ValueState } from "sap/ui/core/library";
 import Messaging from "sap/ui/core/Messaging";
 import Message from "sap/ui/core/message/Message";
 import MessageType from "sap/ui/core/message/MessageType";
@@ -27,11 +32,12 @@ import FileUploader, {
     FileUploader$ChangeEvent, FileUploader$TypeMissmatchEvent
 } from "sap/ui/unified/FileUploader";
 import {
-    ActionParameter, AttachmentLimit, AttachmentMediaType, AttachmentProperty, AttachmentRejection, BusinessAction,
-    CameraFailure, DetailRouteArguments, EntitySetPath, EquipmentProperty, HttpStatus, PartProperty, RequestProperty,
-    RouteName, TargetName
+    ActionParameter, AttachmentLimit, AttachmentMediaType, AttachmentProperty, AttachmentRejection, BindingParameter,
+    BusinessAction, CameraFailure, DetailRouteArguments, EntitySetPath, EquipmentProperty, HttpStatus, PartProperty,
+    ProductProperty, RequestProperty, RouteName, TargetName, ValueHelpEntity
 } from "../model/constants";
 import { createDetailViewModel, EnlargedImage } from "../model/models";
+import ValueHelpService, { ValueHelpEntry } from "../service/ValueHelpService";
 
 /** The business action whose dialog is open, with the operation binding that holds its parameters. */
 interface OpenAction {
@@ -81,6 +87,14 @@ interface OpenAction {
  * the user does not grant the permission, a message says so and the screen stays as it was. The camera is switched
  * off whenever the dialog closes.
  *
+ * Plant, equipment and the material of a spare part are input fields with a search help (HU-07): the value help icon
+ * opens a table select dialog, loaded once from its fragment, which searches on the server ($search) and loads its
+ * rows progressively. The equipment dialog shows only the equipments of the plant of the draft, and the equipment
+ * field is disabled while the draft has no plant. These fields show the code with its name and are not bound
+ * two-way: the controller writes a chosen or typed code to the draft, after the value help service has found it in
+ * the service. A code that does not exist leaves the field in error and sends nothing. A change of the plant empties
+ * the equipment, and the choice of a material sets the unit of the spare part to the base unit of the material.
+ *
  * In both modes the thumbnail of an image opens the image enlarged in a light box, and the download icon of a row
  * makes the browser save the content of the attachment as a file.
  *
@@ -100,7 +114,24 @@ export default class RequestDetail extends BaseController {
     private static readonly UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
     /** Controls of the edit mode whose code list is read the first time a draft is shown. */
-    private static readonly CODE_LIST_CONTROL_IDS = ["requestTypeSelect", "prioritySelect", "plantComboBox"];
+    private static readonly CODE_LIST_CONTROL_IDS = ["requestTypeSelect", "prioritySelect"];
+
+    /** Ids of the input fields of the draft that have a search help; their error state is cleared with the draft. */
+    private static readonly VALUE_HELP_INPUT_IDS = ["plantInput", "equipmentInput"];
+
+    /** Name of the fragment of the search help dialog of each entity. */
+    private static readonly VALUE_HELP_FRAGMENTS: Record<ValueHelpEntity, string> = {
+        [ValueHelpEntity.Plant]: "PlantValueHelp",
+        [ValueHelpEntity.Equipment]: "EquipmentValueHelp",
+        [ValueHelpEntity.Product]: "ProductValueHelp"
+    };
+
+    /** Key of the text of the error of a code that does not exist, for each entity. */
+    private static readonly VALUE_HELP_NOT_FOUND_TEXTS: Record<ValueHelpEntity, string> = {
+        [ValueHelpEntity.Plant]: "valueHelpNotFound",
+        [ValueHelpEntity.Equipment]: "valueHelpEquipmentNotFound",
+        [ValueHelpEntity.Product]: "valueHelpNotFound"
+    };
 
     /** Date and time of the capture in the file name of a photo, for example 20261122-173015. */
     private static readonly PHOTO_TIMESTAMP_PATTERN = "yyyyMMdd-HHmmss";
@@ -157,6 +188,12 @@ export default class RequestDetail extends BaseController {
 
     /** The business action whose dialog is open; undefined while no dialog is open. */
     private openAction?: OpenAction;
+
+    /** The search help dialogs, each loaded once from its fragment the first time it is opened. */
+    private readonly valueHelpDialogs = new Map<ValueHelpEntity, Promise<TableSelectDialog>>();
+
+    /** The material field of the spare part whose search help is open; its binding context is the spare part. */
+    private productInput?: Input;
 
     /** Whether the dialog "Take Photo" is open: a camera that starts once the dialog has closed is stopped at once. */
     private cameraOpen = false;
@@ -269,12 +306,65 @@ export default class RequestDetail extends BaseController {
         });
     }
 
+    /** Search help of the plant (edit mode): opens the dialog with the plants. */
+    public onPlantValueHelp(): void {
+        void this.openValueHelp(ValueHelpEntity.Plant);
+    }
+
+    /** Search help of the equipment (edit mode): opens the dialog with the equipments of the plant of the draft. */
+    public onEquipmentValueHelp(): void {
+        void this.openValueHelp(ValueHelpEntity.Equipment);
+    }
+
+    /** Search help of the material of a spare part (edit mode): opens the dialog with the materials. */
+    public onProductValueHelp(event: Input$ValueHelpRequestEvent): void {
+        this.productInput = event.getSource();
+        void this.openValueHelp(ValueHelpEntity.Product);
+    }
+
     /**
-     * Change of the plant in edit mode: the equipment list shows the equipments of the new plant. The equipment
-     * of the draft is not changed; if it does not belong to the plant, the activation reports it on the field.
+     * Search of a search help dialog (search button, Enter or clear button): the text goes as a quoted phrase to
+     * the $search parameter of the items binding, which the service resolves on the code and the name. An empty
+     * text removes the parameter. Changing the parameter refreshes the binding: one request.
      */
-    public onPlantChange(event: ComboBox$ChangeEvent): void {
-        this.filterEquipments(event.getSource().getSelectedKey());
+    public onValueHelpSearch(event: TableSelectDialog$SearchEvent): void {
+        const binding = event.getParameter("itemsBinding") as ODataListBinding | undefined;
+        const query = (event.getParameter("value") ?? "").trim();
+        binding?.changeParameters({
+            [BindingParameter.Search]: query ? ValueHelpService.toSearchPhrase(query) : undefined
+        });
+    }
+
+    /** A plant has been chosen in its search help. */
+    public onPlantSelected(event: TableSelectDialog$ConfirmEvent): void {
+        void this.takeSelection(event, ValueHelpEntity.Plant, this.getInput("plantInput"));
+    }
+
+    /** An equipment has been chosen in its search help. */
+    public onEquipmentSelected(event: TableSelectDialog$ConfirmEvent): void {
+        void this.takeSelection(event, ValueHelpEntity.Equipment, this.getInput("equipmentInput"));
+    }
+
+    /** A material has been chosen in its search help. */
+    public onProductSelected(event: TableSelectDialog$ConfirmEvent): void {
+        if (this.productInput) {
+            void this.takeSelection(event, ValueHelpEntity.Product, this.productInput);
+        }
+    }
+
+    /** A code has been typed in the plant field: it is checked in the service and written to the draft. */
+    public onPlantInputChange(event: InputBase$ChangeEvent): void {
+        void this.checkTypedCode(event.getSource(), ValueHelpEntity.Plant);
+    }
+
+    /** A code has been typed in the equipment field: it is checked in the service and written to the draft. */
+    public onEquipmentInputChange(event: InputBase$ChangeEvent): void {
+        void this.checkTypedCode(event.getSource(), ValueHelpEntity.Equipment);
+    }
+
+    /** A code has been typed in the material field of a spare part: it is checked and written to the spare part. */
+    public onProductInputChange(event: InputBase$ChangeEvent): void {
+        void this.checkTypedCode(event.getSource(), ValueHelpEntity.Product);
     }
 
     /** Add (operations table, edit mode): creates an operation of the draft, shown at the top of the table. */
@@ -925,50 +1015,203 @@ export default class RequestDetail extends BaseController {
                 previousContext.setKeepAlive(false);
             }
         }
+        this.resetValueHelpInputs();
         if (!isActive) {
-            void this.prepareEditMode(context);
+            this.prepareEditMode();
         }
     }
 
     /**
-     * Prepares the input fields of the edit mode for the shown draft. The code lists are suspended in the view,
-     * so that the display mode does not read them: they are read the first time a draft is shown. The equipment
-     * list gets the equipments of the plant of the draft.
-     * @param context The context of the draft
+     * Prepares the input fields of the edit mode for the shown draft. The lists of type and priority are suspended
+     * in the view, so that the display mode does not read them: they are read the first time a draft is shown.
      */
-    private async prepareEditMode(context: Context): Promise<void> {
+    private prepareEditMode(): void {
         for (const id of RequestDetail.CODE_LIST_CONTROL_IDS) {
             const binding = this.byId(id)?.getBinding("items") as ODataListBinding | undefined;
             if (binding?.isSuspended()) {
                 binding.resume();
             }
         }
-        let plant: string;
-        try {
-            plant = await context.requestProperty(RequestProperty.Plant) as string;
-        } catch {
-            // the model has reported the error of the service, and the error handler shows it
-            return;
-        }
-        if (this.requestContext === context) {
-            this.filterEquipments(plant);
+    }
+
+    /** The error state of the plant and equipment fields belongs to the draft that was shown: it is cleared. */
+    private resetValueHelpInputs(): void {
+        for (const id of RequestDetail.VALUE_HELP_INPUT_IDS) {
+            this.getInput(id).setValueState(ValueState.None);
         }
     }
 
     /**
-     * Shows in the equipment list the equipments of the given plant. Without a plant the list is empty, and
-     * no request is sent (Filter.NONE). The list binding is suspended until the first draft is shown: the
-     * filter is set before the binding reads its data.
-     * @param plant Code of the plant; empty while the draft has no plant
+     * Opens the search help dialog of an entity, loaded the first time. Each opening starts with an empty search; the
+     * equipment dialog is filtered by the plant of the draft. The items binding is suspended until the first opening,
+     * so that the dialog reads nothing before it is needed.
+     * @param entity The entity of the search help
      */
-    private filterEquipments(plant: string): void {
-        const binding = this.getEquipmentComboBox().getBinding("items") as ODataListBinding | undefined;
+    private async openValueHelp(entity: ValueHelpEntity): Promise<void> {
+        const draftContext = this.requestContext;
+        if (!draftContext) {
+            return;
+        }
+        const dialog = await this.getValueHelpDialog(entity);
+        const binding = dialog.getBinding("items") as ODataListBinding | undefined;
         if (!binding) {
             return;
         }
-        binding.filter(plant ? new Filter(EquipmentProperty.Plant, FilterOperator.EQ, plant) : Filter.NONE);
+        binding.changeParameters({ [BindingParameter.Search]: undefined });
+        if (entity === ValueHelpEntity.Equipment) {
+            let plant: string;
+            try {
+                plant = await draftContext.requestProperty(RequestProperty.Plant) as string;
+            } catch {
+                // the model has reported the error of the service, and the error handler shows it
+                return;
+            }
+            binding.filter(new Filter(EquipmentProperty.Plant, FilterOperator.EQ, plant));
+        }
         if (binding.isSuspended()) {
             binding.resume();
+        }
+        dialog.open("");
+    }
+
+    /**
+     * The search help dialog of an entity, loaded once from its fragment as a dependent of the view. It gets the
+     * content density of the application, because a dialog is rendered outside the view.
+     * @param entity The entity of the search help
+     */
+    private getValueHelpDialog(entity: ValueHelpEntity): Promise<TableSelectDialog> {
+        let dialog = this.valueHelpDialogs.get(entity);
+        if (!dialog) {
+            dialog = (this.loadFragment({
+                name: `sapui5.maintenance.view.${RequestDetail.VALUE_HELP_FRAGMENTS[entity]}`
+            }) as Promise<TableSelectDialog>).then((loaded) => {
+                loaded.addStyleClass(this.getComponent().getContentDensityClass());
+                return loaded;
+            });
+            this.valueHelpDialogs.set(entity, dialog);
+        }
+        return dialog;
+    }
+
+    /**
+     * Writes to the draft the entity that the user has chosen in a search help dialog.
+     * @param event The confirm event of the dialog
+     * @param entity The entity of the search help
+     * @param input The field that shows the code
+     */
+    private async takeSelection(event: TableSelectDialog$ConfirmEvent, entity: ValueHelpEntity, input: Input):
+            Promise<void> {
+        const selected = (event.getParameter("selectedContexts") as Context[] | undefined)?.[0];
+        if (!selected) {
+            return;
+        }
+        let entry: ValueHelpEntry;
+        try {
+            entry = await selected.requestObject() as ValueHelpEntry;
+        } catch {
+            // the model has reported the error of the service, and the error handler shows it
+            return;
+        }
+        this.applyEntry(entity, entry, input);
+    }
+
+    /**
+     * Checks a code typed in a field with a search help: the service must have an entity with that code (for an
+     * equipment, in the plant of the draft). If it has, the entity is written to the draft; otherwise the field is
+     * left in error and nothing is sent. An empty field clears the value.
+     * @param input The field of the code
+     * @param entity The entity of the search help
+     */
+    private async checkTypedCode(input: Input, entity: ValueHelpEntity): Promise<void> {
+        const draftContext = this.requestContext;
+        if (!draftContext) {
+            return;
+        }
+        const typed = input.getValue();
+        const code = ValueHelpService.normalizeCode(entity, typed);
+        let entry: ValueHelpEntry | undefined = { [entity]: "" };
+        if (code) {
+            try {
+                const plant = entity === ValueHelpEntity.Equipment
+                    ? await draftContext.requestProperty(RequestProperty.Plant) as string
+                    : undefined;
+                entry = await this.getValueHelpService().find(entity, code, plant);
+            } catch {
+                // the model has reported the error of the service, and the error handler shows it
+                return;
+            }
+        }
+        // the user has typed again, or another request is shown: this answer is outdated
+        if (this.requestContext !== draftContext || input.getValue() !== typed) {
+            return;
+        }
+        if (entry) {
+            this.applyEntry(entity, entry, input);
+            return;
+        }
+        input.setValueState(ValueState.Error);
+        input.setValueStateText(await this.getText(RequestDetail.VALUE_HELP_NOT_FOUND_TEXTS[entity], [code]));
+    }
+
+    /**
+     * Writes an entity of a search help to the draft and shows its code in the field.
+     * - Plant: the equipment is emptied, because it belongs to the previous plant.
+     * - Equipment: only the equipment changes; its name and the functional location come from the service.
+     * - Material: the unit of the spare part is set to the base unit of the material.
+     * @param entity The entity of the search help
+     * @param entry The code of the entity and, for a material, its base unit
+     * @param input The field of the code; the context of a material field is the spare part
+     */
+    private applyEntry(entity: ValueHelpEntity, entry: ValueHelpEntry, input: Input): void {
+        const draftContext = this.requestContext;
+        const code = entry[entity] ?? "";
+        input.setValueState(ValueState.None);
+        input.setValue(code);
+        if (!draftContext) {
+            return;
+        }
+        switch (entity) {
+            case ValueHelpEntity.Plant:
+                if (draftContext.getProperty(RequestProperty.Plant) !== code) {
+                    this.changeProperties(draftContext, { [RequestProperty.Plant]: code, [RequestProperty.Equipment]: "" });
+                    this.getInput("equipmentInput").setValueState(ValueState.None);
+                }
+                break;
+            case ValueHelpEntity.Equipment:
+                if (draftContext.getProperty(RequestProperty.Equipment) !== code) {
+                    this.changeProperties(draftContext, { [RequestProperty.Equipment]: code });
+                }
+                break;
+            case ValueHelpEntity.Product: {
+                const partContext = input.getBindingContext() as Context | null | undefined;
+                const baseUnit = entry[ProductProperty.BaseUnit];
+                if (partContext && partContext.getProperty(PartProperty.Product) !== code) {
+                    this.changeProperties(partContext, {
+                        [PartProperty.Product]: code,
+                        ...(baseUnit ? { [PartProperty.QuantityUnit]: baseUnit } : {})
+                    });
+                }
+                break;
+            }
+        }
+    }
+
+    /**
+     * Sends changes of properties of the draft or of one of its items, which the fields with a search help do not
+     * bind two-way. Like the change of a two-way binding, each one removes the messages of the service bound to its
+     * property and is followed until the service has saved it.
+     * @param context The context of the draft, or of a spare part of it
+     * @param values New values by property name
+     */
+    private changeProperties(context: Context, values: Record<string, string>): void {
+        const draftContext = this.requestContext;
+        if (!draftContext) {
+            return;
+        }
+        for (const [property, value] of Object.entries(values)) {
+            const path = `${context.getPath()}/${property}`;
+            this.getDraftService().removeTransitionMessages(path, false);
+            void this.followChange(draftContext, context.setProperty(property, value), path);
         }
     }
 
@@ -1164,8 +1407,8 @@ export default class RequestDetail extends BaseController {
         return this.getComponent().getModel() as ODataModel;
     }
 
-    private getEquipmentComboBox(): ComboBox {
-        return this.byId("equipmentComboBox") as ComboBox;
+    private getInput(id: string): Input {
+        return this.byId(id) as Input;
     }
 
     private getAttachmentUploader(): FileUploader {

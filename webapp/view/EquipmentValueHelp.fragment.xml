@@ -1,0 +1,43 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <!--
+        Search help of the equipment (HU-07), opened by the value help icon of the equipment field. It shows only the
+        equipments of the plant of the draft: the controller sets the filter on Plant each time the dialog is opened.
+        The items are suspended until then. The search text goes to $search (server side) and the table loads the
+        rows progressively (growing).
+    -->
+    <TableSelectDialog
+        id="equipmentValueHelp"
+        title="{i18n>valueHelpEquipmentTitle}"
+        noDataText="{i18n>valueHelpNoData}"
+        contentWidth="40rem"
+        growing="true"
+        growingThreshold="20"
+        search=".onValueHelpSearch"
+        confirm=".onEquipmentSelected"
+        items="{
+            path: '/Equipments',
+            sorter: { path: 'EquipmentName' },
+            suspended: true
+        }">
+        <columns>
+            <Column width="8rem">
+                <Text text="{i18n>valueHelpColumnCode}" />
+            </Column>
+            <Column>
+                <Text text="{i18n>valueHelpColumnName}" />
+            </Column>
+            <Column minScreenWidth="Tablet" demandPopin="true">
+                <Text text="{i18n>valueHelpColumnLocation}" />
+            </Column>
+        </columns>
+        <ColumnListItem>
+            <cells>
+                <Text text="{Equipment}" />
+                <Text text="{EquipmentName}" />
+                <Text text="{FunctionalLocation}" />
+            </cells>
+        </ColumnListItem>
+    </TableSelectDialog>
+</core:FragmentDefinition>

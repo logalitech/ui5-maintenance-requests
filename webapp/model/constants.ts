@@ -70,7 +70,8 @@ export enum RequestProperty {
     Priority = "Priority",
     Plant = "Plant",
     RequiredEndDate = "RequiredEndDate",
-    CurrencyCode = "CurrencyCode"
+    CurrencyCode = "CurrencyCode",
+    Equipment = "Equipment"
 }
 
 /**
@@ -89,9 +90,26 @@ export enum ActionParameter {
     DowntimeHours = "DowntimeHours"
 }
 
-/** Properties of the Parts entity set that the controllers set as initial data of a new spare part. */
+/** Properties of the Parts entity set that the controllers set as initial data of a new spare part or change. */
 export enum PartProperty {
-    CurrencyCode = "CurrencyCode"
+    CurrencyCode = "CurrencyCode",
+    Product = "Product",
+    QuantityUnit = "QuantityUnit"
+}
+
+/**
+ * Entities with a search help (HU-07). The value is the key property of the entity set, which has the same name
+ * as the property of the request or of the spare part that holds the code.
+ */
+export enum ValueHelpEntity {
+    Plant = "Plant",
+    Equipment = "Equipment",
+    Product = "Product"
+}
+
+/** Properties of the Products entity set that the controllers read from a selected material. */
+export enum ProductProperty {
+    BaseUnit = "BaseUnit"
 }
 
 /**

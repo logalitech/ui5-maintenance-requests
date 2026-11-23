@@ -10,6 +10,7 @@ import ErrorHandler from "./controller/ErrorHandler";
 import DraftService from "./service/DraftService";
 import AttachmentService from "./service/AttachmentService";
 import ActionService from "./service/ActionService";
+import ValueHelpService from "./service/ValueHelpService";
 
 /**
  * @namespace sapui5.maintenance
@@ -27,6 +28,7 @@ export default class Component extends UIComponent {
     private draftService: DraftService;
     private attachmentService: AttachmentService;
     private actionService: ActionService;
+    private valueHelpService: ValueHelpService;
     private contentDensityClass: string;
 
     public init(): void {
@@ -44,6 +46,9 @@ export default class Component extends UIComponent {
 
         // business actions and deletion of the requests
         this.actionService = new ActionService(this.getModel() as ODataModel);
+
+        // search of the codes typed in the fields with a search help
+        this.valueHelpService = new ValueHelpService(this.getModel() as ODataModel);
 
         // set the device and the appView models
         this.setModel(createDeviceModel(), "device");
@@ -80,6 +85,11 @@ export default class Component extends UIComponent {
     /** The attachments of the requests: check, upload and binary content (service/AttachmentService.ts). */
     public getAttachmentService(): AttachmentService {
         return this.attachmentService;
+    }
+
+    /** The search of the codes of plants, equipments and materials (service/ValueHelpService.ts). */
+    public getValueHelpService(): ValueHelpService {
+        return this.valueHelpService;
     }
 
     /** The error handler: the controllers that show an error themselves run its capture. */

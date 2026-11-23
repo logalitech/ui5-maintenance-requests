@@ -1,0 +1,37 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <!--
+        Search help of the plant (HU-07), opened by the value help icon of the plant field. The items are bound to the
+        entity set Plants and suspended: the controller resumes the binding the first time the dialog is opened. The
+        search text goes to $search (event search, server side) and the table loads the rows progressively (growing).
+    -->
+    <TableSelectDialog
+        id="plantValueHelp"
+        title="{i18n>valueHelpPlantTitle}"
+        noDataText="{i18n>valueHelpNoData}"
+        growing="true"
+        growingThreshold="20"
+        search=".onValueHelpSearch"
+        confirm=".onPlantSelected"
+        items="{
+            path: '/Plants',
+            sorter: { path: 'PlantName' },
+            suspended: true
+        }">
+        <columns>
+            <Column width="8rem">
+                <Text text="{i18n>valueHelpColumnCode}" />
+            </Column>
+            <Column>
+                <Text text="{i18n>valueHelpColumnName}" />
+            </Column>
+        </columns>
+        <ColumnListItem>
+            <cells>
+                <Text text="{Plant}" />
+                <Text text="{PlantName}" />
+            </cells>
+        </ColumnListItem>
+    </TableSelectDialog>
+</core:FragmentDefinition>

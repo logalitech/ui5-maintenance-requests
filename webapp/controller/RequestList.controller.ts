@@ -14,6 +14,7 @@ import FilterOperator from "sap/ui/model/FilterOperator";
 import Sorter from "sap/ui/model/Sorter";
 import Context from "sap/ui/model/odata/v4/Context";
 import ODataListBinding from "sap/ui/model/odata/v4/ODataListBinding";
+import ValueHelpService from "../service/ValueHelpService";
 import { BindingParameter, DetailRouteArguments, RequestProperty, RouteName, ViewLevel } from "../model/constants";
 
 /**
@@ -94,7 +95,7 @@ export default class RequestList extends BaseController {
     public onSearch(event: SearchField$SearchEvent): void {
         const query = (event.getParameter("query") ?? "").trim();
         this.getRequestBinding()?.changeParameters({
-            [BindingParameter.Search]: query ? this.toSearchPhrase(query) : undefined
+            [BindingParameter.Search]: query ? ValueHelpService.toSearchPhrase(query) : undefined
         });
     }
 
@@ -175,15 +176,6 @@ export default class RequestList extends BaseController {
             filters.push(new Filter(RequestProperty.Plant, FilterOperator.EQ, plant));
         }
         return filters.length > 0 ? new Filter({ filters, and: true }) : [];
-    }
-
-    /**
-     * The search text as a phrase of the $search parameter: between double quotes, with the double
-     * quotes and the backslashes of the text escaped. In a phrase the service takes quotes,
-     * parentheses and the words AND, OR and NOT as text, not as operators of the search expression.
-     */
-    private toSearchPhrase(query: string): string {
-        return `"${query.replace(/\\/g, "\\\\").replace(/"/g, "\\\"")}"`;
     }
 
     /** The initial sorter of the list, as declared in the view: request number, descending. */
