@@ -72,6 +72,15 @@
                             <OverflowToolbarLayoutData priority="NeverOverflow" />
                         </layoutData>
                     </SearchField>
+                    <!-- Creates a draft in the service and opens it in the detail, in edit mode. -->
+                    <Button
+                        id="createButton"
+                        text="{i18n>createButtonText}"
+                        press=".onCreate">
+                        <layoutData>
+                            <OverflowToolbarLayoutData priority="High" />
+                        </layoutData>
+                    </Button>
                     <MultiComboBox
                         id="statusFilter"
                         width="11rem"

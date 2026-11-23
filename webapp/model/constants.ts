@@ -50,13 +50,15 @@ export enum EntitySetPath {
 }
 
 /**
- * Properties of the Requests entity set that the controllers read from a context or use as
- * paths of filters and sorters of the list.
+ * Properties of the Requests entity set that the controllers and the draft service read from a context
+ * or use as paths of filters and sorters of the list.
  */
 export enum RequestProperty {
     RequestUUID = "RequestUUID",
     RequestID = "RequestID",
     IsActiveEntity = "IsActiveEntity",
+    HasActiveEntity = "HasActiveEntity",
+    HasDraftEntity = "HasDraftEntity",
     Status = "Status",
     Priority = "Priority",
     Plant = "Plant",

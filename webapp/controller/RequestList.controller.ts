@@ -28,6 +28,8 @@ import { BindingParameter, DetailRouteArguments, RequestProperty, RouteName, Vie
  * the dynamic sorter. Each change produces one request; the reset applies all changes between
  * suspend and resume so that it produces one request as well.
  *
+ * "Create" creates a draft with the list binding (service/DraftService.ts) and shows it in the detail.
+ *
  * @namespace sapui5.maintenance.controller
  */
 export default class RequestList extends BaseController {
@@ -69,6 +71,14 @@ export default class RequestList extends BaseController {
     /** Phone (no selection mode): the pressed row is shown in the detail. */
     public onItemPress(event: ListBase$ItemPressEvent): void {
         this.showRequest(event.getParameter("listItem"));
+    }
+
+    /**
+     * Create: the service creates a new request as a draft, which the list shows at the top and the detail
+     * shows in edit mode. If the service rejects the creation, the error handler shows its message.
+     */
+    public onCreate(): void {
+        void this.createRequest();
     }
 
     /** After each update of the rows (first load, growing, filter, sort) the shown request keeps its mark. */
@@ -204,16 +214,39 @@ export default class RequestList extends BaseController {
         }
     };
 
+    /** Shows the request of the given row in the detail. */
+    private showRequest(item: ListItemBase | undefined): void {
+        const context = item?.getBindingContext() as Context | null | undefined;
+        if (context) {
+            this.navigateToRequest(context);
+        }
+    }
+
     /**
-     * Navigates to the detail of the request of the given row, with the layout that the semantic helper
+     * Creates a draft with the list binding and shows it in the detail, once the service has created it
+     * and its key is known. The busy indicator blocks the screen meanwhile.
+     */
+    private async createRequest(): Promise<void> {
+        const binding = this.getRequestBinding();
+        if (!binding) {
+            return;
+        }
+        let draftContext: Context;
+        try {
+            draftContext = await this.runBusy(() => this.getDraftService().create(binding));
+        } catch {
+            // the model has reported the error of the service, and the error handler shows it
+            return;
+        }
+        this.navigateToRequest(draftContext);
+    }
+
+    /**
+     * Navigates to the detail of the request of the given context, with the layout that the semantic helper
      * suggests for the detail level: the current two-column layout is kept (also when the user has
      * widened the list with the arrow of the column separator), and the default one is used otherwise.
      */
-    private showRequest(item: ListItemBase | undefined): void {
-        const context = item?.getBindingContext() as Context | null | undefined;
-        if (!context) {
-            return;
-        }
+    private navigateToRequest(context: Context): void {
         const routeArguments: DetailRouteArguments = {
             uuid: context.getProperty(RequestProperty.RequestUUID) as string,
             active: String(context.getProperty(RequestProperty.IsActiveEntity) as boolean),

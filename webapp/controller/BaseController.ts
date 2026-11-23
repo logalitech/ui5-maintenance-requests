@@ -5,10 +5,11 @@ import JSONModel from "sap/ui/model/json/JSONModel";
 import ResourceModel from "sap/ui/model/resource/ResourceModel";
 import ResourceBundle from "sap/base/i18n/ResourceBundle";
 import type Component from "../Component";
+import type DraftService from "../service/DraftService";
 
 /**
  * Base class of all controllers: typed access to the component, the router, the models,
- * the texts and the appView model.
+ * the texts, the appView model and the draft service.
  *
  * @namespace sapui5.maintenance.controller
  */
@@ -45,6 +46,26 @@ export default abstract class BaseController extends Controller {
     /** The appView model of the component (layout, busy and editable). */
     public getAppViewModel(): JSONModel {
         return this.getComponent().getModel("appView") as JSONModel;
+    }
+
+    /** The draft service of the component: creation, edit and discard of requests. */
+    public getDraftService(): DraftService {
+        return this.getComponent().getDraftService();
+    }
+
+    /**
+     * Runs a task with the busy indicator of the application (appView>/busy) switched on.
+     * @param task The task, for example a call of the draft service
+     * @returns The result of the task
+     */
+    public async runBusy<T>(task: () => Promise<T>): Promise<T> {
+        const appViewModel = this.getAppViewModel();
+        appViewModel.setProperty("/busy", true);
+        try {
+            return await task();
+        } finally {
+            appViewModel.setProperty("/busy", false);
+        }
     }
 
     /** The resource bundle of the i18n model. */

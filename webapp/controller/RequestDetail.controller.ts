@@ -1,6 +1,7 @@
 import BaseController from "./BaseController";
 import { Route$PatternMatchedEvent } from "sap/ui/core/routing/Route";
 import { NavigationActionsTargets } from "sap/f/FlexibleColumnLayoutSemanticHelper";
+import MessageBox from "sap/m/MessageBox";
 import Context from "sap/ui/model/odata/v4/Context";
 import ODataModel from "sap/ui/model/odata/v4/ODataModel";
 import {
@@ -18,6 +19,10 @@ import {
  *
  * A request of the URL that does not exist (malformed key, or 404 of the service) is shown with the
  * page of the target notFound, which replaces the detail in the second column.
+ *
+ * The mode of the screen is not kept in the controller: the view derives it from IsActiveEntity of the
+ * bound request (display for the active request, edit for a draft). "Edit" and "Discard" call the draft
+ * service and then navigate to the other version of the request, which the route binds like any other.
  *
  * @namespace sapui5.maintenance.controller
  */
@@ -53,6 +58,104 @@ export default class RequestDetail extends BaseController {
     /** Close: the target layout of the semantic helper is the list in one column, that is, the list route. */
     public onClose(): void {
         this.getRouter().navTo(RouteName.List);
+    }
+
+    /** Edit (active request): the request goes into edit mode on its draft. */
+    public onEdit(): void {
+        void this.editRequest();
+    }
+
+    /** Discard (draft): after confirmation, the draft is discarded. */
+    public onDiscard(): void {
+        void this.discardDraft();
+    }
+
+    /**
+     * Gets a draft of the current user for the shown active request (resumed or created by the action Edit)
+     * and shows it. If the service rejects the action, the error handler shows its message and the request
+     * stays in display mode.
+     */
+    private async editRequest(): Promise<void> {
+        const activeContext = this.requestContext;
+        if (!activeContext) {
+            return;
+        }
+        try {
+            await this.runBusy(() => this.getDraftService().edit(activeContext));
+        } catch {
+            // the model has reported the error of the service, and the error handler shows it
+            return;
+        }
+        if (this.requestContext === activeContext) {
+            this.navigateToRequest(false);
+        }
+    }
+
+    /**
+     * Discards the shown draft after confirmation and shows the active request again or, for a new request,
+     * the list alone. If the service rejects the action, the error handler shows its message and the draft
+     * stays in edit mode.
+     */
+    private async discardDraft(): Promise<void> {
+        const draftContext = this.requestContext;
+        if (!draftContext || !await this.confirmDiscard()) {
+            return;
+        }
+        let hasActiveEntity: boolean;
+        try {
+            hasActiveEntity = await this.runBusy(() => this.getDraftService().discard(draftContext));
+        } catch {
+            // the model has reported the error of the service, and the error handler shows it
+            return;
+        }
+        if (this.requestContext !== draftContext) {
+            return;
+        }
+        if (hasActiveEntity) {
+            this.navigateToRequest(true);
+            return;
+        }
+        // the draft service has destroyed the context of the new request: the view no longer uses it.
+        // ManagedObject#setBindingContext documents null, although its typings only declare Context.
+        this.requestContext = undefined;
+        this.getView()?.setBindingContext(null as unknown as Context);
+        this.getRouter().navTo(RouteName.List, {}, true);
+    }
+
+    /** Asks the user to confirm that the draft and its changes are discarded. */
+    private async confirmDiscard(): Promise<boolean> {
+        const [title, text, discardAction] = await Promise.all([
+            this.getText("discardConfirmTitle"),
+            this.getText("discardConfirmText"),
+            this.getText("discardConfirmAction")
+        ]);
+        return new Promise((resolve) => {
+            MessageBox.confirm(text, {
+                title,
+                actions: [discardAction, MessageBox.Action.CANCEL],
+                emphasizedAction: discardAction,
+                styleClass: this.getComponent().getContentDensityClass(),
+                onClose: (action: string | null) => resolve(action === discardAction)
+            });
+        });
+    }
+
+    /**
+     * Shows the other version of the current request, the active request or its draft (same RequestUUID),
+     * with the current column layout. The history entry is replaced: the version shown before no longer
+     * exists or is no longer the one to be edited.
+     * @param isActive Whether the active request or the draft is shown
+     */
+    private navigateToRequest(isActive: boolean): void {
+        if (!this.routeKey) {
+            return;
+        }
+        const routeArguments: DetailRouteArguments = {
+            uuid: this.routeKey.uuid,
+            active: String(isActive),
+            layout: this.getAppViewModel().getProperty("/layout") as string
+        };
+        this.getRouter().navTo(RouteName.Detail, routeArguments, true);
     }
 
     /**

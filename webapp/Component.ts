@@ -4,8 +4,10 @@ import View from "sap/ui/core/mvc/View";
 import FlexibleColumnLayout from "sap/f/FlexibleColumnLayout";
 import FlexibleColumnLayoutSemanticHelper from "sap/f/FlexibleColumnLayoutSemanticHelper";
 import { LayoutType } from "sap/f/library";
+import ODataModel from "sap/ui/model/odata/v4/ODataModel";
 import { createAppViewModel, createDeviceModel } from "./model/models";
 import ErrorHandler from "./controller/ErrorHandler";
+import DraftService from "./service/DraftService";
 
 /**
  * @namespace sapui5.maintenance
@@ -20,6 +22,7 @@ export default class Component extends UIComponent {
     };
 
     private errorHandler: ErrorHandler;
+    private draftService: DraftService;
     private contentDensityClass: string;
 
     public init(): void {
@@ -28,6 +31,9 @@ export default class Component extends UIComponent {
 
         // single message box for technical errors of the service
         this.errorHandler = new ErrorHandler(this);
+
+        // draft actions of the service, shared by the list and the detail
+        this.draftService = new DraftService(this.getModel() as ODataModel);
 
         // set the device and the appView models
         this.setModel(createDeviceModel(), "device");
@@ -54,6 +60,11 @@ export default class Component extends UIComponent {
             defaultTwoColumnLayoutType: LayoutType.TwoColumnsMidExpanded,
             maxColumnsCount: 2
         });
+    }
+
+    /** The draft handling of the requests: creation, edit and discard (service/DraftService.ts). */
+    public getDraftService(): DraftService {
+        return this.draftService;
     }
 
     /**

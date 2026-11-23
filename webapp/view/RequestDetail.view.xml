@@ -19,10 +19,16 @@
         the format of the locale. Fields without a value are hidden (strings are empty, dates null):
         the visibility expressions read the raw value with %{...} (target type any), so that the
         model does not convert it to the boolean of the visible property.
+
+        The mode of the screen depends only on IsActiveEntity of the bound request: the active request
+        (true) is shown in display mode, with "Edit" in the header title; a draft (false) is shown in
+        edit mode, with the draft marker and the footer with "Discard". Strict comparisons keep both
+        modes hidden while IsActiveEntity is not yet known.
     -->
     <uxap:ObjectPageLayout
         id="requestObjectPage"
-        upperCaseAnchorBar="false">
+        upperCaseAnchorBar="false"
+        showFooter="{= %{IsActiveEntity} === false }">
         <!-- Title, number, priority and status: visible in the expanded and in the collapsed header. -->
         <uxap:headerTitle>
             <uxap:ObjectPageDynamicHeaderTitle id="requestHeaderTitle">
@@ -36,6 +42,11 @@
                     <Text id="requestNumberSnapped" text="{RequestID}" />
                 </uxap:snappedContent>
                 <uxap:content>
+                    <ObjectMarker
+                        id="requestDraftMarker"
+                        type="Draft"
+                        visible="{= %{IsActiveEntity} === false }"
+                        class="sapUiMediumMarginEnd" />
                     <ObjectStatus
                         id="requestPriority"
                         title="{i18n>headerPriority}"
@@ -56,6 +67,15 @@
                             formatter: 'formatter.criticalityState'
                         }" />
                 </uxap:content>
+                <!-- Edit: only for the active request; the action Edit gives the draft of the user. -->
+                <uxap:actions>
+                    <Button
+                        id="editButton"
+                        text="{i18n>detailEditButton}"
+                        type="Emphasized"
+                        visible="{= %{IsActiveEntity} === true }"
+                        press=".onEdit" />
+                </uxap:actions>
                 <!--
                     Full screen, exit full screen and close. Each action is visible when the semantic
                     helper of the column layout gives it a target layout (appView>/actionButtonsInfo).
@@ -385,5 +405,15 @@
                 </uxap:subSections>
             </uxap:ObjectPageSection>
         </uxap:sections>
+        <!-- Footer of the edit mode (showFooter): actions on the draft. -->
+        <uxap:footer>
+            <OverflowToolbar id="requestFooter">
+                <ToolbarSpacer />
+                <Button
+                    id="discardButton"
+                    text="{i18n>detailDiscardButton}"
+                    press=".onDiscard" />
+            </OverflowToolbar>
+        </uxap:footer>
     </uxap:ObjectPageLayout>
 </mvc:View>
