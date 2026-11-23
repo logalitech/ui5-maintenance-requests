@@ -29,6 +29,12 @@ export default class ActionService {
     /** Navigation property path of the side effects that means the entity itself. */
     private static readonly WHOLE_ENTITY = { $NavigationPropertyPath: "" };
 
+    /** The dynamic control of the actions, named as a target so that the late $select of the detail is requested. */
+    private static readonly OPERATION_CONTROL = "__OperationControl";
+
+    /** The dynamic control of the deletion and update of the request. */
+    private static readonly ENTITY_CONTROL = "__EntityControl";
+
     private readonly model: ODataModel;
 
     /**
@@ -74,7 +80,11 @@ export default class ActionService {
      * @param requestContext Context of the request, as given to bind
      */
     public async reload(requestContext: Context): Promise<void> {
-        await requestContext.requestSideEffects([ActionService.WHOLE_ENTITY]);
+        await requestContext.requestSideEffects([
+            ActionService.WHOLE_ENTITY,
+            ActionService.OPERATION_CONTROL,
+            ActionService.ENTITY_CONTROL
+        ]);
     }
 
     /**

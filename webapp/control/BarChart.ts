@@ -63,6 +63,8 @@ export default class BarChart extends Control {
             /** Height of a chart with vertical bars. */
             height: { type: "sap.ui.core.CSSSize", defaultValue: "18rem" }
         },
+        // the view declares the bars as direct children of the control, so the aggregation is the default one
+        defaultAggregation: "items",
         aggregations: {
             /** The bars. */
             items: { type: "sapui5.maintenance.control.BarChartItem", multiple: true, singularName: "item" }
