@@ -1,7 +1,21 @@
 import formatMessage from "sap/base/strings/formatMessage";
+import { ButtonType, DraftIndicatorState } from "sap/m/library";
 import NumberFormat from "sap/ui/core/format/NumberFormat";
 import { ValueState } from "sap/ui/core/library";
+import Message from "sap/ui/core/message/Message";
+import MessageType from "sap/ui/core/message/MessageType";
 import { Criticality } from "./constants";
+
+/**
+ * The most severe type among the given messages (error, warning, success, information, in this order);
+ * undefined without messages or when all of them have the type None.
+ * @param messages Messages of the message model
+ */
+function getHighestMessageType(messages: Message[] | null | undefined): MessageType | undefined {
+    const types = new Set((messages ?? []).map((message) => message.getType()));
+    return [MessageType.Error, MessageType.Warning, MessageType.Success, MessageType.Information]
+        .find((type) => types.has(type));
+}
 
 /**
  * Formatters of the views. The views load this module with core:require and bind the functions
@@ -60,5 +74,58 @@ export default {
             return "";
         }
         return NumberFormat.getCurrencyInstance().format(Number(quantity) * Number(unitPrice), currencyCode);
+    },
+
+    /**
+     * Text of the saving state of a draft, shown in the footer of the edit mode.
+     * @param state Saving state of the draft (detailView>/draftState)
+     * @param savingText Text while a change is being sent to the service, for example "Saving draft..."
+     * @param savedText Text once the service has saved the last change, for example "Draft saved"
+     * @returns The text of the state; an empty text while no change has been made
+     */
+    draftStateText(state: DraftIndicatorState | null | undefined, savingText: string, savedText: string): string {
+        switch (state) {
+            case DraftIndicatorState.Saving:
+                return savingText;
+            case DraftIndicatorState.Saved:
+                return savedText;
+            default:
+                return "";
+        }
+    },
+
+    /**
+     * Type of the message button: the semantic color of the most severe message, as in the footer of an
+     * SAP Fiori object page (negative for errors, critical for warnings, success, neutral otherwise).
+     * @param messages Messages of the message model
+     */
+    messagesButtonType(messages: Message[] | null | undefined): ButtonType {
+        switch (getHighestMessageType(messages)) {
+            case MessageType.Error:
+                return ButtonType.Negative;
+            case MessageType.Warning:
+                return ButtonType.Critical;
+            case MessageType.Success:
+                return ButtonType.Success;
+            default:
+                return ButtonType.Neutral;
+        }
+    },
+
+    /**
+     * Icon of the message button: the icon of the most severe message.
+     * @param messages Messages of the message model
+     */
+    messagesButtonIcon(messages: Message[] | null | undefined): string {
+        switch (getHighestMessageType(messages)) {
+            case MessageType.Error:
+                return "sap-icon://error";
+            case MessageType.Warning:
+                return "sap-icon://alert";
+            case MessageType.Success:
+                return "sap-icon://sys-enter-2";
+            default:
+                return "sap-icon://information";
+        }
     }
 };

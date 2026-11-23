@@ -1,0 +1,18 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <!--
+        Detail of the messages of the message model (message>/), opened by the message button in the footer
+        of the detail. A message bound to a field has the label of that field as additional text, which the
+        item shows as subtitle.
+    -->
+    <MessagePopover
+        id="messagePopover"
+        items="{ path: 'message>/' }">
+        <MessageItem
+            type="{message>type}"
+            title="{message>message}"
+            subtitle="{message>additionalText}"
+            description="{message>description}" />
+    </MessagePopover>
+</core:FragmentDefinition>

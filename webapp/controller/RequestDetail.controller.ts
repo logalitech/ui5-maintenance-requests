@@ -1,12 +1,24 @@
 import BaseController from "./BaseController";
 import { Route$PatternMatchedEvent } from "sap/ui/core/routing/Route";
 import { NavigationActionsTargets } from "sap/f/FlexibleColumnLayoutSemanticHelper";
+import { Button$PressEvent } from "sap/m/Button";
+import ComboBox, { ComboBox$ChangeEvent } from "sap/m/ComboBox";
+import { DraftIndicatorState } from "sap/m/library";
 import MessageBox from "sap/m/MessageBox";
+import MessagePopover from "sap/m/MessagePopover";
+import MessageToast from "sap/m/MessageToast";
+import Messaging from "sap/ui/core/Messaging";
+import Filter from "sap/ui/model/Filter";
+import FilterOperator from "sap/ui/model/FilterOperator";
+import JSONModel from "sap/ui/model/json/JSONModel";
+import { Model$PropertyChangeEvent } from "sap/ui/model/Model";
 import Context from "sap/ui/model/odata/v4/Context";
-import ODataModel from "sap/ui/model/odata/v4/ODataModel";
+import ODataListBinding from "sap/ui/model/odata/v4/ODataListBinding";
+import ODataModel, { ODataModel$PropertyChangeEventParameters } from "sap/ui/model/odata/v4/ODataModel";
 import {
-    DetailRouteArguments, EntitySetPath, HttpStatus, RequestProperty, RouteName, TargetName
+    DetailRouteArguments, EntitySetPath, EquipmentProperty, HttpStatus, RequestProperty, RouteName, TargetName
 } from "../model/constants";
+import { createDetailViewModel } from "../model/models";
 
 /**
  * Detail of a maintenance request, shown in the second column.
@@ -21,8 +33,14 @@ import {
  * page of the target notFound, which replaces the detail in the second column.
  *
  * The mode of the screen is not kept in the controller: the view derives it from IsActiveEntity of the
- * bound request (display for the active request, edit for a draft). "Edit" and "Discard" call the draft
- * service and then navigate to the other version of the request, which the route binds like any other.
+ * bound request (display for the active request, edit for a draft). "Edit", "Save" and "Discard" call the
+ * draft service and then navigate to the other version of the request, which the route binds like any other.
+ *
+ * In edit mode, each change of a field is sent to the draft by its two-way binding, without a button. The
+ * controller follows those changes with the propertyChange event of the model: the footer shows the saving
+ * state of the draft, and the messages of the service bound to the changed field are removed. The messages
+ * of a failed activation stay in the message model (sap.ui.core.Messaging), bound to their fields; the view
+ * gets that model as "message" for the message button and the message popover.
  *
  * @namespace sapui5.maintenance.controller
  */
@@ -31,17 +49,30 @@ export default class RequestDetail extends BaseController {
     /** Format of RequestUUID (Edm.Guid) in the URL. */
     private static readonly UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
+    /** Controls of the edit mode whose code list is read the first time a draft is shown. */
+    private static readonly CODE_LIST_CONTROL_IDS = ["requestTypeSelect", "prioritySelect", "plantComboBox"];
+
     /** The kept-alive context of the shown request; undefined until a request is shown. */
     private requestContext?: Context;
 
     /** Key of the request of the last matched detail route, also while it is being read. */
     private routeKey?: Pick<DetailRouteArguments, "uuid" | "active">;
 
+    /** Promise of the PATCH request of the last change of the shown draft, whose outcome the footer shows. */
+    private lastPatch?: Promise<void>;
+
+    /** The message popover, loaded once from its fragment the first time it is opened. */
+    private messagePopover?: Promise<MessagePopover>;
+
     public onInit(): void {
+        this.setModel(Messaging.getMessageModel(), "message");
+        this.setModel(createDetailViewModel(), "detailView");
+        this.getODataModel().attachPropertyChange(this.onPropertyChange, this);
         this.getRouter().getRoute(RouteName.Detail)?.attachPatternMatched(this.onPatternMatched, this);
     }
 
     public onExit(): void {
+        this.getODataModel().detachPropertyChange(this.onPropertyChange, this);
         this.getRouter().getRoute(RouteName.Detail)?.detachPatternMatched(this.onPatternMatched, this);
     }
 
@@ -65,9 +96,32 @@ export default class RequestDetail extends BaseController {
         void this.editRequest();
     }
 
+    /** Save (draft): the draft is activated. */
+    public onSave(): void {
+        void this.activateDraft();
+    }
+
     /** Discard (draft): after confirmation, the draft is discarded. */
     public onDiscard(): void {
         void this.discardDraft();
+    }
+
+    /** Message button: opens or closes the popover with the detail of the messages; loaded the first time. */
+    public onOpenMessages(event: Button$PressEvent): void {
+        const button = event.getSource();
+        void this.getMessagePopover().then((popover) => {
+            // the messages may have changed since the popover last showed the detail of one of them
+            popover.navigateBack();
+            popover.toggle(button);
+        });
+    }
+
+    /**
+     * Change of the plant in edit mode: the equipment list shows the equipments of the new plant. The equipment
+     * of the draft is not changed; if it does not belong to the plant, the activation reports it on the field.
+     */
+    public onPlantChange(event: ComboBox$ChangeEvent): void {
+        this.filterEquipments(event.getSource().getSelectedKey());
     }
 
     /**
@@ -89,6 +143,32 @@ export default class RequestDetail extends BaseController {
         if (this.requestContext === activeContext) {
             this.navigateToRequest(false);
         }
+    }
+
+    /**
+     * Activates the shown draft and shows the active request, with its number, and a notification. The busy
+     * indicator blocks the screen meanwhile. If the service rejects the activation, the draft stays in edit
+     * mode: the validation messages mark their fields and the message button in the footer shows their number
+     * and their detail; any other error is shown by the error handler.
+     */
+    private async activateDraft(): Promise<void> {
+        const draftContext = this.requestContext;
+        if (!draftContext) {
+            return;
+        }
+        let activeContext: Context;
+        try {
+            activeContext = await this.runBusy(() => this.getDraftService().activate(draftContext));
+        } catch {
+            // the model has reported the messages of the service: bound to their fields or shown by the error handler
+            return;
+        }
+        if (this.requestContext !== draftContext) {
+            return;
+        }
+        const requestID = await activeContext.requestProperty(RequestProperty.RequestID) as string;
+        this.navigateToRequest(true);
+        MessageToast.show(await this.getText("saveSuccessMessage", [requestID]));
     }
 
     /**
@@ -118,6 +198,7 @@ export default class RequestDetail extends BaseController {
         // the draft service has destroyed the context of the new request: the view no longer uses it.
         // ManagedObject#setBindingContext documents null, although its typings only declare Context.
         this.requestContext = undefined;
+        this.resetDraftState();
         this.getView()?.setBindingContext(null as unknown as Context);
         this.getRouter().navTo(RouteName.List, {}, true);
     }
@@ -181,7 +262,8 @@ export default class RequestDetail extends BaseController {
      * the context as well: the model reports it, and the error handler shows it in its message box. If
      * another request has been navigated to in the meantime, the result is discarded. The context of the
      * request shown before is released afterwards: the list binding manages it again and destroys it when
-     * its row is no longer in the list.
+     * its row is no longer in the list. Its transition messages (a failed activation) are removed, so that the
+     * message button does not show them with another request, and the saving state starts empty.
      * @param uuid RequestUUID of the request
      * @param isActive IsActiveEntity of the request: the active entity or the draft
      */
@@ -218,9 +300,115 @@ export default class RequestDetail extends BaseController {
         const previousContext = this.requestContext;
         this.getView()?.setBindingContext(context);
         this.requestContext = context;
-        if (previousContext !== context && previousContext?.isKeepAlive()) {
-            previousContext.setKeepAlive(false);
+        this.resetDraftState();
+        if (previousContext && previousContext !== context) {
+            this.getDraftService().removeTransitionMessages(previousContext.getPath(), true);
+            if (previousContext.isKeepAlive()) {
+                previousContext.setKeepAlive(false);
+            }
         }
+        if (!isActive) {
+            void this.prepareEditMode(context);
+        }
+    }
+
+    /**
+     * Prepares the input fields of the edit mode for the shown draft. The code lists are suspended in the view,
+     * so that the display mode does not read them: they are read the first time a draft is shown. The equipment
+     * list gets the equipments of the plant of the draft.
+     * @param context The context of the draft
+     */
+    private async prepareEditMode(context: Context): Promise<void> {
+        for (const id of RequestDetail.CODE_LIST_CONTROL_IDS) {
+            const binding = this.byId(id)?.getBinding("items") as ODataListBinding | undefined;
+            if (binding?.isSuspended()) {
+                binding.resume();
+            }
+        }
+        let plant: string;
+        try {
+            plant = await context.requestProperty(RequestProperty.Plant) as string;
+        } catch {
+            // the model has reported the error of the service, and the error handler shows it
+            return;
+        }
+        if (this.requestContext === context) {
+            this.filterEquipments(plant);
+        }
+    }
+
+    /**
+     * Shows in the equipment list the equipments of the given plant. Without a plant the list is empty, and
+     * no request is sent (Filter.NONE). The list binding is suspended until the first draft is shown: the
+     * filter is set before the binding reads its data.
+     * @param plant Code of the plant; empty while the draft has no plant
+     */
+    private filterEquipments(plant: string): void {
+        const binding = this.getEquipmentComboBox().getBinding("items") as ODataListBinding | undefined;
+        if (!binding) {
+            return;
+        }
+        binding.filter(plant ? new Filter(EquipmentProperty.Plant, FilterOperator.EQ, plant) : Filter.NONE);
+        if (binding.isSuspended()) {
+            binding.resume();
+        }
+    }
+
+    /**
+     * A property has been changed by a two-way binding. For a property of the shown draft (a field of the
+     * request, or of one of its items), the transition messages bound to that property are removed, because
+     * they refer to the value that the service validated, and the footer shows the saving state of the change.
+     */
+    private readonly onPropertyChange = (event: Model$PropertyChangeEvent): void => {
+        const { resolvedPath, promise } = event.getParameters() as ODataModel$PropertyChangeEventParameters;
+        const requestPath = this.requestContext?.getPath();
+        if (!requestPath || !resolvedPath?.startsWith(`${requestPath}/`)) {
+            return;
+        }
+        this.getDraftService().removeTransitionMessages(resolvedPath, false);
+        if (promise) {
+            void this.showDraftState(promise);
+        }
+    };
+
+    /**
+     * Shows the saving state of a change: "Saving draft..." while its PATCH request is pending, and
+     * "Draft saved" once the service has saved it. A failed PATCH request is repeated by the model with
+     * the next change, so the state stays "Saving draft..." until then; the promise is rejected only when
+     * the change is reset. Only the outcome of the last change is shown, so that the state does not show
+     * "Draft saved" while a later change is still pending.
+     * @param patch Promise on the outcome of the PATCH request of the change
+     */
+    private async showDraftState(patch: Promise<void>): Promise<void> {
+        this.lastPatch = patch;
+        this.setDraftState(DraftIndicatorState.Saving);
+        let state = DraftIndicatorState.Saved;
+        try {
+            await patch;
+        } catch {
+            state = DraftIndicatorState.Clear;
+        }
+        if (this.lastPatch === patch) {
+            this.setDraftState(state);
+        }
+    }
+
+    /** No saving state: no change has been made since the request was shown. */
+    private resetDraftState(): void {
+        this.lastPatch = undefined;
+        this.setDraftState(DraftIndicatorState.Clear);
+    }
+
+    private setDraftState(state: DraftIndicatorState): void {
+        this.getModel<JSONModel>("detailView").setProperty("/draftState", state);
+    }
+
+    /** The message popover, loaded once from the fragment MessagePopover as a dependent of the view. */
+    private getMessagePopover(): Promise<MessagePopover> {
+        this.messagePopover ??= this.loadFragment({
+            name: "sapui5.maintenance.view.MessagePopover"
+        }) as Promise<MessagePopover>;
+        return this.messagePopover;
     }
 
     /**
@@ -288,5 +476,17 @@ export default class RequestDetail extends BaseController {
     /** Navigation actions of the detail column, written by the App controller into the appView model. */
     private getMidColumnActions(): NavigationActionsTargets {
         return this.getAppViewModel().getProperty("/actionButtonsInfo/midColumn") as NavigationActionsTargets;
+    }
+
+    /**
+     * The OData V4 model of the component. In onInit the view is not yet in the control tree of the
+     * component and does not have the model yet.
+     */
+    private getODataModel(): ODataModel {
+        return this.getComponent().getModel() as ODataModel;
+    }
+
+    private getEquipmentComboBox(): ComboBox {
+        return this.byId("equipmentComboBox") as ComboBox;
     }
 }

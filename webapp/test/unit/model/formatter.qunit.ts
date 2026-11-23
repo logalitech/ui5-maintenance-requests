@@ -1,7 +1,10 @@
 import formatter from "sapui5/maintenance/model/formatter";
 import { Criticality } from "sapui5/maintenance/model/constants";
+import { ButtonType, DraftIndicatorState } from "sap/m/library";
 import { ValueState } from "sap/ui/core/library";
 import NumberFormat from "sap/ui/core/format/NumberFormat";
+import Message from "sap/ui/core/message/Message";
+import MessageType from "sap/ui/core/message/MessageType";
 
 QUnit.module("formatter.criticalityState");
 
@@ -64,4 +67,47 @@ QUnit.test("Returns an empty text while a value is missing", function (assert) {
     assert.strictEqual(formatter.partAmount(undefined, "12.5", "EUR"), "", "quantity not loaded");
     assert.strictEqual(formatter.partAmount("2", null, "EUR"), "", "no unit price");
     assert.strictEqual(formatter.partAmount("2", "12.5", ""), "", "no currency");
+});
+
+QUnit.module("formatter.draftStateText");
+
+QUnit.test("Shows the text of the saving state of the draft", function (assert) {
+    assert.strictEqual(formatter.draftStateText(DraftIndicatorState.Saving, "Saving draft...", "Draft saved"),
+        "Saving draft...", "a change is being sent");
+    assert.strictEqual(formatter.draftStateText(DraftIndicatorState.Saved, "Saving draft...", "Draft saved"),
+        "Draft saved", "the last change is saved");
+});
+
+QUnit.test("Shows no text while no change has been made", function (assert) {
+    assert.strictEqual(formatter.draftStateText(DraftIndicatorState.Clear, "Saving draft...", "Draft saved"), "",
+        "Clear");
+    assert.strictEqual(formatter.draftStateText(undefined, "Saving draft...", "Draft saved"), "", "undefined");
+});
+
+QUnit.module("formatter.messagesButtonType and formatter.messagesButtonIcon");
+
+function createMessages(...types: MessageType[]): Message[] {
+    return types.map((type) => new Message({ type, message: type }));
+}
+
+QUnit.test("Uses the color and the icon of the most severe message", function (assert) {
+    const errors = createMessages(MessageType.Information, MessageType.Error, MessageType.Warning);
+    assert.strictEqual(formatter.messagesButtonType(errors), ButtonType.Negative, "an error is negative");
+    assert.strictEqual(formatter.messagesButtonIcon(errors), "sap-icon://error", "an error has the error icon");
+    const warnings = createMessages(MessageType.Success, MessageType.Warning);
+    assert.strictEqual(formatter.messagesButtonType(warnings), ButtonType.Critical, "a warning is critical");
+    assert.strictEqual(formatter.messagesButtonIcon(warnings), "sap-icon://alert", "a warning has the alert icon");
+    const successes = createMessages(MessageType.Information, MessageType.Success);
+    assert.strictEqual(formatter.messagesButtonType(successes), ButtonType.Success, "a success is success");
+    assert.strictEqual(formatter.messagesButtonIcon(successes), "sap-icon://sys-enter-2",
+        "a success has the success icon");
+});
+
+QUnit.test("Is neutral with information messages or without messages", function (assert) {
+    const information = createMessages(MessageType.Information, MessageType.None);
+    assert.strictEqual(formatter.messagesButtonType(information), ButtonType.Neutral, "information is neutral");
+    assert.strictEqual(formatter.messagesButtonIcon(information), "sap-icon://information",
+        "information has the information icon");
+    assert.strictEqual(formatter.messagesButtonType([]), ButtonType.Neutral, "no messages");
+    assert.strictEqual(formatter.messagesButtonType(undefined), ButtonType.Neutral, "message model not available");
 });

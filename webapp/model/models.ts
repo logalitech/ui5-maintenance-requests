@@ -1,6 +1,7 @@
 import JSONModel from "sap/ui/model/json/JSONModel";
 import Device from "sap/ui/Device";
 import { LayoutType } from "sap/f/library";
+import { DraftIndicatorState } from "sap/m/library";
 import { NavigationActionsTargets } from "sap/f/FlexibleColumnLayoutSemanticHelper";
 
 /**
@@ -34,6 +35,15 @@ export interface AppViewState {
     editable: boolean;
 }
 
+/** State of the detail view kept in its detailView model. */
+export interface DetailViewState {
+    /**
+     * Saving state of the changes of the shown draft: Saving while a PATCH request is pending, Saved once the
+     * service has saved the last change, Clear when no change has been made since the request was shown.
+     */
+    draftState: DraftIndicatorState;
+}
+
 export function createDeviceModel(): JSONModel {
     const model = new JSONModel(Device);
     model.setDefaultBindingMode("OneWay");
@@ -52,6 +62,13 @@ export function createAppViewModel(): JSONModel {
         },
         busy: false,
         editable: false
+    };
+    return new JSONModel(state);
+}
+
+export function createDetailViewModel(): JSONModel {
+    const state: DetailViewState = {
+        draftState: DraftIndicatorState.Clear
     };
     return new JSONModel(state);
 }

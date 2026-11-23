@@ -22,8 +22,9 @@
 
         The mode of the screen depends only on IsActiveEntity of the bound request: the active request
         (true) is shown in display mode, with "Edit" in the header title; a draft (false) is shown in
-        edit mode, with the draft marker and the footer with "Discard". Strict comparisons keep both
-        modes hidden while IsActiveEntity is not yet known.
+        edit mode, with the draft marker, the input fields of the general information and the footer
+        with the messages, "Save" and "Discard". Strict comparisons keep both modes hidden while
+        IsActiveEntity is not yet known.
     -->
     <uxap:ObjectPageLayout
         id="requestObjectPage"
@@ -156,9 +157,28 @@
                 <uxap:subSections>
                     <uxap:ObjectPageSubSection id="generalSubSection" title="{i18n>generalSectionTitle}">
                         <uxap:blocks>
+                            <!--
+                                The modifiable fields (title, type, priority, plant, equipment, description and
+                                due date) have a form element of their own for the edit mode, with an input
+                                control and required="true" for the mandatory fields of the service. The form
+                                elements of the display mode show the same data as text. The other fields are set
+                                by the service and are shown as text in both modes.
+
+                                Each input control is bound two-way to its property of the draft: a change is sent
+                                to the service as a PATCH request in the group $auto, without a button. The model
+                                derives the type of each binding from the metadata (length of the strings, Edm.Date
+                                for the due date). The messages of the service bound to a property (a failed
+                                validation of the activation) and the parse errors of the types mark the field.
+
+                                The code lists are suspended, so that the display mode does not read them; the
+                                controller resumes them the first time a draft is shown. The equipment list holds
+                                the equipments of the plant of the draft (filtered by the controller). The value of
+                                the equipment field is the name of the equipment of the request (one-way): it is
+                                shown also when the equipment is not in the list of the plant.
+                            -->
                             <form:Form
                                 id="generalForm"
-                                editable="false"
+                                editable="{= %{IsActiveEntity} === false }"
                                 width="auto"
                                 class="sapUxAPObjectPageSubSectionAlignContent">
                                 <form:layout>
@@ -168,17 +188,116 @@
                                     <form:FormContainer id="generalFormContainer">
                                         <form:formElements>
                                             <form:FormElement
+                                                label="{i18n>generalTitle}"
+                                                visible="{= %{IsActiveEntity} === false }">
+                                                <form:fields>
+                                                    <Input id="titleInput" value="{Title}" required="true" />
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement
                                                 label="{i18n>generalRequestType}"
-                                                visible="{= !!%{RequestTypeText} }">
+                                                visible="{= %{IsActiveEntity} === true &amp;&amp; !!%{RequestTypeText} }">
                                                 <form:fields>
                                                     <Text text="{RequestTypeText}" />
                                                 </form:fields>
                                             </form:FormElement>
                                             <form:FormElement
+                                                label="{i18n>generalRequestType}"
+                                                visible="{= %{IsActiveEntity} === false }">
+                                                <form:fields>
+                                                    <Select
+                                                        id="requestTypeSelect"
+                                                        selectedKey="{RequestType}"
+                                                        forceSelection="false"
+                                                        required="true"
+                                                        width="100%"
+                                                        items="{
+                                                            path: '/RequestTypes',
+                                                            sorter: { path: 'SortOrder' },
+                                                            suspended: true
+                                                        }">
+                                                        <core:Item key="{RequestType}" text="{RequestTypeText}" />
+                                                    </Select>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement
+                                                label="{i18n>generalPriority}"
+                                                visible="{= %{IsActiveEntity} === false }">
+                                                <form:fields>
+                                                    <Select
+                                                        id="prioritySelect"
+                                                        selectedKey="{Priority}"
+                                                        forceSelection="false"
+                                                        required="true"
+                                                        width="100%"
+                                                        items="{
+                                                            path: '/Priorities',
+                                                            sorter: { path: 'SortOrder' },
+                                                            suspended: true
+                                                        }">
+                                                        <core:Item key="{Priority}" text="{PriorityText}" />
+                                                    </Select>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement
+                                                label="{i18n>generalPlant}"
+                                                visible="{= %{IsActiveEntity} === false }">
+                                                <form:fields>
+                                                    <ComboBox
+                                                        id="plantComboBox"
+                                                        selectedKey="{Plant}"
+                                                        required="true"
+                                                        showSecondaryValues="true"
+                                                        items="{
+                                                            path: '/Plants',
+                                                            sorter: { path: 'PlantName' },
+                                                            suspended: true
+                                                        }"
+                                                        change=".onPlantChange">
+                                                        <core:ListItem key="{Plant}" text="{PlantName}" additionalText="{Plant}" />
+                                                    </ComboBox>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement
+                                                label="{i18n>generalEquipment}"
+                                                visible="{= %{IsActiveEntity} === false }">
+                                                <form:fields>
+                                                    <ComboBox
+                                                        id="equipmentComboBox"
+                                                        selectedKey="{Equipment}"
+                                                        value="{ path: 'EquipmentName', mode: 'OneWay' }"
+                                                        required="true"
+                                                        showSecondaryValues="true"
+                                                        items="{
+                                                            path: '/Equipments',
+                                                            sorter: { path: 'EquipmentName' },
+                                                            suspended: true
+                                                        }">
+                                                        <core:ListItem
+                                                            key="{Equipment}"
+                                                            text="{EquipmentName}"
+                                                            additionalText="{Equipment}" />
+                                                    </ComboBox>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement
                                                 label="{i18n>generalDescription}"
-                                                visible="{= !!%{Description} }">
+                                                visible="{= %{IsActiveEntity} === true &amp;&amp; !!%{Description} }">
                                                 <form:fields>
                                                     <Text text="{Description}" />
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement
+                                                label="{i18n>generalDescription}"
+                                                visible="{= %{IsActiveEntity} === false }">
+                                                <form:fields>
+                                                    <TextArea
+                                                        id="descriptionTextArea"
+                                                        value="{Description}"
+                                                        rows="4"
+                                                        growing="true"
+                                                        growingMaxLines="10"
+                                                        width="100%" />
                                                 </form:fields>
                                             </form:FormElement>
                                             <form:FormElement
@@ -190,9 +309,16 @@
                                             </form:FormElement>
                                             <form:FormElement
                                                 label="{i18n>generalRequiredEndDate}"
-                                                visible="{= !!%{RequiredEndDate} }">
+                                                visible="{= %{IsActiveEntity} === true &amp;&amp; !!%{RequiredEndDate} }">
                                                 <form:fields>
                                                     <Text text="{RequiredEndDate}" />
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement
+                                                label="{i18n>generalRequiredEndDate}"
+                                                visible="{= %{IsActiveEntity} === false }">
+                                                <form:fields>
+                                                    <DatePicker id="requiredEndDatePicker" value="{RequiredEndDate}" />
                                                 </form:fields>
                                             </form:FormElement>
                                             <form:FormElement
@@ -405,10 +531,40 @@
                 </uxap:subSections>
             </uxap:ObjectPageSection>
         </uxap:sections>
-        <!-- Footer of the edit mode (showFooter): actions on the draft. -->
+        <!--
+            Footer of the edit mode (showFooter). On the left, the message button: visible while the message
+            model (message>/, see sap.ui.core.Messaging) holds messages, with their number, and the color and
+            icon of the most severe one; it opens the message popover with their detail. On the right, the
+            saving state of the draft (detailView>/draftState: "Saving draft..." and "Draft saved") and the
+            actions on the draft: "Save" activates it, "Discard" discards it.
+        -->
         <uxap:footer>
             <OverflowToolbar id="requestFooter">
+                <Button
+                    id="messagesButton"
+                    type="{ path: 'message>/', formatter: 'formatter.messagesButtonType' }"
+                    icon="{ path: 'message>/', formatter: 'formatter.messagesButtonIcon' }"
+                    text="{= ${message>/}.length }"
+                    tooltip="{i18n>messagesButtonTooltip}"
+                    ariaHasPopup="Dialog"
+                    visible="{= ${message>/}.length > 0 }"
+                    press=".onOpenMessages" />
                 <ToolbarSpacer />
+                <Text
+                    id="draftStateText"
+                    text="{
+                        parts: [
+                            { path: 'detailView>/draftState' },
+                            { path: 'i18n>draftSavingText' },
+                            { path: 'i18n>draftSavedText' }
+                        ],
+                        formatter: 'formatter.draftStateText'
+                    }" />
+                <Button
+                    id="saveButton"
+                    text="{i18n>detailSaveButton}"
+                    type="Emphasized"
+                    press=".onSave" />
                 <Button
                     id="discardButton"
                     text="{i18n>detailDiscardButton}"

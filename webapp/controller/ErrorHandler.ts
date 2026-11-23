@@ -2,6 +2,7 @@ import BaseObject from "sap/ui/base/Object";
 import Messaging from "sap/ui/core/Messaging";
 import Message from "sap/ui/core/message/Message";
 import ListBinding from "sap/ui/model/ListBinding";
+import ODataModel from "sap/ui/model/odata/v4/ODataModel";
 import ResourceModel from "sap/ui/model/resource/ResourceModel";
 import MessageBox from "sap/m/MessageBox";
 import { HttpStatus } from "../model/constants";
@@ -19,9 +20,17 @@ import type Component from "../Component";
  * it shows its not-found page (the detail of a request opened by URL). Its message is removed without
  * a message box.
  *
+ * A validation of the service is not a technical error either, although the model marks the main error of
+ * every error response as technical: a 400 or 422 response whose message is bound to a field (for example
+ * the target Equipment of a failed activation). Its messages stay in the message model, without a message
+ * box: the field shows the message and the message button of the detail lists it.
+ *
  * @namespace sapui5.maintenance.controller
  */
 export default class ErrorHandler extends BaseObject {
+
+    /** Value of $kind in the metadata of a structural property. */
+    private static readonly PROPERTY_KIND = "Property";
 
     private readonly component: Component;
     private readonly messageBinding: ListBinding;
@@ -43,13 +52,13 @@ export default class ErrorHandler extends BaseObject {
     private readonly onMessagesChanged = (): void => {
         const messages = this.messageBinding.getContexts()
             .map((context) => context.getObject() as Message)
-            .filter((message) => message.getTechnical());
+            .filter((message) => message.getTechnical() && !this.isValidationMessage(message));
         if (messages.length === 0) {
             return;
         }
         // Remove the technical messages so that they are reported once
         Messaging.removeMessages(messages);
-        const errors = messages.filter((message) => !this.isNotFound(message));
+        const errors = messages.filter((message) => this.getHttpStatus(message) !== HttpStatus.NotFound);
         if (errors.length === 0 || this.messageOpen) {
             return;
         }
@@ -57,10 +66,31 @@ export default class ErrorHandler extends BaseObject {
         void this.showError(errors[0]);
     };
 
-    /** Whether the message comes from a 404 response (httpStatus of the technical details of the model). */
-    private isNotFound(message: Message): boolean {
+    /**
+     * Whether the message is a validation message of the service: it comes from a 400 or 422 response and at
+     * least one of its targets is a property of an entity. The model has resolved the target of the service
+     * against the entity (for example /Requests(...,IsActiveEntity=false)/Equipment); the metadata tell
+     * whether that path ends in a property or in the entity itself.
+     */
+    private isValidationMessage(message: Message): boolean {
+        const httpStatus = this.getHttpStatus(message);
+        if (httpStatus !== HttpStatus.BadRequest && httpStatus !== HttpStatus.UnprocessableContent) {
+            return false;
+        }
+        const metaModel = (this.component.getModel() as ODataModel).getMetaModel();
+        return message.getTargets().some((target) => {
+            if (!target) {
+                return false;
+            }
+            const kind: unknown = metaModel.getObject(`${metaModel.getMetaPath(target)}/$kind`);
+            return kind === ErrorHandler.PROPERTY_KIND;
+        });
+    }
+
+    /** HTTP status of the response of the message (httpStatus of the technical details of the model). */
+    private getHttpStatus(message: Message): number | undefined {
         const technicalDetails = message.getTechnicalDetails() as { httpStatus?: number } | undefined;
-        return technicalDetails?.httpStatus === HttpStatus.NotFound;
+        return technicalDetails?.httpStatus;
     }
 
     private async showError(message: Message): Promise<void> {

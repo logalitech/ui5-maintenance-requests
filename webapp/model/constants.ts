@@ -1,7 +1,7 @@
 /**
  * Application constants: route and target names, view levels of the column layout, the criticality
- * scale of the service, the paths of the entity sets and the properties of Requests that the
- * controllers read from the contexts of the list.
+ * scale of the service, the paths of the entity sets and the properties of Requests and Equipments
+ * that the controllers read from the contexts or use in filters.
  */
 
 /** Names of the routes declared in manifest.json (sap.ui5/routing/routes). */
@@ -23,7 +23,9 @@ export enum ViewLevel {
 
 /** HTTP status codes of the service that the application handles. */
 export enum HttpStatus {
-    NotFound = 404
+    BadRequest = 400,
+    NotFound = 404,
+    UnprocessableContent = 422
 }
 
 /**
@@ -63,6 +65,11 @@ export enum RequestProperty {
     Priority = "Priority",
     Plant = "Plant",
     RequiredEndDate = "RequiredEndDate"
+}
+
+/** Properties of the Equipments entity set that the controllers use as paths of filters. */
+export enum EquipmentProperty {
+    Plant = "Plant"
 }
 
 /** OData system query options that the controllers change on a list binding. */
