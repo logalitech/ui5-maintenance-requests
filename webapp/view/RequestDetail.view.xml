@@ -9,13 +9,16 @@
     xmlns="sap.m"
     core:require="{
         formatter: 'sapui5/maintenance/model/formatter',
-        Currency: 'sap/ui/model/odata/type/Currency'
+        Currency: 'sap/ui/model/odata/type/Currency',
+        Unit: 'sap/ui/model/odata/type/Unit'
     }">
     <!--
         The controller binds the view to a kept-alive context of the list binding: the properties
         that the list has already read come from its cache, and the model requests only the missing
         ones. Dates and decimals use the OData types that the model derives from the metadata, with
-        the format of the locale. Fields without a value are hidden (strings are empty, dates null).
+        the format of the locale. Fields without a value are hidden (strings are empty, dates null):
+        the visibility expressions read the raw value with %{...} (target type any), so that the
+        model does not convert it to the boolean of the visible property.
     -->
     <uxap:ObjectPageLayout
         id="requestObjectPage"
@@ -66,21 +69,21 @@
                     <ObjectAttribute
                         title="{i18n>headerPlant}"
                         text="{PlantName}"
-                        visible="{= !!${PlantName} }" />
+                        visible="{= !!%{PlantName} }" />
                     <ObjectAttribute
                         title="{i18n>headerEquipment}"
                         text="{EquipmentName}"
-                        visible="{= !!${EquipmentName} }" />
+                        visible="{= !!%{EquipmentName} }" />
                     <ObjectAttribute
                         title="{i18n>headerFunctionalLocation}"
                         text="{FunctionalLocation}"
-                        visible="{= !!${FunctionalLocation} }" />
+                        visible="{= !!%{FunctionalLocation} }" />
                 </VBox>
                 <VBox class="sapUiSmallMarginBottom">
                     <ObjectAttribute
                         title="{i18n>headerAssignedTo}"
                         text="{AssignedTo}"
-                        visible="{= !!${AssignedTo} }" />
+                        visible="{= !!%{AssignedTo} }" />
                     <ObjectAttribute
                         title="{i18n>headerEstimatedCost}"
                         text="{
@@ -96,8 +99,8 @@
         </uxap:headerContent>
         <uxap:sections>
             <!--
-                With a single section the object page hides the section title, so the subsection
-                repeats it; with more sections the object page shows only one of the two.
+                Each section has a single subsection with the same title: the object page shows the
+                title of the subsection instead of the title of the section, which the anchor bar uses.
             -->
             <uxap:ObjectPageSection
                 id="generalSection"
@@ -119,42 +122,42 @@
                                         <form:formElements>
                                             <form:FormElement
                                                 label="{i18n>generalRequestType}"
-                                                visible="{= !!${RequestTypeText} }">
+                                                visible="{= !!%{RequestTypeText} }">
                                                 <form:fields>
                                                     <Text text="{RequestTypeText}" />
                                                 </form:fields>
                                             </form:FormElement>
                                             <form:FormElement
                                                 label="{i18n>generalDescription}"
-                                                visible="{= !!${Description} }">
+                                                visible="{= !!%{Description} }">
                                                 <form:fields>
                                                     <Text text="{Description}" />
                                                 </form:fields>
                                             </form:FormElement>
                                             <form:FormElement
                                                 label="{i18n>generalReportedBy}"
-                                                visible="{= !!${ReportedBy} }">
+                                                visible="{= !!%{ReportedBy} }">
                                                 <form:fields>
                                                     <Text text="{ReportedBy}" />
                                                 </form:fields>
                                             </form:FormElement>
                                             <form:FormElement
                                                 label="{i18n>generalRequiredEndDate}"
-                                                visible="{= !!${RequiredEndDate} }">
+                                                visible="{= !!%{RequiredEndDate} }">
                                                 <form:fields>
                                                     <Text text="{RequiredEndDate}" />
                                                 </form:fields>
                                             </form:FormElement>
                                             <form:FormElement
                                                 label="{i18n>generalStartedAt}"
-                                                visible="{= !!${StartedAt} }">
+                                                visible="{= !!%{StartedAt} }">
                                                 <form:fields>
                                                     <Text text="{StartedAt}" />
                                                 </form:fields>
                                             </form:FormElement>
                                             <form:FormElement
                                                 label="{i18n>generalCompletedAt}"
-                                                visible="{= !!${CompletedAt} }">
+                                                visible="{= !!%{CompletedAt} }">
                                                 <form:fields>
                                                     <Text text="{CompletedAt}" />
                                                 </form:fields>
@@ -166,21 +169,21 @@
                                             -->
                                             <form:FormElement
                                                 label="{i18n>generalDowntimeHours}"
-                                                visible="{= !!${CompletedAt} }">
+                                                visible="{= !!%{CompletedAt} }">
                                                 <form:fields>
                                                     <Text text="{DowntimeHours}" />
                                                 </form:fields>
                                             </form:FormElement>
                                             <form:FormElement
                                                 label="{i18n>generalResolution}"
-                                                visible="{= !!${ResolutionText} }">
+                                                visible="{= !!%{ResolutionText} }">
                                                 <form:fields>
                                                     <Text text="{ResolutionText}" />
                                                 </form:fields>
                                             </form:FormElement>
                                             <form:FormElement
                                                 label="{i18n>generalRejectionReason}"
-                                                visible="{= !!${RejectionReason} }">
+                                                visible="{= !!%{RejectionReason} }">
                                                 <form:fields>
                                                     <Text text="{RejectionReason}" />
                                                 </form:fields>
@@ -189,6 +192,167 @@
                                     </form:FormContainer>
                                 </form:formContainers>
                             </form:Form>
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+            <!--
+                Operations, spare parts and attachments: relative paths to the compositions of the
+                request. Each binding reads its collection with an own request ($$ownRequest) on the
+                navigation of the shown request, instead of depending on the cache of the list; the
+                model derives the $select of that request from the cells.
+            -->
+            <uxap:ObjectPageSection
+                id="tasksSection"
+                title="{i18n>tasksSectionTitle}"
+                titleUppercase="false">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection id="tasksSubSection" title="{i18n>tasksSectionTitle}">
+                        <uxap:blocks>
+                            <!-- Sorted by item number; hours are decimals with one decimal place. -->
+                            <Table
+                                id="taskTable"
+                                items="{
+                                    path: '_Task',
+                                    sorter: { path: 'TaskNumber' },
+                                    parameters: { $$ownRequest: true }
+                                }"
+                                autoPopinMode="true"
+                                contextualWidth="Auto"
+                                popinLayout="GridSmall"
+                                noDataText="{i18n>taskTableNoData}">
+                                <columns>
+                                    <Column id="taskNumberColumn" width="5rem" importance="High">
+                                        <Text text="{i18n>taskColumnNumber}" />
+                                    </Column>
+                                    <Column id="taskDescriptionColumn" importance="High" autoPopinWidth="10">
+                                        <Text text="{i18n>taskColumnDescription}" />
+                                    </Column>
+                                    <Column id="taskPlannedHoursColumn" width="7rem" hAlign="End" importance="Medium">
+                                        <Text text="{i18n>taskColumnPlannedHours}" />
+                                    </Column>
+                                    <Column id="taskActualHoursColumn" width="7rem" hAlign="End" importance="Medium">
+                                        <Text text="{i18n>taskColumnActualHours}" />
+                                    </Column>
+                                    <Column id="taskCompletedColumn" width="6rem" hAlign="Center" importance="High">
+                                        <Text text="{i18n>taskColumnCompleted}" />
+                                    </Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem vAlign="Middle">
+                                        <cells>
+                                            <Text text="{TaskNumber}" />
+                                            <Text text="{Description}" />
+                                            <Text text="{PlannedHours}" />
+                                            <Text text="{ActualHours}" />
+                                            <CheckBox selected="{IsCompleted}" displayOnly="true" />
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+            <uxap:ObjectPageSection
+                id="partsSection"
+                title="{i18n>partsSectionTitle}"
+                titleUppercase="false">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection id="partsSubSection" title="{i18n>partsSectionTitle}">
+                        <uxap:blocks>
+                            <!--
+                                Quantity and unit price use the OData Unit and Currency types without the
+                                code lists of the service (customizing part null): the format of the locale,
+                                and the unit code when the unit is in no list, for example "3 ST". The amount
+                                is quantity by unit price, formatted in the currency of the price.
+                            -->
+                            <Table
+                                id="partTable"
+                                items="{
+                                    path: '_Part',
+                                    sorter: { path: 'Product' },
+                                    parameters: { $$ownRequest: true }
+                                }"
+                                autoPopinMode="true"
+                                contextualWidth="Auto"
+                                popinLayout="GridSmall"
+                                noDataText="{i18n>partTableNoData}">
+                                <columns>
+                                    <Column id="partProductColumn" importance="High" autoPopinWidth="10">
+                                        <Text text="{i18n>partColumnProduct}" />
+                                    </Column>
+                                    <Column id="partQuantityColumn" width="8rem" hAlign="End" importance="High">
+                                        <Text text="{i18n>partColumnQuantity}" />
+                                    </Column>
+                                    <Column id="partUnitPriceColumn" width="8rem" hAlign="End" importance="Medium">
+                                        <Text text="{i18n>partColumnUnitPrice}" />
+                                    </Column>
+                                    <Column id="partAmountColumn" width="8rem" hAlign="End" importance="High">
+                                        <Text text="{i18n>partColumnAmount}" />
+                                    </Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem vAlign="Middle">
+                                        <cells>
+                                            <ObjectIdentifier title="{ProductName}" text="{Product}" />
+                                            <Text
+                                                text="{
+                                                    parts: [
+                                                        { path: 'Quantity' },
+                                                        { path: 'QuantityUnit' },
+                                                        { value: null }
+                                                    ],
+                                                    type: 'Unit'
+                                                }" />
+                                            <Text
+                                                text="{
+                                                    parts: [
+                                                        { path: 'UnitPrice' },
+                                                        { path: 'CurrencyCode' },
+                                                        { value: null }
+                                                    ],
+                                                    type: 'Currency'
+                                                }" />
+                                            <Text
+                                                text="{
+                                                    parts: [
+                                                        { path: 'Quantity', targetType: 'any' },
+                                                        { path: 'UnitPrice', targetType: 'any' },
+                                                        { path: 'CurrencyCode', targetType: 'any' }
+                                                    ],
+                                                    formatter: 'formatter.partAmount'
+                                                }" />
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+            <uxap:ObjectPageSection
+                id="attachmentsSection"
+                title="{i18n>attachmentsSectionTitle}"
+                titleUppercase="false">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection id="attachmentsSubSection" title="{i18n>attachmentsSectionTitle}">
+                        <uxap:blocks>
+                            <!-- File name, comment and media type; the content is not read in this view. -->
+                            <List
+                                id="attachmentList"
+                                items="{
+                                    path: '_Attachment',
+                                    sorter: { path: 'FileName' },
+                                    parameters: { $$ownRequest: true }
+                                }"
+                                noDataText="{i18n>attachmentListNoData}">
+                                <StandardListItem
+                                    title="{FileName}"
+                                    description="{AttComment}"
+                                    info="{MimeType}"
+                                    wrapping="true" />
+                            </List>
                         </uxap:blocks>
                     </uxap:ObjectPageSubSection>
                 </uxap:subSections>

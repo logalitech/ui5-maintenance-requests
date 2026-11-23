@@ -1,6 +1,7 @@
 import formatter from "sapui5/maintenance/model/formatter";
 import { Criticality } from "sapui5/maintenance/model/constants";
 import { ValueState } from "sap/ui/core/library";
+import NumberFormat from "sap/ui/core/format/NumberFormat";
 
 QUnit.module("formatter.criticalityState");
 
@@ -45,4 +46,22 @@ QUnit.test("Shows the title with the count when the count is known", function (a
 QUnit.test("Shows the title alone while the count is unknown", function (assert) {
     assert.strictEqual(formatter.listTitle("Requests", "Requests ({0})", undefined), "Requests", "undefined count");
     assert.strictEqual(formatter.listTitle("Requests", "Requests ({0})", null), "Requests", "null count");
+});
+
+QUnit.module("formatter.partAmount");
+
+// The expected texts come from the currency format of the test locale, so that the tests do not depend on it.
+QUnit.test("Formats quantity by unit price in the currency of the price", function (assert) {
+    const currencyFormat = NumberFormat.getCurrencyInstance();
+    assert.strictEqual(formatter.partAmount("3.000", "24.9", "EUR"), currencyFormat.format(74.7, "EUR"),
+        "decimal strings, as the model delivers them");
+    assert.strictEqual(formatter.partAmount(2, 12.5, "EUR"), currencyFormat.format(25, "EUR"), "numbers");
+    assert.strictEqual(formatter.partAmount("3", "10.1", "EUR"), currencyFormat.format(30.3, "EUR"),
+        "rounded to the decimals of the currency");
+});
+
+QUnit.test("Returns an empty text while a value is missing", function (assert) {
+    assert.strictEqual(formatter.partAmount(undefined, "12.5", "EUR"), "", "quantity not loaded");
+    assert.strictEqual(formatter.partAmount("2", null, "EUR"), "", "no unit price");
+    assert.strictEqual(formatter.partAmount("2", "12.5", ""), "", "no currency");
 });

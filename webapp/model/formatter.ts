@@ -1,4 +1,5 @@
 import formatMessage from "sap/base/strings/formatMessage";
+import NumberFormat from "sap/ui/core/format/NumberFormat";
 import { ValueState } from "sap/ui/core/library";
 import { Criticality } from "./constants";
 
@@ -40,5 +41,24 @@ export default {
             return title;
         }
         return formatMessage(pattern, [count]);
+    },
+
+    /**
+     * Amount of a spare part: quantity by unit price, in the currency of the price, with the
+     * decimals of the currency and the format of the locale (the same format as the OData Currency
+     * type without code list). The service has no property with this amount. The model delivers
+     * Edm.Decimal values as strings; numbers are accepted as well.
+     * @param quantity Quantity of the part
+     * @param unitPrice Unit price of the part
+     * @param currencyCode Currency of the unit price
+     * @returns The formatted amount; an empty string while a value is missing
+     */
+    partAmount(quantity: string | number | null | undefined, unitPrice: string | number | null | undefined,
+            currencyCode: string | null | undefined): string {
+        if (quantity === null || quantity === undefined || unitPrice === null || unitPrice === undefined
+                || !currencyCode) {
+            return "";
+        }
+        return NumberFormat.getCurrencyInstance().format(Number(quantity) * Number(unitPrice), currencyCode);
     }
 };
