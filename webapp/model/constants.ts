@@ -2,7 +2,8 @@
  * Application constants: route and target names, view levels of the column layout, the criticality
  * scale of the service, the paths of the entity sets, the properties of Requests, Parts, Attachments and
  * Equipments that the controllers and services read from the contexts, set as initial data or use in
- * filters, and the rules for the files that can be attached to a request.
+ * filters, the rules for the files that can be attached to a request, and the reasons why the camera of
+ * the device cannot be used.
  */
 
 /** Names of the routes declared in manifest.json (sap.ui5/routing/routes). */
@@ -77,13 +78,15 @@ export enum PartProperty {
 }
 
 /**
- * Properties of the Attachments entity set that the attachment service sets as initial data of a new attachment
- * or whose URL it builds: Content is the stream property (Edm.Stream) with the binary content of the file.
+ * Properties of the Attachments entity set that the attachment service sets as initial data of a new attachment,
+ * whose URL it builds or that the controllers read from a context: Content is the stream property (Edm.Stream) with
+ * the binary content of the file, and its value is the URL of that content.
  */
 export enum AttachmentProperty {
     FileName = "FileName",
     MimeType = "MimeType",
-    Content = "Attachment"
+    Content = "Attachment",
+    Comment = "AttComment"
 }
 
 /** Media types of the files that can be attached to a request (HU-05): PNG, JPEG and SVG images and PDF documents. */
@@ -106,6 +109,18 @@ export enum AttachmentRejection {
     Type = "Type",
     /** The file is larger than AttachmentLimit.MaxFileSizeMB. */
     Size = "Size"
+}
+
+/** Reason why the camera of the device cannot be used to take a photo (HU-05). */
+export enum CameraFailure {
+    /** The browser offers no camera: the page is not in a secure context (HTTPS or localhost), or the API is missing. */
+    NotSupported = "NotSupported",
+    /** The user, or the settings of the browser, have not granted the access to the camera. */
+    PermissionDenied = "PermissionDenied",
+    /** The device has no camera. */
+    NotFound = "NotFound",
+    /** The camera cannot be started, for example because another application is using it. */
+    Unavailable = "Unavailable"
 }
 
 /** Properties of the Equipments entity set that the controllers use as paths of filters. */

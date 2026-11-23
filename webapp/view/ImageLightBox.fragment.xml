@@ -1,0 +1,19 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <!--
+        Image attachment shown enlarged, opened by the thumbnail of the attachments table. The controller writes the
+        pressed attachment into detailView>/image: the URL of its content (value of the stream property Attachment),
+        its file name as title and its comment as subtitle. The light box shows the image in its original size, scaled
+        down to fit smaller screens; an image that cannot be loaded is shown as an error.
+    -->
+    <LightBox id="imageLightBox">
+        <imageContent>
+            <LightBoxItem
+                imageSrc="{detailView>/image/src}"
+                alt="{detailView>/image/title}"
+                title="{detailView>/image/title}"
+                subtitle="{detailView>/image/subtitle}" />
+        </imageContent>
+    </LightBox>
+</core:FragmentDefinition>

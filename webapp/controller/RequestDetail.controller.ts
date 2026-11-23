@@ -1,13 +1,17 @@
 import BaseController from "./BaseController";
 import { Route$PatternMatchedEvent } from "sap/ui/core/routing/Route";
 import { NavigationActionsTargets } from "sap/f/FlexibleColumnLayoutSemanticHelper";
+import { Avatar$PressEvent } from "sap/m/Avatar";
 import { Button$PressEvent } from "sap/m/Button";
 import ComboBox, { ComboBox$ChangeEvent } from "sap/m/ComboBox";
+import Dialog from "sap/m/Dialog";
 import { DraftIndicatorState } from "sap/m/library";
+import LightBox from "sap/m/LightBox";
 import { ListBase$DeleteEvent } from "sap/m/ListBase";
 import MessageBox from "sap/m/MessageBox";
 import MessagePopover from "sap/m/MessagePopover";
 import MessageToast from "sap/m/MessageToast";
+import DateFormat from "sap/ui/core/format/DateFormat";
 import Messaging from "sap/ui/core/Messaging";
 import Filter from "sap/ui/model/Filter";
 import FilterOperator from "sap/ui/model/FilterOperator";
@@ -20,10 +24,10 @@ import FileUploader, {
     FileUploader$ChangeEvent, FileUploader$TypeMissmatchEvent
 } from "sap/ui/unified/FileUploader";
 import {
-    AttachmentLimit, AttachmentMediaType, AttachmentRejection, DetailRouteArguments, EntitySetPath, EquipmentProperty,
-    HttpStatus, PartProperty, RequestProperty, RouteName, TargetName
+    AttachmentLimit, AttachmentMediaType, AttachmentProperty, AttachmentRejection, CameraFailure, DetailRouteArguments,
+    EntitySetPath, EquipmentProperty, HttpStatus, PartProperty, RequestProperty, RouteName, TargetName
 } from "../model/constants";
-import { createDetailViewModel } from "../model/models";
+import { createDetailViewModel, EnlargedImage } from "../model/models";
 
 /**
  * Detail of a maintenance request, shown in the second column.
@@ -55,7 +59,16 @@ import { createDetailViewModel } from "../model/models";
  * In edit mode a file can be attached to the draft: the file uploader of the attachments table only selects the
  * file. A file that the application does not accept (media type or size) is rejected with a message before anything
  * is sent; otherwise the attachment service creates the attachment and sends its content, while the busy indicator
- * blocks the screen. The comment of an attachment is an input field, sent to the draft like the other fields.
+ * blocks the screen. The comment of an attachment is an input field, sent to the draft like the other fields, and
+ * the delete icon of a row deletes the attachment, like an operation or a spare part.
+ *
+ * "Take Photo" opens a dialog with the live image of the camera of the device. "Capture" turns the current image
+ * into a JPEG file, which is attached like a chosen file. If the browser offers no camera, the device has none or
+ * the user does not grant the permission, a message says so and the screen stays as it was. The camera is switched
+ * off whenever the dialog closes.
+ *
+ * In both modes the thumbnail of an image opens the image enlarged in a light box, and the download icon of a row
+ * makes the browser save the content of the attachment as a file.
  *
  * @namespace sapui5.maintenance.controller
  */
@@ -66,6 +79,17 @@ export default class RequestDetail extends BaseController {
 
     /** Controls of the edit mode whose code list is read the first time a draft is shown. */
     private static readonly CODE_LIST_CONTROL_IDS = ["requestTypeSelect", "prioritySelect", "plantComboBox"];
+
+    /** Date and time of the capture in the file name of a photo, for example 20261122-173015. */
+    private static readonly PHOTO_TIMESTAMP_PATTERN = "yyyyMMdd-HHmmss";
+
+    /** Key of the text that tells the user why the camera cannot be used, for each reason. */
+    private static readonly CAMERA_FAILURE_TEXTS: Record<CameraFailure, string> = {
+        [CameraFailure.NotSupported]: "cameraNotSupported",
+        [CameraFailure.PermissionDenied]: "cameraPermissionDenied",
+        [CameraFailure.NotFound]: "cameraNotFound",
+        [CameraFailure.Unavailable]: "cameraUnavailable"
+    };
 
     /** The kept-alive context of the shown request; undefined until a request is shown. */
     private requestContext?: Context;
@@ -79,6 +103,15 @@ export default class RequestDetail extends BaseController {
     /** The message popover, loaded once from its fragment the first time it is opened. */
     private messagePopover?: Promise<MessagePopover>;
 
+    /** The light box of the image attachments, loaded once from its fragment the first time an image is shown. */
+    private imageLightBox?: Promise<LightBox>;
+
+    /** The dialog "Take Photo", loaded once from its fragment the first time the camera is opened. */
+    private cameraDialog?: Promise<Dialog>;
+
+    /** Whether the dialog "Take Photo" is open: a camera that starts once the dialog has closed is stopped at once. */
+    private cameraOpen = false;
+
     public onInit(): void {
         this.setModel(Messaging.getMessageModel(), "message");
         this.setModel(createDetailViewModel(), "detailView");
@@ -91,6 +124,11 @@ export default class RequestDetail extends BaseController {
     public onExit(): void {
         this.getODataModel().detachPropertyChange(this.onPropertyChange, this);
         this.getRouter().getRoute(RouteName.Detail)?.detachPatternMatched(this.onPatternMatched, this);
+        // the camera keeps running after its video element is removed: it is switched off with the view
+        const video = this.getCameraVideo();
+        if (video) {
+            this.getAttachmentService().stopCamera(video);
+        }
     }
 
     /** Full screen: the detail route with the target layout that the semantic helper suggests. */
@@ -179,7 +217,53 @@ export default class RequestDetail extends BaseController {
         void this.showAttachmentRejection(event.getParameter("fileName") ?? "", AttachmentRejection.Type);
     }
 
-    /** Delete icon of a row of the operations or the spare parts table (edit mode): deletes the item. */
+    /** Thumbnail of an image attachment (both modes): the light box shows the image enlarged. */
+    public onShowImage(event: Avatar$PressEvent): void {
+        const attachmentContext = event.getSource().getBindingContext() as Context | null | undefined;
+        if (attachmentContext) {
+            void this.showImage(attachmentContext);
+        }
+    }
+
+    /** Download icon of an attachment (both modes): the browser saves the content of the attachment as a file. */
+    public onDownloadAttachment(event: Button$PressEvent): void {
+        const attachmentContext = event.getSource().getBindingContext() as Context | null | undefined;
+        if (attachmentContext) {
+            void this.downloadAttachment(attachmentContext);
+        }
+    }
+
+    /** Take Photo (attachments table, edit mode): opens the dialog with the live image of the camera. */
+    public onTakePhoto(): void {
+        void this.openCamera();
+    }
+
+    /** The dialog "Take Photo" is open, and its video element rendered: the camera is started. */
+    public onCameraDialogAfterOpen(): void {
+        void this.startCamera();
+    }
+
+    /** Capture (dialog "Take Photo"): the current image of the camera is attached to the draft as a JPEG photo. */
+    public onCapturePhoto(): void {
+        void this.capturePhoto();
+    }
+
+    /** Cancel (dialog "Take Photo"): the dialog is closed without a photo. */
+    public onCloseCamera(): void {
+        void this.getCameraDialog().then((dialog) => dialog.close());
+    }
+
+    /** The dialog "Take Photo" has closed, by one of its buttons or by the Escape key: the camera is switched off. */
+    public onCameraDialogAfterClose(): void {
+        this.cameraOpen = false;
+        this.setCameraReady(false);
+        const video = this.getCameraVideo();
+        if (video) {
+            this.getAttachmentService().stopCamera(video);
+        }
+    }
+
+    /** Delete icon of a row of the operations, spare parts or attachments table (edit mode): deletes the item. */
     public onDeleteItem(event: ListBase$DeleteEvent): void {
         const draftContext = this.requestContext;
         const itemContext = event.getParameter("listItem")?.getBindingContext() as Context | null | undefined;
@@ -309,7 +393,7 @@ export default class RequestDetail extends BaseController {
      * busy indicator blocks the screen until the table shows the new attachment, so that the draft is not saved or
      * discarded during the upload, and the footer shows the saving state of the draft. The model reports a failed
      * creation, and the attachment service a failed upload; the error handler shows them.
-     * @param file The chosen file
+     * @param file The chosen file, or the photo taken with the camera
      */
     private async addAttachment(file: File): Promise<void> {
         const draftContext = this.requestContext;
@@ -337,6 +421,118 @@ export default class RequestDetail extends BaseController {
             ? await this.getText("attachmentRejectedSize", [fileName, AttachmentLimit.MaxFileSizeMB])
             : await this.getText("attachmentRejectedType", [fileName]);
         MessageBox.error(text, { styleClass: this.getComponent().getContentDensityClass() });
+    }
+
+    /**
+     * Shows an image attachment enlarged in the light box: the URL of its content, with its file name as title and
+     * its comment as subtitle. The attachments table has read these properties, so no request is sent.
+     * @param attachmentContext The context of the image attachment
+     */
+    private async showImage(attachmentContext: Context): Promise<void> {
+        let image: EnlargedImage;
+        try {
+            const [src, title, subtitle] = await attachmentContext.requestProperty([
+                AttachmentProperty.Content,
+                AttachmentProperty.FileName,
+                AttachmentProperty.Comment
+            ]) as [string, string, string];
+            image = { src, title, subtitle };
+        } catch {
+            // the model has reported the error of the service, and the error handler shows it
+            return;
+        }
+        this.getModel<JSONModel>("detailView").setProperty("/image", image);
+        (await this.getImageLightBox()).open();
+    }
+
+    /**
+     * Downloads an attachment with the attachment service; the busy indicator blocks the screen until the browser has
+     * received the file. The attachment service reports a failed download, and the error handler shows it.
+     * @param attachmentContext The context of the attachment
+     */
+    private async downloadAttachment(attachmentContext: Context): Promise<void> {
+        try {
+            await this.runBusy(() => this.getAttachmentService().download(attachmentContext));
+        } catch {
+            // the attachment service has reported the error, and the error handler shows it
+        }
+    }
+
+    /**
+     * Opens the dialog "Take Photo", which starts the camera once it is open. If the browser offers no camera (the
+     * page is not in a secure context), the user is told so and the dialog is not opened.
+     */
+    private async openCamera(): Promise<void> {
+        if (!this.getAttachmentService().isCameraSupported()) {
+            await this.showCameraFailure(CameraFailure.NotSupported);
+            return;
+        }
+        const dialog = await this.getCameraDialog();
+        this.cameraOpen = true;
+        dialog.open();
+    }
+
+    /**
+     * Starts the camera, whose live image the dialog "Take Photo" shows, and enables "Capture" once the image is
+     * shown. If the camera cannot be used (no camera, permission not granted, camera in use), the dialog is closed
+     * and the user is told why; the draft stays as it was. A camera that starts once the dialog has closed (the
+     * dialog was closed while the browser asked for the permission) is switched off at once.
+     */
+    private async startCamera(): Promise<void> {
+        const video = this.getCameraVideo();
+        if (!video) {
+            return;
+        }
+        const attachmentService = this.getAttachmentService();
+        const failure = await attachmentService.startCamera(video);
+        if (!this.cameraOpen) {
+            attachmentService.stopCamera(video);
+            return;
+        }
+        if (failure) {
+            (await this.getCameraDialog()).close();
+            await this.showCameraFailure(failure);
+            return;
+        }
+        this.setCameraReady(true);
+    }
+
+    /**
+     * Takes a photo with the camera of the dialog "Take Photo": a JPEG file named after the date and time of the
+     * capture. The dialog is closed and the photo is attached to the draft like a chosen file (addAttachment).
+     * "Capture" is disabled meanwhile, so that one press gives one photo.
+     */
+    private async capturePhoto(): Promise<void> {
+        const video = this.getCameraVideo();
+        if (!video) {
+            return;
+        }
+        this.setCameraReady(false);
+        const timestamp = DateFormat.getDateTimeInstance({ pattern: RequestDetail.PHOTO_TIMESTAMP_PATTERN })
+            .format(new Date());
+        const fileName = await this.getText("cameraPhotoFileName", [timestamp]);
+        let photo: File;
+        try {
+            photo = await this.getAttachmentService().capturePhoto(video, fileName);
+        } catch {
+            this.setCameraReady(this.cameraOpen);
+            MessageBox.warning(await this.getText("cameraCaptureFailed"), {
+                styleClass: this.getComponent().getContentDensityClass()
+            });
+            return;
+        }
+        (await this.getCameraDialog()).close();
+        await this.addAttachment(photo);
+    }
+
+    /**
+     * Tells the user why the camera cannot be used. Nothing else changes: a photo can still be attached as a file
+     * with "Add File".
+     * @param failure Reason why the camera cannot be used
+     */
+    private async showCameraFailure(failure: CameraFailure): Promise<void> {
+        const text = await this.getText(RequestDetail.CAMERA_FAILURE_TEXTS[failure]);
+        MessageBox.warning(text, { styleClass: this.getComponent().getContentDensityClass() });
     }
 
     /** Asks the user to confirm that the draft and its changes are discarded. */
@@ -566,12 +762,45 @@ export default class RequestDetail extends BaseController {
         this.getModel<JSONModel>("detailView").setProperty("/draftState", state);
     }
 
+    /** Enables or disables "Capture" in the dialog "Take Photo". */
+    private setCameraReady(ready: boolean): void {
+        this.getModel<JSONModel>("detailView").setProperty("/cameraReady", ready);
+    }
+
     /** The message popover, loaded once from the fragment MessagePopover as a dependent of the view. */
     private getMessagePopover(): Promise<MessagePopover> {
         this.messagePopover ??= this.loadFragment({
             name: "sapui5.maintenance.view.MessagePopover"
         }) as Promise<MessagePopover>;
         return this.messagePopover;
+    }
+
+    /** The light box of the image attachments, loaded once from the fragment ImageLightBox as a dependent of the view. */
+    private getImageLightBox(): Promise<LightBox> {
+        this.imageLightBox ??= this.loadFragment({
+            name: "sapui5.maintenance.view.ImageLightBox"
+        }) as Promise<LightBox>;
+        return this.imageLightBox;
+    }
+
+    /**
+     * The dialog "Take Photo", loaded once from the fragment CameraDialog as a dependent of the view. It gets the
+     * content density of the application, because a dialog is rendered outside the view.
+     */
+    private getCameraDialog(): Promise<Dialog> {
+        this.cameraDialog ??= (this.loadFragment({
+            name: "sapui5.maintenance.view.CameraDialog"
+        }) as Promise<Dialog>).then((dialog) => dialog.addStyleClass(this.getComponent().getContentDensityClass()));
+        return this.cameraDialog;
+    }
+
+    /**
+     * The video element of the dialog "Take Photo", which shows the live image of the camera; undefined until the
+     * dialog has been rendered.
+     */
+    private getCameraVideo(): HTMLVideoElement | undefined {
+        const domRef = this.byId("cameraVideo")?.getDomRef();
+        return domRef instanceof HTMLVideoElement ? domRef : undefined;
     }
 
     /**

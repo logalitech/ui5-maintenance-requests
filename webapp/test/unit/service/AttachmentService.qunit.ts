@@ -54,3 +54,21 @@ QUnit.test("Accepts files up to the maximum size and rejects larger ones", funct
     assert.strictEqual(service.checkFile(createFile("photo.jpg", "image/jpeg", maxFileSize + 1)),
         AttachmentRejection.Size, "one byte more than the maximum size");
 });
+
+// The camera itself is not started: the tests would depend on the device and would ask for the permission.
+QUnit.module("AttachmentService camera");
+
+// assert.rejects makes the test wait for the promise
+QUnit.test("Takes no photo while the video element shows no image of the camera", function (assert) {
+    const service = createAttachmentService();
+    const video = document.createElement("video");
+    void assert.rejects(service.capturePhoto(video, "Photo_20261122-173015.jpg"), Error,
+        "rejected: the video element has no image");
+});
+
+QUnit.test("Stopping the camera of a video element without camera changes nothing", function (assert) {
+    const service = createAttachmentService();
+    const video = document.createElement("video");
+    service.stopCamera(video);
+    assert.strictEqual(video.srcObject, null, "the video element still shows no camera");
+});

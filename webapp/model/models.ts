@@ -35,6 +35,16 @@ export interface AppViewState {
     editable: boolean;
 }
 
+/** Image of an attachment shown enlarged in the light box of the detail view. */
+export interface EnlargedImage {
+    /** URL of the content of the attachment: the value of its stream property Attachment. */
+    src: string;
+    /** File name of the attachment, shown as title. */
+    title: string;
+    /** Comment on the attachment, shown as subtitle. */
+    subtitle: string;
+}
+
 /** State of the detail view kept in its detailView model. */
 export interface DetailViewState {
     /**
@@ -43,6 +53,10 @@ export interface DetailViewState {
      * been made since the request was shown.
      */
     draftState: DraftIndicatorState;
+    /** The image shown in the light box: the image attachment pressed last. */
+    image: EnlargedImage;
+    /** Whether the dialog "Take Photo" shows the live image of the camera, so that a photo can be captured. */
+    cameraReady: boolean;
 }
 
 export function createDeviceModel(): JSONModel {
@@ -69,7 +83,13 @@ export function createAppViewModel(): JSONModel {
 
 export function createDetailViewModel(): JSONModel {
     const state: DetailViewState = {
-        draftState: DraftIndicatorState.Clear
+        draftState: DraftIndicatorState.Clear,
+        image: {
+            src: "",
+            title: "",
+            subtitle: ""
+        },
+        cameraReady: false
     };
     return new JSONModel(state);
 }

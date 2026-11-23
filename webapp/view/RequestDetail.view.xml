@@ -622,17 +622,22 @@
                     <uxap:ObjectPageSubSection id="attachmentsSubSection" title="{i18n>attachmentsSectionTitle}">
                         <uxap:blocks>
                             <!--
-                                Thumbnail, file name, media type and comment of each attachment, sorted by file name.
-                                The value of the stream property Attachment (Edm.Stream) is the URL of the content: the
-                                avatar shows the image from that URL, reduced; another file shows the icon of its media
-                                type (formatter.attachmentThumbnail). The browser reads the content, not the model.
+                                Thumbnail, file name, media type and comment of each attachment, sorted by file name, and
+                                the download icon. The value of the stream property Attachment (Edm.Stream) is the URL of
+                                the content: the avatar of an image shows the image from that URL, reduced, and opens it
+                                enlarged in the light box of the controller; another file shows the icon of its media
+                                type, as a decorative avatar (formatter.isImage decides which avatar is visible). The
+                                browser reads the content, not the model. The download icon makes the browser save the
+                                content as a file (attachment service).
 
                                 In edit mode the comment is an input field bound two-way to the attachment of the draft,
-                                like the cells of the other tables. "Add File" is a file uploader that only selects the
-                                file: its media types, set by the controller, filter the file dialog. The controller
-                                checks the file, and the attachment service creates the attachment and sends its
-                                content; the table shows the new attachment once its content is on the service. The
-                                button is enabled by the dynamic control of the service (__CreateByAssociationControl).
+                                like the cells of the other tables, and the delete icon of a row (mode Delete) deletes the
+                                attachment. "Add File" is a file uploader that only selects the file: its media types, set
+                                by the controller, filter the file dialog. The controller checks the file, and the
+                                attachment service creates the attachment and sends its content; the table shows the new
+                                attachment once its content is on the service. "Take Photo" opens the dialog with the
+                                camera of the device, and the photo is attached like a chosen file. Both buttons are
+                                enabled by the dynamic control of the service (__CreateByAssociationControl).
                             -->
                             <Table
                                 id="attachmentTable"
@@ -641,10 +646,12 @@
                                     sorter: { path: 'FileName' },
                                     parameters: { $$ownRequest: true }
                                 }"
+                                mode="{= %{IsActiveEntity} === false ? 'Delete' : 'None' }"
                                 autoPopinMode="true"
                                 contextualWidth="Auto"
                                 popinLayout="GridSmall"
-                                noDataText="{i18n>attachmentTableNoData}">
+                                noDataText="{i18n>attachmentTableNoData}"
+                                delete=".onDeleteItem">
                                 <headerToolbar>
                                     <OverflowToolbar id="attachmentToolbar" visible="{= %{IsActiveEntity} === false }">
                                         <ToolbarSpacer />
@@ -655,6 +662,12 @@
                                             enabled="{= %{__CreateByAssociationControl/_Attachment} === true }"
                                             change=".onAttachmentFileChange"
                                             typeMissmatch=".onAttachmentTypeMismatch" />
+                                        <Button
+                                            id="takePhotoButton"
+                                            text="{i18n>attachmentTakePhotoButton}"
+                                            icon="sap-icon://camera"
+                                            enabled="{= %{__CreateByAssociationControl/_Attachment} === true }"
+                                            press=".onTakePhoto" />
                                     </OverflowToolbar>
                                 </headerToolbar>
                                 <columns>
@@ -670,23 +683,33 @@
                                     <Column id="attachmentCommentColumn" importance="Medium" autoPopinWidth="10">
                                         <Text id="attachmentCommentHeader" text="{i18n>attachmentColumnComment}" />
                                     </Column>
+                                    <Column id="attachmentDownloadColumn" width="6rem" hAlign="Center" importance="High">
+                                        <Text text="{i18n>attachmentColumnDownload}" />
+                                    </Column>
                                 </columns>
                                 <items>
                                     <ColumnListItem vAlign="Middle">
                                         <cells>
-                                            <!-- An image that cannot be loaded shows the icon of the image files. -->
-                                            <Avatar
-                                                src="{
-                                                    parts: [
-                                                        { path: 'Attachment', targetType: 'any' },
-                                                        { path: 'MimeType', targetType: 'any' }
-                                                    ],
-                                                    formatter: 'formatter.attachmentThumbnail'
-                                                }"
-                                                displayShape="Square"
-                                                displaySize="S"
-                                                fallbackIcon="sap-icon://attachment-photo"
-                                                decorative="true" />
+                                            <!--
+                                                An image is pressable and opens the light box; an image that cannot be
+                                                loaded shows the icon of the image files. Another file is decorative.
+                                            -->
+                                            <VBox renderType="Bare">
+                                                <Avatar
+                                                    src="{Attachment}"
+                                                    displayShape="Square"
+                                                    displaySize="S"
+                                                    fallbackIcon="sap-icon://attachment-photo"
+                                                    tooltip="{i18n>attachmentShowImageTooltip}"
+                                                    visible="{= formatter.isImage(%{MimeType}) }"
+                                                    press=".onShowImage" />
+                                                <Avatar
+                                                    src="{ path: 'MimeType', targetType: 'any', formatter: 'formatter.attachmentIcon' }"
+                                                    displayShape="Square"
+                                                    displaySize="S"
+                                                    decorative="true"
+                                                    visible="{= !formatter.isImage(%{MimeType}) }" />
+                                            </VBox>
                                             <Text text="{FileName}" />
                                             <Text text="{MimeType}" />
                                             <VBox renderType="Bare">
@@ -696,6 +719,11 @@
                                                     ariaLabelledBy="attachmentCommentHeader"
                                                     visible="{= %{IsActiveEntity} !== true }" />
                                             </VBox>
+                                            <Button
+                                                icon="sap-icon://download"
+                                                type="Transparent"
+                                                tooltip="{i18n>attachmentDownloadTooltip}"
+                                                press=".onDownloadAttachment" />
                                         </cells>
                                     </ColumnListItem>
                                 </items>

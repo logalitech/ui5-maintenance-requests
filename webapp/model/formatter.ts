@@ -78,18 +78,21 @@ export default {
     },
 
     /**
-     * Source of the thumbnail of an attachment, for the src property of an avatar. For an image, the URL of its
-     * content: the value of the stream property Attachment, which the model types as sap.ui.model.odata.type.Stream,
-     * and from which the browser reads the image. For any other file, the icon of its media type, for example the
-     * PDF icon for application/pdf.
-     * @param contentUrl Value of the stream property Attachment: the URL of the content; undefined while unknown
-     * @param mimeType Media type of the attachment (MimeType)
-     * @returns The URL of the image, or the URI of an icon of the SAP icon font
+     * Whether an attachment is an image: its media type starts with "image/". The attachments table shows an image
+     * as a thumbnail that opens it enlarged, and any other file as the icon of its media type.
+     * @param mimeType Media type of the attachment (MimeType); undefined while unknown
      */
-    attachmentThumbnail(contentUrl: string | null | undefined, mimeType: string | null | undefined): string {
-        if (contentUrl && mimeType?.startsWith("image/")) {
-            return contentUrl;
-        }
+    isImage(mimeType: string | null | undefined): boolean {
+        return mimeType?.startsWith("image/") === true;
+    },
+
+    /**
+     * Icon of an attachment that is not an image, for the src property of an avatar: the icon of its media type,
+     * for example the PDF icon for application/pdf.
+     * @param mimeType Media type of the attachment (MimeType)
+     * @returns The URI of an icon of the SAP icon font
+     */
+    attachmentIcon(mimeType: string | null | undefined): string {
         return IconPool.getIconForMimeType(mimeType ?? "");
     },
 

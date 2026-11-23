@@ -4,7 +4,9 @@ import MessageType from "sap/ui/core/message/MessageType";
 import Context from "sap/ui/model/odata/v4/Context";
 import ODataListBinding from "sap/ui/model/odata/v4/ODataListBinding";
 import ODataModel from "sap/ui/model/odata/v4/ODataModel";
-import { AttachmentLimit, AttachmentMediaType, AttachmentProperty, AttachmentRejection } from "../model/constants";
+import {
+    AttachmentLimit, AttachmentMediaType, AttachmentProperty, AttachmentRejection, CameraFailure
+} from "../model/constants";
 import type DraftService from "./DraftService";
 
 /** Body of an error response of the service (OData V4 JSON format): the members that the service uses. */
@@ -35,8 +37,14 @@ interface ODataErrorResponse {
  * content while it is still empty; that URL does not change when the content arrives, so the thumbnail would not
  * be loaded again.
  *
- * A failed upload is reported like a failed request of the model: as a technical message in sap.ui.core.Messaging,
- * which the error handler of the application shows (controller/ErrorHandler.ts).
+ * To download an attachment, its content is read from the same URL (GET) and saved by the browser as a file with
+ * the file name of the attachment.
+ *
+ * A photo is taken with the camera of the device (media devices API of the browser), shown live in a video element
+ * of the view, and converted into a JPEG file, which is attached like any other file.
+ *
+ * A failed upload or download is reported like a failed request of the model: as a technical message in
+ * sap.ui.core.Messaging, which the error handler of the application shows (controller/ErrorHandler.ts).
  */
 export default class AttachmentService {
 
@@ -58,6 +66,34 @@ export default class AttachmentService {
 
     /** Replacement of a character that cannot be sent in the header Content-Disposition. */
     private static readonly HEADER_REPLACEMENT = "_";
+
+    /**
+     * Camera requested from the browser: video only, preferably the rear camera of a mobile device, which points at
+     * the equipment, and an image of about 1920 x 1080 pixels, so that a JPEG photo stays well below the maximum
+     * size of an attachment. The preferences are not mandatory: any camera of the device is accepted.
+     */
+    private static readonly CAMERA_CONSTRAINTS: MediaStreamConstraints = {
+        video: {
+            facingMode: { ideal: "environment" },
+            width: { ideal: 1920 },
+            height: { ideal: 1080 }
+        },
+        audio: false
+    };
+
+    /**
+     * Reasons why the browser does not start the camera, by the name of the error of getUserMedia. Any other error,
+     * such as NotReadableError (the camera is in use) or AbortError, means that the camera is unavailable.
+     */
+    private static readonly CAMERA_ERRORS: Partial<Record<string, CameraFailure>> = {
+        NotAllowedError: CameraFailure.PermissionDenied,
+        SecurityError: CameraFailure.PermissionDenied,
+        NotFoundError: CameraFailure.NotFound,
+        OverconstrainedError: CameraFailure.NotFound
+    };
+
+    /** Quality of the JPEG image of a photo, between 0 and 1. */
+    private static readonly JPEG_QUALITY = 0.9;
 
     private readonly model: ODataModel;
 
@@ -133,6 +169,112 @@ export default class AttachmentService {
     }
 
     /**
+     * Downloads an attachment, of the active request or of a draft: its content is read from the URL of its stream
+     * property (GET, answered with 200 and the content) and the browser saves it as a file with the file name of the
+     * attachment. The URL and the file name are taken from the context, which the attachments table has read.
+     * @param attachmentContext The context of the attachment
+     * @returns A promise that is resolved once the browser has received the file, and rejected if the content cannot
+     *   be read, once the error has been reported
+     */
+    public async download(attachmentContext: Context): Promise<void> {
+        const [url, fileName] = await attachmentContext.requestProperty([
+            AttachmentProperty.Content,
+            AttachmentProperty.FileName
+        ]) as [string, string];
+        const response = await this.send(url, {
+            method: "GET",
+            headers: this.model.getHttpHeaders()
+        });
+        const objectUrl = URL.createObjectURL(await response.blob());
+        try {
+            // a link with the attribute download makes the browser save the content instead of showing it
+            const link = document.createElement("a");
+            link.href = objectUrl;
+            link.download = fileName;
+            link.click();
+        } finally {
+            URL.revokeObjectURL(objectUrl);
+        }
+    }
+
+    /**
+     * Whether the browser offers the camera of the device: only in a secure context (HTTPS or localhost) and with the
+     * media devices API. A device without camera is only detected when the camera is started.
+     */
+    public isCameraSupported(): boolean {
+        return this.getMediaDevices() !== undefined;
+    }
+
+    /**
+     * Starts the camera of the device and shows its live image in a video element. The browser asks the user for
+     * the permission the first time, unless its settings decide. A camera that the video element still shows is
+     * stopped first, so that no camera stays switched on.
+     * @param video The video element that shows the live image; it has the attributes autoplay, muted and playsinline
+     * @returns The reason why the camera cannot be used; undefined once the video element shows the live image
+     */
+    public async startCamera(video: HTMLVideoElement): Promise<CameraFailure | undefined> {
+        const mediaDevices = this.getMediaDevices();
+        if (!mediaDevices) {
+            return CameraFailure.NotSupported;
+        }
+        let stream: MediaStream;
+        try {
+            stream = await mediaDevices.getUserMedia(AttachmentService.CAMERA_CONSTRAINTS);
+        } catch (error) {
+            const name = error instanceof DOMException ? error.name : "";
+            return AttachmentService.CAMERA_ERRORS[name] ?? CameraFailure.Unavailable;
+        }
+        this.stopCamera(video);
+        video.srcObject = stream;
+        try {
+            await video.play();
+        } catch {
+            // the video element has not shown the image, or has been given another camera in the meantime
+            this.stopTracks(stream);
+            if (video.srcObject === stream) {
+                video.srcObject = null;
+            }
+            return CameraFailure.Unavailable;
+        }
+        return undefined;
+    }
+
+    /**
+     * Stops the camera whose live image a video element shows: the device switches the camera off. Nothing happens
+     * when the video element shows no camera.
+     * @param video The video element of startCamera
+     */
+    public stopCamera(video: HTMLVideoElement): void {
+        if (video.srcObject instanceof MediaStream) {
+            this.stopTracks(video.srcObject);
+        }
+        video.srcObject = null;
+    }
+
+    /**
+     * Takes a photo: the current image of the camera shown in a video element, as a JPEG file
+     * (AttachmentMediaType.Jpeg) with the size of the camera image. The file is not checked here: call checkFile
+     * before attaching it.
+     * @param video The video element that shows the live image of the camera (startCamera)
+     * @param fileName The name of the file
+     * @returns The JPEG file; the promise is rejected while the video element shows no image
+     */
+    public async capturePhoto(video: HTMLVideoElement, fileName: string): Promise<File> {
+        const { videoWidth: width, videoHeight: height } = video;
+        const canvas = width > 0 && height > 0 ? new OffscreenCanvas(width, height) : undefined;
+        const context = canvas?.getContext("2d");
+        if (!canvas || !context) {
+            throw new Error("The video element shows no image of the camera");
+        }
+        context.drawImage(video, 0, 0, width, height);
+        const blob = await canvas.convertToBlob({
+            type: AttachmentMediaType.Jpeg,
+            quality: AttachmentService.JPEG_QUALITY
+        });
+        return new File([blob], fileName, { type: AttachmentMediaType.Jpeg });
+    }
+
+    /**
      * Sends the content of a file to the stream property of a created attachment (PUT, answered with 204):
      * - URL: the service URL and the canonical path of the attachment, Attachments(AttachmentUUID=...,
      *   IsActiveEntity=false), followed by the stream property.
@@ -141,7 +283,6 @@ export default class AttachmentService {
      * - If-Match: mandatory, the service answers 428 without it. The ETag of the attachment, from its context.
      * - Content-Type and Content-Disposition: the service sets MimeType and FileName from them. Without
      *   Content-Disposition, the service would leave the file name empty.
-     * A failed request is reported as a technical message, with the HTTP status of the response.
      * @param attachmentContext The context of the created attachment
      * @param file The file whose content is sent
      */
@@ -149,28 +290,41 @@ export default class AttachmentService {
         const canonicalPath = await attachmentContext.requestCanonicalPath();
         const url = `${this.model.getServiceUrl()}${canonicalPath.slice(1)}/${AttachmentProperty.Content}`;
         const etag = attachmentContext.getProperty(AttachmentService.ETAG) as string | undefined;
+        await this.send(url, {
+            method: "PUT",
+            headers: {
+                ...this.model.getHttpHeaders(),
+                "Content-Type": file.type,
+                "Content-Disposition": `attachment; filename="${this.toHeaderFileName(file.name)}"`,
+                "If-Match": etag ?? AttachmentService.ANY_ETAG
+            },
+            body: file
+        });
+    }
+
+    /**
+     * Sends a request for the content of an attachment. A failed request is reported as a technical message, with
+     * the HTTP status of the response.
+     * @param url The URL of the stream property of the attachment
+     * @param init The method, the headers and the body of the request
+     * @returns The successful response; the promise is rejected without a response or with an error response
+     */
+    private async send(url: string, init: RequestInit): Promise<Response> {
         let response: Response;
         try {
-            response = await fetch(url, {
-                method: "PUT",
-                headers: {
-                    ...this.model.getHttpHeaders(),
-                    "Content-Type": file.type,
-                    "Content-Disposition": `attachment; filename="${this.toHeaderFileName(file.name)}"`,
-                    "If-Match": etag ?? AttachmentService.ANY_ETAG
-                },
-                body: file
-            });
+            response = await fetch(url, init);
         } catch (error) {
             // no response: the connection failed
-            this.reportUploadError(error instanceof Error ? error.message : String(error));
+            this.reportError(error instanceof Error ? error.message : String(error));
             throw error;
         }
         if (!response.ok) {
             const message = await this.readErrorMessage(response);
-            this.reportUploadError(message, response.status);
-            throw new Error(`The upload to ${url} failed with the status ${response.status}: ${message}`);
+            this.reportError(message, response.status);
+            throw new Error(`The request ${init.method ?? "GET"} ${url} failed with the status ${response.status}: `
+                + message);
         }
+        return response;
     }
 
     /**
@@ -201,13 +355,13 @@ export default class AttachmentService {
     }
 
     /**
-     * Reports a failed upload like the model reports a failed request: a technical error message in
+     * Reports a failed upload or download like the model reports a failed request: a technical error message in
      * sap.ui.core.Messaging, with the HTTP status in its technical details. The error handler shows it in its
      * message box and removes it.
      * @param message The message of the service, or of the browser when there is no response
      * @param httpStatus The HTTP status of the response; undefined without a response
      */
-    private reportUploadError(message: string, httpStatus?: number): void {
+    private reportError(message: string, httpStatus?: number): void {
         Messaging.addMessages(new Message({
             message,
             type: MessageType.Error,
@@ -223,5 +377,29 @@ export default class AttachmentService {
      */
     private toHeaderFileName(fileName: string): string {
         return fileName.replace(AttachmentService.HEADER_UNSAFE_CHARACTERS, AttachmentService.HEADER_REPLACEMENT);
+    }
+
+    /**
+     * The media devices of the browser, which give access to the camera; undefined outside a secure context (HTTPS
+     * or localhost), where the browser does not offer them, and in a browser without the API.
+     */
+    private getMediaDevices(): MediaDevices | undefined {
+        if (!window.isSecureContext) {
+            return undefined;
+        }
+        // the typings declare navigator.mediaDevices as always present, which only holds in a secure context
+        // eslint-disable-next-line @sap-ux/fiori-tools/sap-no-navigator -- sap.ui.Device has no API for the camera
+        const mediaDevices: MediaDevices | undefined = navigator.mediaDevices;
+        return mediaDevices;
+    }
+
+    /**
+     * Stops all the tracks of a camera stream, so that the device switches the camera off.
+     * @param stream The stream of getUserMedia
+     */
+    private stopTracks(stream: MediaStream): void {
+        for (const track of stream.getTracks()) {
+            track.stop();
+        }
     }
 }

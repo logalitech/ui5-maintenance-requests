@@ -1,0 +1,38 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <!--
+        Dialog "Take Photo", opened by the button of the attachments table in edit mode. Once the dialog is open, the
+        controller starts the camera, whose live image the video element shows: autoplay and muted let the browser
+        play it without a user action, and playsinline keeps it inside the page on iOS. The HTML control keeps its DOM
+        when it is rendered again (preferDOM), so the video element keeps the camera. "Capture" is enabled while the
+        live image is shown (detailView>/cameraReady); closing the dialog in any way switches the camera off.
+    -->
+    <Dialog
+        id="cameraDialog"
+        title="{i18n>cameraDialogTitle}"
+        contentWidth="40rem"
+        stretch="{device>/system/phone}"
+        afterOpen=".onCameraDialogAfterOpen"
+        afterClose=".onCameraDialogAfterClose">
+        <content>
+            <core:HTML
+                id="cameraVideo"
+                content="&lt;video class='maintenanceCameraVideo' autoplay muted playsinline&gt;&lt;/video&gt;" />
+        </content>
+        <beginButton>
+            <Button
+                id="cameraCaptureButton"
+                text="{i18n>cameraCaptureButton}"
+                type="Emphasized"
+                enabled="{detailView>/cameraReady}"
+                press=".onCapturePhoto" />
+        </beginButton>
+        <endButton>
+            <Button
+                id="cameraCancelButton"
+                text="{i18n>cameraCancelButton}"
+                press=".onCloseCamera" />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>
