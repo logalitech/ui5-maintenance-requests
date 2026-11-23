@@ -8,6 +8,7 @@ import ComboBox from "sap/m/ComboBox";
 import ViewSettingsDialog, { ViewSettingsDialog$ConfirmEvent } from "sap/m/ViewSettingsDialog";
 import { ListBase$ItemPressEvent, ListBase$SelectionChangeEvent } from "sap/m/ListBase";
 import { Router$RouteMatchedEvent } from "sap/ui/core/routing/Router";
+import { ValueState } from "sap/ui/core/library";
 import Filter from "sap/ui/model/Filter";
 import FilterOperator from "sap/ui/model/FilterOperator";
 import Sorter from "sap/ui/model/Sorter";
@@ -76,13 +77,15 @@ export default class RequestList extends BaseController {
     }
 
     /**
-     * Search (Enter, search button or clear button): the text goes as is to the $search parameter
-     * of the list binding, which the service resolves on the request number and the title. An empty
-     * text removes the parameter. Changing the parameter refreshes the binding: one request.
+     * Search (Enter, search button or clear button): the text goes as a quoted phrase to the $search
+     * parameter of the list binding, which the service resolves on the request number and the title.
+     * An empty text removes the parameter. Changing the parameter refreshes the binding: one request.
      */
     public onSearch(event: SearchField$SearchEvent): void {
         const query = (event.getParameter("query") ?? "").trim();
-        this.getRequestBinding()?.changeParameters({ [BindingParameter.Search]: query || undefined });
+        this.getRequestBinding()?.changeParameters({
+            [BindingParameter.Search]: query ? this.toSearchPhrase(query) : undefined
+        });
     }
 
     /**
@@ -108,14 +111,16 @@ export default class RequestList extends BaseController {
     }
 
     /**
-     * Resets the search, the three filters (including a text typed by hand) and the sort order.
-     * The binding is suspended while the changes are applied, so that the resume sends one request.
+     * Resets the search, the three filters (including a text typed by hand and the error mark that
+     * the status filter sets on a text that matches no option) and the sort order. The binding is
+     * suspended while the changes are applied, so that the resume sends one request.
      */
     public onResetFilters(): void {
         this.getSearchField().setValue("");
         const statusFilter = this.getStatusFilter();
         statusFilter.setSelectedKeys([]);
         statusFilter.setValue("");
+        statusFilter.setValueState(ValueState.None);
         for (const comboBox of [this.getPriorityFilter(), this.getPlantFilter()]) {
             comboBox.setSelectedKey("");
             comboBox.setValue("");
@@ -160,6 +165,15 @@ export default class RequestList extends BaseController {
             filters.push(new Filter(RequestProperty.Plant, FilterOperator.EQ, plant));
         }
         return filters.length > 0 ? new Filter({ filters, and: true }) : [];
+    }
+
+    /**
+     * The search text as a phrase of the $search parameter: between double quotes, with the double
+     * quotes and the backslashes of the text escaped. In a phrase the service takes quotes,
+     * parentheses and the words AND, OR and NOT as text, not as operators of the search expression.
+     */
+    private toSearchPhrase(query: string): string {
+        return `"${query.replace(/\\/g, "\\\\").replace(/"/g, "\\\"")}"`;
     }
 
     /** The initial sorter of the list, as declared in the view: request number, descending. */

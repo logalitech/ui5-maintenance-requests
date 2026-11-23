@@ -42,7 +42,11 @@
             -->
             <headerToolbar>
                 <OverflowToolbar id="requestToolbar">
-                    <!-- Bound by the controller to the header context of the list binding ($count) -->
+                    <!--
+                        Bound by the controller to the header context of the list binding ($count).
+                        Not shrinkable: when the toolbar is narrow the filters go to the overflow
+                        area instead of the title losing its width (the count stays visible).
+                    -->
                     <Title
                         id="requestTableTitle"
                         level="H2"
@@ -53,7 +57,11 @@
                                 { path: '$count', targetType: 'any' }
                             ],
                             formatter: 'formatter.listTitle'
-                        }" />
+                        }">
+                        <layoutData>
+                            <OverflowToolbarLayoutData shrinkable="false" />
+                        </layoutData>
+                    </Title>
                     <ToolbarSpacer />
                     <SearchField
                         id="searchField"
@@ -104,13 +112,15 @@
                 Fixed widths in rem only where the content is short; the title takes the remaining
                 space. With autoPopinMode the table moves the columns to the pop-in by importance:
                 Low first (plant, equipment), then Medium (due date). The four High columns stay
-                visible at about 450 px, the width of the list next to the detail.
+                visible at about 450 px, the width of the list next to the detail. The pop-in
+                calculation counts 10 rem for the title (autoPopinWidth), so that the other columns
+                move to the pop-in before the title gets narrower than that.
             -->
             <columns>
                 <Column id="requestColumn" width="5rem" importance="High">
                     <Text text="{i18n>columnRequest}" />
                 </Column>
-                <Column id="titleColumn" importance="High" autoPopinWidth="4">
+                <Column id="titleColumn" importance="High" autoPopinWidth="10">
                     <Text text="{i18n>columnTitle}" />
                 </Column>
                 <Column id="plantColumn" width="8rem" importance="Low">
