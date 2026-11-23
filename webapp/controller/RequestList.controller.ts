@@ -14,7 +14,7 @@ import FilterOperator from "sap/ui/model/FilterOperator";
 import Sorter from "sap/ui/model/Sorter";
 import Context from "sap/ui/model/odata/v4/Context";
 import ODataListBinding from "sap/ui/model/odata/v4/ODataListBinding";
-import { BindingParameter, DetailRouteArguments, RequestProperty, RouteName } from "../model/constants";
+import { BindingParameter, DetailRouteArguments, RequestProperty, RouteName, ViewLevel } from "../model/constants";
 
 /**
  * List of maintenance requests, shown in the first column.
@@ -204,7 +204,11 @@ export default class RequestList extends BaseController {
         }
     };
 
-    /** Navigates to the detail of the request of the given row. */
+    /**
+     * Navigates to the detail of the request of the given row, with the layout that the semantic helper
+     * suggests for the detail level: the current two-column layout is kept (also when the user has
+     * widened the list with the arrow of the column separator), and the default one is used otherwise.
+     */
     private showRequest(item: ListItemBase | undefined): void {
         const context = item?.getBindingContext() as Context | null | undefined;
         if (!context) {
@@ -212,12 +216,16 @@ export default class RequestList extends BaseController {
         }
         const routeArguments: DetailRouteArguments = {
             uuid: context.getProperty(RequestProperty.RequestUUID) as string,
-            active: String(context.getProperty(RequestProperty.IsActiveEntity) as boolean)
+            active: String(context.getProperty(RequestProperty.IsActiveEntity) as boolean),
+            layout: this.getComponent().getHelper().getNextUIState(ViewLevel.Detail).layout
         };
         this.getRouter().navTo(RouteName.Detail, routeArguments);
     }
 
-    /** Selects the row of the shown request, if the row is loaded. */
+    /**
+     * Selects the row of the shown request, if the row is loaded. Otherwise no row stays marked: the
+     * row of the request shown before, or a selection kept by the table after a filter, is removed.
+     */
     private markShownRequest(): void {
         const shown = this.shownRequest;
         if (!shown) {
@@ -230,7 +238,9 @@ export default class RequestList extends BaseController {
                 && context.getProperty(RequestProperty.RequestUUID) === shown.uuid
                 && String(context.getProperty(RequestProperty.IsActiveEntity)) === shown.active;
         });
-        if (item && !item.getSelected()) {
+        if (!item) {
+            table.removeSelections(true);
+        } else if (!item.getSelected()) {
             table.setSelectedItem(item);
         }
     }

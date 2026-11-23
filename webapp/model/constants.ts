@@ -1,12 +1,29 @@
 /**
- * Application constants: route names, the criticality scale of the service, the paths of the
- * entity sets and the properties of Requests that the controllers read from the contexts of the list.
+ * Application constants: route and target names, view levels of the column layout, the criticality
+ * scale of the service, the paths of the entity sets and the properties of Requests that the
+ * controllers read from the contexts of the list.
  */
 
 /** Names of the routes declared in manifest.json (sap.ui5/routing/routes). */
 export enum RouteName {
     List = "list",
     Detail = "detail"
+}
+
+/** Targets declared in manifest.json (sap.ui5/routing/targets) that the controllers display without a route. */
+export enum TargetName {
+    NotFound = "notFound"
+}
+
+/** View levels of the semantic helper of the FlexibleColumnLayout (getNextUIState). */
+export enum ViewLevel {
+    List = 0,
+    Detail = 1
+}
+
+/** HTTP status codes of the service that the application handles. */
+export enum HttpStatus {
+    NotFound = 404
 }
 
 /**

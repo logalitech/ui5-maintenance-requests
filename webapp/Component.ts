@@ -1,5 +1,9 @@
 import UIComponent from "sap/ui/core/UIComponent";
 import Device from "sap/ui/Device";
+import View from "sap/ui/core/mvc/View";
+import FlexibleColumnLayout from "sap/f/FlexibleColumnLayout";
+import FlexibleColumnLayoutSemanticHelper from "sap/f/FlexibleColumnLayoutSemanticHelper";
+import { LayoutType } from "sap/f/library";
 import { createAppViewModel, createDeviceModel } from "./model/models";
 import ErrorHandler from "./controller/ErrorHandler";
 
@@ -36,6 +40,20 @@ export default class Component extends UIComponent {
     public destroy(suppressInvalidate?: boolean): void {
         this.errorHandler.destroy();
         super.destroy(suppressInvalidate);
+    }
+
+    /**
+     * The semantic helper of the FlexibleColumnLayout of the root view, which suggests the layout of each
+     * view level and the navigation actions of the detail column. The application has two levels, list
+     * and detail: at most two columns, with the detail expanded by default. The helper keeps one instance
+     * per layout; the settings apply to the first call. Available once the root view has been created.
+     */
+    public getHelper(): FlexibleColumnLayoutSemanticHelper {
+        const flexibleColumnLayout = (this.getRootControl() as View).byId("fcl") as FlexibleColumnLayout;
+        return FlexibleColumnLayoutSemanticHelper.getInstanceFor(flexibleColumnLayout, {
+            defaultTwoColumnLayoutType: LayoutType.TwoColumnsMidExpanded,
+            maxColumnsCount: 2
+        });
     }
 
     /**

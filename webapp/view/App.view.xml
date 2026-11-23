@@ -4,10 +4,15 @@
     height="100%"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:f="sap.f">
+    <!--
+        The layout is set by the controller from the route; the arrow of a column separator changes it
+        through the two-way binding and fires stateChange, like a resize beyond a breakpoint.
+    -->
     <f:FlexibleColumnLayout
         id="fcl"
         layout="{appView>/layout}"
         busy="{appView>/busy}"
         busyIndicatorDelay="0"
-        backgroundDesign="Solid" />
+        backgroundDesign="Solid"
+        stateChange=".onStateChange" />
 </mvc:View>

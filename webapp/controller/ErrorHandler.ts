@@ -4,6 +4,7 @@ import Message from "sap/ui/core/message/Message";
 import ListBinding from "sap/ui/model/ListBinding";
 import ResourceModel from "sap/ui/model/resource/ResourceModel";
 import MessageBox from "sap/m/MessageBox";
+import { HttpStatus } from "../model/constants";
 import type Component from "../Component";
 
 /**
@@ -13,6 +14,10 @@ import type Component from "../Component";
  * The OData V4 model reports failed requests as technical messages in sap.ui.core.Messaging.
  * This class observes the message model, shows the first technical message in a message box
  * and removes the technical messages, so that the same error is not shown twice.
+ *
+ * A 404 response is not a technical error: the entity read does not exist, and the screen that reads
+ * it shows its not-found page (the detail of a request opened by URL). Its message is removed without
+ * a message box.
  *
  * @namespace sapui5.maintenance.controller
  */
@@ -44,12 +49,19 @@ export default class ErrorHandler extends BaseObject {
         }
         // Remove the technical messages so that they are reported once
         Messaging.removeMessages(messages);
-        if (this.messageOpen) {
+        const errors = messages.filter((message) => !this.isNotFound(message));
+        if (errors.length === 0 || this.messageOpen) {
             return;
         }
         this.messageOpen = true;
-        void this.showError(messages[0]);
+        void this.showError(errors[0]);
     };
+
+    /** Whether the message comes from a 404 response (httpStatus of the technical details of the model). */
+    private isNotFound(message: Message): boolean {
+        const technicalDetails = message.getTechnicalDetails() as { httpStatus?: number } | undefined;
+        return technicalDetails?.httpStatus === HttpStatus.NotFound;
+    }
 
     private async showError(message: Message): Promise<void> {
         const resourceModel = this.component.getModel("i18n") as ResourceModel;

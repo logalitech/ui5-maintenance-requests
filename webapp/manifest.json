@@ -132,6 +132,11 @@
           "name": "RequestDetail",
           "id": "requestDetail",
           "controlAggregation": "midColumnPages"
+        },
+        "notFound": {
+          "name": "NotFound",
+          "id": "notFound",
+          "controlAggregation": "midColumnPages"
         }
       }
     },

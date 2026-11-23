@@ -1,0 +1,23 @@
+<mvc:View
+    controllerName="sapui5.maintenance.controller.NotFound"
+    displayBlock="true"
+    height="100%"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <!--
+        Shown in the second column, instead of the detail, when the request of the URL does not exist.
+        The link leads to the list in one column.
+    -->
+    <Page id="notFoundPage" title="{i18n>notFoundPageTitle}">
+        <IllustratedMessage
+            id="notFoundMessage"
+            illustrationType="sapIllus-PageNotFound"
+            title="{i18n>notFoundTitle}"
+            description="{i18n>notFoundDescription}"
+            enableVerticalResponsiveness="true">
+            <additionalContent>
+                <Link id="notFoundListLink" text="{i18n>notFoundListLink}" press=".onNavToList" />
+            </additionalContent>
+        </IllustratedMessage>
+    </Page>
+</mvc:View>

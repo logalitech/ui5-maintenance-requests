@@ -56,6 +56,33 @@
                             formatter: 'formatter.criticalityState'
                         }" />
                 </uxap:content>
+                <!--
+                    Full screen, exit full screen and close. Each action is visible when the semantic
+                    helper of the column layout gives it a target layout (appView>/actionButtonsInfo).
+                -->
+                <uxap:navigationActions>
+                    <Button
+                        id="enterFullScreenButton"
+                        type="Transparent"
+                        icon="sap-icon://full-screen"
+                        tooltip="{i18n>detailEnterFullScreenTooltip}"
+                        visible="{= !!${appView>/actionButtonsInfo/midColumn/fullScreen} }"
+                        press=".onEnterFullScreen" />
+                    <Button
+                        id="exitFullScreenButton"
+                        type="Transparent"
+                        icon="sap-icon://exit-full-screen"
+                        tooltip="{i18n>detailExitFullScreenTooltip}"
+                        visible="{= !!${appView>/actionButtonsInfo/midColumn/exitFullScreen} }"
+                        press=".onExitFullScreen" />
+                    <Button
+                        id="closeButton"
+                        type="Transparent"
+                        icon="sap-icon://decline"
+                        tooltip="{i18n>detailCloseTooltip}"
+                        visible="{= !!${appView>/actionButtonsInfo/midColumn/closeColumn} }"
+                        press=".onClose" />
+                </uxap:navigationActions>
             </uxap:ObjectPageDynamicHeaderTitle>
         </uxap:headerTitle>
         <!--
